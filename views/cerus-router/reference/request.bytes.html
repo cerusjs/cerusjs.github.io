@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus-router').open(this)">
+						<option value="request.html" undefined>request</option>
+						<option value="request.remote.html" undefined>request.remote</option>
+						<option value="request.local.html" undefined>request.local</option>
+						<option value="request.bytes.html" selected>request.bytes</option>
+						<option value="request.accepts.html" undefined>request.accepts</option>
+						<option value="request.agent.html" undefined>request.agent</option>
+						<option value="request.agent.browser.html" undefined>request.agent.browser</option>
+						<option value="request.agent.browser.is.html" undefined>request.agent.browser.is</option>
+						<option value="request.agent.device.html" undefined>request.agent.device</option>
+						<option value="request.agent.engine.html" undefined>request.agent.engine</option>
+						<option value="request.agent.os.html" undefined>request.agent.os</option>
+						<option value="request.agent.cpu.html" undefined>request.agent.cpu</option>
+						<option value="request.cookies.html" undefined>request.cookies</option>
+						<option value="request.headers.html" undefined>request.headers</option>
+						<option value="response.html" undefined>response</option>
+						<option value="response.cookie.html" undefined>response.cookie</option>
+						<option value="response.cookies.html" undefined>response.cookies</option>
+						<option value="response.headers.html" undefined>response.headers</option>
+						<option value="router.html" undefined>router</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<h1>request.bytes</h1>
+		<div class="name">
+							request.bytes()
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+					<a href="/views/cerus-router/source/request.js.html#line564">Line 564</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"></div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.bytes.html#read">read</a>
+					</div>
+					<div class="col a8"></div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.bytes.html#written">written</a>
+					</div>
+					<div class="col a8"></div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="read" class="function">
+				<div class="name">
+					.read()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line573">Line 573</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																																						</div>
+				<div class="desc"></div>
+																							</div>
+					<div id="written" class="function">
+				<div class="name">
+					.written()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line580">Line 580</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																																						</div>
+				<div class="desc"></div>
+																							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

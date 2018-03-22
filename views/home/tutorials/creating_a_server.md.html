@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "selected" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('tutorials', 'home').open(this)">
+						<option value="installation.md.html" undefined>Installation</option>
+						<option value="your_first_app.md.html" undefined>Your first app</option>
+						<option value="creating_a_server.md.html" selected>Creating a server</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="markdown-body">
+	<h1 id="creating-a-server">Creating a server</h1>
+<p>If you haven&#39;t seen the previous tutorials, please do. They contain some important information you&#39;ll need for this tutorial. So, we now know how to create the cerus variable containing the initialized cerus class. The next step is to create your first server. To do this we will use the following code:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> cerus = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus"</span>)();
+
+cerus.server().start(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"the server has started"</span>);
+});
+</code></pre>
+<p>This code will first create the cerus class, as explained in the previous tutorial. In the lines after that it will call the server function assigned to the cerus class. This function will return the server class. This class was initialized when cerus was loaded, meaning you don&#39;t have to initialize it yourself. Then the start function is called which starts the server. The callback that is passed on in the function will be called after the server has been started. When that happens the server will log &quot;the server has started&quot;. If there is an error, first try to reinstall cerus and if that doesn&#39;t work you can open an issue on the cerus github containing the error.</p>
+
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

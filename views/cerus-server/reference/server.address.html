@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus-server').open(this)">
+						<option value="server.html" undefined>server</option>
+						<option value="server.address.html" selected>server.address</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<h1>server.address</h1>
+		<div class="name">
+							.server().address()
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus-server/source/server.js.html">server.js</a>, 
+					<a href="/views/cerus-server/source/server.js.html#line286">Line 286</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This is the address class for the server. It contains information about the server, like the port and ip address.</p>
+</div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-server/reference/server.address.html#port">port</a>
+					</div>
+					<div class="col a8">Returns the port the server is using.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-server/reference/server.address.html#family">family</a>
+					</div>
+					<div class="col a8">Returns the family of the server's ip.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-server/reference/server.address.html#address">address</a>
+					</div>
+					<div class="col a8">Returns the ip of the server.</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="port" class="function">
+				<div class="name">
+					.port()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-server/source/server.js.html">server.js</a>, 
+							<a href="/views/cerus-server/source/server.js.html#line296">Line 296</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the port the server is using.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the port the server is currently listening on.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The port the server is using.</div>
+						</div>
+					</div>
+							</div>
+					<div id="family" class="function">
+				<div class="name">
+					.family()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-server/source/server.js.html">server.js</a>, 
+							<a href="/views/cerus-server/source/server.js.html#line306">Line 306</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the family of the server's ip.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return if the ip the server is currently using is IPv4 or IPv6.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The family of the server's ip.</div>
+						</div>
+					</div>
+							</div>
+					<div id="address" class="function">
+				<div class="name">
+					.address()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-server/source/server.js.html">server.js</a>, 
+							<a href="/views/cerus-server/source/server.js.html#line316">Line 316</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the ip of the server.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the ip the server is currently using.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The ip of the server.</div>
+						</div>
+					</div>
+							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

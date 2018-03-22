@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "selected" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('tutorials', 'home').open(this)">
+						<option value="installation.md.html" selected>Installation</option>
+						<option value="your_first_app.md.html" undefined>Your first app</option>
+						<option value="creating_a_server.md.html" undefined>Creating a server</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="markdown-body">
+	<h1 id="installation">Installation</h1>
+<p>This tutorial will explain how you can install CerusJS. Currently it&#39;s pretty easy, but it&#39;ll probably change in the future making it easier and more scalable. But you don&#39;t have to worry, the original installation process is still going to work. Having said that, the current installation system requires nothing more than NPM.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>To install CerusJS you need NPM and to run the projects you are going to create you need NodeJS. If you&#39;ve already installed both of these you can go ahead to the next paragraph. When installing NodeJS it will automatically also download NPM. The download for NodeJS/NPM is available on <a href="https://nodejs.org/en/download/">this</a> link. Choose the installer for your operating system. Go through the installation process and when the installation has completed you can test it with the following command.</p>
+<pre><code class="hljs bash"><span class="hljs-comment"># Returns the install version of NodeJS</span>
+$ node -v
+</code></pre>
+<p>If NodeJS is installed correctly it should return a version number. Since NodeJS is now installed NPM should also be there and you can now head on to the next paragraph.</p>
+<h2 id="installing-the-basic-module">Installing the basic module</h2>
+<p>When you&#39;re starting out it is recommended to install the cerus module. This module can be found as &quot;cerus&quot; on NPM and contains the basic modules you&#39;ll need to create things like servers. For more information about this module you can look at it&#39;s readme <a href="/views/home/readme.html">here</a>. To install this module and the other modules you will need NPM, so check to paragraph above if you haven&#39;t already. You&#39;ll need to install the module in your project folder. This is the folder where you want to work on your project and from where you want to run your project. Please empty the folder before using the command to avoid overwriting problems.</p>
+<pre><code class="hljs bash"><span class="hljs-comment"># Installs the latests version of the cerus module.</span>
+$ npm install cerus
+</code></pre>
+<p>After you call this command there should be a new file and folder in your project folder. The &quot;package.json&quot; file that was created contains the configuration for NPM. The &quot;node_modules&quot; folder contains the modules that were installed by NPM. You learn to add other modules in the next paragraph. These new modules will also be installed into the &quot;node_modules&quot; folder.</p>
+<h2 id="installing-a-specific-module">Installing a specific module</h2>
+<p>There is basically no difference between this installation process and installing the basic module. Just like before you&#39;ll need NPM. Please note that [MODULE] is the name of the module you want to install. Most cerus modules will start with the &quot;cerus-&quot; prefix, so check you have added that before installing the module. This command also needs to be run inside your project folder.</p>
+<pre><code class="hljs bash"><span class="hljs-comment"># Installs the specified module.</span>
+$ npm install [MODULE]
+</code></pre>
+
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

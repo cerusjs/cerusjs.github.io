@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('source', 'cerus-server').open(this)">
+						<option value="server.js.html" selected>server.js</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="source">
+	<h1>server.js</h1>
+	<div class="lines">
+					<div class="line" id="line1">
+				<div class="number">1.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">"http"</span>);</pre>
+			</div>
+					<div class="line" id="line2">
+				<div class="number">2.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line3">
+				<div class="number">3.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line4">
+				<div class="number">4.</div>
+				<pre class="content"><span class="hljs-comment"> * This is the server class. With you can easily create and manage a http server. This class is </span></pre>
+			</div>
+					<div class="line" id="line5">
+				<div class="number">5.</div>
+				<pre class="content"><span class="hljs-comment"> * also needed when working with the cerus-router. When there is a request the callback function is</span></pre>
+			</div>
+					<div class="line" id="line6">
+				<div class="number">6.</div>
+				<pre class="content"><span class="hljs-comment"> * called. This callback has to be set if you want to receive incoming requets. It must be noted </span></pre>
+			</div>
+					<div class="line" id="line7">
+				<div class="number">7.</div>
+				<pre class="content"><span class="hljs-comment"> * that this name can be confusing and therefor a different module is on it's way. This means this </span></pre>
+			</div>
+					<div class="line" id="line8">
+				<div class="number">8.</div>
+				<pre class="content"><span class="hljs-comment"> * class will be deprecated somewhere in the near future.</span></pre>
+			</div>
+					<div class="line" id="line9">
+				<div class="number">9.</div>
+				<pre class="content"><span class="hljs-comment"> * @example</span></pre>
+			</div>
+					<div class="line" id="line10">
+				<div class="number">10.</div>
+				<pre class="content"><span class="hljs-comment"> * // in this example a server is created and started</span></pre>
+			</div>
+					<div class="line" id="line11">
+				<div class="number">11.</div>
+				<pre class="content"><span class="hljs-comment"> * cerus.server().callback(function(req, res) {});</span></pre>
+			</div>
+					<div class="line" id="line12">
+				<div class="number">12.</div>
+				<pre class="content"><span class="hljs-comment"> * // -&gt; now all incoming request will call this function</span></pre>
+			</div>
+					<div class="line" id="line13">
+				<div class="number">13.</div>
+				<pre class="content"><span class="hljs-comment"> * </span></pre>
+			</div>
+					<div class="line" id="line14">
+				<div class="number">14.</div>
+				<pre class="content"><span class="hljs-comment"> * cerus.server().start();</span></pre>
+			</div>
+					<div class="line" id="line15">
+				<div class="number">15.</div>
+				<pre class="content"><span class="hljs-comment"> * // -&gt; starts the server on port 80</span></pre>
+			</div>
+					<div class="line" id="line16">
+				<div class="number">16.</div>
+				<pre class="content"><span class="hljs-comment"> * @class server</span></pre>
+			</div>
+					<div class="line" id="line17">
+				<div class="number">17.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line18">
+				<div class="number">18.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">server</span> </span>{</pre>
+			</div>
+					<div class="line" id="line19">
+				<div class="number">19.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(cerus) {</pre>
+			</div>
+					<div class="line" id="line20">
+				<div class="number">20.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._server = http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line21">
+				<div class="number">21.</div>
+				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>._func === <span class="hljs-string">"function"</span>) {</pre>
+			</div>
+					<div class="line" id="line22">
+				<div class="number">22.</div>
+				<pre class="content">				<span class="hljs-keyword">this</span>._func(req, res);</pre>
+			</div>
+					<div class="line" id="line23">
+				<div class="number">23.</div>
+				<pre class="content">			}</pre>
+			</div>
+					<div class="line" id="line24">
+				<div class="number">24.</div>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+			</div>
+					<div class="line" id="line25">
+				<div class="number">25.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._port = <span class="hljs-number">80</span>;</pre>
+			</div>
+					<div class="line" id="line26">
+				<div class="number">26.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
+			</div>
+					<div class="line" id="line27">
+				<div class="number">27.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line28">
+				<div class="number">28.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line29">
+				<div class="number">29.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line30">
+				<div class="number">30.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function sets the callback function for the server. This function will be called when </span></pre>
+			</div>
+					<div class="line" id="line31">
+				<div class="number">31.</div>
+				<pre class="content"><span class="hljs-comment">	 * there is a new request. The function will be called with to parameters: req and res. The </span></pre>
+			</div>
+					<div class="line" id="line32">
+				<div class="number">32.</div>
+				<pre class="content"><span class="hljs-comment">	 * req parameter contains the request (http.IncomingMessage) and the res parameter the response</span></pre>
+			</div>
+					<div class="line" id="line33">
+				<div class="number">33.</div>
+				<pre class="content"><span class="hljs-comment">	 * (http.ServerResponse). For a custom and better req and res take a look at the cerus-router </span></pre>
+			</div>
+					<div class="line" id="line34">
+				<div class="number">34.</div>
+				<pre class="content"><span class="hljs-comment">	 * module. </span></pre>
+			</div>
+					<div class="line" id="line35">
+				<div class="number">35.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line36">
+				<div class="number">36.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.server().callback(function(req, res) {});</span></pre>
+			</div>
+					<div class="line" id="line37">
+				<div class="number">37.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; this will set the callback function</span></pre>
+			</div>
+					<div class="line" id="line38">
+				<div class="number">38.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Sets the callback that will be called for incoming requests.</span></pre>
+			</div>
+					<div class="line" id="line39">
+				<div class="number">39.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Function} func The callback function.</span></pre>
+			</div>
+					<div class="line" id="line40">
+				<div class="number">40.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function callback</span></pre>
+			</div>
+					<div class="line" id="line41">
+				<div class="number">41.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line42">
+				<div class="number">42.</div>
+				<pre class="content">	callback(func) {</pre>
+			</div>
+					<div class="line" id="line43">
+				<div class="number">43.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> func !== <span class="hljs-string">"function"</span>) {</pre>
+			</div>
+					<div class="line" id="line44">
+				<div class="number">44.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument func must be a function"</span>);</pre>
+			</div>
+					<div class="line" id="line45">
+				<div class="number">45.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line46">
+				<div class="number">46.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line47">
+				<div class="number">47.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._func = func;</pre>
+			</div>
+					<div class="line" id="line48">
+				<div class="number">48.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line49">
+				<div class="number">49.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line50">
+				<div class="number">50.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line51">
+				<div class="number">51.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function is used to start the server. You can also supply a port if you don't want to </span></pre>
+			</div>
+					<div class="line" id="line52">
+				<div class="number">52.</div>
+				<pre class="content"><span class="hljs-comment">	 * use the one that is currently set. The server cannot be started when it is already running.</span></pre>
+			</div>
+					<div class="line" id="line53">
+				<div class="number">53.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will also return a promise. This promise will call the "started" event when </span></pre>
+			</div>
+					<div class="line" id="line54">
+				<div class="number">54.</div>
+				<pre class="content"><span class="hljs-comment">	 * the server has been started.</span></pre>
+			</div>
+					<div class="line" id="line55">
+				<div class="number">55.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line56">
+				<div class="number">56.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.server().start(); // or cerus.server().listen();</span></pre>
+			</div>
+					<div class="line" id="line57">
+				<div class="number">57.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; starts the server on the default port 80</span></pre>
+			</div>
+					<div class="line" id="line58">
+				<div class="number">58.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Starts the server.</span></pre>
+			</div>
+					<div class="line" id="line59">
+				<div class="number">59.</div>
+				<pre class="content"><span class="hljs-comment">	 * @alias listen</span></pre>
+			</div>
+					<div class="line" id="line60">
+				<div class="number">60.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} (port) The port that the server will use.</span></pre>
+			</div>
+					<div class="line" id="line61">
+				<div class="number">61.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+			</div>
+					<div class="line" id="line62">
+				<div class="number">62.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function start</span></pre>
+			</div>
+					<div class="line" id="line63">
+				<div class="number">63.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line64">
+				<div class="number">64.</div>
+				<pre class="content">	start(port) {</pre>
+			</div>
+					<div class="line" id="line65">
+				<div class="number">65.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.listening()) {</pre>
+			</div>
+					<div class="line" id="line66">
+				<div class="number">66.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the server was already listening"</span>);</pre>
+			</div>
+					<div class="line" id="line67">
+				<div class="number">67.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line68">
+				<div class="number">68.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line69">
+				<div class="number">69.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(port !== <span class="hljs-literal">undefined</span> &amp;&amp; <span class="hljs-keyword">typeof</span> port !== <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line70">
+				<div class="number">70.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument port must be a number"</span>);</pre>
+			</div>
+					<div class="line" id="line71">
+				<div class="number">71.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line72">
+				<div class="number">72.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line73">
+				<div class="number">73.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line74">
+				<div class="number">74.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.listen(port || <span class="hljs-keyword">this</span>._port, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+			</div>
+					<div class="line" id="line75">
+				<div class="number">75.</div>
+				<pre class="content">				event(<span class="hljs-string">"started"</span>);</pre>
+			</div>
+					<div class="line" id="line76">
+				<div class="number">76.</div>
+				<pre class="content">			});</pre>
+			</div>
+					<div class="line" id="line77">
+				<div class="number">77.</div>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+			</div>
+					<div class="line" id="line78">
+				<div class="number">78.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line79">
+				<div class="number">79.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line80">
+				<div class="number">80.</div>
+				<pre class="content">	listen(port) {</pre>
+			</div>
+					<div class="line" id="line81">
+				<div class="number">81.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.start(port);</pre>
+			</div>
+					<div class="line" id="line82">
+				<div class="number">82.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line83">
+				<div class="number">83.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line84">
+				<div class="number">84.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line85">
+				<div class="number">85.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will stop the server. It can only be called if the server is already running. </span></pre>
+			</div>
+					<div class="line" id="line86">
+				<div class="number">86.</div>
+				<pre class="content"><span class="hljs-comment">	 * It'll also return a promise that calls the "stopped" event when the function has finished </span></pre>
+			</div>
+					<div class="line" id="line87">
+				<div class="number">87.</div>
+				<pre class="content"><span class="hljs-comment">	 * stopping the server.</span></pre>
+			</div>
+					<div class="line" id="line88">
+				<div class="number">88.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line89">
+				<div class="number">89.</div>
+				<pre class="content"><span class="hljs-comment">	 * // with a server already running</span></pre>
+			</div>
+					<div class="line" id="line90">
+				<div class="number">90.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.server().stop(); // or cerus.server().end();</span></pre>
+			</div>
+					<div class="line" id="line91">
+				<div class="number">91.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; stops the server</span></pre>
+			</div>
+					<div class="line" id="line92">
+				<div class="number">92.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Stops the server.</span></pre>
+			</div>
+					<div class="line" id="line93">
+				<div class="number">93.</div>
+				<pre class="content"><span class="hljs-comment">	 * @alias end</span></pre>
+			</div>
+					<div class="line" id="line94">
+				<div class="number">94.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+			</div>
+					<div class="line" id="line95">
+				<div class="number">95.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function stop</span></pre>
+			</div>
+					<div class="line" id="line96">
+				<div class="number">96.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line97">
+				<div class="number">97.</div>
+				<pre class="content">	stop() {</pre>
+			</div>
+					<div class="line" id="line98">
+				<div class="number">98.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.listening()) {</pre>
+			</div>
+					<div class="line" id="line99">
+				<div class="number">99.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the server never started listening"</span>);</pre>
+			</div>
+					<div class="line" id="line100">
+				<div class="number">100.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line101">
+				<div class="number">101.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line102">
+				<div class="number">102.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line103">
+				<div class="number">103.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.close(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+			</div>
+					<div class="line" id="line104">
+				<div class="number">104.</div>
+				<pre class="content">				event(<span class="hljs-string">"stopped"</span>);</pre>
+			</div>
+					<div class="line" id="line105">
+				<div class="number">105.</div>
+				<pre class="content">			});</pre>
+			</div>
+					<div class="line" id="line106">
+				<div class="number">106.</div>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+			</div>
+					<div class="line" id="line107">
+				<div class="number">107.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line108">
+				<div class="number">108.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line109">
+				<div class="number">109.</div>
+				<pre class="content">	end() {</pre>
+			</div>
+					<div class="line" id="line110">
+				<div class="number">110.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.stop();</pre>
+			</div>
+					<div class="line" id="line111">
+				<div class="number">111.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line112">
+				<div class="number">112.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line113">
+				<div class="number">113.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line114">
+				<div class="number">114.</div>
+				<pre class="content"><span class="hljs-comment">	 * This is a getter and setter for the port that will be used for the server. It is possible to</span></pre>
+			</div>
+					<div class="line" id="line115">
+				<div class="number">115.</div>
+				<pre class="content"><span class="hljs-comment">	 * not use this port by supplying a port to the .start() function directly.</span></pre>
+			</div>
+					<div class="line" id="line116">
+				<div class="number">116.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the server port.</span></pre>
+			</div>
+					<div class="line" id="line117">
+				<div class="number">117.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} (port) The new server port.</span></pre>
+			</div>
+					<div class="line" id="line118">
+				<div class="number">118.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The server port.</span></pre>
+			</div>
+					<div class="line" id="line119">
+				<div class="number">119.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function port</span></pre>
+			</div>
+					<div class="line" id="line120">
+				<div class="number">120.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line121">
+				<div class="number">121.</div>
+				<pre class="content">	port(port) {</pre>
+			</div>
+					<div class="line" id="line122">
+				<div class="number">122.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> port === <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line123">
+				<div class="number">123.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._port = port;</pre>
+			</div>
+					<div class="line" id="line124">
+				<div class="number">124.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line125">
+				<div class="number">125.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line126">
+				<div class="number">126.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._port;</pre>
+			</div>
+					<div class="line" id="line127">
+				<div class="number">127.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line128">
+				<div class="number">128.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line129">
+				<div class="number">129.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line130">
+				<div class="number">130.</div>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can listen for server events. It'll return a promise that is called </span></pre>
+			</div>
+					<div class="line" id="line131">
+				<div class="number">131.</div>
+				<pre class="content"><span class="hljs-comment">	 * on a number of events. The "error" event is called when there was an error in the server. It</span></pre>
+			</div>
+					<div class="line" id="line132">
+				<div class="number">132.</div>
+				<pre class="content"><span class="hljs-comment">	 * is called with the error as parameter. The "close" event is called when the server was </span></pre>
+			</div>
+					<div class="line" id="line133">
+				<div class="number">133.</div>
+				<pre class="content"><span class="hljs-comment">	 * closed. The "listening" event is called when the server has started listening. The </span></pre>
+			</div>
+					<div class="line" id="line134">
+				<div class="number">134.</div>
+				<pre class="content"><span class="hljs-comment">	 * "connection" event is called when there was a new connection together with the new socket as</span></pre>
+			</div>
+					<div class="line" id="line135">
+				<div class="number">135.</div>
+				<pre class="content"><span class="hljs-comment">	 * paramater.</span></pre>
+			</div>
+					<div class="line" id="line136">
+				<div class="number">136.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns a promise that is called on every event.</span></pre>
+			</div>
+					<div class="line" id="line137">
+				<div class="number">137.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+			</div>
+					<div class="line" id="line138">
+				<div class="number">138.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function event</span></pre>
+			</div>
+					<div class="line" id="line139">
+				<div class="number">139.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line140">
+				<div class="number">140.</div>
+				<pre class="content">	event() {</pre>
+			</div>
+					<div class="line" id="line141">
+				<div class="number">141.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line142">
+				<div class="number">142.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.on(<span class="hljs-string">"error"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line143">
+				<div class="number">143.</div>
+				<pre class="content">				event(<span class="hljs-string">"error"</span>, error);</pre>
+			</div>
+					<div class="line" id="line144">
+				<div class="number">144.</div>
+				<pre class="content">			});</pre>
+			</div>
+					<div class="line" id="line145">
+				<div class="number">145.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line146">
+				<div class="number">146.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.on(<span class="hljs-string">"close"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+			</div>
+					<div class="line" id="line147">
+				<div class="number">147.</div>
+				<pre class="content">				event(<span class="hljs-string">"close"</span>);</pre>
+			</div>
+					<div class="line" id="line148">
+				<div class="number">148.</div>
+				<pre class="content">			});</pre>
+			</div>
+					<div class="line" id="line149">
+				<div class="number">149.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line150">
+				<div class="number">150.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.on(<span class="hljs-string">"listening"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+			</div>
+					<div class="line" id="line151">
+				<div class="number">151.</div>
+				<pre class="content">				event(<span class="hljs-string">"listening"</span>);</pre>
+			</div>
+					<div class="line" id="line152">
+				<div class="number">152.</div>
+				<pre class="content">			});</pre>
+			</div>
+					<div class="line" id="line153">
+				<div class="number">153.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line154">
+				<div class="number">154.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.on(<span class="hljs-string">"connection"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">socket</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line155">
+				<div class="number">155.</div>
+				<pre class="content">				event(<span class="hljs-string">"connection"</span>, socket);</pre>
+			</div>
+					<div class="line" id="line156">
+				<div class="number">156.</div>
+				<pre class="content">			});</pre>
+			</div>
+					<div class="line" id="line157">
+				<div class="number">157.</div>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+			</div>
+					<div class="line" id="line158">
+				<div class="number">158.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line159">
+				<div class="number">159.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line160">
+				<div class="number">160.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line161">
+				<div class="number">161.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function returns if the server is currently listening for requests. This means that </span></pre>
+			</div>
+					<div class="line" id="line162">
+				<div class="number">162.</div>
+				<pre class="content"><span class="hljs-comment">	 * this function returns if the server has started or if it's currently stopped.</span></pre>
+			</div>
+					<div class="line" id="line163">
+				<div class="number">163.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns if the server is listening.</span></pre>
+			</div>
+					<div class="line" id="line164">
+				<div class="number">164.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the server is listening.</span></pre>
+			</div>
+					<div class="line" id="line165">
+				<div class="number">165.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function listening</span></pre>
+			</div>
+					<div class="line" id="line166">
+				<div class="number">166.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line167">
+				<div class="number">167.</div>
+				<pre class="content">	listening() {</pre>
+			</div>
+					<div class="line" id="line168">
+				<div class="number">168.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._server.listening;</pre>
+			</div>
+					<div class="line" id="line169">
+				<div class="number">169.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line170">
+				<div class="number">170.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line171">
+				<div class="number">171.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line172">
+				<div class="number">172.</div>
+				<pre class="content"><span class="hljs-comment">	 * This is a getter and setter for the maximum amount of headers that the server will accept in </span></pre>
+			</div>
+					<div class="line" id="line173">
+				<div class="number">173.</div>
+				<pre class="content"><span class="hljs-comment">	 * a HTTP request. The default maximum amount of headers is 2000.</span></pre>
+			</div>
+					<div class="line" id="line174">
+				<div class="number">174.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the maximum amount of headers.</span></pre>
+			</div>
+					<div class="line" id="line175">
+				<div class="number">175.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} (maxheaders) The new maximum amount of headers.</span></pre>
+			</div>
+					<div class="line" id="line176">
+				<div class="number">176.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The maximum amount of headers.</span></pre>
+			</div>
+					<div class="line" id="line177">
+				<div class="number">177.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function maxheaders</span></pre>
+			</div>
+					<div class="line" id="line178">
+				<div class="number">178.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line179">
+				<div class="number">179.</div>
+				<pre class="content">	maxheaders(maxheaders) {</pre>
+			</div>
+					<div class="line" id="line180">
+				<div class="number">180.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> maxheaders === <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line181">
+				<div class="number">181.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.maxHeadersCount = maxheaders;</pre>
+			</div>
+					<div class="line" id="line182">
+				<div class="number">182.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line183">
+				<div class="number">183.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line184">
+				<div class="number">184.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._server.maxHeadersCount;</pre>
+			</div>
+					<div class="line" id="line185">
+				<div class="number">185.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line186">
+				<div class="number">186.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line187">
+				<div class="number">187.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line188">
+				<div class="number">188.</div>
+				<pre class="content"><span class="hljs-comment">	 * This is a getter and setter for the maximum amount of connections that the server will accept </span></pre>
+			</div>
+					<div class="line" id="line189">
+				<div class="number">189.</div>
+				<pre class="content"><span class="hljs-comment">	 * before refusing requests. By default there is no maximum amount of connections.</span></pre>
+			</div>
+					<div class="line" id="line190">
+				<div class="number">190.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the maximum amount of connections.</span></pre>
+			</div>
+					<div class="line" id="line191">
+				<div class="number">191.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} (maxconnections) The new maximum amount of connections.</span></pre>
+			</div>
+					<div class="line" id="line192">
+				<div class="number">192.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The maximum amount of connections.</span></pre>
+			</div>
+					<div class="line" id="line193">
+				<div class="number">193.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function maxconnections</span></pre>
+			</div>
+					<div class="line" id="line194">
+				<div class="number">194.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line195">
+				<div class="number">195.</div>
+				<pre class="content">	maxconnections(maxconnections) {</pre>
+			</div>
+					<div class="line" id="line196">
+				<div class="number">196.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> maxconnections === <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line197">
+				<div class="number">197.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.maxConnections = maxconnections;</pre>
+			</div>
+					<div class="line" id="line198">
+				<div class="number">198.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line199">
+				<div class="number">199.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line200">
+				<div class="number">200.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._server.maxConnections;</pre>
+			</div>
+					<div class="line" id="line201">
+				<div class="number">201.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line202">
+				<div class="number">202.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line203">
+				<div class="number">203.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line204">
+				<div class="number">204.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the current amount of connections. The connections will be </span></pre>
+			</div>
+					<div class="line" id="line205">
+				<div class="number">205.</div>
+				<pre class="content"><span class="hljs-comment">	 * returned using a promise. The amount of connections will be a parameter in the connections </span></pre>
+			</div>
+					<div class="line" id="line206">
+				<div class="number">206.</div>
+				<pre class="content"><span class="hljs-comment">	 * event. The amount of connections can only be fetched if the server is listening.</span></pre>
+			</div>
+					<div class="line" id="line207">
+				<div class="number">207.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the amount of active connections.</span></pre>
+			</div>
+					<div class="line" id="line208">
+				<div class="number">208.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The amount of connections.</span></pre>
+			</div>
+					<div class="line" id="line209">
+				<div class="number">209.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function connections</span></pre>
+			</div>
+					<div class="line" id="line210">
+				<div class="number">210.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line211">
+				<div class="number">211.</div>
+				<pre class="content">	connections() {</pre>
+			</div>
+					<div class="line" id="line212">
+				<div class="number">212.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.listening()) {</pre>
+			</div>
+					<div class="line" id="line213">
+				<div class="number">213.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the server hasn't started listening"</span>);</pre>
+			</div>
+					<div class="line" id="line214">
+				<div class="number">214.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line215">
+				<div class="number">215.</div>
+				<pre class="content">		</pre>
+			</div>
+					<div class="line" id="line216">
+				<div class="number">216.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line217">
+				<div class="number">217.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.getConnections(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, count</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line218">
+				<div class="number">218.</div>
+				<pre class="content">				</pre>
+			</div>
+					<div class="line" id="line219">
+				<div class="number">219.</div>
+				<pre class="content">				<span class="hljs-keyword">if</span>(err) {</pre>
+			</div>
+					<div class="line" id="line220">
+				<div class="number">220.</div>
+				<pre class="content">					event(<span class="hljs-string">"error"</span>);</pre>
+			</div>
+					<div class="line" id="line221">
+				<div class="number">221.</div>
+				<pre class="content">				}</pre>
+			</div>
+					<div class="line" id="line222">
+				<div class="number">222.</div>
+				<pre class="content">				<span class="hljs-keyword">else</span> {</pre>
+			</div>
+					<div class="line" id="line223">
+				<div class="number">223.</div>
+				<pre class="content">					event(<span class="hljs-string">"connections"</span>, count);</pre>
+			</div>
+					<div class="line" id="line224">
+				<div class="number">224.</div>
+				<pre class="content">				}</pre>
+			</div>
+					<div class="line" id="line225">
+				<div class="number">225.</div>
+				<pre class="content">			});</pre>
+			</div>
+					<div class="line" id="line226">
+				<div class="number">226.</div>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+			</div>
+					<div class="line" id="line227">
+				<div class="number">227.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line228">
+				<div class="number">228.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line229">
+				<div class="number">229.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line230">
+				<div class="number">230.</div>
+				<pre class="content"><span class="hljs-comment">	 * This is a getter and setter for the number of milliseconds of inactivity the server needs to </span></pre>
+			</div>
+					<div class="line" id="line231">
+				<div class="number">231.</div>
+				<pre class="content"><span class="hljs-comment">	 * wait for incoming data. If it takes more than the alive time the request is presumed </span></pre>
+			</div>
+					<div class="line" id="line232">
+				<div class="number">232.</div>
+				<pre class="content"><span class="hljs-comment">	 * inactive. The default time is 5000 milliseconds (5 seconds).</span></pre>
+			</div>
+					<div class="line" id="line233">
+				<div class="number">233.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the keep alive timeout time.</span></pre>
+			</div>
+					<div class="line" id="line234">
+				<div class="number">234.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} (alive) The keep alive timeout time.</span></pre>
+			</div>
+					<div class="line" id="line235">
+				<div class="number">235.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The keep alive timeout time.</span></pre>
+			</div>
+					<div class="line" id="line236">
+				<div class="number">236.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function alive</span></pre>
+			</div>
+					<div class="line" id="line237">
+				<div class="number">237.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line238">
+				<div class="number">238.</div>
+				<pre class="content">	alive(alive) {</pre>
+			</div>
+					<div class="line" id="line239">
+				<div class="number">239.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> alive === <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line240">
+				<div class="number">240.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.keepAliveTimeout = alive;</pre>
+			</div>
+					<div class="line" id="line241">
+				<div class="number">241.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line242">
+				<div class="number">242.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line243">
+				<div class="number">243.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._server.keepAliveTimeout;</pre>
+			</div>
+					<div class="line" id="line244">
+				<div class="number">244.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line245">
+				<div class="number">245.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line246">
+				<div class="number">246.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line247">
+				<div class="number">247.</div>
+				<pre class="content"><span class="hljs-comment">	 * This is a getter and setter for the number of milliseconds of inactivity a socket can use </span></pre>
+			</div>
+					<div class="line" id="line248">
+				<div class="number">248.</div>
+				<pre class="content"><span class="hljs-comment">	 * before being presumed to have timed out. When a socket is presumed to have timed out the </span></pre>
+			</div>
+					<div class="line" id="line249">
+				<div class="number">249.</div>
+				<pre class="content"><span class="hljs-comment">	 * connection is destroyed. The default time 120000 (2 minutes).</span></pre>
+			</div>
+					<div class="line" id="line250">
+				<div class="number">250.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the timeout time.</span></pre>
+			</div>
+					<div class="line" id="line251">
+				<div class="number">251.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} (timeout) The timeout time.</span></pre>
+			</div>
+					<div class="line" id="line252">
+				<div class="number">252.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The timeout time.</span></pre>
+			</div>
+					<div class="line" id="line253">
+				<div class="number">253.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function timeout</span></pre>
+			</div>
+					<div class="line" id="line254">
+				<div class="number">254.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line255">
+				<div class="number">255.</div>
+				<pre class="content">	timeout(timeout) {</pre>
+			</div>
+					<div class="line" id="line256">
+				<div class="number">256.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> timeout === <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line257">
+				<div class="number">257.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._server.setTimeout(timeout);</pre>
+			</div>
+					<div class="line" id="line258">
+				<div class="number">258.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line259">
+				<div class="number">259.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line260">
+				<div class="number">260.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._server.timeout;</pre>
+			</div>
+					<div class="line" id="line261">
+				<div class="number">261.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line262">
+				<div class="number">262.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line263">
+				<div class="number">263.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line264">
+				<div class="number">264.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the address class for this server. The address class contains </span></pre>
+			</div>
+					<div class="line" id="line265">
+				<div class="number">265.</div>
+				<pre class="content"><span class="hljs-comment">	 * information about the address the server is using. This class can only be returned of the </span></pre>
+			</div>
+					<div class="line" id="line266">
+				<div class="number">266.</div>
+				<pre class="content"><span class="hljs-comment">	 * server is listening.</span></pre>
+			</div>
+					<div class="line" id="line267">
+				<div class="number">267.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the server.address class.</span></pre>
+			</div>
+					<div class="line" id="line268">
+				<div class="number">268.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The server.address class.</span></pre>
+			</div>
+					<div class="line" id="line269">
+				<div class="number">269.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function address</span></pre>
+			</div>
+					<div class="line" id="line270">
+				<div class="number">270.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line271">
+				<div class="number">271.</div>
+				<pre class="content">	address() {</pre>
+			</div>
+					<div class="line" id="line272">
+				<div class="number">272.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.listening()) {</pre>
+			</div>
+					<div class="line" id="line273">
+				<div class="number">273.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the server never started listening"</span>);</pre>
+			</div>
+					<div class="line" id="line274">
+				<div class="number">274.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line275">
+				<div class="number">275.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line276">
+				<div class="number">276.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._address === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line277">
+				<div class="number">277.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._address = <span class="hljs-keyword">new</span> address(<span class="hljs-keyword">this</span>._server);</pre>
+			</div>
+					<div class="line" id="line278">
+				<div class="number">278.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line279">
+				<div class="number">279.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line280">
+				<div class="number">280.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._address;</pre>
+			</div>
+					<div class="line" id="line281">
+				<div class="number">281.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line282">
+				<div class="number">282.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line283">
+				<div class="number">283.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line284">
+				<div class="number">284.</div>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = server;</pre>
+			</div>
+					<div class="line" id="line285">
+				<div class="number">285.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line286">
+				<div class="number">286.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line287">
+				<div class="number">287.</div>
+				<pre class="content"><span class="hljs-comment"> * This is the address class for the server. It contains information about the server, like the </span></pre>
+			</div>
+					<div class="line" id="line288">
+				<div class="number">288.</div>
+				<pre class="content"><span class="hljs-comment"> * port and ip address.</span></pre>
+			</div>
+					<div class="line" id="line289">
+				<div class="number">289.</div>
+				<pre class="content"><span class="hljs-comment"> * @class server.address</span></pre>
+			</div>
+					<div class="line" id="line290">
+				<div class="number">290.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line291">
+				<div class="number">291.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">address</span> </span>{</pre>
+			</div>
+					<div class="line" id="line292">
+				<div class="number">292.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(server) {</pre>
+			</div>
+					<div class="line" id="line293">
+				<div class="number">293.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._address = server.address();</pre>
+			</div>
+					<div class="line" id="line294">
+				<div class="number">294.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line295">
+				<div class="number">295.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line296">
+				<div class="number">296.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line297">
+				<div class="number">297.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the port the server is currently listening on.</span></pre>
+			</div>
+					<div class="line" id="line298">
+				<div class="number">298.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the port the server is using.</span></pre>
+			</div>
+					<div class="line" id="line299">
+				<div class="number">299.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The port the server is using.</span></pre>
+			</div>
+					<div class="line" id="line300">
+				<div class="number">300.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function port</span></pre>
+			</div>
+					<div class="line" id="line301">
+				<div class="number">301.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line302">
+				<div class="number">302.</div>
+				<pre class="content">	port() {</pre>
+			</div>
+					<div class="line" id="line303">
+				<div class="number">303.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._address.port;</pre>
+			</div>
+					<div class="line" id="line304">
+				<div class="number">304.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line305">
+				<div class="number">305.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line306">
+				<div class="number">306.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line307">
+				<div class="number">307.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return if the ip the server is currently using is IPv4 or IPv6.</span></pre>
+			</div>
+					<div class="line" id="line308">
+				<div class="number">308.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the family of the server's ip.</span></pre>
+			</div>
+					<div class="line" id="line309">
+				<div class="number">309.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The family of the server's ip.</span></pre>
+			</div>
+					<div class="line" id="line310">
+				<div class="number">310.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function family</span></pre>
+			</div>
+					<div class="line" id="line311">
+				<div class="number">311.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line312">
+				<div class="number">312.</div>
+				<pre class="content">	family() {</pre>
+			</div>
+					<div class="line" id="line313">
+				<div class="number">313.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._address.family;</pre>
+			</div>
+					<div class="line" id="line314">
+				<div class="number">314.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line315">
+				<div class="number">315.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line316">
+				<div class="number">316.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line317">
+				<div class="number">317.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the ip the server is currently using.</span></pre>
+			</div>
+					<div class="line" id="line318">
+				<div class="number">318.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the ip of the server.</span></pre>
+			</div>
+					<div class="line" id="line319">
+				<div class="number">319.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The ip of the server.</span></pre>
+			</div>
+					<div class="line" id="line320">
+				<div class="number">320.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function address</span></pre>
+			</div>
+					<div class="line" id="line321">
+				<div class="number">321.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line322">
+				<div class="number">322.</div>
+				<pre class="content">	address() {</pre>
+			</div>
+					<div class="line" id="line323">
+				<div class="number">323.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._address.address;</pre>
+			</div>
+					<div class="line" id="line324">
+				<div class="number">324.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line325">
+				<div class="number">325.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line326">
+				<div class="number">326.</div>
+				<pre class="content"></pre>
+			</div>
+			</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

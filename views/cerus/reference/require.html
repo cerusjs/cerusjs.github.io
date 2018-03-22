@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus').open(this)">
+						<option value="autoroute.html" undefined>autoroute</option>
+						<option value="autoroute.folders.html" undefined>autoroute.folders</option>
+						<option value="cerus.html" undefined>cerus</option>
+						<option value="require.html" selected>require</option>
+						<option value="require.folders.html" undefined>require.folders</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<h1>require</h1>
+		<div class="name">
+							.require()
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus/source/require.js.html">require.js</a>, 
+					<a href="/views/cerus/source/require.js.html#line4">Line 4</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This class is used to easily require models, helpers and libraries. These class types are an important part of the cerus-ecosystem. When requiring a new class it is also cached to ensure higher loading speeds. You can also set the folder where the classes are loaded from.</p>
+</div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/require.html#folders">folders</a>
+					</div>
+					<div class="col a8">Returns the folders class.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/require.html#helper">helper</a>
+					</div>
+					<div class="col a8">Loads a helper class.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/require.html#library">library</a>
+					</div>
+					<div class="col a8">Loads a library class.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/require.html#model">model</a>
+					</div>
+					<div class="col a8">Loads a model class.</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="folders" class="function">
+				<div class="name">
+					.folders()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/require.js.html">require.js</a>, 
+							<a href="/views/cerus/source/require.js.html#line19">Line 19</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the folders class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function return the folders class for this module. With this class you can set the folders where the helpers, models and libraries are loaded from.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The require.folders class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="helper" class="function">
+				<div class="name">
+					.helper(name)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/require.js.html">require.js</a>, 
+							<a href="/views/cerus/source/require.js.html#line30">Line 30</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Loads a helper class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function loads helpers for you. A helper is class that contains functions that help you with a certain job. For more information about helpers: read the tutorial about it. The helper that is loaded is specified by it&#39;s name. When a helper is loaded for a second time it will load faster since it is cached. The name can also be an absolute path if you don&#39;t want to use the default routing. You can change the name of the folder where the helpers should be stored with .folders().helpers(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly: e.g. cerus.helper().</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">name</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the helper.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js"</span>
+cerus.autoroute().helper(<span class="hljs-string">"example"</span>);
+<span class="hljs-comment">// -&gt; will load "C:/project/helpers/example.js"</span>
+</code></pre>
+</div>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js" and using an absolute path</span>
+cerus.autoroute().helper(<span class="hljs-string">"D:\\project\\example"</span>);
+<span class="hljs-comment">// -&gt; will load "D:/project/example.js"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The specified (initialized) class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="library" class="function">
+				<div class="name">
+					.library(name)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/require.js.html">require.js</a>, 
+							<a href="/views/cerus/source/require.js.html#line72">Line 72</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Loads a library class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function is used to load libraries. A library is often a third-party class that you need to use. For more information about libraries you can read the tutorial about it. What library is loaded can be specified with the name parameter. When loading a library for a second time it&#39;ll load faster since libraries are cached. You can also use an absolute path if you don&#39;t want to use the default routing. You can change the name of the folder where the libraries should be stored with .folders().libraries(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly: e.g. cerus.library().</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">name</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the library.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js"</span>
+cerus.autoroute().library(<span class="hljs-string">"example"</span>);
+<span class="hljs-comment">// -&gt; will load "C:/project/libraries/example.js"</span>
+</code></pre>
+</div>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js" and using an absolute path</span>
+cerus.autoroute().library(<span class="hljs-string">"D:\\project\\example"</span>);
+<span class="hljs-comment">// -&gt; will load "D:/project/example.js"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The specified class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="model" class="function">
+				<div class="name">
+					.model(name)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/require.js.html">require.js</a>, 
+							<a href="/views/cerus/source/require.js.html#line114">Line 114</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Loads a model class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can load a model. A model is just like MVC a class that is used for storing (and sometimes loading) data. For more information about models read the tutorial that is written about it. The model you want to load is specified with it&#39;s name. When the model is loaded for a second time it will be loaded faster since it is cached. Just like the other methods you can use an absolute path when you don&#39;t want to use the default routing. You can also change the name of the folder where the models should be stored with .folders().models(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly: e.g. cerus.model().</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">name</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the model.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js"</span>
+cerus.autoroute().model(<span class="hljs-string">"example"</span>);
+<span class="hljs-comment">// -&gt; will load "C:/project/models/example.js"</span>
+</code></pre>
+</div>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js" and using a absolute path</span>
+cerus.autoroute().model(<span class="hljs-string">"D:\\project\\example"</span>);
+<span class="hljs-comment">// -&gt; will load "D:/project/example.js"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The specified class.</div>
+						</div>
+					</div>
+							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

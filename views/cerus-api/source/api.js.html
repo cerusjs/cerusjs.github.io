@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('source', 'cerus-api').open(this)">
+						<option value="api.js.html" selected>api.js</option>
+						<option value="policies.js.html" undefined>policies.js</option>
+						<option value="json.js.html" undefined>json.js</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="source">
+	<h1>api.js</h1>
+	<div class="lines">
+					<div class="line" id="line1">
+				<div class="number">1.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> json = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./json"</span>);</pre>
+			</div>
+					<div class="line" id="line2">
+				<div class="number">2.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> policies = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./api/policies"</span>);</pre>
+			</div>
+					<div class="line" id="line3">
+				<div class="number">3.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line4">
+				<div class="number">4.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line5">
+				<div class="number">5.</div>
+				<pre class="content"><span class="hljs-comment"> * This is the main api class. With this class you can add/manage api routes, manage policies and </span></pre>
+			</div>
+					<div class="line" id="line6">
+				<div class="number">6.</div>
+				<pre class="content"><span class="hljs-comment"> * change the api folders/urls. The api is used to easily obtain data from the server while also </span></pre>
+			</div>
+					<div class="line" id="line7">
+				<div class="number">7.</div>
+				<pre class="content"><span class="hljs-comment"> * respecting things like security by using policies. The response for the api works in a RESTful </span></pre>
+			</div>
+					<div class="line" id="line8">
+				<div class="number">8.</div>
+				<pre class="content"><span class="hljs-comment"> * manner and can be managed using the assigned JSON class object.</span></pre>
+			</div>
+					<div class="line" id="line9">
+				<div class="number">9.</div>
+				<pre class="content"><span class="hljs-comment"> * @class api</span></pre>
+			</div>
+					<div class="line" id="line10">
+				<div class="number">10.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line11">
+				<div class="number">11.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">api</span> </span>{</pre>
+			</div>
+					<div class="line" id="line12">
+				<div class="number">12.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(cerus) {</pre>
+			</div>
+					<div class="line" id="line13">
+				<div class="number">13.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._policies = <span class="hljs-keyword">new</span> policies(cerus);</pre>
+			</div>
+					<div class="line" id="line14">
+				<div class="number">14.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._folders = <span class="hljs-keyword">new</span> folders();</pre>
+			</div>
+					<div class="line" id="line15">
+				<div class="number">15.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._urls = <span class="hljs-keyword">new</span> urls();</pre>
+			</div>
+					<div class="line" id="line16">
+				<div class="number">16.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
+			</div>
+					<div class="line" id="line17">
+				<div class="number">17.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line18">
+				<div class="number">18.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line19">
+				<div class="number">19.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line20">
+				<div class="number">20.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the folders class for this module. With this class you can change </span></pre>
+			</div>
+					<div class="line" id="line21">
+				<div class="number">21.</div>
+				<pre class="content"><span class="hljs-comment">	 * the folders which are used to store the api classes and policy classes.</span></pre>
+			</div>
+					<div class="line" id="line22">
+				<div class="number">22.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The folders class.</span></pre>
+			</div>
+					<div class="line" id="line23">
+				<div class="number">23.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function folders</span></pre>
+			</div>
+					<div class="line" id="line24">
+				<div class="number">24.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line25">
+				<div class="number">25.</div>
+				<pre class="content">	folders() {</pre>
+			</div>
+					<div class="line" id="line26">
+				<div class="number">26.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._folders;</pre>
+			</div>
+					<div class="line" id="line27">
+				<div class="number">27.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line28">
+				<div class="number">28.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line29">
+				<div class="number">29.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line30">
+				<div class="number">30.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the urls class for this module. This class is used to store the </span></pre>
+			</div>
+					<div class="line" id="line31">
+				<div class="number">31.</div>
+				<pre class="content"><span class="hljs-comment">	 * url for the api.</span></pre>
+			</div>
+					<div class="line" id="line32">
+				<div class="number">32.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The urls class.</span></pre>
+			</div>
+					<div class="line" id="line33">
+				<div class="number">33.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function urls</span></pre>
+			</div>
+					<div class="line" id="line34">
+				<div class="number">34.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line35">
+				<div class="number">35.</div>
+				<pre class="content">	urls() {</pre>
+			</div>
+					<div class="line" id="line36">
+				<div class="number">36.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._urls;</pre>
+			</div>
+					<div class="line" id="line37">
+				<div class="number">37.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line38">
+				<div class="number">38.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line39">
+				<div class="number">39.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line40">
+				<div class="number">40.</div>
+				<pre class="content"><span class="hljs-comment">	 * With the class this function returns you can manage the policies for the api. The policies </span></pre>
+			</div>
+					<div class="line" id="line41">
+				<div class="number">41.</div>
+				<pre class="content"><span class="hljs-comment">	 * are used as middleware before the api function is called. These policies are used for things</span></pre>
+			</div>
+					<div class="line" id="line42">
+				<div class="number">42.</div>
+				<pre class="content"><span class="hljs-comment">	 * like security and to check if the client is logged in. You can easily add policies using the</span></pre>
+			</div>
+					<div class="line" id="line43">
+				<div class="number">43.</div>
+				<pre class="content"><span class="hljs-comment">	 * {@link api.policy} function.</span></pre>
+			</div>
+					<div class="line" id="line44">
+				<div class="number">44.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The policies class.</span></pre>
+			</div>
+					<div class="line" id="line45">
+				<div class="number">45.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function policies</span></pre>
+			</div>
+					<div class="line" id="line46">
+				<div class="number">46.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line47">
+				<div class="number">47.</div>
+				<pre class="content">	policies() {</pre>
+			</div>
+					<div class="line" id="line48">
+				<div class="number">48.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._policies;</pre>
+			</div>
+					<div class="line" id="line49">
+				<div class="number">49.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line50">
+				<div class="number">50.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line51">
+				<div class="number">51.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line52">
+				<div class="number">52.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function is used for a shortcut to add a new policy. You can specify the name with the </span></pre>
+			</div>
+					<div class="line" id="line53">
+				<div class="number">53.</div>
+				<pre class="content"><span class="hljs-comment">	 * inserted parameter. This function will return a promise that will be called on the 'policy' </span></pre>
+			</div>
+					<div class="line" id="line54">
+				<div class="number">54.</div>
+				<pre class="content"><span class="hljs-comment">	 * event when the policy is used. The api request will be stopped when the policy has emitted</span></pre>
+			</div>
+					<div class="line" id="line55">
+				<div class="number">55.</div>
+				<pre class="content"><span class="hljs-comment">	 * a response. The 'policy' event will e called with the request, json response and cerus as </span></pre>
+			</div>
+					<div class="line" id="line56">
+				<div class="number">56.</div>
+				<pre class="content"><span class="hljs-comment">	 * parameters.</span></pre>
+			</div>
+					<div class="line" id="line57">
+				<div class="number">57.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the new policy.</span></pre>
+			</div>
+					<div class="line" id="line58">
+				<div class="number">58.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+			</div>
+					<div class="line" id="line59">
+				<div class="number">59.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function policy</span></pre>
+			</div>
+					<div class="line" id="line60">
+				<div class="number">60.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line61">
+				<div class="number">61.</div>
+				<pre class="content">	policy(name) {</pre>
+			</div>
+					<div class="line" id="line62">
+				<div class="number">62.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._policies.add(name);</pre>
+			</div>
+					<div class="line" id="line63">
+				<div class="number">63.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line64">
+				<div class="number">64.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line65">
+				<div class="number">65.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line66">
+				<div class="number">66.</div>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can load an api or policy class. The api classes should contain the </span></pre>
+			</div>
+					<div class="line" id="line67">
+				<div class="number">67.</div>
+				<pre class="content"><span class="hljs-comment">	 * functions used for routing api requests. The policy classes should contain the policies. To</span></pre>
+			</div>
+					<div class="line" id="line68">
+				<div class="number">68.</div>
+				<pre class="content"><span class="hljs-comment">	 * load the class it wil use the general require function. The folders that should contain the</span></pre>
+			</div>
+					<div class="line" id="line69">
+				<div class="number">69.</div>
+				<pre class="content"><span class="hljs-comment">	 * classes can be changed using the {@link api.folders} function.</span></pre>
+			</div>
+					<div class="line" id="line70">
+				<div class="number">70.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the class to load.</span></pre>
+			</div>
+					<div class="line" id="line71">
+				<div class="number">71.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} type The type of class to load.</span></pre>
+			</div>
+					<div class="line" id="line72">
+				<div class="number">72.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} This function will return the loaded class.</span></pre>
+			</div>
+					<div class="line" id="line73">
+				<div class="number">73.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function load</span></pre>
+			</div>
+					<div class="line" id="line74">
+				<div class="number">74.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line75">
+				<div class="number">75.</div>
+				<pre class="content">	load(name, type = <span class="hljs-string">"api"</span>) {</pre>
+			</div>
+					<div class="line" id="line76">
+				<div class="number">76.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line77">
+				<div class="number">77.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line78">
+				<div class="number">78.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line79">
+				<div class="number">79.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line80">
+				<div class="number">80.</div>
+				<pre class="content">		<span class="hljs-keyword">switch</span>(type) {</pre>
+			</div>
+					<div class="line" id="line81">
+				<div class="number">81.</div>
+				<pre class="content">			<span class="hljs-comment">// If type is policy, load a policy class</span></pre>
+			</div>
+					<div class="line" id="line82">
+				<div class="number">82.</div>
+				<pre class="content">			<span class="hljs-keyword">case</span> <span class="hljs-string">"policy"</span>:</pre>
+			</div>
+					<div class="line" id="line83">
+				<div class="number">83.</div>
+				<pre class="content">				<span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>(<span class="hljs-keyword">this</span>._cerus.root() + <span class="hljs-keyword">this</span>._folders._policies + <span class="hljs-string">"/"</span> + name);</pre>
+			</div>
+					<div class="line" id="line84">
+				<div class="number">84.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line85">
+				<div class="number">85.</div>
+				<pre class="content">			<span class="hljs-comment">// If type is api, load an api class</span></pre>
+			</div>
+					<div class="line" id="line86">
+				<div class="number">86.</div>
+				<pre class="content">			<span class="hljs-keyword">case</span> <span class="hljs-string">"api"</span>:</pre>
+			</div>
+					<div class="line" id="line87">
+				<div class="number">87.</div>
+				<pre class="content">			<span class="hljs-keyword">default</span>:</pre>
+			</div>
+					<div class="line" id="line88">
+				<div class="number">88.</div>
+				<pre class="content">				<span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>(<span class="hljs-keyword">this</span>._cerus.root() + <span class="hljs-keyword">this</span>._folders._api + <span class="hljs-string">"/"</span> + name);</pre>
+			</div>
+					<div class="line" id="line89">
+				<div class="number">89.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line90">
+				<div class="number">90.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line91">
+				<div class="number">91.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line92">
+				<div class="number">92.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line93">
+				<div class="number">93.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function is used to create a new api route. </span></pre>
+			</div>
+					<div class="line" id="line94">
+				<div class="number">94.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} url The url the new api will route to.</span></pre>
+			</div>
+					<div class="line" id="line95">
+				<div class="number">95.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Array} policies The policies for this api route.</span></pre>
+			</div>
+					<div class="line" id="line96">
+				<div class="number">96.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+			</div>
+					<div class="line" id="line97">
+				<div class="number">97.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line98">
+				<div class="number">98.</div>
+				<pre class="content">	add(url, policies = []) {</pre>
+			</div>
+					<div class="line" id="line99">
+				<div class="number">99.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line100">
+				<div class="number">100.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line101">
+				<div class="number">101.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line102">
+				<div class="number">102.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line103">
+				<div class="number">103.</div>
+				<pre class="content">		<span class="hljs-keyword">var</span> policies_ = policies;</pre>
+			</div>
+					<div class="line" id="line104">
+				<div class="number">104.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line105">
+				<div class="number">105.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!(policies_ <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>)) {</pre>
+			</div>
+					<div class="line" id="line106">
+				<div class="number">106.</div>
+				<pre class="content">			policies_ = [policies_];</pre>
+			</div>
+					<div class="line" id="line107">
+				<div class="number">107.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line108">
+				<div class="number">108.</div>
+				<pre class="content">		</pre>
+			</div>
+					<div class="line" id="line109">
+				<div class="number">109.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line110">
+				<div class="number">110.</div>
+				<pre class="content">			<span class="hljs-comment">// Route all possible methods with the specified url</span></pre>
+			</div>
+					<div class="line" id="line111">
+				<div class="number">111.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.router().route(<span class="hljs-string">"/"</span> + <span class="hljs-keyword">this</span>._urls._api + <span class="hljs-string">"/"</span> + url)</pre>
+			</div>
+					<div class="line" id="line112">
+				<div class="number">112.</div>
+				<pre class="content">			.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line113">
+				<div class="number">113.</div>
+				<pre class="content">				<span class="hljs-keyword">var</span> json_ = <span class="hljs-keyword">new</span> json(req, res);</pre>
+			</div>
+					<div class="line" id="line114">
+				<div class="number">114.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line115">
+				<div class="number">115.</div>
+				<pre class="content">				<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; policies_.length; i++) {</pre>
+			</div>
+					<div class="line" id="line116">
+				<div class="number">116.</div>
+				<pre class="content">					<span class="hljs-comment">// Continue if the policy doesn't exist</span></pre>
+			</div>
+					<div class="line" id="line117">
+				<div class="number">117.</div>
+				<pre class="content">					<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._policies.has(policies_[i]) === <span class="hljs-literal">false</span>) {</pre>
+			</div>
+					<div class="line" id="line118">
+				<div class="number">118.</div>
+				<pre class="content">						<span class="hljs-keyword">continue</span>;</pre>
+			</div>
+					<div class="line" id="line119">
+				<div class="number">119.</div>
+				<pre class="content">					}</pre>
+			</div>
+					<div class="line" id="line120">
+				<div class="number">120.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line121">
+				<div class="number">121.</div>
+				<pre class="content">					<span class="hljs-keyword">this</span>._policies.get(policies_[i])(<span class="hljs-string">"policy"</span>, req, json_, <span class="hljs-keyword">this</span>._cerus);</pre>
+			</div>
+					<div class="line" id="line122">
+				<div class="number">122.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line123">
+				<div class="number">123.</div>
+				<pre class="content">					<span class="hljs-keyword">if</span>(json_.emitted()) {</pre>
+			</div>
+					<div class="line" id="line124">
+				<div class="number">124.</div>
+				<pre class="content">						<span class="hljs-keyword">return</span>;</pre>
+			</div>
+					<div class="line" id="line125">
+				<div class="number">125.</div>
+				<pre class="content">					}</pre>
+			</div>
+					<div class="line" id="line126">
+				<div class="number">126.</div>
+				<pre class="content">				}</pre>
+			</div>
+					<div class="line" id="line127">
+				<div class="number">127.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line128">
+				<div class="number">128.</div>
+				<pre class="content">				event(<span class="hljs-string">"request"</span>, req, json_, <span class="hljs-keyword">this</span>._cerus);</pre>
+			</div>
+					<div class="line" id="line129">
+				<div class="number">129.</div>
+				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>));</pre>
+			</div>
+					<div class="line" id="line130">
+				<div class="number">130.</div>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+			</div>
+					<div class="line" id="line131">
+				<div class="number">131.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line132">
+				<div class="number">132.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line133">
+				<div class="number">133.</div>
+				<pre class="content">	remove(url) {</pre>
+			</div>
+					<div class="line" id="line134">
+				<div class="number">134.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line135">
+				<div class="number">135.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line136">
+				<div class="number">136.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line137">
+				<div class="number">137.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line138">
+				<div class="number">138.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus.router().remove(<span class="hljs-keyword">this</span>._urls._api + <span class="hljs-string">"/"</span> + url);</pre>
+			</div>
+					<div class="line" id="line139">
+				<div class="number">139.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line140">
+				<div class="number">140.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line141">
+				<div class="number">141.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line142">
+				<div class="number">142.</div>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = api;</pre>
+			</div>
+					<div class="line" id="line143">
+				<div class="number">143.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line144">
+				<div class="number">144.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">folders</span> </span>{</pre>
+			</div>
+					<div class="line" id="line145">
+				<div class="number">145.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
+			</div>
+					<div class="line" id="line146">
+				<div class="number">146.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._policies = <span class="hljs-string">"policies"</span>;</pre>
+			</div>
+					<div class="line" id="line147">
+				<div class="number">147.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._api = <span class="hljs-string">"api"</span>;</pre>
+			</div>
+					<div class="line" id="line148">
+				<div class="number">148.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line149">
+				<div class="number">149.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line150">
+				<div class="number">150.</div>
+				<pre class="content">	policies(policies) {</pre>
+			</div>
+					<div class="line" id="line151">
+				<div class="number">151.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> policies === <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line152">
+				<div class="number">152.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._policies = policies;</pre>
+			</div>
+					<div class="line" id="line153">
+				<div class="number">153.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line154">
+				<div class="number">154.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line155">
+				<div class="number">155.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._policies;</pre>
+			</div>
+					<div class="line" id="line156">
+				<div class="number">156.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line157">
+				<div class="number">157.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line158">
+				<div class="number">158.</div>
+				<pre class="content">	api(api) {</pre>
+			</div>
+					<div class="line" id="line159">
+				<div class="number">159.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> api === <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line160">
+				<div class="number">160.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._api = api;</pre>
+			</div>
+					<div class="line" id="line161">
+				<div class="number">161.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line162">
+				<div class="number">162.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line163">
+				<div class="number">163.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._api;</pre>
+			</div>
+					<div class="line" id="line164">
+				<div class="number">164.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line165">
+				<div class="number">165.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line166">
+				<div class="number">166.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line167">
+				<div class="number">167.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">urls</span> </span>{</pre>
+			</div>
+					<div class="line" id="line168">
+				<div class="number">168.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
+			</div>
+					<div class="line" id="line169">
+				<div class="number">169.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._api = <span class="hljs-string">"api"</span>;</pre>
+			</div>
+					<div class="line" id="line170">
+				<div class="number">170.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line171">
+				<div class="number">171.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line172">
+				<div class="number">172.</div>
+				<pre class="content">	api(api) {</pre>
+			</div>
+					<div class="line" id="line173">
+				<div class="number">173.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> api === <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line174">
+				<div class="number">174.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._api = api;</pre>
+			</div>
+					<div class="line" id="line175">
+				<div class="number">175.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line176">
+				<div class="number">176.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line177">
+				<div class="number">177.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._api;</pre>
+			</div>
+					<div class="line" id="line178">
+				<div class="number">178.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line179">
+				<div class="number">179.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line180">
+				<div class="number">180.</div>
+				<pre class="content"></pre>
+			</div>
+			</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

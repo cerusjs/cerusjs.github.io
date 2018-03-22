@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('source', 'cerus-router').open(this)">
+						<option value="layer.js.html" undefined>layer.js</option>
+						<option value="request.js.html" undefined>request.js</option>
+						<option value="accepts.js.html" undefined>accepts.js</option>
+						<option value="agent.js.html" undefined>agent.js</option>
+						<option value="cookies.js.html" undefined>cookies.js</option>
+						<option value="headers.js.html" undefined>headers.js</option>
+						<option value="response.js.html" undefined>response.js</option>
+						<option value="cookie.js.html" undefined>cookie.js</option>
+						<option value="cookies.js.html" undefined>cookies.js</option>
+						<option value="headers.js.html" undefined>headers.js</option>
+						<option value="route.js.html" undefined>route.js</option>
+						<option value="router.js.html" selected>router.js</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="source">
+	<h1>router.js</h1>
+	<div class="lines">
+					<div class="line" id="line1">
+				<div class="number">1.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> response = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./response"</span>);</pre>
+			</div>
+					<div class="line" id="line2">
+				<div class="number">2.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./request"</span>);</pre>
+			</div>
+					<div class="line" id="line3">
+				<div class="number">3.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> route = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./route"</span>);</pre>
+			</div>
+					<div class="line" id="line4">
+				<div class="number">4.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line5">
+				<div class="number">5.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">router</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">route</span> </span>{</pre>
+			</div>
+					<div class="line" id="line6">
+				<div class="number">6.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(cerus) {</pre>
+			</div>
+					<div class="line" id="line7">
+				<div class="number">7.</div>
+				<pre class="content">		<span class="hljs-keyword">super</span>(cerus);</pre>
+			</div>
+					<div class="line" id="line8">
+				<div class="number">8.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line9">
+				<div class="number">9.</div>
+				<pre class="content">		<span class="hljs-comment">// Route everything to the main route</span></pre>
+			</div>
+					<div class="line" id="line10">
+				<div class="number">10.</div>
+				<pre class="content">		cerus.server().callback(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line11">
+				<div class="number">11.</div>
+				<pre class="content">			<span class="hljs-keyword">var</span> req_ = <span class="hljs-keyword">new</span> request(req, cerus);</pre>
+			</div>
+					<div class="line" id="line12">
+				<div class="number">12.</div>
+				<pre class="content">			<span class="hljs-keyword">var</span> res_ = <span class="hljs-keyword">new</span> response(res, req_, cerus);</pre>
+			</div>
+					<div class="line" id="line13">
+				<div class="number">13.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line14">
+				<div class="number">14.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.handle(req_, res_);</pre>
+			</div>
+					<div class="line" id="line15">
+				<div class="number">15.</div>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+			</div>
+					<div class="line" id="line16">
+				<div class="number">16.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line17">
+				<div class="number">17.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line18">
+				<div class="number">18.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line19">
+				<div class="number">19.</div>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = router;</pre>
+			</div>
+					<div class="line" id="line20">
+				<div class="number">20.</div>
+				<pre class="content"></pre>
+			</div>
+			</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('source', 'cerus-router').open(this)">
+						<option value="layer.js.html" undefined>layer.js</option>
+						<option value="request.js.html" undefined>request.js</option>
+						<option value="accepts.js.html" undefined>accepts.js</option>
+						<option value="agent.js.html" undefined>agent.js</option>
+						<option value="cookies.js.html" selected>cookies.js</option>
+						<option value="headers.js.html" undefined>headers.js</option>
+						<option value="response.js.html" undefined>response.js</option>
+						<option value="cookie.js.html" undefined>cookie.js</option>
+						<option value="cookies.js.html" selected>cookies.js</option>
+						<option value="headers.js.html" undefined>headers.js</option>
+						<option value="route.js.html" undefined>route.js</option>
+						<option value="router.js.html" undefined>router.js</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="source">
+	<h1>cookies.js</h1>
+	<div class="lines">
+					<div class="line" id="line1">
+				<div class="number">1.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> cookie = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./cookie"</span>);</pre>
+			</div>
+					<div class="line" id="line2">
+				<div class="number">2.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line3">
+				<div class="number">3.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line4">
+				<div class="number">4.</div>
+				<pre class="content"><span class="hljs-comment"> * @class response.cookies</span></pre>
+			</div>
+					<div class="line" id="line5">
+				<div class="number">5.</div>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
+			</div>
+					<div class="line" id="line6">
+				<div class="number">6.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line7">
+				<div class="number">7.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">cookies</span> </span>{</pre>
+			</div>
+					<div class="line" id="line8">
+				<div class="number">8.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
+			</div>
+					<div class="line" id="line9">
+				<div class="number">9.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cookies = [];</pre>
+			</div>
+					<div class="line" id="line10">
+				<div class="number">10.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line11">
+				<div class="number">11.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line12">
+				<div class="number">12.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line13">
+				<div class="number">13.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function create</span></pre>
+			</div>
+					<div class="line" id="line14">
+				<div class="number">14.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line15">
+				<div class="number">15.</div>
+				<pre class="content">	create(key, value, options) {</pre>
+			</div>
+					<div class="line" id="line16">
+				<div class="number">16.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> cookie(key, value, options);</pre>
+			</div>
+					<div class="line" id="line17">
+				<div class="number">17.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line18">
+				<div class="number">18.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line19">
+				<div class="number">19.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line20">
+				<div class="number">20.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function add</span></pre>
+			</div>
+					<div class="line" id="line21">
+				<div class="number">21.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line22">
+				<div class="number">22.</div>
+				<pre class="content">	add(cookie_) {</pre>
+			</div>
+					<div class="line" id="line23">
+				<div class="number">23.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!(cookie_ <span class="hljs-keyword">instanceof</span> cookie)) {</pre>
+			</div>
+					<div class="line" id="line24">
+				<div class="number">24.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument cookie_ must be a cookie"</span>);</pre>
+			</div>
+					<div class="line" id="line25">
+				<div class="number">25.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line26">
+				<div class="number">26.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line27">
+				<div class="number">27.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> cookie_.key() !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line28">
+				<div class="number">28.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the key of the inserted key must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line29">
+				<div class="number">29.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line30">
+				<div class="number">30.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line31">
+				<div class="number">31.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cookies.push(cookie_);</pre>
+			</div>
+					<div class="line" id="line32">
+				<div class="number">32.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line33">
+				<div class="number">33.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line34">
+				<div class="number">34.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line35">
+				<div class="number">35.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function get</span></pre>
+			</div>
+					<div class="line" id="line36">
+				<div class="number">36.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line37">
+				<div class="number">37.</div>
+				<pre class="content">	get(key) {</pre>
+			</div>
+					<div class="line" id="line38">
+				<div class="number">38.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line39">
+				<div class="number">39.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument key must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line40">
+				<div class="number">40.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line41">
+				<div class="number">41.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line42">
+				<div class="number">42.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.cookies[<span class="hljs-keyword">this</span>._cookies.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x.key()).indexOf(key)];</pre>
+			</div>
+					<div class="line" id="line43">
+				<div class="number">43.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line44">
+				<div class="number">44.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line45">
+				<div class="number">45.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line46">
+				<div class="number">46.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function has</span></pre>
+			</div>
+					<div class="line" id="line47">
+				<div class="number">47.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line48">
+				<div class="number">48.</div>
+				<pre class="content">	has(key) {</pre>
+			</div>
+					<div class="line" id="line49">
+				<div class="number">49.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line50">
+				<div class="number">50.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument key must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line51">
+				<div class="number">51.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line52">
+				<div class="number">52.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line53">
+				<div class="number">53.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cookies.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x.key()).includes(key);</pre>
+			</div>
+					<div class="line" id="line54">
+				<div class="number">54.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line55">
+				<div class="number">55.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line56">
+				<div class="number">56.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line57">
+				<div class="number">57.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
+			</div>
+					<div class="line" id="line58">
+				<div class="number">58.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line59">
+				<div class="number">59.</div>
+				<pre class="content">	remove(key) {</pre>
+			</div>
+					<div class="line" id="line60">
+				<div class="number">60.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line61">
+				<div class="number">61.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument key must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line62">
+				<div class="number">62.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line63">
+				<div class="number">63.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line64">
+				<div class="number">64.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cookies.splice(<span class="hljs-keyword">this</span>._cookies.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x.key()).indexOf(key), <span class="hljs-number">1</span>);</pre>
+			</div>
+					<div class="line" id="line65">
+				<div class="number">65.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line66">
+				<div class="number">66.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line67">
+				<div class="number">67.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line68">
+				<div class="number">68.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function list</span></pre>
+			</div>
+					<div class="line" id="line69">
+				<div class="number">69.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line70">
+				<div class="number">70.</div>
+				<pre class="content">	list() {</pre>
+			</div>
+					<div class="line" id="line71">
+				<div class="number">71.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cookies.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x.key());</pre>
+			</div>
+					<div class="line" id="line72">
+				<div class="number">72.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line73">
+				<div class="number">73.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line74">
+				<div class="number">74.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line75">
+				<div class="number">75.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function clear</span></pre>
+			</div>
+					<div class="line" id="line76">
+				<div class="number">76.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line77">
+				<div class="number">77.</div>
+				<pre class="content">	clear() {</pre>
+			</div>
+					<div class="line" id="line78">
+				<div class="number">78.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cookies = [];</pre>
+			</div>
+					<div class="line" id="line79">
+				<div class="number">79.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line80">
+				<div class="number">80.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line81">
+				<div class="number">81.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line82">
+				<div class="number">82.</div>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = cookies;</pre>
+			</div>
+					<div class="line" id="line83">
+				<div class="number">83.</div>
+				<pre class="content"></pre>
+			</div>
+			</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

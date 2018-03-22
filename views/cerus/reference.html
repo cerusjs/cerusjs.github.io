@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus').open(this)">
+						<option value="autoroute.html" selected>autoroute</option>
+						<option value="autoroute.folders.html" undefined>autoroute.folders</option>
+						<option value="cerus.html" undefined>cerus</option>
+						<option value="require.html" undefined>require</option>
+						<option value="require.folders.html" undefined>require.folders</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<h1>autoroute</h1>
+		<div class="name">
+							.autoroute()
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
+					<a href="/views/cerus/source/autoroute.js.html#line4">Line 4</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This is the autoroute class. It is used to easily route views, assets and your favicon. If you don&#39;t know what these look at each of the functions or at the tutorials for this class.</p>
+</div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/autoroute.html#folders">folders</a>
+					</div>
+					<div class="col a8">Returns the folders class.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/autoroute.html#favicon">favicon</a>
+					</div>
+					<div class="col a8">Loads and routes the favicon.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/autoroute.html#view">view</a>
+					</div>
+					<div class="col a8">Loads and routes a view.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/autoroute.html#assets">assets</a>
+					</div>
+					<div class="col a8">Loads and routes an assets folder.</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="folders" class="function">
+				<div class="name">
+					.folders()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
+							<a href="/views/cerus/source/autoroute.js.html#line17">Line 17</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the folders class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the folders class for this module. With it you can change the folders the views and assets should be stored in.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The folders class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="favicon" class="function">
+				<div class="name">
+					.favicon(path)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
+							<a href="/views/cerus/source/autoroute.js.html#line28">Line 28</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Loads and routes the favicon.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With the favicon function you can easily route the favicon of your site. If you don&#39;t know what a favicon is: it is the image that a browser will request to use as icon. There is no folder where the icon is meant to be stored. If the path isn&#39;t absolute it is just added after the root. If it is absolute it&#39;ll directly be used. Before usage the path is fixed. Meaning that all \\ are replaced with a / to support all platforms. When the file is loaded a file event will be called on the returned promise. This event will be supplied with the file object. When the favicon was requested there will be a request event, with as arguments the request and response objects.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">path</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The path to the icon.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js"</span>
+cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
+<span class="hljs-comment">// -&gt; will load and route "C:/project/favicon.png" to "/favicon.ico"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function will return a promise.</div>
+						</div>
+					</div>
+							</div>
+					<div id="view" class="function">
+				<div class="name">
+					.view(url, filename, ext)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
+							<a href="/views/cerus/source/autoroute.js.html#line77">Line 77</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Loads and routes a view.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function is used to easily route a view. This is often a .html file, but can be generalized as a markup file. If you want to learn more about views, please read the tutorial about it. By default views are stored in the views folder. You can change this with the .folders().views() function or by using an absolute path. When your path isn&#39;t absolute it is prefixed by the root and the views folder. If it is absolute the specified path won&#39;t be prefixed. All paths do however get fixed, all \ are changed to a / to support all platforms. The files also get suffixed by default. The suffix can be removed or changed with the ext parameter. The view will be routed to specified url. The promise this function returns emits an file event the view was loaded, a request event when the view was requested and a finish event when the view has finished routing.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">url</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The url the view will be routed to.
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">filename</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The filename or path of the view.
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">ext</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The extension of the view. (optional) (default: ".html")
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js"</span>
+cerus.autoroute().view(<span class="hljs-string">"/home"</span>, <span class="hljs-string">"example"</span>);
+<span class="hljs-comment">// -&gt; will load and route "C:/project/views/example.html" to "/home"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function will return a promise.</div>
+						</div>
+					</div>
+							</div>
+					<div id="assets" class="function">
+				<div class="name">
+					.assets(folder, type)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
+							<a href="/views/cerus/source/autoroute.js.html#line139">Line 139</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Loads and routes an assets folder.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can route assets. Assets are folders containing a certain type of &quot;assets&quot;, e.g. stylesheets, scripts, images, etc. If you want to learn more about how to use assets take a look at the assets tutorial. By default all the assets are stored in the assets folder. You can change this folder with .folder().assets(). You can also use an absolute path. When using an absolute path the default prefix, the root and assets folder, won&#39;t be used. This path is also fixed, \ is changed to /, before being used to support all the platforms. The assets will be routed to /{FOLDER}/{FILE}. You can also override the type that will be send with the request by using the type parameter. This function will a promise that emits the following events: file when a new file is loaded, request when a file has been requested and finish when all files in the folder are loaded and routed.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">folder</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The assets folder that will be routed.
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">type</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The type that will be used for the response. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js" and folder "C:\\project\\assets\\css\\" containing two files:</span>
+<span class="hljs-comment">// "example1.css" and "example2.css"</span>
+cerus.autoroute().assets(<span class="hljs-string">"css"</span>);
+<span class="hljs-comment">// -&gt; will load and route "example1.css" to "/css/example1.css" and "example2.css" to "/css/example2.css"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function will return a promise.</div>
+						</div>
+					</div>
+							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

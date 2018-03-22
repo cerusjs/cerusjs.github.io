@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus-router').open(this)">
+						<option value="request.html" selected>request</option>
+						<option value="request.remote.html" undefined>request.remote</option>
+						<option value="request.local.html" undefined>request.local</option>
+						<option value="request.bytes.html" undefined>request.bytes</option>
+						<option value="request.accepts.html" undefined>request.accepts</option>
+						<option value="request.agent.html" undefined>request.agent</option>
+						<option value="request.agent.browser.html" undefined>request.agent.browser</option>
+						<option value="request.agent.browser.is.html" undefined>request.agent.browser.is</option>
+						<option value="request.agent.device.html" undefined>request.agent.device</option>
+						<option value="request.agent.engine.html" undefined>request.agent.engine</option>
+						<option value="request.agent.os.html" undefined>request.agent.os</option>
+						<option value="request.agent.cpu.html" undefined>request.agent.cpu</option>
+						<option value="request.cookies.html" undefined>request.cookies</option>
+						<option value="request.headers.html" undefined>request.headers</option>
+						<option value="response.html" undefined>response</option>
+						<option value="response.cookie.html" undefined>response.cookie</option>
+						<option value="response.cookies.html" undefined>response.cookies</option>
+						<option value="response.headers.html" undefined>response.headers</option>
+						<option value="router.html" undefined>router</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<h1>request</h1>
+		<div class="name">
+							request
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+					<a href="/views/cerus-router/source/request.js.html#line7">Line 7</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This is the request class. It is supplied as first parameter in a route handler and contains information about the request that was send by the client.</p>
+</div>
+					<div class="examples">
+				<h3>Examples</h3>
+									<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// this is an example of how to get the request</span>
+cerus.router().route(<span class="hljs-string">"/"</span>)
+.then(req, res, next) {
+<span class="hljs-comment">// the req parameter is the request class</span>
+});
+</code></pre>
+</div>
+							</div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#body">body</a>
+					</div>
+					<div class="col a8">Returns the body of the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#event">event</a>
+					</div>
+					<div class="col a8">Returns a promise that is called on every event.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#remote">remote</a>
+					</div>
+					<div class="col a8">Returns the {@link request.remote} class for this request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#local">local</a>
+					</div>
+					<div class="col a8">Returns the {@link request.local} class for this request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#readable">readable</a>
+					</div>
+					<div class="col a8">Returns if there is data available to read.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#url">url</a>
+					</div>
+					<div class="col a8">Returns the url used for the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#method">method</a>
+					</div>
+					<div class="col a8">Returns the method used for the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#version">version</a>
+					</div>
+					<div class="col a8">Returns the http version sent by the client.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#protocol">protocol</a>
+					</div>
+					<div class="col a8">Returns the protocol used for the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#headers">headers</a>
+					</div>
+					<div class="col a8">Returns the {@link request.headers} class.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#header">header</a>
+					</div>
+					<div class="col a8">Returns the specified header.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#cookies">cookies</a>
+					</div>
+					<div class="col a8">Returns the {@link request.cookies} class.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#cookie">cookie</a>
+					</div>
+					<div class="col a8">Returns the specified cookie.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#hostname">hostname</a>
+					</div>
+					<div class="col a8">Returns the hostname of the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#path">path</a>
+					</div>
+					<div class="col a8">Returns the path of the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#hash">hash</a>
+					</div>
+					<div class="col a8">Returns the hash part of the requested url.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#accepts">accepts</a>
+					</div>
+					<div class="col a8">Returns the {@link request.accepts} class.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#connecting">connecting</a>
+					</div>
+					<div class="col a8">Returns if the client is currently connecting.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#is">is</a>
+					</div>
+					<div class="col a8">Returns the matched content-type.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#connection">connection</a>
+					</div>
+					<div class="col a8">Returns the connection header.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#destroy">destroy</a>
+					</div>
+					<div class="col a8">Destroys the socket that received the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#bytes">bytes</a>
+					</div>
+					<div class="col a8">Returns the {@link request.bytes} class.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#get">get</a>
+					</div>
+					<div class="col a8">Fetches the specified data from the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#xhr">xhr</a>
+					</div>
+					<div class="col a8">Checks if the request was send using XHR.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#proxy">proxy</a>
+					</div>
+					<div class="col a8">Checks if the request was send using a proxy.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#secure">secure</a>
+					</div>
+					<div class="col a8">Checks if the connnection is secure.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#agent">agent</a>
+					</div>
+					<div class="col a8">Returns the {@link request.agent} class.</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="body" class="function">
+				<div class="name">
+					.body()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line32">Line 32</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the body of the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns the body of the request. This means it contains the data the client send with the request. Currently the only accepted body types are JSON and plain text. This function should only be called after the &quot;end&quot; event was fired. Otherwise it might be empty since the request wasn&#39;t finished yet.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// inside a route handling function</span>
+req.event()
+.on(<span class="hljs-string">"end"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-comment">// use req.body() here</span>
+});
+</code></pre>
+</div>
+											</div>
+																			</div>
+					<div id="event" class="function">
+				<div class="name">
+					.event()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line50">Line 50</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns a promise that is called on every event.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can listen for all the request events. It&#39;ll return a promise that will be called on a number of events. The &quot;data&quot; event will be called when there was data received from the client with the data as parameter. The &quot;end&quot; request when all data was received and there is no data left. You should for this event until working with the request data. The &quot;close&quot; event will be called when the response was closed. The &quot;aborted&quot; event will be called when it was aborted by the socket. The &quot;error&quot; event is thrown when there was an error and the &quot;timeout&quot; event will be called when the client timed out.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function will return a promise.</div>
+						</div>
+					</div>
+							</div>
+					<div id="remote" class="function">
+				<div class="name">
+					.remote()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line99">Line 99</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the {@link request.remote} class for this request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the request.remote class for this request. This class contains information about the address of the user.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The {@link request.remote} class for this request.</div>
+						</div>
+					</div>
+							</div>
+					<div id="local" class="function">
+				<div class="name">
+					.local()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line114">Line 114</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the {@link request.local} class for this request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the request.local class for this request. This class contains information about the local address that was used to connect to the server.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The {@link request.local} class for this request.</div>
+						</div>
+					</div>
+							</div>
+					<div id="readable" class="function">
+				<div class="name">
+					.readable()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line129">Line 129</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns if there is data available to read.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns if there is data readable from the request, meaning if there is data available to read.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Boolean</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">If there is data available to read.</div>
+						</div>
+					</div>
+							</div>
+					<div id="url" class="function">
+				<div class="name">
+					.url()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line140">Line 140</a>
+						</div>
+					</div>
+																					<div class="item">
+							<div class="key">Aliases:</div>
+							<div class="value">href</div>
+						</div>
+										<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the url used for the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the url that was used for this request. This will be the full url the client used. Meaning that things like the hash are included.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// inside a route handling function and with "/home" as url</span>
+req.url()
+<span class="hljs-comment">// -&gt; will return "/home"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The url used for the request.</div>
+						</div>
+					</div>
+							</div>
+					<div id="method" class="function">
+				<div class="name">
+					.method()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line160">Line 160</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the method used for the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns the method that was used for the request.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// inside a route handling function and with "GET" as method</span>
+req.method()
+<span class="hljs-comment">// -&gt; will return "GET"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The method used for the request.</div>
+						</div>
+					</div>
+							</div>
+					<div id="version" class="function">
+				<div class="name">
+					.version()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line174">Line 174</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the http version sent by the client.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the HTTP version sent by the client. This is often the same as the version the server is running on.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The http version sent by the client.</div>
+						</div>
+					</div>
+							</div>
+					<div id="protocol" class="function">
+				<div class="name">
+					.protocol()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line185">Line 185</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the protocol used for the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This functions returns the protocol that is used for the request. This can be one of two values: &quot;http&quot; or &quot;https&quot;.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The protocol used for the request.</div>
+						</div>
+					</div>
+							</div>
+					<div id="headers" class="function">
+				<div class="name">
+					.headers()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line196">Line 196</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the {@link request.headers} class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the request.headers class. With this class you can get the headers that were sent in the request.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The {@link request.headers} class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="header" class="function">
+				<div class="name">
+					.header(key)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line211">Line 211</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the specified header.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can easily get a header. It is basically a shortcut for .headers().get(). You specify the header you want to get with the key parameter.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">key</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the header you want to get.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// inside a route handling function and with the header "Host: example.com"</span>
+req.header(<span class="hljs-string">"host"</span>);
+<span class="hljs-comment">// -&gt; will return "example.com"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The specified header.</div>
+						</div>
+					</div>
+							</div>
+					<div id="cookies" class="function">
+				<div class="name">
+					.cookies()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line227">Line 227</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the {@link request.cookies} class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the request.cookies class. With this class you can get the cookies that were sent in the request.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The {@link request.cookies} class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="cookie" class="function">
+				<div class="name">
+					.cookie(key)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line242">Line 242</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the specified cookie.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can easily get a cookie. It is basically a shortcut for .cookies().get(). You specify the cookie you want to get with the key parameter.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">key</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the cookie you want to get.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// inside a route handling function and with the cookie "example=cookie"</span>
+req.header(<span class="hljs-string">"example"</span>);
+<span class="hljs-comment">// -&gt; will return "cookie"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The specified cookie.</div>
+						</div>
+					</div>
+							</div>
+					<div id="hostname" class="function">
+				<div class="name">
+					.hostname()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line258">Line 258</a>
+						</div>
+					</div>
+																					<div class="item">
+							<div class="key">Aliases:</div>
+							<div class="value">host</div>
+						</div>
+										<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the hostname of the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function is used to get the hostname of the request. Before just returns the Host header the proxy hostname is checked since it has more importance. If there is a proxy hostname it is first fixed before being returned. The fixes include removing brackets, etc.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The hostname of the request.</div>
+						</div>
+					</div>
+							</div>
+					<div id="path" class="function">
+				<div class="name">
+					.path()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line286">Line 286</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the path of the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the path for this request. The path is a bit different from the url or href since it only contains the path. For example, from the url &quot;/home?123&quot; the path is just &quot;/home&quot;.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The path of the request.</div>
+						</div>
+					</div>
+							</div>
+					<div id="hash" class="function">
+				<div class="name">
+					.hash()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line298">Line 298</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the hash part of the requested url.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the hash part of the url used in this request. The hash is the last bit of the url after the &quot;#&quot; (hashtag). For example, the hash of the url &quot;/home#example&quot; would be &quot;example&quot;.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The hash part of the requested url.</div>
+						</div>
+					</div>
+							</div>
+					<div id="accepts" class="function">
+				<div class="name">
+					.accepts()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line310">Line 310</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the {@link request.accepts} class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With the class this function returns (request.accepts) you can check what the client accepts. This class is basically a wrapper for dougwilson&#39;s accepts module.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The {@link request.accepts} class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="connecting" class="function">
+				<div class="name">
+					.connecting()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line325">Line 325</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns if the client is currently connecting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns true if the client is currently connecting to the server. It is set to false when the client has succesfully connected.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Boolean</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">If the client is currently connecting.</div>
+						</div>
+					</div>
+							</div>
+					<div id="is" class="function">
+				<div class="name">
+					.is(types)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line355">Line 355</a>
+						</div>
+					</div>
+																					<div class="item">
+							<div class="key">Aliases:</div>
+							<div class="value">type</div>
+						</div>
+										<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the matched content-type.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With function you can check the content-type of the request. The content-type is the header that is sent to inform what type of data the request data is. You can insert as many parameters as you want and the content-type will be returned from those parameters. If none of the paramters match the content-type false is returned. This also a wrapper for one of dougwilson&#39;s modules.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">types</div>
+									<div class="col a3">...String</div>
+									<div class="col a6"><span>
+										The types to match.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// inside a route handling function and with "application/json" as content-type</span>
+req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"</span>);
+<span class="hljs-comment">// -&gt; will return "json"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String|Boolean</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Returns the matched content-type or false.</div>
+						</div>
+					</div>
+							</div>
+					<div id="connection" class="function">
+				<div class="name">
+					.connection()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line379">Line 379</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the connection header.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the connection header. This header contains the type of connection the client requested. For example, &quot;close&quot; means the client would like to close the connection.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The connection header sent by the client.</div>
+						</div>
+					</div>
+							</div>
+					<div id="destroy" class="function">
+				<div class="name">
+					.destroy(error)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line391">Line 391</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Destroys the socket that received the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can destroy the socket that received the request. This makes the server unusable and should therefor only be used when there is an important error. You can also add an error. This error will be used as parameter in the error event.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">error</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The error you want to add. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																							</div>
+					<div id="bytes" class="function">
+				<div class="name">
+					.bytes()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line403">Line 403</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the {@link request.bytes} class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the request.bytes class for this request. This class contains stats about the bytes that were read and written by the request.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The {@link request.bytes} class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="get" class="function">
+				<div class="name">
+					.get(key)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line418">Line 418</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Fetches the specified data from the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can get the specified data that was send by the request. If it was a POST request the data is currently just the parsed JSON. In the future this class will also accept different types of data. For the other methods the data is fetched from the query that is parsed from the url.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">key</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The key to specify which data to get.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// inside a route handling function and with "/home?data=example" as url</span>
+req.get(<span class="hljs-string">"data"</span>);
+<span class="hljs-comment">// -&gt; will return "example"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The specified data from the request.</div>
+						</div>
+					</div>
+							</div>
+					<div id="xhr" class="function">
+				<div class="name">
+					.xhr()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line447">Line 447</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Checks if the request was send using XHR.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function is used to determine if the request was send using XHR, a.k.a. XMLHTTPRequest. It does this by checking if the X-Requested-With header matches &quot;xmlhttprequest&quot;.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Boolean</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">If the request was send using XHR.</div>
+						</div>
+					</div>
+							</div>
+					<div id="proxy" class="function">
+				<div class="name">
+					.proxy()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line460">Line 460</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Checks if the request was send using a proxy.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will check if the request was send using a proxy. It does this by checking if the X-Forwarded-Proto header was set.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Boolean</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">If the request was send using a proxy.</div>
+						</div>
+					</div>
+							</div>
+					<div id="secure" class="function">
+				<div class="name">
+					.secure()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line471">Line 471</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Checks if the connnection is secure.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can check if the connection is secure, meaning it is over &quot;https&quot;.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Boolean</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">If the connection is secure.</div>
+						</div>
+					</div>
+							</div>
+					<div id="agent" class="function">
+				<div class="name">
+					.agent()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
+							<a href="/views/cerus-router/source/request.js.html#line481">Line 481</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the {@link request.agent} class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns the request.agent class. This class contains more information about the client by parsing the user-agent header. This is class is a wrapper of faisalman&#39;s ua-parser-js package.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The {@link request.agent} class.</div>
+						</div>
+					</div>
+							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

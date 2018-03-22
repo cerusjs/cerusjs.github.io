@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus').open(this)">
+						<option value="autoroute.html" undefined>autoroute</option>
+						<option value="autoroute.folders.html" undefined>autoroute.folders</option>
+						<option value="cerus.html" undefined>cerus</option>
+						<option value="require.html" undefined>require</option>
+						<option value="require.folders.html" selected>require.folders</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<h1>require.folders</h1>
+		<div class="name">
+							.require().folders()
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus/source/folders.js.html">folders.js</a>, 
+					<a href="/views/cerus/source/folders.js.html#line1">Line 1</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This class contains the folder settings for the require module. With this class you can change the folders where the helpers, libraries and models should be stored in.</p>
+</div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/require.folders.html#helpers">helpers</a>
+					</div>
+					<div class="col a8">The getter/setter for the helper folder.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/require.folders.html#libraries">libraries</a>
+					</div>
+					<div class="col a8">The getter/setter for the library folder.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus/reference/require.folders.html#models">models</a>
+					</div>
+					<div class="col a8">The getter/setter for the model folder.</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="helpers" class="function">
+				<div class="name">
+					.helpers(path)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/folders.js.html">folders.js</a>, 
+							<a href="/views/cerus/source/folders.js.html#line13">Line 13</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The getter/setter for the helper folder.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the getter and setter for the helper folder. This is the folder where the helper classes should be put in. By default this path is &quot;helpers&quot;. See <a href="/views/cerus/reference/require.html#helper">require.helper</a> for what a helper is.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">path</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The new path for the helpers folder. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The path for the helpers folder.</div>
+						</div>
+					</div>
+							</div>
+					<div id="libraries" class="function">
+				<div class="name">
+					.libraries(path)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/folders.js.html">folders.js</a>, 
+							<a href="/views/cerus/source/folders.js.html#line30">Line 30</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The getter/setter for the library folder.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the getter and setter for the libraries folder. This is the folder where the library classes should be put in. By default this path is &quot;libraries&quot;. See <a href="/views/cerus/reference/require.html#library">require.library</a> for what a library is.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">path</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The new path for the libraries folder. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The path for the libraries folder.</div>
+						</div>
+					</div>
+							</div>
+					<div id="models" class="function">
+				<div class="name">
+					.models(path)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus/source/folders.js.html">folders.js</a>, 
+							<a href="/views/cerus/source/folders.js.html#line47">Line 47</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The getter/setter for the model folder.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the getter and setter for the model folder. This is the folder where the model classes should be put in. By default this path is &quot;model&quot;. See <a href="/views/cerus/reference/require.html#model">require.model</a> for what a model is.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">path</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The new path for the models folder. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The path for the models folder.</div>
+						</div>
+					</div>
+							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

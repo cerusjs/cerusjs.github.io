@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "selected" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="markdown-body">
+	<h1 id="changelog">Changelog</h1>
+<h2 id="v0-1-0-3-feb-2018-">v0.1.0 (3 Feb. 2018)</h2>
+<ul>
+<li>(New) Redid the whole module.</li>
+<li>(New) Added eslint and fixed issues it found.</li>
+<li>(Enh) Changed and added some tests.</li>
+</ul>
+<h2 id="v0-0-16-28-jan-2018-">v0.0.16 (28 Jan. 2018)</h2>
+<ul>
+<li>(Enh) Updated more dependencies.</li>
+</ul>
+<h2 id="v0-0-15-28-jan-2018-">v0.0.15 (28 Jan. 2018)</h2>
+<ul>
+<li>(New) Added some documentation.</li>
+<li>(New) Added the root function to replace the setting.</li>
+<li>(Enh) Updated all the dependencies.</li>
+<li>(Enh) Moved some methods around.</li>
+<li>(Enh) Worked on the redesign.</li>
+<li>(Fix) Fixed an issue with a missing new.</li>
+</ul>
+<h2 id="v0-0-14-18-nov-2017-">v0.0.14 (18 Nov. 2017)</h2>
+<ul>
+<li>(New) Added new, better tests.</li>
+<li>(Enh) Updated the cerus-server package.</li>
+<li>(Enh) The root will now only contain forward slashes.</li>
+<li>(Enh) The #favicon() function will now return a promise.</li>
+<li>(Enh) The #helper(), #library() and #model() functions now accept absolute paths.</li>
+<li>(Fix) All relative an absolute routing should now work.</li>
+<li>(Del) Removed the original tests.</li>
+</ul>
+<h2 id="v0-0-13-11-nov-2017-">v0.0.13 (11 Nov. 2017)</h2>
+<ul>
+<li>(Enh) Updated the router for the ? time. I&#39;ve lost count.</li>
+</ul>
+<h2 id="v0-0-12-11-nov-2017-">v0.0.12 (11 Nov. 2017)</h2>
+<ul>
+<li>(Fix) Changed the root setting another time.</li>
+</ul>
+<h2 id="v0-0-11-11-nov-2017-">v0.0.11 (11 Nov. 2017)</h2>
+<ul>
+<li>(Enh) Another router update. Who would have thought?</li>
+</ul>
+<h2 id="v0-0-10-11-nov-2017-">v0.0.10 (11 Nov. 2017)</h2>
+<ul>
+<li>(Enh) And updated the router another time.</li>
+</ul>
+<h2 id="v0-0-9-6-nov-2017-">v0.0.9 (6 Nov. 2017)</h2>
+<ul>
+<li>(Enh) Updated the router once again.</li>
+</ul>
+<h2 id="v0-0-8-6-nov-2017-">v0.0.8 (6 Nov. 2017)</h2>
+<ul>
+<li>(Enh) The #view() function will now send a file event when the file was read.</li>
+<li>(Fix) Images will now be send in binary.</li>
+<li>(Fix) Changed the paths for #assets() another time.</li>
+</ul>
+<h2 id="v0-0-7-5-nov-2017-">v0.0.7 (5 Nov. 2017)</h2>
+<ul>
+<li>(Fix) The #favicon() function will now correctly route.</li>
+<li>(Fix) Fixed the paths for the #assets() function again.</li>
+</ul>
+<h2 id="v0-0-6-4-nov-2017-">v0.0.6 (4 Nov. 2017)</h2>
+<ul>
+<li>(Fix) Fixed a wrong path in the #assets() function.</li>
+</ul>
+<h2 id="v0-0-5-4-nov-2017-">v0.0.5 (4 Nov. 2017)</h2>
+<ul>
+<li>(Enh) Updated the cerus-router module.</li>
+</ul>
+<h2 id="v0-0-4-4-nov-2017-">v0.0.4 (4 Nov. 2017)</h2>
+<ul>
+<li>(Fix) Fixed an issue with setting the root setting incorrectly.</li>
+</ul>
+<h2 id="v0-0-3-3-nov-2017-">v0.0.3 (3 Nov. 2017)</h2>
+<ul>
+<li>(Enh) Updated the cerus-router module.</li>
+<li>(Fix) Fixed typos and header sizes in the readme.</li>
+</ul>
+<h2 id="v0-0-2-3-nov-2017-">v0.0.2 (3 Nov. 2017)</h2>
+<ul>
+<li>(New) Added a lot of packages.</li>
+<li>(New) Added specs tests.</li>
+<li>(New) Added the #favicon(), #view(), #assets() and #library() functions.</li>
+<li>(Enh) The functions will now throw errors instead of an empty object.</li>
+<li>(Enh) Updated the readme.</li>
+</ul>
+<h2 id="v0-0-1-2-nov-2017-">v0.0.1 (2 Nov. 2017)</h2>
+<ul>
+<li>(New) Created this module.</li>
+<li>(New) Added the package.json.</li>
+<li>(New) Added the .gitignore.</li>
+<li>(New) Added the main class.</li>
+</ul>
+
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

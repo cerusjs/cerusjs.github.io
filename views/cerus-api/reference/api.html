@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus-api').open(this)">
+						<option value="api.html" selected>api</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<h1>api</h1>
+		<div class="name">
+							.api()
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus-api/source/api.js.html">api.js</a>, 
+					<a href="/views/cerus-api/source/api.js.html#line4">Line 4</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This is the main api class. With this class you can add/manage api routes, manage policies and change the api folders/urls. The api is used to easily obtain data from the server while also respecting things like security by using policies. The response for the api works in a RESTful manner and can be managed using the assigned JSON class object.</p>
+</div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/api.html#folders">folders</a>
+					</div>
+					<div class="col a8"><p>This function will return the folders class for this module. With this class you can change the folders which are used to store the api classes and policy classes.</p>
+</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/api.html#urls">urls</a>
+					</div>
+					<div class="col a8"><p>This function will return the urls class for this module. This class is used to store the url for the api.</p>
+</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/api.html#policies">policies</a>
+					</div>
+					<div class="col a8"><p>With the class this function returns you can manage the policies for the api. The policies are used as middleware before the api function is called. These policies are used for things like security and to check if the client is logged in. You can easily add policies using the <a href="/views/cerus-api/reference/api.html#policy">api.policy</a> function.</p>
+</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/api.html#policy">policy</a>
+					</div>
+					<div class="col a8"><p>This function is used for a shortcut to add a new policy. You can specify the name with the inserted parameter. This function will return a promise that will be called on the &#39;policy&#39; event when the policy is used. The api request will be stopped when the policy has emitted a response. The &#39;policy&#39; event will e called with the request, json response and cerus as parameters.</p>
+</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/api.html#load">load</a>
+					</div>
+					<div class="col a8"><p>With this function you can load an api or policy class. The api classes should contain the functions used for routing api requests. The policy classes should contain the policies. To load the class it wil use the general require function. The folders that should contain the classes can be changed using the <a href="/views/cerus-api/reference/api.html#folders">api.folders</a> function.</p>
+</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/api.html#undefined"></a>
+					</div>
+					<div class="col a8"><p>This function is used to create a new api route.</p>
+</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="folders" class="function">
+				<div class="name">
+					.folders()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/api.js.html">api.js</a>, 
+							<a href="/views/cerus-api/source/api.js.html#line19">Line 19</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																																						</div>
+				<div class="desc"><p>This function will return the folders class for this module. With this class you can change the folders which are used to store the api classes and policy classes.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The folders class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="urls" class="function">
+				<div class="name">
+					.urls()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/api.js.html">api.js</a>, 
+							<a href="/views/cerus-api/source/api.js.html#line29">Line 29</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																																						</div>
+				<div class="desc"><p>This function will return the urls class for this module. This class is used to store the url for the api.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The urls class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="policies" class="function">
+				<div class="name">
+					.policies()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/api.js.html">api.js</a>, 
+							<a href="/views/cerus-api/source/api.js.html#line39">Line 39</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																																						</div>
+				<div class="desc"><p>With the class this function returns you can manage the policies for the api. The policies are used as middleware before the api function is called. These policies are used for things like security and to check if the client is logged in. You can easily add policies using the <a href="/views/cerus-api/reference/api.html#policy">api.policy</a> function.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The policies class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="policy" class="function">
+				<div class="name">
+					.policy(name)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/api.js.html">api.js</a>, 
+							<a href="/views/cerus-api/source/api.js.html#line51">Line 51</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																																						</div>
+				<div class="desc"><p>This function is used for a shortcut to add a new policy. You can specify the name with the inserted parameter. This function will return a promise that will be called on the &#39;policy&#39; event when the policy is used. The api request will be stopped when the policy has emitted a response. The &#39;policy&#39; event will e called with the request, json response and cerus as parameters.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">name</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the new policy.
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function will return a promise.</div>
+						</div>
+					</div>
+							</div>
+					<div id="load" class="function">
+				<div class="name">
+					.load(name, type)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/api.js.html">api.js</a>, 
+							<a href="/views/cerus-api/source/api.js.html#line65">Line 65</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																																						</div>
+				<div class="desc"><p>With this function you can load an api or policy class. The api classes should contain the functions used for routing api requests. The policy classes should contain the policies. To load the class it wil use the general require function. The folders that should contain the classes can be changed using the <a href="/views/cerus-api/reference/api.html#folders">api.folders</a> function.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">name</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the class to load.
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">type</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The type of class to load.
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function will return the loaded class.</div>
+						</div>
+					</div>
+							</div>
+					<div id="" class="function">
+				<div class="name">
+					.undefined(url, policies)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/api.js.html">api.js</a>, 
+							<a href="/views/cerus-api/source/api.js.html#line92">Line 92</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																																						</div>
+				<div class="desc"><p>This function is used to create a new api route.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">url</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The url the new api will route to.
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">policies</div>
+									<div class="col a3">Array</div>
+									<div class="col a6"><span>
+										The policies for this api route.
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function will return a promise.</div>
+						</div>
+					</div>
+							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>
