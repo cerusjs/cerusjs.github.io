@@ -28,14 +28,14 @@
 				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
 			</ul>
 		</div>
-		<div id="cerus-item" class="item closed">
+		<div id="cerus-item" class="item opened">
 			<div class="item-title" onclick="sidebar().item('cerus')">
-				cerus				<i class="fas fa-plus"></i>
+				cerus				<i class="fas fa-minus"></i>
 			</div>
 			<ul class="item-links">
 				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+				<li><a class= "selected" href="/views/cerus/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="cerus-core-item" class="item closed">
@@ -68,14 +68,24 @@
 				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
 			</ul>
 		</div>
-		<div id="cerus-api-item" class="item opened">
+		<div id="cerus-api-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-api')">
-				cerus-api				<i class="fas fa-minus"></i>
+				cerus-api				<i class="fas fa-plus"></i>
 			</div>
 			<ul class="item-links">
 				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
-				<li><a class= "selected" href="/views/cerus-api/reference.html">Reference</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
 	</div>
@@ -87,10 +97,12 @@
 		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
 	</div>
 	<div class="right">
-				<select class="list" onchange="title_('source', 'cerus-api').open(this)">
-						<option value="api.js.html" undefined>api.js</option>
-						<option value="policies.js.html" selected>policies.js</option>
-						<option value="json.js.html" undefined>json.js</option>
+				<select class="list" onchange="title_('source', 'cerus').open(this)">
+						<option value="lib/autoroute.js.html" undefined>lib/autoroute.js.html</option>
+						<option value="lib/autoroute/folders.js.html" undefined>lib/autoroute/folders.js.html</option>
+						<option value="lib/cerus.js.html" selected>lib/cerus.js.html</option>
+						<option value="lib/require.js.html" undefined>lib/require.js.html</option>
+						<option value="lib/require/folders.js.html" undefined>lib/require/folders.js.html</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
@@ -98,211 +110,230 @@
 </div>
 			<div class="inner">
 				<div class="source">
-	<h1>policies.js</h1>
+	<h1>lib/cerus.js</h1>
 	<div class="lines">
 					<div class="line" id="line1">
 				<div class="number">1.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">policies</span> </span>{</pre>
+				<pre class="content"><span class="hljs-keyword">var</span> core = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus-core"</span>)();</pre>
 			</div>
 					<div class="line" id="line2">
 				<div class="number">2.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(cerus) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line3">
 				<div class="number">3.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._policies = {};</pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line4">
 				<div class="number">4.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
+				<pre class="content"><span class="hljs-comment"> * This is the main class for the cerus module. It isn't really a class since it creates an </span></pre>
 			</div>
 					<div class="line" id="line5">
 				<div class="number">5.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment"> * instantiation of the core class and adds some plugins to the core. This class also adds a root</span></pre>
 			</div>
 					<div class="line" id="line6">
 				<div class="number">6.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment"> * function to cerus and some of the plugins that are added can also be found in this package.</span></pre>
 			</div>
 					<div class="line" id="line7">
 				<div class="number">7.</div>
-				<pre class="content">	add(name) {</pre>
+				<pre class="content"><span class="hljs-comment"> * @class cerus</span></pre>
 			</div>
 					<div class="line" id="line8">
 				<div class="number">8.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
 			</div>
 					<div class="line" id="line9">
 				<div class="number">9.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument name must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line10">
 				<div class="number">10.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line11">
 				<div class="number">11.</div>
-				<pre class="content"></pre>
+				<pre class="content">	core.use((<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line12">
 				<div class="number">12.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> core = {};</pre>
 			</div>
 					<div class="line" id="line13">
 				<div class="number">13.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._policies[name] = event;</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> root_ = process.cwd().replace(<span class="hljs-regexp">/\\/g</span>, <span class="hljs-string">"/"</span>) + <span class="hljs-string">"/"</span>;</pre>
 			</div>
 					<div class="line" id="line14">
 				<div class="number">14.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line15">
 				<div class="number">15.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		core.name = <span class="hljs-string">"cerus"</span>;</pre>
 			</div>
 					<div class="line" id="line16">
 				<div class="number">16.</div>
-				<pre class="content"></pre>
+				<pre class="content">		core.version = <span class="hljs-string">"0.1.0"</span>;</pre>
 			</div>
 					<div class="line" id="line17">
 				<div class="number">17.</div>
-				<pre class="content">	has(name) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line18">
 				<div class="number">18.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line19">
 				<div class="number">19.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument name must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">		 * This is the setter and getter for the project's root location. By default this root is a</span></pre>
 			</div>
 					<div class="line" id="line20">
 				<div class="number">20.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">		 * fixed version of process.cwd(). The fix that is applied is replacing all '\\' with '/' </span></pre>
 			</div>
 					<div class="line" id="line21">
 				<div class="number">21.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">		 * to add support all platforms. The default root also contains a slash at the end to let </span></pre>
 			</div>
 					<div class="line" id="line22">
 				<div class="number">22.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._policies[name] !== <span class="hljs-literal">undefined</span>;</pre>
+				<pre class="content"><span class="hljs-comment">		 * every platform know it is definitely a folder.</span></pre>
 			</div>
 					<div class="line" id="line23">
 				<div class="number">23.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">		 * @example</span></pre>
 			</div>
 					<div class="line" id="line24">
 				<div class="number">24.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">		 * // with as project env "C:\\project\\example.js"</span></pre>
 			</div>
 					<div class="line" id="line25">
 				<div class="number">25.</div>
-				<pre class="content">	get(name) {</pre>
+				<pre class="content"><span class="hljs-comment">		 * console.log(cerus.root());</span></pre>
 			</div>
 					<div class="line" id="line26">
 				<div class="number">26.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">		 * // -&gt; will return "C:/project/"</span></pre>
 			</div>
 					<div class="line" id="line27">
 				<div class="number">27.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument name must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">		 * @param {String} (root) The new path for the root.</span></pre>
 			</div>
 					<div class="line" id="line28">
 				<div class="number">28.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">		 * @return {String} The root path.</span></pre>
 			</div>
 					<div class="line" id="line29">
 				<div class="number">29.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">		 * @function root</span></pre>
 			</div>
 					<div class="line" id="line30">
 				<div class="number">30.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._policies[name];</pre>
+				<pre class="content"><span class="hljs-comment">		 */</span></pre>
 			</div>
 					<div class="line" id="line31">
 				<div class="number">31.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		core.root = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">root</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line32">
 				<div class="number">32.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> root === <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content">	remove(name) {</pre>
+				<pre class="content">				root_ = root;</pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument name must be a string"</span>);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			<span class="hljs-keyword">return</span> root_;</pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content"></pre>
+				<pre class="content">		};</pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content">		<span class="hljs-keyword">delete</span> <span class="hljs-keyword">this</span>._policies[name];</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> core;</pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content"></pre>
+				<pre class="content">	})());</pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content">	list() {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>._policies);</pre>
+				<pre class="content">	core.use(<span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus-promise"</span>)());</pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	core.use(<span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus-server"</span>)());</pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content"></pre>
+				<pre class="content">	core.use(<span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus-fs"</span>)());</pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content">	clear() {</pre>
+				<pre class="content">	core.use(<span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus-compression"</span>)());</pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._policies = {};</pre>
+				<pre class="content">	core.use(<span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus-router"</span>)());</pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	core.use(<span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus-api"</span>)());</pre>
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content">}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line49">
 				<div class="number">49.</div>
-				<pre class="content"></pre>
+				<pre class="content">	core.use(<span class="hljs-built_in">require</span>(<span class="hljs-string">"./autoroute"</span>)());</pre>
 			</div>
 					<div class="line" id="line50">
 				<div class="number">50.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = policies;</pre>
+				<pre class="content">	core.use(<span class="hljs-built_in">require</span>(<span class="hljs-string">"./require"</span>)());</pre>
+			</div>
+					<div class="line" id="line51">
+				<div class="number">51.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line52">
+				<div class="number">52.</div>
+				<pre class="content">	<span class="hljs-keyword">return</span> core;</pre>
+			</div>
+					<div class="line" id="line53">
+				<div class="number">53.</div>
+				<pre class="content">};</pre>
+			</div>
+					<div class="line" id="line54">
+				<div class="number">54.</div>
+				<pre class="content"></pre>
 			</div>
 			</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

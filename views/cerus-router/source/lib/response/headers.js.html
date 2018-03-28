@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -88,18 +98,18 @@
 	</div>
 	<div class="right">
 				<select class="list" onchange="title_('source', 'cerus-router').open(this)">
-						<option value="layer.js.html" undefined>layer.js</option>
-						<option value="request.js.html" undefined>request.js</option>
-						<option value="accepts.js.html" undefined>accepts.js</option>
-						<option value="agent.js.html" undefined>agent.js</option>
-						<option value="cookies.js.html" undefined>cookies.js</option>
-						<option value="headers.js.html" selected>headers.js</option>
-						<option value="response.js.html" undefined>response.js</option>
-						<option value="cookie.js.html" undefined>cookie.js</option>
-						<option value="cookies.js.html" undefined>cookies.js</option>
-						<option value="headers.js.html" selected>headers.js</option>
-						<option value="route.js.html" undefined>route.js</option>
-						<option value="router.js.html" undefined>router.js</option>
+						<option value="lib/layer.js.html" undefined>lib/layer.js.html</option>
+						<option value="lib/request.js.html" undefined>lib/request.js.html</option>
+						<option value="lib/request/accepts.js.html" undefined>lib/request/accepts.js.html</option>
+						<option value="lib/request/agent.js.html" undefined>lib/request/agent.js.html</option>
+						<option value="lib/request/cookies.js.html" undefined>lib/request/cookies.js.html</option>
+						<option value="lib/request/headers.js.html" undefined>lib/request/headers.js.html</option>
+						<option value="lib/response.js.html" undefined>lib/response.js.html</option>
+						<option value="lib/response/cookie.js.html" undefined>lib/response/cookie.js.html</option>
+						<option value="lib/response/cookies.js.html" undefined>lib/response/cookies.js.html</option>
+						<option value="lib/response/headers.js.html" selected>lib/response/headers.js.html</option>
+						<option value="lib/route.js.html" undefined>lib/route.js.html</option>
+						<option value="lib/router.js.html" undefined>lib/router.js.html</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
@@ -107,7 +117,7 @@
 </div>
 			<div class="inner">
 				<div class="source">
-	<h1>headers.js</h1>
+	<h1>lib/response/headers.js</h1>
 	<div class="lines">
 					<div class="line" id="line1">
 				<div class="number">1.</div>
@@ -564,6 +574,9 @@
 			</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

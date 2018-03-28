@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus-api').open(this)">
+						<option value="api.html" undefined>api</option>
+						<option value="api.folders.html" undefined>api.folders</option>
+						<option value="api.urls.html" undefined>api.urls</option>
+						<option value="api.policies.html" undefined>api.policies</option>
+						<option value="json.html" selected>json</option>
+						<option value="json.errors.html" undefined>json.errors</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<div class="name">
+							json
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+					<a href="/views/cerus-api/source/lib/json.js.html#line65">Line 65</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This is the json class. This class is one of the parameters that is supplied with the api request event. With it you can easily manage a JSON response. It&#39;ll help you with returning errors, pretty printing, etc.</p>
+</div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/json.html#emitted">emitted</a>
+					</div>
+					<div class="col a8">Returns if the response has been emitted.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/json.html#json">json</a>
+					</div>
+					<div class="col a8">Returns the JSON object that will be send.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/json.html#response">response</a>
+					</div>
+					<div class="col a8">Returns the response class created by the router.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/json.html#status">status</a>
+					</div>
+					<div class="col a8">The getter/setter for the status code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/json.html#pretty">pretty</a>
+					</div>
+					<div class="col a8">The getter/setter for the pretty printing mode.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/json.html#header">header</a>
+					</div>
+					<div class="col a8">Returns the header that matches the status code or all of the headers.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/json.html#emit">emit</a>
+					</div>
+					<div class="col a8">Emits the json object to the client.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-api/reference/json.html#errors">errors</a>
+					</div>
+					<div class="col a8">Returns the json.errors class.</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="emitted" class="function">
+				<div class="name">
+					.emitted()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+							<a href="/views/cerus-api/source/lib/json.js.html#line83">Line 83</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns if the response has been emitted.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can check if the response has been emitted. Emitted is set to true when the emit function has been used. It is different from response.finished() since it can take some time to finish a response, which might result in an error when the response is re-emitted in that time.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Boolean</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">If the response has been emitted.</div>
+						</div>
+					</div>
+							</div>
+					<div id="json" class="function">
+				<div class="name">
+					.json()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+							<a href="/views/cerus-api/source/lib/json.js.html#line96">Line 96</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the JSON object that will be send.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the JSON object you can add items to. This object will be stringified and send to the client on emit. There is no need to manually update the object by changing the this._json variable since the object will be updated automatically.  @example json.json()[&quot;example&quot;] = &quot;value&quot;; // -&gt; this will set the &quot;example&quot; key to &quot;value&quot;</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Object</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The JSON object that will be send.</div>
+						</div>
+					</div>
+							</div>
+					<div id="response" class="function">
+				<div class="name">
+					.response()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+							<a href="/views/cerus-api/source/lib/json.js.html#line111">Line 111</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the response class created by the router.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the response for this request. This response is the same as the response created by the router.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The response class created by the router.</div>
+						</div>
+					</div>
+							</div>
+					<div id="status" class="function">
+				<div class="name">
+					.status(code)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+							<a href="/views/cerus-api/source/lib/json.js.html#line122">Line 122</a>
+						</div>
+					</div>
+																					<div class="item">
+							<div class="key">Aliases:</div>
+							<div class="value">code</div>
+						</div>
+										<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The getter/setter for the status code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function is the getter/setter for the status code that will be send to the client. This function has to be used when since the router&#39;s response status code will be overwritten when the json object is emitted.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">code</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new status code. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Returns the status code.</div>
+						</div>
+					</div>
+							</div>
+					<div id="pretty" class="function">
+				<div class="name">
+					.pretty(pretty)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+							<a href="/views/cerus-api/source/lib/json.js.html#line144">Line 144</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The getter/setter for the pretty printing mode.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function is the getter/setter for the pretty printing mode. If the pretty printing mode is on the response will be send using the following stringify method JSON.stringify(json, null, &quot;\t&quot;). This means that tabs are used for spacing.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">pretty</div>
+									<div class="col a3">Boolean</div>
+									<div class="col a6"><span>
+										If the pretty printing mode should be on.
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">[type]</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">If the pretty printing mode is on.</div>
+						</div>
+					</div>
+							</div>
+					<div id="header" class="function">
+				<div class="name">
+					.header(code)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+							<a href="/views/cerus-api/source/lib/json.js.html#line161">Line 161</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the header that matches the status code or all of the headers.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will help you with the header string. If you insert a status code as parameter it&#39;ll return the header string that matches that code or when you don&#39;t insert anything it&#39;ll return an object of all the header strings.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">code</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The status code you want the header for. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">json.header(<span class="hljs-number">204</span>);
+<span class="hljs-comment">// -&gt; this will return "No Content"</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String|Object</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The header that matches the status code or all of the headers.</div>
+						</div>
+					</div>
+							</div>
+					<div id="emit" class="function">
+				<div class="name">
+					.emit()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+							<a href="/views/cerus-api/source/lib/json.js.html#line181">Line 181</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Emits the json object to the client.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can emit the json response. When it is emitted once this function will be blocked so you can&#39;t emit it anymore. This function will set the content-type to &quot;json&quot; for you and will set the status code you&#39;ve set. It will then send the json object. This will be in pretty printing mode, depending on if you&#39;ve set it to true.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">json.code(<span class="hljs-number">500</span>);
+json.json()[<span class="hljs-string">"error"</span>] = <span class="hljs-string">"There was an error"</span>;
+json.emit();
+<span class="hljs-comment">// -&gt; this will emit the object "{error: "There was an error"}"</span>
+</code></pre>
+</div>
+											</div>
+																			</div>
+					<div id="errors" class="function">
+				<div class="name">
+					.errors()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-api/source/lib/json.js.html">lib/json.js</a>, 
+							<a href="/views/cerus-api/source/lib/json.js.html#line207">Line 207</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the json.errors class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the <a href="/views/cerus-api/reference/json.html#errors">json.errors</a> class. With this class you can easily send errors to the client. You can also create your own errors if the pre-created ones don&#39;t suffice.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The json.errors class.</div>
+						</div>
+					</div>
+							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

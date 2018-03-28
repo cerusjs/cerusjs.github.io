@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -88,18 +98,18 @@
 	</div>
 	<div class="right">
 				<select class="list" onchange="title_('source', 'cerus-router').open(this)">
-						<option value="layer.js.html" undefined>layer.js</option>
-						<option value="request.js.html" undefined>request.js</option>
-						<option value="accepts.js.html" undefined>accepts.js</option>
-						<option value="agent.js.html" undefined>agent.js</option>
-						<option value="cookies.js.html" undefined>cookies.js</option>
-						<option value="headers.js.html" undefined>headers.js</option>
-						<option value="response.js.html" selected>response.js</option>
-						<option value="cookie.js.html" undefined>cookie.js</option>
-						<option value="cookies.js.html" undefined>cookies.js</option>
-						<option value="headers.js.html" undefined>headers.js</option>
-						<option value="route.js.html" undefined>route.js</option>
-						<option value="router.js.html" undefined>router.js</option>
+						<option value="lib/layer.js.html" undefined>lib/layer.js.html</option>
+						<option value="lib/request.js.html" undefined>lib/request.js.html</option>
+						<option value="lib/request/accepts.js.html" undefined>lib/request/accepts.js.html</option>
+						<option value="lib/request/agent.js.html" undefined>lib/request/agent.js.html</option>
+						<option value="lib/request/cookies.js.html" undefined>lib/request/cookies.js.html</option>
+						<option value="lib/request/headers.js.html" undefined>lib/request/headers.js.html</option>
+						<option value="lib/response.js.html" selected>lib/response.js.html</option>
+						<option value="lib/response/cookie.js.html" undefined>lib/response/cookie.js.html</option>
+						<option value="lib/response/cookies.js.html" undefined>lib/response/cookies.js.html</option>
+						<option value="lib/response/headers.js.html" undefined>lib/response/headers.js.html</option>
+						<option value="lib/route.js.html" undefined>lib/route.js.html</option>
+						<option value="lib/router.js.html" undefined>lib/router.js.html</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
@@ -107,7 +117,7 @@
 </div>
 			<div class="inner">
 				<div class="source">
-	<h1>response.js</h1>
+	<h1>lib/response.js</h1>
 	<div class="lines">
 					<div class="line" id="line1">
 				<div class="number">1.</div>
@@ -199,7 +209,7 @@
 			</div>
 					<div class="line" id="line23">
 				<div class="number">23.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> code !== <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> code === <span class="hljs-string">"number"</span>) {</pre>
 			</div>
 					<div class="line" id="line24">
 				<div class="number">24.</div>
@@ -739,7 +749,7 @@
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
-				<pre class="content"></pre>
+				<pre class="content">		</pre>
 			</div>
 					<div class="line" id="line159">
 				<div class="number">159.</div>
@@ -1091,19 +1101,30 @@
 			</div>
 					<div class="line" id="line246">
 				<div class="number">246.</div>
-				<pre class="content">	<span class="hljs-keyword">return</span> mime.getType(type);</pre>
+				<pre class="content">	<span class="hljs-keyword">var</span> type_ = mime.getType(type);</pre>
 			</div>
 					<div class="line" id="line247">
 				<div class="number">247.</div>
-				<pre class="content">};</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line248">
 				<div class="number">248.</div>
+				<pre class="content">	<span class="hljs-keyword">return</span> type_ === <span class="hljs-literal">null</span> ? type : type_;</pre>
+			</div>
+					<div class="line" id="line249">
+				<div class="number">249.</div>
+				<pre class="content">};</pre>
+			</div>
+					<div class="line" id="line250">
+				<div class="number">250.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

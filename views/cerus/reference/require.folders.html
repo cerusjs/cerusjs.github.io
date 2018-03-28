@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -102,7 +112,6 @@
 				<div class="reference">
 	<!-- CLASS -->
 	<div class="class">
-		<h1>require.folders</h1>
 		<div class="name">
 							.require().folders()
 					</div>
@@ -110,8 +119,8 @@
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
-					<a href="/views/cerus/source/folders.js.html">folders.js</a>, 
-					<a href="/views/cerus/source/folders.js.html#line1">Line 1</a>
+					<a href="/views/cerus/source/lib/require/folders.js.html">lib/require/folders.js</a>, 
+					<a href="/views/cerus/source/lib/require/folders.js.html#line1">Line 1</a>
 				</div>
 			</div>
 												<div class="item">
@@ -163,8 +172,8 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/folders.js.html">folders.js</a>, 
-							<a href="/views/cerus/source/folders.js.html#line13">Line 13</a>
+							<a href="/views/cerus/source/lib/require/folders.js.html">lib/require/folders.js</a>, 
+							<a href="/views/cerus/source/lib/require/folders.js.html#line13">Line 13</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -176,7 +185,7 @@
 							<div class="value">The getter/setter for the helper folder.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This is the getter and setter for the helper folder. This is the folder where the helper classes should be put in. By default this path is &quot;helpers&quot;. See <a href="/views/cerus/reference/require.html#helper">require.helper</a> for what a helper is.</p>
+				<div class="desc"><p>This is the getter and setter for the helper folder. This is the folder where the helper classes should be put in. By default this path is &quot;helpers&quot;. See <a href="/views/cerus/reference/require.html#helper">require.helper</a> for what a helper is. This path is also fixed (\\ is changed to /) before being used to support all the platforms.</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -215,8 +224,8 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/folders.js.html">folders.js</a>, 
-							<a href="/views/cerus/source/folders.js.html#line30">Line 30</a>
+							<a href="/views/cerus/source/lib/require/folders.js.html">lib/require/folders.js</a>, 
+							<a href="/views/cerus/source/lib/require/folders.js.html#line31">Line 31</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -228,7 +237,7 @@
 							<div class="value">The getter/setter for the library folder.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This is the getter and setter for the libraries folder. This is the folder where the library classes should be put in. By default this path is &quot;libraries&quot;. See <a href="/views/cerus/reference/require.html#library">require.library</a> for what a library is.</p>
+				<div class="desc"><p>This is the getter and setter for the libraries folder. This is the folder where the library classes should be put in. By default this path is &quot;libraries&quot;. See <a href="/views/cerus/reference/require.html#library">require.library</a> for what a library is. This path is also fixed (\\ is changed to /) before being used to support all the platforms.</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -267,8 +276,8 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/folders.js.html">folders.js</a>, 
-							<a href="/views/cerus/source/folders.js.html#line47">Line 47</a>
+							<a href="/views/cerus/source/lib/require/folders.js.html">lib/require/folders.js</a>, 
+							<a href="/views/cerus/source/lib/require/folders.js.html#line49">Line 49</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -280,7 +289,7 @@
 							<div class="value">The getter/setter for the model folder.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This is the getter and setter for the model folder. This is the folder where the model classes should be put in. By default this path is &quot;model&quot;. See <a href="/views/cerus/reference/require.html#model">require.model</a> for what a model is.</p>
+				<div class="desc"><p>This is the getter and setter for the model folder. This is the folder where the model classes should be put in. By default this path is &quot;model&quot;. See <a href="/views/cerus/reference/require.html#model">require.model</a> for what a model is. This path is also fixed (\\ is changed to /) before being used to support all the platforms.</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -315,6 +324,9 @@
 	</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

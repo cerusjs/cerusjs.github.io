@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -102,16 +112,15 @@
 				<div class="reference">
 	<!-- CLASS -->
 	<div class="class">
-		<h1>cerus</h1>
 		<div class="name">
-							.cerus()
+							cerus
 					</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
-					<a href="/views/cerus/source/cerus.js.html">cerus.js</a>, 
-					<a href="/views/cerus/source/cerus.js.html#line3">Line 3</a>
+					<a href="/views/cerus/source/lib/cerus.js.html">lib/cerus.js</a>, 
+					<a href="/views/cerus/source/lib/cerus.js.html#line3">Line 3</a>
 				</div>
 			</div>
 												<div class="item">
@@ -119,7 +128,7 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"><p>This is the main class for the cerus module. It isn&#39;t really a class since it creates an instantiation of the core class and adds some packages to it. This class also adds a root function to cerus.</p>
+		<div class="desc"><p>This is the main class for the cerus module. It isn&#39;t really a class since it creates an instantiation of the core class and adds some plugins to the core. This class also adds a root function to cerus and some of the plugins that are added can also be found in this package.</p>
 </div>
 			</div>
 
@@ -135,7 +144,7 @@
 					<div class="col a4">
 						<a href="/views/cerus/reference/cerus.html#root">root</a>
 					</div>
-					<div class="col a8"><p>This is a setter and getter for the project&#39;s root. By default this root is a fixed version of process.cwd(). The fix that is applied is replacing all &#39;\&#39; with &#39;/&#39; to support all platforms. The default root also contains a slash at the end. You can change the root by adding the root parameter.</p>
+					<div class="col a8"><p>This is the setter and getter for the project&#39;s root location. By default this root is a fixed version of process.cwd(). The fix that is applied is replacing all &#39;\&#39; with &#39;/&#39; to add support all platforms. The default root also contains a slash at the end to let every platform know it is definitely a folder.</p>
 </div>
 				</div>
 					</div>
@@ -152,8 +161,8 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/cerus.js.html">cerus.js</a>, 
-							<a href="/views/cerus/source/cerus.js.html#line17">Line 17</a>
+							<a href="/views/cerus/source/lib/cerus.js.html">lib/cerus.js</a>, 
+							<a href="/views/cerus/source/lib/cerus.js.html#line18">Line 18</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -161,7 +170,7 @@
 						<div class="value">public</div>
 					</div>
 																																																						</div>
-				<div class="desc"><p>This is a setter and getter for the project&#39;s root. By default this root is a fixed version of process.cwd(). The fix that is applied is replacing all &#39;\&#39; with &#39;/&#39; to support all platforms. The default root also contains a slash at the end. You can change the root by adding the root parameter.</p>
+				<div class="desc"><p>This is the setter and getter for the project&#39;s root location. By default this root is a fixed version of process.cwd(). The fix that is applied is replacing all &#39;\&#39; with &#39;/&#39; to add support all platforms. The default root also contains a slash at the end to let every platform know it is definitely a folder.</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -204,6 +213,9 @@
 	</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -116,7 +126,6 @@
 				<div class="reference">
 	<!-- CLASS -->
 	<div class="class">
-		<h1>request.remote</h1>
 		<div class="name">
 							request.remote()
 					</div>
@@ -124,8 +133,8 @@
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
-					<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
-					<a href="/views/cerus-router/source/request.js.html#line502">Line 502</a>
+					<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+					<a href="/views/cerus-router/source/lib/request.js.html#line502">Line 502</a>
 				</div>
 			</div>
 												<div class="item">
@@ -149,20 +158,19 @@
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.remote.html#address">address</a>
 					</div>
-					<div class="col a8"><p>This function will return the IP address used by the client.</p>
-</div>
+					<div class="col a8">Returns the IP used by the client.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.remote.html#port">port</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the port used by the client.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.remote.html#family">family</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the family of the IP used by the client.</div>
 				</div>
 					</div>
 	</div>
@@ -178,26 +186,40 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
-							<a href="/views/cerus-router/source/request.js.html#line513">Line 513</a>
+							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+							<a href="/views/cerus-router/source/lib/request.js.html#line513">Line 513</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the IP used by the client.</div>
+						</div>
+																			</div>
 				<div class="desc"><p>This function will return the IP address used by the client.</p>
 </div>
 													<div class="examples">
 						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// inside a route handling function</span>
-req.remote().address();
-<span class="hljs-comment">// -&gt; will return an ip address</span>
+													<div class="example"><pre><code class="hljs javascript">req.remote().address();
+<span class="hljs-comment">// -&gt; will return the client IP</span>
 </code></pre>
 </div>
 											</div>
-																			</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The IP used by the client.</div>
+						</div>
+					</div>
+							</div>
 					<div id="port" class="function">
 				<div class="name">
 					.port()
@@ -206,17 +228,40 @@ req.remote().address();
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
-							<a href="/views/cerus-router/source/request.js.html#line525">Line 525</a>
+							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+							<a href="/views/cerus-router/source/lib/request.js.html#line526">Line 526</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the port used by the client.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the port used by the client.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">req.remote().port();
+<span class="hljs-comment">// -&gt; will return the client port</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The port used by the client.</div>
+						</div>
+					</div>
+							</div>
 					<div id="family" class="function">
 				<div class="name">
 					.family()
@@ -225,21 +270,47 @@ req.remote().address();
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus-router/source/request.js.html">request.js</a>, 
-							<a href="/views/cerus-router/source/request.js.html#line532">Line 532</a>
+							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+							<a href="/views/cerus-router/source/lib/request.js.html#line539">Line 539</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the family of the IP used by the client.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the family of the IP that was returned by the client.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">req.remote().family();
+<span class="hljs-comment">// -&gt; will return the family of the client IP</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The family of the IP used by the client.</div>
+						</div>
+					</div>
+							</div>
 		
 	</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

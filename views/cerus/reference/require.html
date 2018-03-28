@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -102,7 +112,6 @@
 				<div class="reference">
 	<!-- CLASS -->
 	<div class="class">
-		<h1>require</h1>
 		<div class="name">
 							.require()
 					</div>
@@ -110,8 +119,8 @@
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
-					<a href="/views/cerus/source/require.js.html">require.js</a>, 
-					<a href="/views/cerus/source/require.js.html#line4">Line 4</a>
+					<a href="/views/cerus/source/lib/require.js.html">lib/require.js</a>, 
+					<a href="/views/cerus/source/lib/require.js.html#line4">Line 4</a>
 				</div>
 			</div>
 												<div class="item">
@@ -119,7 +128,7 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"><p>This class is used to easily require models, helpers and libraries. These class types are an important part of the cerus-ecosystem. When requiring a new class it is also cached to ensure higher loading speeds. You can also set the folder where the classes are loaded from.</p>
+		<div class="desc"><p>This class is used to easily require models, helpers and libraries. These class types are an important part of the cerus-ecosystem. Each type is explained in the corresponding function. When requiring a new class it is also cached to ensure higher loading speeds. You can also set the folder where the classes are loaded from.</p>
 </div>
 			</div>
 
@@ -147,7 +156,7 @@
 					<div class="col a4">
 						<a href="/views/cerus/reference/require.html#library">library</a>
 					</div>
-					<div class="col a8">Loads a library class.</div>
+					<div class="col a8">Loads a library.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
@@ -169,8 +178,8 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/require.js.html">require.js</a>, 
-							<a href="/views/cerus/source/require.js.html#line19">Line 19</a>
+							<a href="/views/cerus/source/lib/require.js.html">lib/require.js</a>, 
+							<a href="/views/cerus/source/lib/require.js.html#line20">Line 20</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -182,7 +191,7 @@
 							<div class="value">Returns the folders class.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This function return the folders class for this module. With this class you can set the folders where the helpers, models and libraries are loaded from.</p>
+				<div class="desc"><p>This function returns the folders class for this module. With this class you can set the folders where the helpers, models and libraries are loaded from.</p>
 </div>
 																									<div class="return">
 						<h3>Returns</h3>
@@ -204,8 +213,8 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/require.js.html">require.js</a>, 
-							<a href="/views/cerus/source/require.js.html#line30">Line 30</a>
+							<a href="/views/cerus/source/lib/require.js.html">lib/require.js</a>, 
+							<a href="/views/cerus/source/lib/require.js.html#line31">Line 31</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -217,7 +226,7 @@
 							<div class="value">Loads a helper class.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This function loads helpers for you. A helper is class that contains functions that help you with a certain job. For more information about helpers: read the tutorial about it. The helper that is loaded is specified by it&#39;s name. When a helper is loaded for a second time it will load faster since it is cached. The name can also be an absolute path if you don&#39;t want to use the default routing. You can change the name of the folder where the helpers should be stored with .folders().helpers(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly: e.g. cerus.helper().</p>
+				<div class="desc"><p>This function loads helpers for you. A helper is class that contains functions that help you with a certain job. More information about helpers can be found in the tutorial about it. The helper that is loaded is specified by it&#39;s name. When a helper is loaded for a second time it will load faster since the class is cached when it&#39;s first loaded. The name can also be an absolute path if you don&#39;t want to use the default routing. You can change the name of the folder where helper classes should be stored with .folders().helpers(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly using cerus.helper(). A helper class differs from a model since the helper is initialized when it&#39;s first loaded and a model is returned uninitialized.</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -257,7 +266,7 @@ cerus.autoroute().helper(<span class="hljs-string">"D:\\project\\example"</span>
 						</div>
 						<div class="item">
 							<div class="key">Description</div>
-							<div class="value">The specified (initialized) class.</div>
+							<div class="value">The specified (initialized) helper class.</div>
 						</div>
 					</div>
 							</div>
@@ -269,8 +278,8 @@ cerus.autoroute().helper(<span class="hljs-string">"D:\\project\\example"</span>
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/require.js.html">require.js</a>, 
-							<a href="/views/cerus/source/require.js.html#line72">Line 72</a>
+							<a href="/views/cerus/source/lib/require.js.html">lib/require.js</a>, 
+							<a href="/views/cerus/source/lib/require.js.html#line75">Line 75</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -279,10 +288,10 @@ cerus.autoroute().helper(<span class="hljs-string">"D:\\project\\example"</span>
 					</div>
 																																														<div class="item">
 							<div class="key">Summary:</div>
-							<div class="value">Loads a library class.</div>
+							<div class="value">Loads a library.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This function is used to load libraries. A library is often a third-party class that you need to use. For more information about libraries you can read the tutorial about it. What library is loaded can be specified with the name parameter. When loading a library for a second time it&#39;ll load faster since libraries are cached. You can also use an absolute path if you don&#39;t want to use the default routing. You can change the name of the folder where the libraries should be stored with .folders().libraries(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly: e.g. cerus.library().</p>
+				<div class="desc"><p>This function is used to load libraries. In CerusJS a library is a third-party class. For more information about libraries you can read the tutorial about it. You can specify the library that is loaded using the name parameter. When loading a library for a second time it&#39;ll load faster since libraries are cached when they&#39;re first loaded. You can also use an absolute path if you don&#39;t want to use the default routing. You can change the name of the folder where the libraries should be stored with .folders().libraries(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly using cerus.library().</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -322,7 +331,7 @@ cerus.autoroute().library(<span class="hljs-string">"D:\\project\\example"</span
 						</div>
 						<div class="item">
 							<div class="key">Description</div>
-							<div class="value">The specified class.</div>
+							<div class="value">The specified library.</div>
 						</div>
 					</div>
 							</div>
@@ -334,8 +343,8 @@ cerus.autoroute().library(<span class="hljs-string">"D:\\project\\example"</span
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/require.js.html">require.js</a>, 
-							<a href="/views/cerus/source/require.js.html#line114">Line 114</a>
+							<a href="/views/cerus/source/lib/require.js.html">lib/require.js</a>, 
+							<a href="/views/cerus/source/lib/require.js.html#line117">Line 117</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -347,7 +356,7 @@ cerus.autoroute().library(<span class="hljs-string">"D:\\project\\example"</span
 							<div class="value">Loads a model class.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>With this function you can load a model. A model is just like MVC a class that is used for storing (and sometimes loading) data. For more information about models read the tutorial that is written about it. The model you want to load is specified with it&#39;s name. When the model is loaded for a second time it will be loaded faster since it is cached. Just like the other methods you can use an absolute path when you don&#39;t want to use the default routing. You can also change the name of the folder where the models should be stored with .folders().models(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly: e.g. cerus.model().</p>
+				<div class="desc"><p>With this function you can load a model. A model is, just like MVC, a class that is used for storing (and sometimes loading) data. For more information about models you can read the tutorial that is written about it. You can specify the model you want to load using the name parameter. When the model is loaded for a second time it will be loaded faster since when it&#39;s loaded first it is cached. Just like the other methods you can use an absolute path when you don&#39;t want to use the default routing. You can also change the name of the folder where the model classes should be stored with .folders().models(). The path is fixed (\\ is changed to /) before it is used to ensure support for all platforms. This function can also be called directly using cerus.model().</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -387,7 +396,7 @@ cerus.autoroute().model(<span class="hljs-string">"D:\\project\\example"</span>)
 						</div>
 						<div class="item">
 							<div class="key">Description</div>
-							<div class="value">The specified class.</div>
+							<div class="value">The specified model class.</div>
 						</div>
 					</div>
 							</div>
@@ -395,6 +404,9 @@ cerus.autoroute().model(<span class="hljs-string">"D:\\project\\example"</span>)
 	</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

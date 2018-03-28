@@ -14,7 +14,7 @@ body {
   .overlay.closed {
     background: rgba(0, 0, 0, 0); }
   .overlay.opened {
-    background: rgba(0, 0, 0, 0.5); }
+    background: rgba(0, 0, 0, 0.7); }
   @media screen and (min-width: 720px) {
     .overlay {
       display: none; } }
@@ -33,11 +33,10 @@ body {
   .sidebar.opened {
     left: 0; }
   .sidebar.closed {
-    left: -300px; }
+    left: -302px; }
   .sidebar::-webkit-scrollbar {
     width: 7px;
-    position: relative;
-    right: 1px; }
+    position: relative; }
   .sidebar::-webkit-scrollbar-thumb {
     background: #566075; }
   .sidebar::-webkit-scrollbar-track {
@@ -46,7 +45,7 @@ body {
     .sidebar {
       width: 250px; }
       .sidebar.closed {
-        left: -250px; } }
+        left: -352px; } }
   .sidebar .header {
     background: #111621;
     color: #FFFFFF;
@@ -67,7 +66,6 @@ body {
           cursor: pointer; }
   .sidebar .links .item {
     padding: 25px 0;
-    border-top: 1px solid #566075;
     transition: 0.3s all; }
     .sidebar .links .item .item-title {
       -webkit-user-select: none;
@@ -77,14 +75,17 @@ body {
       user-select: none;
       font-family: "Open Sans";
       font-weight: 800;
-      font-size: 18px;
+      font-size: 16px;
       margin: 0 25px;
-      padding: 5px 15px; }
+      padding: 5px 15px;
+      position: relative; }
       .sidebar .links .item .item-title i {
-        float: right;
         font-size: 16px;
         line-height: 24px;
-        color: #FFFFFF; }
+        color: #FFFFFF;
+        position: absolute;
+        right: 15px;
+        margin-left: 5px; }
       .sidebar .links .item .item-title:hover {
         cursor: pointer; }
     .sidebar .links .item .item-links {
@@ -94,18 +95,20 @@ body {
       transition: 0.3s height;
       font-family: "Open Sans";
       font-weight: 400;
-      font-size: 15px;
-      margin: 0 25px;
+      font-size: 14px;
+      margin: 3px 25px 0 25px;
       padding: 0 10px;
       list-style-type: none;
-      transition: 0.3s all; }
+      transition: 0.3s all;
+      line-height: 14px; }
       .sidebar .links .item .item-links li {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         -o-user-select: none;
         user-select: none;
-        height: 24px; }
+        height: 22px;
+        line-height: 22px; }
         .sidebar .links .item .item-links li a {
           color: #566075;
           text-decoration: none;
@@ -121,12 +124,43 @@ body {
     .sidebar .links .item.opened {
       background: #111621; }
       .sidebar .links .item.opened .item-links {
-        max-height: 500px;
+        max-height: 100px;
         border: none; }
     .sidebar .links .item.closed .item-links {
       max-height: 0; }
-    .sidebar .links .item:last-child {
-      border-bottom: 1px solid #566075; }
+    @media screen and (max-width: 480px) {
+      .sidebar .links .item {
+        padding: 20px 0; }
+        .sidebar .links .item .item-title {
+          padding: 0; }
+          .sidebar .links .item .item-title i {
+            right: 0; }
+        .sidebar .links .item .item-links {
+          padding: 0; }
+          .sidebar .links .item .item-links li {
+            height: 20px;
+            line-height: 20px; } }
+
+.scroll {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.2s all;
+  cursor: pointer;
+  opacity: 0; }
+  .scroll .scroll-image {
+    background: url(/assets/gfx/scroll_top_icon.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%; }
+  .scroll.visible {
+    visibility: visible;
+    opacity: 1; }
 
 .content {
   transition: 0.5s all;
@@ -138,13 +172,13 @@ body {
     margin-left: 0; }
   .content .inner {
     font-family: "Open Sans";
-    margin: 5px 50px 0;
+    margin: 32px 50px 0;
     font-size: 15px; }
     .content .inner code {
       padding: 12px 18px;
       font-size: 14px; }
     .content .inner pre {
-      margin: 0; }
+      margin: 0 0 15px 0; }
     .content .inner .table {
       width: 100%;
       font-size: 14px; }
@@ -205,9 +239,9 @@ body {
           .content .inner .class h1 {
             margin: 24px 0; } }
       .content .inner .class .name {
-        line-height: 18px;
+        line-height: 22px;
         padding: 12px 24px;
-        font-size: 16px;
+        font-size: 20px;
         font-family: monospace;
         color: #FFFFFF;
         background: #111621; }
@@ -220,6 +254,9 @@ body {
             position: absolute;
             right: 14px;
             top: 8px; }
+        @media screen and (max-width: 480px) {
+          .content .inner .class .name {
+            font-size: 16px; } }
       .content .inner .class .list {
         border-left: 2px solid #c4c9d3;
         padding-left: 10px;
@@ -339,10 +376,15 @@ body {
           background: #222939; }
     @media screen and (max-width: 1080px) {
       .content .inner {
-        margin: 5px 25px 0; } }
+        margin: 25px 25px 0; }
+        .content .inner .class, .content .inner .summary {
+          margin-bottom: 32px; }
+        .content .inner .functions .function {
+          margin-bottom: 32px;
+          padding-bottom: 32px; } }
     @media screen and (max-width: 480px) {
       .content .inner {
-        margin: 5px 10px 0; } }
+        margin: 20px 15px 0; } }
   @media screen and (max-width: 720px) {
     .content {
       margin-left: 0 !important; } }
@@ -375,18 +417,21 @@ body {
     border: none;
     border-bottom: 2px solid #111621;
     color: #111621;
-    padding: 3px 0;
-    height: 26px;
+    padding: 3px 0 6px 0;
+    height: 29px;
     font-size: 13px;
     font-family: "Open Sans";
     cursor: pointer;
     position: relative;
-    top: -4px; }
+    top: -5px; }
     .title .list:focus {
       outline: none; }
     @media screen and (max-width: 480px) {
       .title .list {
         max-width: 140px; } }
+    @media screen and (max-width: 380px) {
+      .title .list {
+        max-width: 120px; } }
   .title .left {
     float: left; }
   .title .right {

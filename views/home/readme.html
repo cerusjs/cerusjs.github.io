@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -94,23 +104,29 @@
 			<div class="inner">
 				<div class="markdown-body">
 	<p><img src="https://i.imgur.com/owrQCO9.png" alt="alt text" title="CerusJS"><br>
-Welcome to the home page for CerusJS! CerusJS is a modular, but even more important, understandable NodeJS framework. The whole framework is designed to be easy to use and learn. Since all names are styled the same and a similar styling is used all across the framework using most functions is almost intuitive. As said before CerusJS is also modular. This means every section is split up in a seperate module to not only speed up the loading process but also to improve usability. Having said that everything is still open source and accessable from a <a href="https://github.com/cerusjs">single user</a>. This &quot;module&quot; contains all the basic tutorials you need to start using CerusJS. For more detailed tutorials and the full reference per module you can just click on that module.</p>
+Welcome to the home page for CerusJS! CerusJS is a modular, and even more important, understandable NodeJS framework. The whole framework is designed to be easy to learn and use. Since all names are styled the same and a similar styling is used all across the framework all plugins and their modules will be intuitive to use.
+Since CerusJS is also modular, loading times can be decreased drastically since you only use and load the parts you need. This modularity will also improve the usability among other things. Having said that, everything is still open source and available under a <a href="https://github.com/cerusjs">single user</a>. This information &quot;module&quot; contains all the basic tutorials you need when starting out with CerusJS. For more detailed tutorials and the full reference per module you can just click on that module.</p>
 <h2 id="installation">Installation</h2>
-<p>Installing CerusJS is pretty easy since it is available through <a href="https://www.npmjs.com/">NPM</a>, but before reading further please make sure you have NodeJS as well as NPM installed. When starting out it is recommended to start with the cerus module. It contains all the basic modules you&#39;ll need to create a server and other things. From that point installing and using other modules it will be as easy as ABC. Use the following command to install the cerus module:</p>
+<p>Installing CerusJS is pretty easy since it is available through <a href="https://www.npmjs.com/">NPM</a>, but before reading further please make sure you have NodeJS (which also installs NPM by default). When starting out it is recommended to start with the cerus module. It contains all the basic modules you&#39;ll need to create a server and other things. From that point installing and using other modules it will be as easy as ABC. Use the following command to install the cerus module:</p>
 <pre><code class="hljs bash"><span class="hljs-comment"># Installs the latest version of CerusJS.</span>
 $ npm install cerus
+</code></pre>
+<h2 id="a-short-example">A short example</h2>
+<p>The following example will show how the create and start a server:</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> cerus = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus"</span>)();
+cerus.server().start();
 </code></pre>
 <h2 id="modules">Modules</h2>
 <p>This is a list of all the official modules. Some modules can be an abstract layer, so they will need a driver to be used with it. Read more about this <a href="#">here</a>.</p>
 <ul>
 <li><a href="/views/cerus/readme.html">cerus</a>: This is the main module, meaning it contains all the starter modules needed to create things like a basic server. It also contains some utils for easily routing files and for requiring files.</li>
-<li><a href="/views/cerus-core/readme.html">cerus-core</a>: This is the core for CerusJS. It has only one function: add other modules to the cerus instance. AKA: this module stands in the middle of it all.</li>
+<li><a href="/views/cerus-core/readme.html">cerus-core</a>: This is the core for CerusJS. It has only one function: to add other modules to the cerus instance. This basically means this module will stand in the middle of it all.</li>
 <li><a href="/views/cerus-server/readme.html">cerus-server</a>: With the cerus-server module you can create basic HTTP servers. It also contains server-related functions to help you. Warning: this will be replaced by another module in the future, meaning it won&#39;t be supported anymore.</li>
 <li><a href="/views/cerus-router/readme.html">cerus-router</a>: This is the router module, with it you can route incoming HTTP requests based on the requested URL. It will also build the request and response class that come with the request.</li>
 <li><a href="/views/cerus-api/readme.html">cerus-api</a>: With the cerus-api module you can route RESTful (JSON) requests. It contains a custom response class that will be used to append the JSON response to.</li>
 <li><a href="/views/cerus-promise/readme.html">cerus-promise</a>: This is the custom promise for CerusJS. It is build from scratch to not only support the basic promise methods, but to also include easy stacking and custom events.</li>
 <li><a href="/views/cerus-fs/readme.html">cerus-fs</a>: With the cerus-fs module you can easily interact with your file system. It is split in to groups: files and folders, which make it easier to use and they each contain their own functions.</li>
-<li><a href="/views/cerus-compression/readme.html">cerus-compression</a>: This module is used to easy the compression proces. You can automatically compress data with it or just create a stream to compress at will.</li>
+<li><a href="/views/cerus-compression/readme.html">cerus-compression</a>: This module is used to easy the compression process. You can automatically compress data with it or just create a stream to compress at will.</li>
 <li><a href="/views/cerus-uuid/readme.html">cerus-uuid</a>: The cerus-uuid module is used to work with UUIDs. With it you can generate truly unique UUIDs.</li>
 <li><a href="/views/cerus-ejs/readme.html">cerus-ejs</a>: This is the EJS module for CerusJS. It is used to parse EJS files and even has a custom including system.</li>
 <li><a href="/views/cerus-sessions/readme.html">cerus-sessions</a>: With this module a router can create it&#39;s own sessions. These sessions can be used to store client information in a safe way.</li>
@@ -118,11 +134,6 @@ $ npm install cerus
 <li><a href="/views/cerus-hash/readme.html">cerus-hash</a>: With the cerus-hash module you can encrypt/decrypt data, hash data and it even includes helpers for peer to peer encryption.</li>
 <li><a href="/views/cerus-request/readme.html">cerus-request</a>: The cerus-request module is a custom request module you can use to check if your server is behaving correctly.</li>
 </ul>
-<h2 id="a-short-example">A short example</h2>
-<p>Here follows a short example that will create and start a basic server.</p>
-<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> cerus = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus"</span>)();
-cerus.server().start();
-</code></pre>
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://www.npmjs.com/~cerusjs">NPM</a></li>
@@ -130,10 +141,13 @@ cerus.server().start();
 <li><a href="https://cerusjs.github.io/">Docs</a></li>
 </ul>
 <h2 id="contributers">Contributers</h2>
-<p>The author of CerusJS is <a href="https://github.com/JortHub">JortHub</a>.</p>
+<p>The author of CerusJS is <a href="https://github.com/JortvD">JortvD</a>.</p>
 
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

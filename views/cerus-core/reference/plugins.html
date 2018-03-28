@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -99,7 +109,6 @@
 				<div class="reference">
 	<!-- CLASS -->
 	<div class="class">
-		<h1>plugins</h1>
 		<div class="name">
 							.plugins()
 					</div>
@@ -107,8 +116,8 @@
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
-					<a href="/views/cerus-core/source/plugins.js.html">plugins.js</a>, 
-					<a href="/views/cerus-core/source/plugins.js.html#line1">Line 1</a>
+					<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+					<a href="/views/cerus-core/source/lib/plugins.js.html#line1">Line 1</a>
 				</div>
 			</div>
 												<div class="item">
@@ -116,18 +125,18 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"><p>With this class you can manage your plugins. A plugin is an object that contains functions that are added to the cerus core. This means that with this class you can expand CerusJS&#39; functionality.</p>
+		<div class="desc"><p>With this class you can manage your plugins. A plugin is an object that contains functions that are added to the cerus core. This means that with this class you can manage the plugins that will expand CerusJS&#39; functionality.</p>
 </div>
 					<div class="examples">
 				<h3>Examples</h3>
 									<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// this is a basic example of adding a plugin</span>
-<span class="hljs-comment">// plugin -&gt; {</span>
-<span class="hljs-comment">//   name: "example",</span>
-<span class="hljs-comment">//   version: "0.0.1",</span>
-<span class="hljs-comment">//   example: function() {</span>
-<span class="hljs-comment">//     return "example";</span>
-<span class="hljs-comment">//   }</span>
-<span class="hljs-comment">// }</span>
+<span class="hljs-keyword">var</span> plugin = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"example"</span>,
+  <span class="hljs-attr">version</span>: <span class="hljs-string">"0.0.1"</span>,
+  <span class="hljs-attr">example</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"example"</span>;
+  }
+};
 
 cerus.plugins().add(plugin); <span class="hljs-comment">// or cerus.use(plugin);</span>
 <span class="hljs-comment">// -&gt; this will add the specified plugin</span>
@@ -191,8 +200,8 @@ cerus.example();
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus-core/source/plugins.js.html">plugins.js</a>, 
-							<a href="/views/cerus-core/source/plugins.js.html#line28">Line 28</a>
+							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+							<a href="/views/cerus-core/source/lib/plugins.js.html#line28">Line 28</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -246,28 +255,28 @@ cerus.example();
 					</div>
 													<div class="examples">
 						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// plugin -&gt; {</span>
-<span class="hljs-comment">//   name: "example",</span>
-<span class="hljs-comment">//   version: "0.0.1",</span>
-<span class="hljs-comment">//   example: function() {</span>
-<span class="hljs-comment">//     return "example";</span>
-<span class="hljs-comment">//   }</span>
-<span class="hljs-comment">// }</span>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> plugin = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"example"</span>,
+  <span class="hljs-attr">version</span>: <span class="hljs-string">"0.0.1"</span>,
+  <span class="hljs-attr">example</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"example"</span>;
+  }
+};
 
 cerus.plugins().add(plugin);
 <span class="hljs-comment">// -&gt; this will add the specified plugin</span>
 </code></pre>
 </div>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// plugin -&gt; {</span>
-<span class="hljs-comment">//   name: "example",</span>
-<span class="hljs-comment">//   version: "0.0.1",</span>
-<span class="hljs-comment">//   _init: function() {</span>
-<span class="hljs-comment">//     console.log("initialized the plugin");</span>
-<span class="hljs-comment">//   }</span>
-<span class="hljs-comment">//   example: function() {</span>
-<span class="hljs-comment">//     return "example";</span>
-<span class="hljs-comment">//   }</span>
-<span class="hljs-comment">// }</span>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> plugin = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">"example"</span>,
+  <span class="hljs-attr">version</span>: <span class="hljs-string">"0.0.1"</span>,
+  <span class="hljs-attr">_init</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"initialized the plugin"</span>);
+  },
+  <span class="hljs-attr">example</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"example"</span>;
+  }
+};
 
 cerus.plugins().add(plugin);
 <span class="hljs-comment">// -&gt; this will add the specified plugin and call the _init function.</span>
@@ -283,8 +292,8 @@ cerus.plugins().add(plugin);
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus-core/source/plugins.js.html">plugins.js</a>, 
-							<a href="/views/cerus-core/source/plugins.js.html#line154">Line 154</a>
+							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+							<a href="/views/cerus-core/source/lib/plugins.js.html#line153">Line 153</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -332,8 +341,8 @@ cerus.plugins().remove(<span class="hljs-string">"example"</span>);
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus-core/source/plugins.js.html">plugins.js</a>, 
-							<a href="/views/cerus-core/source/plugins.js.html#line201">Line 201</a>
+							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+							<a href="/views/cerus-core/source/lib/plugins.js.html#line200">Line 200</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -392,8 +401,8 @@ cerus.plugins().has(<span class="hljs-string">"example"</span>);
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus-core/source/plugins.js.html">plugins.js</a>, 
-							<a href="/views/cerus-core/source/plugins.js.html#line223">Line 223</a>
+							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+							<a href="/views/cerus-core/source/lib/plugins.js.html#line222">Line 222</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -416,8 +425,8 @@ cerus.plugins().has(<span class="hljs-string">"example"</span>);
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus-core/source/plugins.js.html">plugins.js</a>, 
-							<a href="/views/cerus-core/source/plugins.js.html#line233">Line 233</a>
+							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+							<a href="/views/cerus-core/source/lib/plugins.js.html#line232">Line 232</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -436,6 +445,9 @@ cerus.plugins().has(<span class="hljs-string">"example"</span>);
 	</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -88,11 +98,11 @@
 	</div>
 	<div class="right">
 				<select class="list" onchange="title_('source', 'cerus').open(this)">
-						<option value="autoroute.js.html" undefined>autoroute.js</option>
-						<option value="folders.js.html" selected>folders.js</option>
-						<option value="cerus.js.html" undefined>cerus.js</option>
-						<option value="require.js.html" undefined>require.js</option>
-						<option value="folders.js.html" selected>folders.js</option>
+						<option value="lib/autoroute.js.html" undefined>lib/autoroute.js.html</option>
+						<option value="lib/autoroute/folders.js.html" undefined>lib/autoroute/folders.js.html</option>
+						<option value="lib/cerus.js.html" undefined>lib/cerus.js.html</option>
+						<option value="lib/require.js.html" undefined>lib/require.js.html</option>
+						<option value="lib/require/folders.js.html" selected>lib/require/folders.js.html</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
@@ -100,7 +110,7 @@
 </div>
 			<div class="inner">
 				<div class="source">
-	<h1>folders.js</h1>
+	<h1>lib/require/folders.js</h1>
 	<div class="lines">
 					<div class="line" id="line1">
 				<div class="number">1.</div>
@@ -164,211 +174,226 @@
 			</div>
 					<div class="line" id="line16">
 				<div class="number">16.</div>
-				<pre class="content"><span class="hljs-comment">	 * what a helper is.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * what a helper is. This path is also fixed (\\\\ is changed to /) before being used to </span></pre>
 			</div>
 					<div class="line" id="line17">
 				<div class="number">17.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the helper folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * support all the platforms.</span></pre>
 			</div>
 					<div class="line" id="line18">
 				<div class="number">18.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the helpers folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the helper folder.</span></pre>
 			</div>
 					<div class="line" id="line19">
 				<div class="number">19.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the helpers folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the helpers folder.</span></pre>
 			</div>
 					<div class="line" id="line20">
 				<div class="number">20.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function helpers</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the helpers folder.</span></pre>
 			</div>
 					<div class="line" id="line21">
 				<div class="number">21.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function helpers</span></pre>
 			</div>
 					<div class="line" id="line22">
 				<div class="number">22.</div>
-				<pre class="content">	helpers(path) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line23">
 				<div class="number">23.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">	helpers(path) {</pre>
 			</div>
 					<div class="line" id="line24">
 				<div class="number">24.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._helpers = path;</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line25">
 				<div class="number">25.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._helpers = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line26">
 				<div class="number">26.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line27">
 				<div class="number">27.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._helpers;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line28">
 				<div class="number">28.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._helpers;</pre>
 			</div>
 					<div class="line" id="line29">
 				<div class="number">29.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line30">
 				<div class="number">30.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line31">
 				<div class="number">31.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the getter and setter for the libraries folder. This is the folder where the library </span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line32">
 				<div class="number">32.</div>
-				<pre class="content"><span class="hljs-comment">	 * classes should be put in. By default this path is "libraries". See {@link require.library} </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the getter and setter for the libraries folder. This is the folder where the library </span></pre>
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content"><span class="hljs-comment">	 * for what a library is.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * classes should be put in. By default this path is "libraries". See {@link require.library} </span></pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the library folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * for what a library is. This path is also fixed (\\\\ is changed to /) before being used to </span></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the libraries folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * support all the platforms.</span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the libraries folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the library folder.</span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function libraries</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the libraries folder.</span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the libraries folder.</span></pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content">	libraries(path) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function libraries</span></pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._libraries = path;</pre>
+				<pre class="content">	libraries(path) {</pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._libraries = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._libraries;</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._libraries;</pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the getter and setter for the model folder. This is the folder where the model </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line49">
 				<div class="number">49.</div>
-				<pre class="content"><span class="hljs-comment">	 * classes should be put in. By default this path is "model". See {@link require.model} for</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line50">
 				<div class="number">50.</div>
-				<pre class="content"><span class="hljs-comment">	 * what a model is.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the getter and setter for the model folder. This is the folder where the model </span></pre>
 			</div>
 					<div class="line" id="line51">
 				<div class="number">51.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the model folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * classes should be put in. By default this path is "model". See {@link require.model} for</span></pre>
 			</div>
 					<div class="line" id="line52">
 				<div class="number">52.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the models folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * what a model is. This path is also fixed (\\\\ is changed to /) before being used to </span></pre>
 			</div>
 					<div class="line" id="line53">
 				<div class="number">53.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the models folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * support all the platforms.</span></pre>
 			</div>
 					<div class="line" id="line54">
 				<div class="number">54.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function models</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the model folder.</span></pre>
 			</div>
 					<div class="line" id="line55">
 				<div class="number">55.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the models folder.</span></pre>
 			</div>
 					<div class="line" id="line56">
 				<div class="number">56.</div>
-				<pre class="content">	models(path) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the models folder.</span></pre>
 			</div>
 					<div class="line" id="line57">
 				<div class="number">57.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function models</span></pre>
 			</div>
 					<div class="line" id="line58">
 				<div class="number">58.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._models = path;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line59">
 				<div class="number">59.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	models(path) {</pre>
 			</div>
 					<div class="line" id="line60">
 				<div class="number">60.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line61">
 				<div class="number">61.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._models;</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._models = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line62">
 				<div class="number">62.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line63">
 				<div class="number">63.</div>
-				<pre class="content">}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line64">
 				<div class="number">64.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._models;</pre>
 			</div>
 					<div class="line" id="line65">
 				<div class="number">65.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = folders;</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line66">
 				<div class="number">66.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line67">
+				<div class="number">67.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line68">
+				<div class="number">68.</div>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = folders;</pre>
+			</div>
+					<div class="line" id="line69">
+				<div class="number">69.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>

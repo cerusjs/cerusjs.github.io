@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -102,7 +112,6 @@
 				<div class="reference">
 	<!-- CLASS -->
 	<div class="class">
-		<h1>autoroute</h1>
 		<div class="name">
 							.autoroute()
 					</div>
@@ -110,8 +119,8 @@
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
-					<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
-					<a href="/views/cerus/source/autoroute.js.html#line4">Line 4</a>
+					<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
+					<a href="/views/cerus/source/lib/autoroute.js.html#line4">Line 4</a>
 				</div>
 			</div>
 												<div class="item">
@@ -119,7 +128,7 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"><p>This is the autoroute class. It is used to easily route views, assets and your favicon. If you don&#39;t know what these look at each of the functions or at the tutorials for this class.</p>
+		<div class="desc"><p>This is the autoroute class. It is used to easily route views, assets and your favicon. If you don&#39;t know what these are you can take look at each of the functions or at the tutorials for this class.</p>
 </div>
 			</div>
 
@@ -169,8 +178,8 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
-							<a href="/views/cerus/source/autoroute.js.html#line17">Line 17</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
+							<a href="/views/cerus/source/lib/autoroute.js.html#line18">Line 18</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -192,7 +201,7 @@
 						</div>
 						<div class="item">
 							<div class="key">Description</div>
-							<div class="value">The folders class.</div>
+							<div class="value">The autoroute.folders class.</div>
 						</div>
 					</div>
 							</div>
@@ -204,8 +213,8 @@
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
-							<a href="/views/cerus/source/autoroute.js.html#line28">Line 28</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
+							<a href="/views/cerus/source/lib/autoroute.js.html#line29">Line 29</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -264,8 +273,8 @@ cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
-							<a href="/views/cerus/source/autoroute.js.html#line77">Line 77</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
+							<a href="/views/cerus/source/lib/autoroute.js.html#line78">Line 78</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -277,7 +286,7 @@ cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
 							<div class="value">Loads and routes a view.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This function is used to easily route a view. This is often a .html file, but can be generalized as a markup file. If you want to learn more about views, please read the tutorial about it. By default views are stored in the views folder. You can change this with the .folders().views() function or by using an absolute path. When your path isn&#39;t absolute it is prefixed by the root and the views folder. If it is absolute the specified path won&#39;t be prefixed. All paths do however get fixed, all \ are changed to a / to support all platforms. The files also get suffixed by default. The suffix can be removed or changed with the ext parameter. The view will be routed to specified url. The promise this function returns emits an file event the view was loaded, a request event when the view was requested and a finish event when the view has finished routing.</p>
+				<div class="desc"><p>This function is used to easily route a view. Views are often .html files, but can be generalized as a markup file. If you want to learn more about views you can read the tutorial about it. By default views are stored in the views folder, but you can change this with the .folders().views() function or by using an absolute path. When your path isn&#39;t absolute it is prefixed by the root and the views folder. If it is absolute the specified path won&#39;t be prefixed. All paths do however get fixed, all \ are changed to a / to support all platforms. The files also get suffixed by default. The suffix can be removed or changed with the ext parameter. The view will be routed to specified url. The promise this function returns emits a file event the view was loaded, a request event when the view was requested and a finish event when the view has finished routing.</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -338,8 +347,8 @@ cerus.autoroute().view(<span class="hljs-string">"/home"</span>, <span class="hl
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
-							<a href="/views/cerus/source/autoroute.js.html">autoroute.js</a>, 
-							<a href="/views/cerus/source/autoroute.js.html#line139">Line 139</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
+							<a href="/views/cerus/source/lib/autoroute.js.html#line140">Line 140</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -351,7 +360,7 @@ cerus.autoroute().view(<span class="hljs-string">"/home"</span>, <span class="hl
 							<div class="value">Loads and routes an assets folder.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>With this function you can route assets. Assets are folders containing a certain type of &quot;assets&quot;, e.g. stylesheets, scripts, images, etc. If you want to learn more about how to use assets take a look at the assets tutorial. By default all the assets are stored in the assets folder. You can change this folder with .folder().assets(). You can also use an absolute path. When using an absolute path the default prefix, the root and assets folder, won&#39;t be used. This path is also fixed, \ is changed to /, before being used to support all the platforms. The assets will be routed to /{FOLDER}/{FILE}. You can also override the type that will be send with the request by using the type parameter. This function will a promise that emits the following events: file when a new file is loaded, request when a file has been requested and finish when all files in the folder are loaded and routed.</p>
+				<div class="desc"><p>With this function you can route assets. Assets are folders containing a certain type of &quot;assets&quot;, e.g. stylesheets, scripts, images, etc. If you want to learn more about how to use assets take a look at the assets tutorial. By default all the assets are stored in the assets folder. You can change this folder with .folder().assets(). You can also use an absolute path. When using an absolute path the default prefix, the root and assets folder, won&#39;t be used. This path is also fixed (\\ is changed to /) before being used to support all the platforms. The assets will be routed to /{FOLDER}/{FILE}. You can also override the type that will be send with the request by using the type parameter. This function will a promise that emits the following events: file when a new file is loaded, request when a file has been requested and finish when all files in the folder are loaded and routed.</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -402,6 +411,9 @@ cerus.autoroute().assets(<span class="hljs-string">"css"</span>);
 	</div>
 </div>
 			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
 		</div>
 		<script type="text/javascript" src="/assets/js/script.js"></script>
 	</body>
