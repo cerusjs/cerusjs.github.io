@@ -108,7 +108,15 @@
 	<div class="right">
 				<select class="list" onchange="title_('reference', 'cerus-compression').open(this)">
 						<option value="compression.html" undefined>compression</option>
-						<option value="settings.html" selected>settings</option>
+						<option value="compression.settings.html" selected>compression.settings</option>
+						<option value="compression.constants.html" undefined>compression.constants</option>
+						<option value="compression.constants.flush.html" undefined>compression.constants.flush</option>
+						<option value="compression.constants.codes.html" undefined>compression.constants.codes</option>
+						<option value="compression.constants.level.html" undefined>compression.constants.level</option>
+						<option value="compression.constants.strategy.html" undefined>compression.constants.strategy</option>
+						<option value="compression.constants.windowbits.html" undefined>compression.constants.windowbits</option>
+						<option value="compression.constants.memory.html" undefined>compression.constants.memory</option>
+						<option value="compression.constants.chunk.html" undefined>compression.constants.chunk</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
@@ -119,14 +127,14 @@
 	<!-- CLASS -->
 	<div class="class">
 		<div class="name">
-							.settings()
+							.compression().settings()
 					</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-					<a href="/views/cerus-compression/source/lib/compression.js.html#line201">Line 201</a>
+					<a href="/views/cerus-compression/source/lib/compression.js.html#line261">Line 261</a>
 				</div>
 			</div>
 												<div class="item">
@@ -134,7 +142,8 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"></div>
+		<div class="desc"><p>This is the settings class. With this class you can change the default options that will be used for compressing the data that is in the stream.</p>
+</div>
 			</div>
 
 	<!-- SUMMARY -->
@@ -147,49 +156,49 @@
 			</div>
 							<div class="row">
 					<div class="col a4">
-						<a href="/views/cerus-compression/reference/settings.html#flush">flush</a>
+						<a href="/views/cerus-compression/reference/compression.settings.html#flush">flush</a>
 					</div>
 					<div class="col a8"></div>
 				</div>
 							<div class="row">
 					<div class="col a4">
-						<a href="/views/cerus-compression/reference/settings.html#finish">finish</a>
+						<a href="/views/cerus-compression/reference/compression.settings.html#finish">finish</a>
 					</div>
 					<div class="col a8"></div>
 				</div>
 							<div class="row">
 					<div class="col a4">
-						<a href="/views/cerus-compression/reference/settings.html#chunk">chunk</a>
+						<a href="/views/cerus-compression/reference/compression.settings.html#chunk">chunk</a>
 					</div>
 					<div class="col a8"></div>
 				</div>
 							<div class="row">
 					<div class="col a4">
-						<a href="/views/cerus-compression/reference/settings.html#level">level</a>
+						<a href="/views/cerus-compression/reference/compression.settings.html#level">level</a>
 					</div>
 					<div class="col a8"></div>
 				</div>
 							<div class="row">
 					<div class="col a4">
-						<a href="/views/cerus-compression/reference/settings.html#memory">memory</a>
+						<a href="/views/cerus-compression/reference/compression.settings.html#memory">memory</a>
 					</div>
 					<div class="col a8"></div>
 				</div>
 							<div class="row">
 					<div class="col a4">
-						<a href="/views/cerus-compression/reference/settings.html#strategy">strategy</a>
+						<a href="/views/cerus-compression/reference/compression.settings.html#strategy">strategy</a>
 					</div>
 					<div class="col a8"></div>
 				</div>
 							<div class="row">
 					<div class="col a4">
-						<a href="/views/cerus-compression/reference/settings.html#window">window</a>
+						<a href="/views/cerus-compression/reference/compression.settings.html#windowbits">windowbits</a>
 					</div>
 					<div class="col a8"></div>
 				</div>
 							<div class="row">
 					<div class="col a4">
-						<a href="/views/cerus-compression/reference/settings.html#type">type</a>
+						<a href="/views/cerus-compression/reference/compression.settings.html#type">type</a>
 					</div>
 					<div class="col a8"></div>
 				</div>
@@ -208,7 +217,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line218">Line 218</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line281">Line 281</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -227,7 +236,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line229">Line 229</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line293">Line 293</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -246,7 +255,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line240">Line 240</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line304">Line 304</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -265,7 +274,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line251">Line 251</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line315">Line 315</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -284,7 +293,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line262">Line 262</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line326">Line 326</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -303,7 +312,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line273">Line 273</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line337">Line 337</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -313,16 +322,16 @@
 																																																						</div>
 				<div class="desc"></div>
 																							</div>
-					<div id="window" class="function">
+					<div id="windowbits" class="function">
 				<div class="name">
-					.window()
+					.windowbits()
 				</div>
 				<div class="list">
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line284">Line 284</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line348">Line 348</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -341,7 +350,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line295">Line 295</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line359">Line 359</a>
 						</div>
 					</div>
 																				<div class="item">

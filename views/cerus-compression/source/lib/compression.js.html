@@ -623,67 +623,67 @@
 			</div>
 					<div class="line" id="line127">
 				<div class="number">127.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function end</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will end the compression stream. While ending the stream you can also supply </span></pre>
 			</div>
 					<div class="line" id="line128">
 				<div class="number">128.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * the last data that will be written to the stream. The data you want to write to the stream</span></pre>
 			</div>
 					<div class="line" id="line129">
 				<div class="number">129.</div>
-				<pre class="content">	end(chunk, encoding) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * is specified with the chunk parameter. You can also set the encoding it will be written in</span></pre>
 			</div>
 					<div class="line" id="line130">
 				<div class="number">130.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._stream === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * using the encoding parameter. This function will throw an error when the stream hasn't been</span></pre>
 			</div>
 					<div class="line" id="line131">
 				<div class="number">131.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"there has no stream been opened yet"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * opened yet when this function is called. This function will also return a promise that calls</span></pre>
 			</div>
 					<div class="line" id="line132">
 				<div class="number">132.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * the "ended" event when the stream has succesfully ended and all the data has been flushed.</span></pre>
 			</div>
 					<div class="line" id="line133">
 				<div class="number">133.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line134">
 				<div class="number">134.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content"><span class="hljs-comment">	 * var compression = cerus.compression();</span></pre>
 			</div>
 					<div class="line" id="line135">
 				<div class="number">135.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._stream.end(chunk, encoding, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+				<pre class="content"><span class="hljs-comment">	 * compression.open();</span></pre>
 			</div>
 					<div class="line" id="line136">
 				<div class="number">136.</div>
-				<pre class="content">				event(<span class="hljs-string">"ended"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * compression.end("data");</span></pre>
 			</div>
 					<div class="line" id="line137">
 				<div class="number">137.</div>
-				<pre class="content">			});</pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; this function will write the string "data" to the compression stream end then end the stream</span></pre>
 			</div>
 					<div class="line" id="line138">
 				<div class="number">138.</div>
-				<pre class="content">		});</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Ends the compression stream after writing data.</span></pre>
 			</div>
 					<div class="line" id="line139">
 				<div class="number">139.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String|Buffer} chunk The last data to write to the stream.</span></pre>
 			</div>
 					<div class="line" id="line140">
 				<div class="number">140.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (encoding) The encoding the data will be written in.</span></pre>
 			</div>
 					<div class="line" id="line141">
 				<div class="number">141.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line142">
 				<div class="number">142.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function cork</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function end</span></pre>
 			</div>
 					<div class="line" id="line143">
 				<div class="number">143.</div>
@@ -691,7 +691,7 @@
 			</div>
 					<div class="line" id="line144">
 				<div class="number">144.</div>
-				<pre class="content">	cork() {</pre>
+				<pre class="content">	end(chunk, encoding) {</pre>
 			</div>
 					<div class="line" id="line145">
 				<div class="number">145.</div>
@@ -711,67 +711,67 @@
 			</div>
 					<div class="line" id="line149">
 				<div class="number">149.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._stream.cork();</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line150">
 				<div class="number">150.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._stream.end(chunk, encoding, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line151">
 				<div class="number">151.</div>
-				<pre class="content"></pre>
+				<pre class="content">				event(<span class="hljs-string">"ended"</span>);</pre>
 			</div>
 					<div class="line" id="line152">
 				<div class="number">152.</div>
-				<pre class="content">	<span class="hljs-comment">/** </span></pre>
+				<pre class="content">			});</pre>
 			</div>
 					<div class="line" id="line153">
 				<div class="number">153.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function uncork</span></pre>
+				<pre class="content">		});</pre>
 			</div>
 					<div class="line" id="line154">
 				<div class="number">154.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line155">
 				<div class="number">155.</div>
-				<pre class="content">	uncork() {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line156">
 				<div class="number">156.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._stream === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line157">
 				<div class="number">157.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"there has no stream been opened yet"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can force the compression stream to buffer all the data to the </span></pre>
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * memory. By doing this a situation can be avoided where a backup would be created when </span></pre>
 			</div>
 					<div class="line" id="line159">
 				<div class="number">159.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * a lot of small chunks of data are added to the internal buffer. When this happens </span></pre>
 			</div>
 					<div class="line" id="line160">
 				<div class="number">160.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._stream.uncork();</pre>
+				<pre class="content"><span class="hljs-comment">	 * performance will be heavily impacted. This behaviour is stopped using the .uncork() </span></pre>
 			</div>
 					<div class="line" id="line161">
 				<div class="number">161.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * function or when the stream is ended. This function will throw an error when the stream </span></pre>
 			</div>
 					<div class="line" id="line162">
 				<div class="number">162.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * hasn't been started yet.</span></pre>
 			</div>
 					<div class="line" id="line163">
 				<div class="number">163.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Forces the compression stream to write all data to the memory.</span></pre>
 			</div>
 					<div class="line" id="line164">
 				<div class="number">164.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function destroy</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function cork</span></pre>
 			</div>
 					<div class="line" id="line165">
 				<div class="number">165.</div>
@@ -779,7 +779,7 @@
 			</div>
 					<div class="line" id="line166">
 				<div class="number">166.</div>
-				<pre class="content">	destroy(error) {</pre>
+				<pre class="content">	cork() {</pre>
 			</div>
 					<div class="line" id="line167">
 				<div class="number">167.</div>
@@ -799,7 +799,7 @@
 			</div>
 					<div class="line" id="line171">
 				<div class="number">171.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._stream.destroy(error);</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._stream.cork();</pre>
 			</div>
 					<div class="line" id="line172">
 				<div class="number">172.</div>
@@ -811,247 +811,247 @@
 			</div>
 					<div class="line" id="line174">
 				<div class="number">174.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	<span class="hljs-comment">/** </span></pre>
 			</div>
 					<div class="line" id="line175">
 				<div class="number">175.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function compress</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * Using this function you can stop the behaviour that was started using the .cork() method.</span></pre>
 			</div>
 					<div class="line" id="line176">
 				<div class="number">176.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This can also be done by ending the compression stream. This function will throw an error </span></pre>
 			</div>
 					<div class="line" id="line177">
 				<div class="number">177.</div>
-				<pre class="content">	compress(data, opts = {}) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * when the stream hasn't been started yet.</span></pre>
 			</div>
 					<div class="line" id="line178">
 				<div class="number">178.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> options = <span class="hljs-built_in">Object</span>.assign({}, <span class="hljs-keyword">this</span>.settings()._settings, opts);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Stops forcing the compression stream to write all data to the memory.</span></pre>
 			</div>
 					<div class="line" id="line179">
 				<div class="number">179.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> name = return_type(options.type);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function uncork</span></pre>
 			</div>
 					<div class="line" id="line180">
 				<div class="number">180.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line181">
 				<div class="number">181.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> data !== <span class="hljs-string">"string"</span> &amp;&amp; !Buffer.isBuffer(data)) {</pre>
+				<pre class="content">	uncork() {</pre>
 			</div>
 					<div class="line" id="line182">
 				<div class="number">182.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument data must be a string or a buffer"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._stream === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line183">
 				<div class="number">183.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"there has no stream been opened yet"</span>);</pre>
 			</div>
 					<div class="line" id="line184">
 				<div class="number">184.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line185">
 				<div class="number">185.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line186">
 				<div class="number">186.</div>
-				<pre class="content">			<span class="hljs-keyword">var</span> func = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._stream.uncork();</pre>
 			</div>
 					<div class="line" id="line187">
 				<div class="number">187.</div>
-				<pre class="content">				<span class="hljs-keyword">if</span>(err) {</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line188">
 				<div class="number">188.</div>
-				<pre class="content">					<span class="hljs-keyword">return</span> event(<span class="hljs-string">"error"</span>, err);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line189">
 				<div class="number">189.</div>
-				<pre class="content">				}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line190">
 				<div class="number">190.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can destroy the compression stream. Destroying it is basically </span></pre>
 			</div>
 					<div class="line" id="line191">
 				<div class="number">191.</div>
-				<pre class="content">				event(<span class="hljs-string">"data"</span>, res);</pre>
+				<pre class="content"><span class="hljs-comment">	 * ending it with a possible error. This error can be inserted using the error parameter. You </span></pre>
 			</div>
 					<div class="line" id="line192">
 				<div class="number">192.</div>
-				<pre class="content">			};</pre>
+				<pre class="content"><span class="hljs-comment">	 * can get this error from the "error" event. This function will throw an error when the stream</span></pre>
 			</div>
 					<div class="line" id="line193">
 				<div class="number">193.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * hasn't started yet.</span></pre>
 			</div>
 					<div class="line" id="line194">
 				<div class="number">194.</div>
-				<pre class="content">			zlib[name](Buffer.from(data, opts[<span class="hljs-string">"encoding"</span>]), options, func);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line195">
 				<div class="number">195.</div>
-				<pre class="content">		});</pre>
+				<pre class="content"><span class="hljs-comment">	 * var compression = cerus.compression();</span></pre>
 			</div>
 					<div class="line" id="line196">
 				<div class="number">196.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * compression.open();</span></pre>
 			</div>
 					<div class="line" id="line197">
 				<div class="number">197.</div>
-				<pre class="content">}</pre>
+				<pre class="content"><span class="hljs-comment">	 * compression.destroy(new Error("destroyed"));</span></pre>
 			</div>
 					<div class="line" id="line198">
 				<div class="number">198.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; this function will destroy the compression stream and throw the error "destroyed"</span></pre>
 			</div>
 					<div class="line" id="line199">
 				<div class="number">199.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = compression;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Destroys the compression stream.</span></pre>
 			</div>
 					<div class="line" id="line200">
 				<div class="number">200.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Error} (error) The error that will be used in the "error" event.</span></pre>
 			</div>
 					<div class="line" id="line201">
 				<div class="number">201.</div>
-				<pre class="content"><span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function destroy</span></pre>
 			</div>
 					<div class="line" id="line202">
 				<div class="number">202.</div>
-				<pre class="content"><span class="hljs-comment"> * @class settings</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line203">
 				<div class="number">203.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content">	destroy(error) {</pre>
 			</div>
 					<div class="line" id="line204">
 				<div class="number">204.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">settings</span> </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._stream === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line205">
 				<div class="number">205.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"there has no stream been opened yet"</span>);</pre>
 			</div>
 					<div class="line" id="line206">
 				<div class="number">206.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._settings = {</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line207">
 				<div class="number">207.</div>
-				<pre class="content">			flush: zlib.Z_NO_FLUSH,</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line208">
 				<div class="number">208.</div>
-				<pre class="content">			finishFlush: zlib.Z_FINISH,</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._stream.destroy(error);</pre>
 			</div>
 					<div class="line" id="line209">
 				<div class="number">209.</div>
-				<pre class="content">			chunkSize: zlib.Z_DEFAULT_CHUNK,</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line210">
 				<div class="number">210.</div>
-				<pre class="content">			level: zlib.Z_DEFAULT_COMPRESSION,</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line211">
 				<div class="number">211.</div>
-				<pre class="content">			memLevel: zlib.Z_DEFAULT_MEMLEVEL,</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line212">
 				<div class="number">212.</div>
-				<pre class="content">			strategy: zlib.Z_DEFAULT_STRATEGY,</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can asynchronously compress data. This means this function will </span></pre>
 			</div>
 					<div class="line" id="line213">
 				<div class="number">213.</div>
-				<pre class="content">			windowBits: zlib.Z_DEFAULT_WINDOWBITS,</pre>
+				<pre class="content"><span class="hljs-comment">	 * immediately compress the data instead of having to use a stream. The data you want to </span></pre>
 			</div>
 					<div class="line" id="line214">
 				<div class="number">214.</div>
-				<pre class="content">			type: <span class="hljs-string">"deflate"</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * compress is specified with the data parameter. You can also override the settings using the </span></pre>
 			</div>
 					<div class="line" id="line215">
 				<div class="number">215.</div>
-				<pre class="content">		};</pre>
+				<pre class="content"><span class="hljs-comment">	 * opts parameter. This function will return a promise that calls the "data" event when the </span></pre>
 			</div>
 					<div class="line" id="line216">
 				<div class="number">216.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * data has been compressed, with the data as first argument, and the "error" event when there</span></pre>
 			</div>
 					<div class="line" id="line217">
 				<div class="number">217.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * was an error while compressing the data.</span></pre>
 			</div>
 					<div class="line" id="line218">
 				<div class="number">218.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line219">
 				<div class="number">219.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function flush</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * var compression = cerus.compression();</span></pre>
 			</div>
 					<div class="line" id="line220">
 				<div class="number">220.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * compression.compress("example string");</span></pre>
 			</div>
 					<div class="line" id="line221">
 				<div class="number">221.</div>
-				<pre class="content">	flush(flush) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; this function will compress the string "example string"</span></pre>
 			</div>
 					<div class="line" id="line222">
 				<div class="number">222.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> flush === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Asynchronously compresses the inserted data.</span></pre>
 			</div>
 					<div class="line" id="line223">
 				<div class="number">223.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"flush"</span>] = flush;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String|Buffer} data The data that has to be compressed.</span></pre>
 			</div>
 					<div class="line" id="line224">
 				<div class="number">224.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Object} (opts) The settings you want to override.</span></pre>
 			</div>
 					<div class="line" id="line225">
 				<div class="number">225.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Object} (opts.encoding) The encoding you've used for the buffer.</span></pre>
 			</div>
 					<div class="line" id="line226">
 				<div class="number">226.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"flush"</span>];</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line227">
 				<div class="number">227.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function compress</span></pre>
 			</div>
 					<div class="line" id="line228">
 				<div class="number">228.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line229">
 				<div class="number">229.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	compress(data, opts = {}) {</pre>
 			</div>
 					<div class="line" id="line230">
 				<div class="number">230.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function finish</span></pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> options = <span class="hljs-built_in">Object</span>.assign({}, <span class="hljs-keyword">this</span>.settings()._settings, opts);</pre>
 			</div>
 					<div class="line" id="line231">
 				<div class="number">231.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> name = return_type(options.type);</pre>
 			</div>
 					<div class="line" id="line232">
 				<div class="number">232.</div>
-				<pre class="content">	finish(finish) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line233">
 				<div class="number">233.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> finish === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> data !== <span class="hljs-string">"string"</span> &amp;&amp; !Buffer.isBuffer(data)) {</pre>
 			</div>
 					<div class="line" id="line234">
 				<div class="number">234.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"finishFlush"</span>] = finish;</pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument data must be a string or a buffer"</span>);</pre>
 			</div>
 					<div class="line" id="line235">
 				<div class="number">235.</div>
@@ -1063,87 +1063,87 @@
 			</div>
 					<div class="line" id="line237">
 				<div class="number">237.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"finishFlush"</span>];</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line238">
 				<div class="number">238.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">			<span class="hljs-keyword">var</span> func = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line239">
 				<div class="number">239.</div>
-				<pre class="content"></pre>
+				<pre class="content">				<span class="hljs-keyword">if</span>(err) {</pre>
 			</div>
 					<div class="line" id="line240">
 				<div class="number">240.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">					<span class="hljs-keyword">return</span> event(<span class="hljs-string">"error"</span>, err);</pre>
 			</div>
 					<div class="line" id="line241">
 				<div class="number">241.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function chunk</span></pre>
+				<pre class="content">				}</pre>
 			</div>
 					<div class="line" id="line242">
 				<div class="number">242.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line243">
 				<div class="number">243.</div>
-				<pre class="content">	chunk(chunk) {</pre>
+				<pre class="content">				event(<span class="hljs-string">"data"</span>, res);</pre>
 			</div>
 					<div class="line" id="line244">
 				<div class="number">244.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> chunk === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content">			};</pre>
 			</div>
 					<div class="line" id="line245">
 				<div class="number">245.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"chunkSize"</span>] = chunk;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line246">
 				<div class="number">246.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			zlib[name](Buffer.from(data, opts[<span class="hljs-string">"encoding"</span>]), options, func);</pre>
 			</div>
 					<div class="line" id="line247">
 				<div class="number">247.</div>
-				<pre class="content"></pre>
+				<pre class="content">		});</pre>
 			</div>
 					<div class="line" id="line248">
 				<div class="number">248.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"chunkSize"</span>];</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line249">
 				<div class="number">249.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line250">
 				<div class="number">250.</div>
-				<pre class="content"></pre>
+				<pre class="content">	constants() {</pre>
 			</div>
 					<div class="line" id="line251">
 				<div class="number">251.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.constants === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line252">
 				<div class="number">252.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function level</span></pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>.constants = <span class="hljs-keyword">new</span> constants();</pre>
 			</div>
 					<div class="line" id="line253">
 				<div class="number">253.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line254">
 				<div class="number">254.</div>
-				<pre class="content">	level(level) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line255">
 				<div class="number">255.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> level === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.constants;</pre>
 			</div>
 					<div class="line" id="line256">
 				<div class="number">256.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"level"</span>] = level;</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line257">
 				<div class="number">257.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line258">
 				<div class="number">258.</div>
@@ -1151,87 +1151,87 @@
 			</div>
 					<div class="line" id="line259">
 				<div class="number">259.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"level"</span>];</pre>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = compression;</pre>
 			</div>
 					<div class="line" id="line260">
 				<div class="number">260.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line261">
 				<div class="number">261.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line262">
 				<div class="number">262.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the settings class. With this class you can change the default options that will be used</span></pre>
 			</div>
 					<div class="line" id="line263">
 				<div class="number">263.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function memory</span></pre>
+				<pre class="content"><span class="hljs-comment"> * for compressing the data that is in the stream.</span></pre>
 			</div>
 					<div class="line" id="line264">
 				<div class="number">264.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class settings</span></pre>
 			</div>
 					<div class="line" id="line265">
 				<div class="number">265.</div>
-				<pre class="content">	memory(memory) {</pre>
+				<pre class="content"><span class="hljs-comment"> * @id compression.settings</span></pre>
 			</div>
 					<div class="line" id="line266">
 				<div class="number">266.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> memory === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line267">
 				<div class="number">267.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"memLevel"</span>] = memory;</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">settings</span> </span>{</pre>
 			</div>
 					<div class="line" id="line268">
 				<div class="number">268.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
 			</div>
 					<div class="line" id="line269">
 				<div class="number">269.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._settings = {</pre>
 			</div>
 					<div class="line" id="line270">
 				<div class="number">270.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"memLevel"</span>];</pre>
+				<pre class="content">			flush: zlib.Z_NO_FLUSH,</pre>
 			</div>
 					<div class="line" id="line271">
 				<div class="number">271.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">			finishFlush: zlib.Z_FINISH,</pre>
 			</div>
 					<div class="line" id="line272">
 				<div class="number">272.</div>
-				<pre class="content"></pre>
+				<pre class="content">			chunkSize: zlib.Z_DEFAULT_CHUNK,</pre>
 			</div>
 					<div class="line" id="line273">
 				<div class="number">273.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">			level: zlib.Z_DEFAULT_COMPRESSION,</pre>
 			</div>
 					<div class="line" id="line274">
 				<div class="number">274.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function strategy</span></pre>
+				<pre class="content">			memLevel: zlib.Z_DEFAULT_MEMLEVEL,</pre>
 			</div>
 					<div class="line" id="line275">
 				<div class="number">275.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">			strategy: zlib.Z_DEFAULT_STRATEGY,</pre>
 			</div>
 					<div class="line" id="line276">
 				<div class="number">276.</div>
-				<pre class="content">	strategy(strategy) {</pre>
+				<pre class="content">			windowBits: zlib.Z_DEFAULT_WINDOWBITS,</pre>
 			</div>
 					<div class="line" id="line277">
 				<div class="number">277.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> strategy === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content">			type: <span class="hljs-string">"deflate"</span></pre>
 			</div>
 					<div class="line" id="line278">
 				<div class="number">278.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"strategy"</span>] = strategy;</pre>
+				<pre class="content">		};</pre>
 			</div>
 					<div class="line" id="line279">
 				<div class="number">279.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line280">
 				<div class="number">280.</div>
@@ -1239,206 +1239,1422 @@
 			</div>
 					<div class="line" id="line281">
 				<div class="number">281.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"strategy"</span>];</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line282">
 				<div class="number">282.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * </span></pre>
 			</div>
 					<div class="line" id="line283">
 				<div class="number">283.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function flush</span></pre>
 			</div>
 					<div class="line" id="line284">
 				<div class="number">284.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line285">
 				<div class="number">285.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function window</span></pre>
+				<pre class="content">	flush(flush) {</pre>
 			</div>
 					<div class="line" id="line286">
 				<div class="number">286.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> flush === <span class="hljs-string">"number"</span>) {</pre>
 			</div>
 					<div class="line" id="line287">
 				<div class="number">287.</div>
-				<pre class="content">	<span class="hljs-built_in">window</span>(<span class="hljs-built_in">window</span>) {</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"flush"</span>] = flush;</pre>
 			</div>
 					<div class="line" id="line288">
 				<div class="number">288.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span> === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line289">
 				<div class="number">289.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"windowBits"</span>] = <span class="hljs-built_in">window</span>;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line290">
 				<div class="number">290.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"flush"</span>];</pre>
 			</div>
 					<div class="line" id="line291">
 				<div class="number">291.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line292">
 				<div class="number">292.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"windowBits"</span>];</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line293">
 				<div class="number">293.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line294">
 				<div class="number">294.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function finish</span></pre>
 			</div>
 					<div class="line" id="line295">
 				<div class="number">295.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line296">
 				<div class="number">296.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function type</span></pre>
+				<pre class="content">	finish(finish) {</pre>
 			</div>
 					<div class="line" id="line297">
 				<div class="number">297.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> finish === <span class="hljs-string">"number"</span>) {</pre>
 			</div>
 					<div class="line" id="line298">
 				<div class="number">298.</div>
-				<pre class="content">	type(type) {</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"finishFlush"</span>] = finish;</pre>
 			</div>
 					<div class="line" id="line299">
 				<div class="number">299.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> type === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line300">
 				<div class="number">300.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"type"</span>] = type;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line301">
 				<div class="number">301.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"finishFlush"</span>];</pre>
 			</div>
 					<div class="line" id="line302">
 				<div class="number">302.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line303">
 				<div class="number">303.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"type"</span>];</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line304">
 				<div class="number">304.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line305">
 				<div class="number">305.</div>
-				<pre class="content">}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function chunk</span></pre>
 			</div>
 					<div class="line" id="line306">
 				<div class="number">306.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line307">
 				<div class="number">307.</div>
-				<pre class="content"><span class="hljs-keyword">var</span> return_type = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">return_type_for_name</span>(<span class="hljs-params">type</span>) </span>{</pre>
+				<pre class="content">	chunk(chunk) {</pre>
 			</div>
 					<div class="line" id="line308">
 				<div class="number">308.</div>
-				<pre class="content">	<span class="hljs-keyword">switch</span>(type) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> chunk === <span class="hljs-string">"number"</span>) {</pre>
 			</div>
 					<div class="line" id="line309">
 				<div class="number">309.</div>
-				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"deflate"</span>:</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"chunkSize"</span>] = chunk;</pre>
 			</div>
 					<div class="line" id="line310">
 				<div class="number">310.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"deflate"</span>;</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line311">
 				<div class="number">311.</div>
-				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"deflateraw"</span>:</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line312">
 				<div class="number">312.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"deflateRaw"</span>;</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"chunkSize"</span>];</pre>
 			</div>
 					<div class="line" id="line313">
 				<div class="number">313.</div>
-				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"gunzip"</span>:</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line314">
 				<div class="number">314.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"gunzip"</span>;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line315">
 				<div class="number">315.</div>
-				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"gzip"</span>:</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line316">
 				<div class="number">316.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"gzip"</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function level</span></pre>
 			</div>
 					<div class="line" id="line317">
 				<div class="number">317.</div>
-				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"inflate"</span>:</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line318">
 				<div class="number">318.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"inflate"</span>;</pre>
+				<pre class="content">	level(level) {</pre>
 			</div>
 					<div class="line" id="line319">
 				<div class="number">319.</div>
-				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"inflateraw"</span>:</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> level === <span class="hljs-string">"number"</span>) {</pre>
 			</div>
 					<div class="line" id="line320">
 				<div class="number">320.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"inflateRaw"</span>;</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"level"</span>] = level;</pre>
 			</div>
 					<div class="line" id="line321">
 				<div class="number">321.</div>
-				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"unzip"</span>:</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line322">
 				<div class="number">322.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"unzip"</span>;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line323">
 				<div class="number">323.</div>
-				<pre class="content">		<span class="hljs-keyword">default</span>:</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"level"</span>];</pre>
 			</div>
 					<div class="line" id="line324">
 				<div class="number">324.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the specified type "</span> + type + <span class="hljs-string">" doesn't exist"</span>);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line325">
 				<div class="number">325.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line326">
 				<div class="number">326.</div>
-				<pre class="content">};</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line327">
 				<div class="number">327.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function memory</span></pre>
 			</div>
 					<div class="line" id="line328">
 				<div class="number">328.</div>
-				<pre class="content"><span class="hljs-keyword">var</span> upper_first = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">upper_case_first_letter</span>(<span class="hljs-params">str</span>) </span>{</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line329">
 				<div class="number">329.</div>
-				<pre class="content">	<span class="hljs-keyword">return</span> str.charAt(<span class="hljs-number">0</span>).toUpperCase() + str.slice(<span class="hljs-number">1</span>);</pre>
+				<pre class="content">	memory(memory) {</pre>
 			</div>
 					<div class="line" id="line330">
 				<div class="number">330.</div>
-				<pre class="content">};</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> memory === <span class="hljs-string">"number"</span>) {</pre>
 			</div>
 					<div class="line" id="line331">
 				<div class="number">331.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"memLevel"</span>] = memory;</pre>
+			</div>
+					<div class="line" id="line332">
+				<div class="number">332.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line333">
+				<div class="number">333.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line334">
+				<div class="number">334.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"memLevel"</span>];</pre>
+			</div>
+					<div class="line" id="line335">
+				<div class="number">335.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line336">
+				<div class="number">336.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line337">
+				<div class="number">337.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line338">
+				<div class="number">338.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function strategy</span></pre>
+			</div>
+					<div class="line" id="line339">
+				<div class="number">339.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line340">
+				<div class="number">340.</div>
+				<pre class="content">	strategy(strategy) {</pre>
+			</div>
+					<div class="line" id="line341">
+				<div class="number">341.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> strategy === <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line342">
+				<div class="number">342.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"strategy"</span>] = strategy;</pre>
+			</div>
+					<div class="line" id="line343">
+				<div class="number">343.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line344">
+				<div class="number">344.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line345">
+				<div class="number">345.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"strategy"</span>];</pre>
+			</div>
+					<div class="line" id="line346">
+				<div class="number">346.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line347">
+				<div class="number">347.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line348">
+				<div class="number">348.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line349">
+				<div class="number">349.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function windowbits</span></pre>
+			</div>
+					<div class="line" id="line350">
+				<div class="number">350.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line351">
+				<div class="number">351.</div>
+				<pre class="content">	windowbits(windowbits) {</pre>
+			</div>
+					<div class="line" id="line352">
+				<div class="number">352.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> windowbits === <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line353">
+				<div class="number">353.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"windowBits"</span>] = windowbits;</pre>
+			</div>
+					<div class="line" id="line354">
+				<div class="number">354.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line355">
+				<div class="number">355.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line356">
+				<div class="number">356.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"windowBits"</span>];</pre>
+			</div>
+					<div class="line" id="line357">
+				<div class="number">357.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line358">
+				<div class="number">358.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line359">
+				<div class="number">359.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line360">
+				<div class="number">360.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function type</span></pre>
+			</div>
+					<div class="line" id="line361">
+				<div class="number">361.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line362">
+				<div class="number">362.</div>
+				<pre class="content">	type(type) {</pre>
+			</div>
+					<div class="line" id="line363">
+				<div class="number">363.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> type === <span class="hljs-string">"number"</span>) {</pre>
+			</div>
+					<div class="line" id="line364">
+				<div class="number">364.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"type"</span>] = type;</pre>
+			</div>
+					<div class="line" id="line365">
+				<div class="number">365.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line366">
+				<div class="number">366.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line367">
+				<div class="number">367.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._settings[<span class="hljs-string">"type"</span>];</pre>
+			</div>
+					<div class="line" id="line368">
+				<div class="number">368.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line369">
+				<div class="number">369.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line370">
+				<div class="number">370.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line371">
+				<div class="number">371.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line372">
+				<div class="number">372.</div>
+				<pre class="content"><span class="hljs-comment"> * @class constants</span></pre>
+			</div>
+					<div class="line" id="line373">
+				<div class="number">373.</div>
+				<pre class="content"><span class="hljs-comment"> * @id compression.constants</span></pre>
+			</div>
+					<div class="line" id="line374">
+				<div class="number">374.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line375">
+				<div class="number">375.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">constants</span> </span>{</pre>
+			</div>
+					<div class="line" id="line376">
+				<div class="number">376.</div>
+				<pre class="content">	flush() {</pre>
+			</div>
+					<div class="line" id="line377">
+				<div class="number">377.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.flush === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line378">
+				<div class="number">378.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.flush = <span class="hljs-keyword">new</span> constants_flush();</pre>
+			</div>
+					<div class="line" id="line379">
+				<div class="number">379.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line380">
+				<div class="number">380.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line381">
+				<div class="number">381.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.flush;</pre>
+			</div>
+					<div class="line" id="line382">
+				<div class="number">382.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line383">
+				<div class="number">383.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line384">
+				<div class="number">384.</div>
+				<pre class="content">	codes() {</pre>
+			</div>
+					<div class="line" id="line385">
+				<div class="number">385.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.codes === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line386">
+				<div class="number">386.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.codes = <span class="hljs-keyword">new</span> constants_codes();</pre>
+			</div>
+					<div class="line" id="line387">
+				<div class="number">387.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line388">
+				<div class="number">388.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line389">
+				<div class="number">389.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.codes;</pre>
+			</div>
+					<div class="line" id="line390">
+				<div class="number">390.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line391">
+				<div class="number">391.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line392">
+				<div class="number">392.</div>
+				<pre class="content">	level() {</pre>
+			</div>
+					<div class="line" id="line393">
+				<div class="number">393.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.level === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line394">
+				<div class="number">394.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.level = <span class="hljs-keyword">new</span> constants_level();</pre>
+			</div>
+					<div class="line" id="line395">
+				<div class="number">395.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line396">
+				<div class="number">396.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line397">
+				<div class="number">397.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.level;</pre>
+			</div>
+					<div class="line" id="line398">
+				<div class="number">398.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line399">
+				<div class="number">399.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line400">
+				<div class="number">400.</div>
+				<pre class="content">	strategy() {</pre>
+			</div>
+					<div class="line" id="line401">
+				<div class="number">401.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.strategy === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line402">
+				<div class="number">402.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.strategy = <span class="hljs-keyword">new</span> constants_strategy();</pre>
+			</div>
+					<div class="line" id="line403">
+				<div class="number">403.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line404">
+				<div class="number">404.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line405">
+				<div class="number">405.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.strategy;</pre>
+			</div>
+					<div class="line" id="line406">
+				<div class="number">406.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line407">
+				<div class="number">407.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line408">
+				<div class="number">408.</div>
+				<pre class="content">	windowbits() {</pre>
+			</div>
+					<div class="line" id="line409">
+				<div class="number">409.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.windowbits === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line410">
+				<div class="number">410.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.windowbits = <span class="hljs-keyword">new</span> constants_windowbits();</pre>
+			</div>
+					<div class="line" id="line411">
+				<div class="number">411.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line412">
+				<div class="number">412.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line413">
+				<div class="number">413.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.windowbits;</pre>
+			</div>
+					<div class="line" id="line414">
+				<div class="number">414.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line415">
+				<div class="number">415.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line416">
+				<div class="number">416.</div>
+				<pre class="content">	memory() {</pre>
+			</div>
+					<div class="line" id="line417">
+				<div class="number">417.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.memory === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line418">
+				<div class="number">418.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.memory = <span class="hljs-keyword">new</span> constants_memory();</pre>
+			</div>
+					<div class="line" id="line419">
+				<div class="number">419.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line420">
+				<div class="number">420.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line421">
+				<div class="number">421.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.memory;</pre>
+			</div>
+					<div class="line" id="line422">
+				<div class="number">422.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line423">
+				<div class="number">423.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line424">
+				<div class="number">424.</div>
+				<pre class="content">	chunk() {</pre>
+			</div>
+					<div class="line" id="line425">
+				<div class="number">425.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.chunk === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line426">
+				<div class="number">426.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.chunk = <span class="hljs-keyword">new</span> constants_chunk();</pre>
+			</div>
+					<div class="line" id="line427">
+				<div class="number">427.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line428">
+				<div class="number">428.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line429">
+				<div class="number">429.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.chunk;</pre>
+			</div>
+					<div class="line" id="line430">
+				<div class="number">430.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line431">
+				<div class="number">431.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line432">
+				<div class="number">432.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line433">
+				<div class="number">433.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line434">
+				<div class="number">434.</div>
+				<pre class="content"><span class="hljs-comment"> * @class flush</span></pre>
+			</div>
+					<div class="line" id="line435">
+				<div class="number">435.</div>
+				<pre class="content"><span class="hljs-comment"> * @id compression.constants.flush</span></pre>
+			</div>
+					<div class="line" id="line436">
+				<div class="number">436.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line437">
+				<div class="number">437.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">constants_flush</span> </span>{</pre>
+			</div>
+					<div class="line" id="line438">
+				<div class="number">438.</div>
+				<pre class="content">	no() {</pre>
+			</div>
+					<div class="line" id="line439">
+				<div class="number">439.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_NO_FLUSH;</pre>
+			</div>
+					<div class="line" id="line440">
+				<div class="number">440.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line441">
+				<div class="number">441.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line442">
+				<div class="number">442.</div>
+				<pre class="content">	partial() {</pre>
+			</div>
+					<div class="line" id="line443">
+				<div class="number">443.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_PARTIAL_FLUSH;</pre>
+			</div>
+					<div class="line" id="line444">
+				<div class="number">444.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line445">
+				<div class="number">445.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line446">
+				<div class="number">446.</div>
+				<pre class="content">	sync() {</pre>
+			</div>
+					<div class="line" id="line447">
+				<div class="number">447.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_SYNC_FLUSH;</pre>
+			</div>
+					<div class="line" id="line448">
+				<div class="number">448.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line449">
+				<div class="number">449.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line450">
+				<div class="number">450.</div>
+				<pre class="content">	full() {</pre>
+			</div>
+					<div class="line" id="line451">
+				<div class="number">451.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_FULL_FLUSH;</pre>
+			</div>
+					<div class="line" id="line452">
+				<div class="number">452.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line453">
+				<div class="number">453.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line454">
+				<div class="number">454.</div>
+				<pre class="content">	finish() {</pre>
+			</div>
+					<div class="line" id="line455">
+				<div class="number">455.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_FINISH;</pre>
+			</div>
+					<div class="line" id="line456">
+				<div class="number">456.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line457">
+				<div class="number">457.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line458">
+				<div class="number">458.</div>
+				<pre class="content">	block() {</pre>
+			</div>
+					<div class="line" id="line459">
+				<div class="number">459.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_BLOCK;</pre>
+			</div>
+					<div class="line" id="line460">
+				<div class="number">460.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line461">
+				<div class="number">461.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line462">
+				<div class="number">462.</div>
+				<pre class="content">	trees() {</pre>
+			</div>
+					<div class="line" id="line463">
+				<div class="number">463.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_TREES;</pre>
+			</div>
+					<div class="line" id="line464">
+				<div class="number">464.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line465">
+				<div class="number">465.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line466">
+				<div class="number">466.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line467">
+				<div class="number">467.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line468">
+				<div class="number">468.</div>
+				<pre class="content"><span class="hljs-comment"> * @class flush</span></pre>
+			</div>
+					<div class="line" id="line469">
+				<div class="number">469.</div>
+				<pre class="content"><span class="hljs-comment"> * @id compression.constants.codes</span></pre>
+			</div>
+					<div class="line" id="line470">
+				<div class="number">470.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line471">
+				<div class="number">471.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">constants_codes</span> </span>{</pre>
+			</div>
+					<div class="line" id="line472">
+				<div class="number">472.</div>
+				<pre class="content">	ok() {</pre>
+			</div>
+					<div class="line" id="line473">
+				<div class="number">473.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_OK;</pre>
+			</div>
+					<div class="line" id="line474">
+				<div class="number">474.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line475">
+				<div class="number">475.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line476">
+				<div class="number">476.</div>
+				<pre class="content">	streamend() {</pre>
+			</div>
+					<div class="line" id="line477">
+				<div class="number">477.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_STREAM_END;</pre>
+			</div>
+					<div class="line" id="line478">
+				<div class="number">478.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line479">
+				<div class="number">479.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line480">
+				<div class="number">480.</div>
+				<pre class="content">	needdict() {</pre>
+			</div>
+					<div class="line" id="line481">
+				<div class="number">481.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_NEED_DICT;</pre>
+			</div>
+					<div class="line" id="line482">
+				<div class="number">482.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line483">
+				<div class="number">483.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line484">
+				<div class="number">484.</div>
+				<pre class="content">	errno() {</pre>
+			</div>
+					<div class="line" id="line485">
+				<div class="number">485.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_ERRNO;</pre>
+			</div>
+					<div class="line" id="line486">
+				<div class="number">486.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line487">
+				<div class="number">487.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line488">
+				<div class="number">488.</div>
+				<pre class="content">	streamerror() {</pre>
+			</div>
+					<div class="line" id="line489">
+				<div class="number">489.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_STREAM_ERROR;</pre>
+			</div>
+					<div class="line" id="line490">
+				<div class="number">490.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line491">
+				<div class="number">491.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line492">
+				<div class="number">492.</div>
+				<pre class="content">	dataerror() {</pre>
+			</div>
+					<div class="line" id="line493">
+				<div class="number">493.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_DATA_ERROR;</pre>
+			</div>
+					<div class="line" id="line494">
+				<div class="number">494.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line495">
+				<div class="number">495.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line496">
+				<div class="number">496.</div>
+				<pre class="content">	memerror() {</pre>
+			</div>
+					<div class="line" id="line497">
+				<div class="number">497.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_MEM_ERROR;</pre>
+			</div>
+					<div class="line" id="line498">
+				<div class="number">498.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line499">
+				<div class="number">499.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line500">
+				<div class="number">500.</div>
+				<pre class="content">	buferror() {</pre>
+			</div>
+					<div class="line" id="line501">
+				<div class="number">501.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_BUF_ERROR;</pre>
+			</div>
+					<div class="line" id="line502">
+				<div class="number">502.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line503">
+				<div class="number">503.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line504">
+				<div class="number">504.</div>
+				<pre class="content">	versionerror() {</pre>
+			</div>
+					<div class="line" id="line505">
+				<div class="number">505.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_VERSION_ERROR;</pre>
+			</div>
+					<div class="line" id="line506">
+				<div class="number">506.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line507">
+				<div class="number">507.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line508">
+				<div class="number">508.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line509">
+				<div class="number">509.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line510">
+				<div class="number">510.</div>
+				<pre class="content"><span class="hljs-comment"> * @class flush</span></pre>
+			</div>
+					<div class="line" id="line511">
+				<div class="number">511.</div>
+				<pre class="content"><span class="hljs-comment"> * @id compression.constants.level</span></pre>
+			</div>
+					<div class="line" id="line512">
+				<div class="number">512.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line513">
+				<div class="number">513.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">constants_level</span> </span>{</pre>
+			</div>
+					<div class="line" id="line514">
+				<div class="number">514.</div>
+				<pre class="content">	no() {</pre>
+			</div>
+					<div class="line" id="line515">
+				<div class="number">515.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_NO_COMPRESSION;</pre>
+			</div>
+					<div class="line" id="line516">
+				<div class="number">516.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line517">
+				<div class="number">517.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line518">
+				<div class="number">518.</div>
+				<pre class="content">	speed() {</pre>
+			</div>
+					<div class="line" id="line519">
+				<div class="number">519.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_BEST_SPEED;</pre>
+			</div>
+					<div class="line" id="line520">
+				<div class="number">520.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line521">
+				<div class="number">521.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line522">
+				<div class="number">522.</div>
+				<pre class="content">	compression() {</pre>
+			</div>
+					<div class="line" id="line523">
+				<div class="number">523.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_BEST_COMPRESSION;</pre>
+			</div>
+					<div class="line" id="line524">
+				<div class="number">524.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line525">
+				<div class="number">525.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line526">
+				<div class="number">526.</div>
+				<pre class="content">	<span class="hljs-keyword">default</span>() {</pre>
+			</div>
+					<div class="line" id="line527">
+				<div class="number">527.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_DEFAULT_COMPRESSION;</pre>
+			</div>
+					<div class="line" id="line528">
+				<div class="number">528.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line529">
+				<div class="number">529.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line530">
+				<div class="number">530.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line531">
+				<div class="number">531.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line532">
+				<div class="number">532.</div>
+				<pre class="content"><span class="hljs-comment"> * @class flush</span></pre>
+			</div>
+					<div class="line" id="line533">
+				<div class="number">533.</div>
+				<pre class="content"><span class="hljs-comment"> * @id compression.constants.strategy</span></pre>
+			</div>
+					<div class="line" id="line534">
+				<div class="number">534.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line535">
+				<div class="number">535.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">constants_strategy</span> </span>{</pre>
+			</div>
+					<div class="line" id="line536">
+				<div class="number">536.</div>
+				<pre class="content">	filtered() {</pre>
+			</div>
+					<div class="line" id="line537">
+				<div class="number">537.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_FILTERED;</pre>
+			</div>
+					<div class="line" id="line538">
+				<div class="number">538.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line539">
+				<div class="number">539.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line540">
+				<div class="number">540.</div>
+				<pre class="content">	huffman() {</pre>
+			</div>
+					<div class="line" id="line541">
+				<div class="number">541.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_HUFFMAN_ONLY;</pre>
+			</div>
+					<div class="line" id="line542">
+				<div class="number">542.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line543">
+				<div class="number">543.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line544">
+				<div class="number">544.</div>
+				<pre class="content">	rle() {</pre>
+			</div>
+					<div class="line" id="line545">
+				<div class="number">545.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_RLE;</pre>
+			</div>
+					<div class="line" id="line546">
+				<div class="number">546.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line547">
+				<div class="number">547.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line548">
+				<div class="number">548.</div>
+				<pre class="content">	fixed() {</pre>
+			</div>
+					<div class="line" id="line549">
+				<div class="number">549.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_FIXED;</pre>
+			</div>
+					<div class="line" id="line550">
+				<div class="number">550.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line551">
+				<div class="number">551.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line552">
+				<div class="number">552.</div>
+				<pre class="content">	<span class="hljs-keyword">default</span>() {</pre>
+			</div>
+					<div class="line" id="line553">
+				<div class="number">553.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_DEFAULT_STRATEGY;</pre>
+			</div>
+					<div class="line" id="line554">
+				<div class="number">554.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line555">
+				<div class="number">555.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line556">
+				<div class="number">556.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line557">
+				<div class="number">557.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line558">
+				<div class="number">558.</div>
+				<pre class="content"><span class="hljs-comment"> * @class flush</span></pre>
+			</div>
+					<div class="line" id="line559">
+				<div class="number">559.</div>
+				<pre class="content"><span class="hljs-comment"> * @id compression.constants.windowbits</span></pre>
+			</div>
+					<div class="line" id="line560">
+				<div class="number">560.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line561">
+				<div class="number">561.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">constants_windowbits</span> </span>{</pre>
+			</div>
+					<div class="line" id="line562">
+				<div class="number">562.</div>
+				<pre class="content">	min() {</pre>
+			</div>
+					<div class="line" id="line563">
+				<div class="number">563.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_MIN_WINDOWBITS;</pre>
+			</div>
+					<div class="line" id="line564">
+				<div class="number">564.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line565">
+				<div class="number">565.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line566">
+				<div class="number">566.</div>
+				<pre class="content">	max() {</pre>
+			</div>
+					<div class="line" id="line567">
+				<div class="number">567.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_MAX_WINDOWBITS;</pre>
+			</div>
+					<div class="line" id="line568">
+				<div class="number">568.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line569">
+				<div class="number">569.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line570">
+				<div class="number">570.</div>
+				<pre class="content">	<span class="hljs-keyword">default</span>() {</pre>
+			</div>
+					<div class="line" id="line571">
+				<div class="number">571.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_DEFAULT_WINDOWBITS;</pre>
+			</div>
+					<div class="line" id="line572">
+				<div class="number">572.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line573">
+				<div class="number">573.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line574">
+				<div class="number">574.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line575">
+				<div class="number">575.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line576">
+				<div class="number">576.</div>
+				<pre class="content"><span class="hljs-comment"> * @class flush</span></pre>
+			</div>
+					<div class="line" id="line577">
+				<div class="number">577.</div>
+				<pre class="content"><span class="hljs-comment"> * @id compression.constants.memory</span></pre>
+			</div>
+					<div class="line" id="line578">
+				<div class="number">578.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line579">
+				<div class="number">579.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">constants_memory</span> </span>{</pre>
+			</div>
+					<div class="line" id="line580">
+				<div class="number">580.</div>
+				<pre class="content">	min() {</pre>
+			</div>
+					<div class="line" id="line581">
+				<div class="number">581.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_MIN_MEMLEVEL;</pre>
+			</div>
+					<div class="line" id="line582">
+				<div class="number">582.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line583">
+				<div class="number">583.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line584">
+				<div class="number">584.</div>
+				<pre class="content">	max() {</pre>
+			</div>
+					<div class="line" id="line585">
+				<div class="number">585.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_MAX_MEMLEVEL;</pre>
+			</div>
+					<div class="line" id="line586">
+				<div class="number">586.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line587">
+				<div class="number">587.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line588">
+				<div class="number">588.</div>
+				<pre class="content">	<span class="hljs-keyword">default</span>() {</pre>
+			</div>
+					<div class="line" id="line589">
+				<div class="number">589.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_DEFAULT_MEMLEVEL;</pre>
+			</div>
+					<div class="line" id="line590">
+				<div class="number">590.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line591">
+				<div class="number">591.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line592">
+				<div class="number">592.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line593">
+				<div class="number">593.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line594">
+				<div class="number">594.</div>
+				<pre class="content"><span class="hljs-comment"> * @class flush</span></pre>
+			</div>
+					<div class="line" id="line595">
+				<div class="number">595.</div>
+				<pre class="content"><span class="hljs-comment"> * @id compression.constants.chunk</span></pre>
+			</div>
+					<div class="line" id="line596">
+				<div class="number">596.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line597">
+				<div class="number">597.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">constants_chunk</span> </span>{</pre>
+			</div>
+					<div class="line" id="line598">
+				<div class="number">598.</div>
+				<pre class="content">	min() {</pre>
+			</div>
+					<div class="line" id="line599">
+				<div class="number">599.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_MIN_CHUNK;</pre>
+			</div>
+					<div class="line" id="line600">
+				<div class="number">600.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line601">
+				<div class="number">601.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line602">
+				<div class="number">602.</div>
+				<pre class="content">	max() {</pre>
+			</div>
+					<div class="line" id="line603">
+				<div class="number">603.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_MAX_CHUNK;</pre>
+			</div>
+					<div class="line" id="line604">
+				<div class="number">604.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line605">
+				<div class="number">605.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line606">
+				<div class="number">606.</div>
+				<pre class="content">	<span class="hljs-keyword">default</span>() {</pre>
+			</div>
+					<div class="line" id="line607">
+				<div class="number">607.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> zlib.constants.Z_DEFAULT_CHUNK;</pre>
+			</div>
+					<div class="line" id="line608">
+				<div class="number">608.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line609">
+				<div class="number">609.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line610">
+				<div class="number">610.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line611">
+				<div class="number">611.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> return_type = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">return_type_for_name</span>(<span class="hljs-params">type</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line612">
+				<div class="number">612.</div>
+				<pre class="content">	<span class="hljs-keyword">switch</span>(type.toLowerCase()) {</pre>
+			</div>
+					<div class="line" id="line613">
+				<div class="number">613.</div>
+				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"deflate"</span>:</pre>
+			</div>
+					<div class="line" id="line614">
+				<div class="number">614.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"deflate"</span>;</pre>
+			</div>
+					<div class="line" id="line615">
+				<div class="number">615.</div>
+				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"deflateraw"</span>:</pre>
+			</div>
+					<div class="line" id="line616">
+				<div class="number">616.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"deflateRaw"</span>;</pre>
+			</div>
+					<div class="line" id="line617">
+				<div class="number">617.</div>
+				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"gunzip"</span>:</pre>
+			</div>
+					<div class="line" id="line618">
+				<div class="number">618.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"gunzip"</span>;</pre>
+			</div>
+					<div class="line" id="line619">
+				<div class="number">619.</div>
+				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"gzip"</span>:</pre>
+			</div>
+					<div class="line" id="line620">
+				<div class="number">620.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"gzip"</span>;</pre>
+			</div>
+					<div class="line" id="line621">
+				<div class="number">621.</div>
+				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"inflate"</span>:</pre>
+			</div>
+					<div class="line" id="line622">
+				<div class="number">622.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"inflate"</span>;</pre>
+			</div>
+					<div class="line" id="line623">
+				<div class="number">623.</div>
+				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"inflateraw"</span>:</pre>
+			</div>
+					<div class="line" id="line624">
+				<div class="number">624.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"inflateRaw"</span>;</pre>
+			</div>
+					<div class="line" id="line625">
+				<div class="number">625.</div>
+				<pre class="content">		<span class="hljs-keyword">case</span> <span class="hljs-string">"unzip"</span>:</pre>
+			</div>
+					<div class="line" id="line626">
+				<div class="number">626.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-string">"unzip"</span>;</pre>
+			</div>
+					<div class="line" id="line627">
+				<div class="number">627.</div>
+				<pre class="content">		<span class="hljs-keyword">default</span>:</pre>
+			</div>
+					<div class="line" id="line628">
+				<div class="number">628.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the specified type "</span> + type + <span class="hljs-string">" doesn't exist"</span>);</pre>
+			</div>
+					<div class="line" id="line629">
+				<div class="number">629.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line630">
+				<div class="number">630.</div>
+				<pre class="content">};</pre>
+			</div>
+					<div class="line" id="line631">
+				<div class="number">631.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line632">
+				<div class="number">632.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> upper_first = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">upper_case_first_letter</span>(<span class="hljs-params">str</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line633">
+				<div class="number">633.</div>
+				<pre class="content">	<span class="hljs-keyword">return</span> str.charAt(<span class="hljs-number">0</span>).toUpperCase() + str.slice(<span class="hljs-number">1</span>);</pre>
+			</div>
+					<div class="line" id="line634">
+				<div class="number">634.</div>
+				<pre class="content">};</pre>
+			</div>
+					<div class="line" id="line635">
+				<div class="number">635.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>
