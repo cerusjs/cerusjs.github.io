@@ -88,6 +88,15 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="docs-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('docs')">
+				docs				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/docs/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/docs/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -112,7 +121,7 @@ Since CerusJS is also modular, loading times can be decreased drastically since 
 $ npm install cerus
 </code></pre>
 <h2 id="a-short-example">A short example</h2>
-<p>The following example will show how the create and start a server:</p>
+<p>The following example shows how the create and start a server:</p>
 <pre><code class="hljs javascript"><span class="hljs-keyword">var</span> cerus = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus"</span>)();
 cerus.server().start();
 </code></pre>

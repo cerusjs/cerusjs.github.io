@@ -88,6 +88,15 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="docs-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('docs')">
+				docs				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/docs/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/docs/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -98,9 +107,10 @@
 	</div>
 	<div class="right">
 				<select class="list" onchange="title_('tutorials', 'home').open(this)">
-						<option value="installation.md.html" selected>Installation</option>
-						<option value="your_first_app.md.html" undefined>Your first app</option>
-						<option value="creating_a_server.md.html" undefined>Creating a server</option>
+						<option value="installation.md.html" selected>1: Installation</option>
+						<option value="your_first_app.md.html" undefined>2: Your first app</option>
+						<option value="creating_a_server.md.html" undefined>3: Creating a server</option>
+						<option value="routing_paths.md.html" undefined>4: Routing paths</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>

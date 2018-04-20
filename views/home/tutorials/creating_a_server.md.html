@@ -88,6 +88,15 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="docs-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('docs')">
+				docs				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/docs/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/docs/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -98,9 +107,10 @@
 	</div>
 	<div class="right">
 				<select class="list" onchange="title_('tutorials', 'home').open(this)">
-						<option value="installation.md.html" undefined>Installation</option>
-						<option value="your_first_app.md.html" undefined>Your first app</option>
-						<option value="creating_a_server.md.html" selected>Creating a server</option>
+						<option value="installation.md.html" undefined>1: Installation</option>
+						<option value="your_first_app.md.html" undefined>2: Your first app</option>
+						<option value="creating_a_server.md.html" selected>3: Creating a server</option>
+						<option value="routing_paths.md.html" undefined>4: Routing paths</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
@@ -108,8 +118,11 @@
 </div>
 			<div class="inner">
 				<div class="markdown-body">
-	<h1 id="creating-a-server">Creating a server</h1>
-<p>If you haven&#39;t seen the previous tutorials, please do. They contain some important information you&#39;ll need for this tutorial. So, we now know how to create the cerus variable containing the initialized cerus class. The next step is to create your first server. To do this we will use the following code:</p>
+	<blockquote>
+<p>If you haven&#39;t seen the previous tutorials, please do. They contain some important information you&#39;ll need for this tutorial. </p>
+</blockquote>
+<h1 id="creating-a-server">Creating a server</h1>
+<p>So, we now know how to create the cerus variable containing the initialized cerus class. The next step is to create your first server. A server is basically a read and write stream that is accessible from a certain port. Streams are a queue of data that is written to by one side and read from by the other vice versa. A port is a code assigned to an endpoint, also called socket, for the stream to go through. These ports are needed since there are allways streams of information active. What you will create in the following lines of code is the socket. This socket will create a stream that is assigned to the selected port, or 80 by default, and to the networks IP address. </p>
 <pre><code class="hljs javascript"><span class="hljs-keyword">var</span> cerus = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus"</span>)();
 
 cerus.server().start(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{

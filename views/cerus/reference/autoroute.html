@@ -88,6 +88,15 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="docs-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('docs')">
+				docs				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/docs/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/docs/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
 		<div class="overlay closed" onclick="sidebar().toggle()"></div>
@@ -128,7 +137,7 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"><p>This is the autoroute class. It is used to easily route views, assets and your favicon. If you don&#39;t know what these are you can take look at each of the functions or at the tutorials for this class.</p>
+		<div class="desc"><p>This is the autoroute class. It is used to easily route views, assets and your favicon. If you don&#39;t know what these are you can take look at each of the functions.</p>
 </div>
 			</div>
 
@@ -179,7 +188,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-							<a href="/views/cerus/source/lib/autoroute.js.html#line18">Line 18</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html#line17">Line 17</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -214,7 +223,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-							<a href="/views/cerus/source/lib/autoroute.js.html#line29">Line 29</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html#line28">Line 28</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -226,7 +235,7 @@
 							<div class="value">Loads and routes the favicon.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>With the favicon function you can easily route the favicon of your site. If you don&#39;t know what a favicon is: it is the image that a browser will request to use as icon. There is no folder where the icon is meant to be stored. If the path isn&#39;t absolute it is just added after the root. If it is absolute it&#39;ll directly be used. Before usage the path is fixed. Meaning that all \\ are replaced with a / to support all platforms. When the file is loaded a file event will be called on the returned promise. This event will be supplied with the file object. When the favicon was requested there will be a request event, with as arguments the request and response objects.</p>
+				<div class="desc"><p>With the favicon function you can easily route the favicon of your site. The favicon is the image a browser will request to use as icon for the site. There is no folder where the icon is meant to be stored, so the path that is used will start from the root if the path isn&#39;t absolute. If it is absolute it&#39;ll directly be used. Before usage the path is fixed by replacing all \\ with / to add support for all platforms. The promise this function returns will call the &quot;file&quot; event when the file has been loaded (with the file as parameter) and the &quot;request&quot; event when the favicon has been requested (with the request and response as parameters).</p>
 </div>
 									<div class="params">
 						<h3>Parameters</h3>
@@ -247,9 +256,9 @@
 					</div>
 													<div class="examples">
 						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js"</span>
+													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project root "C:/project/"</span>
 cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
-<span class="hljs-comment">// -&gt; will load and route "C:/project/favicon.png" to "/favicon.ico"</span>
+<span class="hljs-comment">// -&gt; will load and route "C:/project/favicon.png" to the "/favicon.ico" url</span>
 </code></pre>
 </div>
 											</div>
@@ -274,7 +283,7 @@ cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-							<a href="/views/cerus/source/lib/autoroute.js.html#line78">Line 78</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html#line77">Line 77</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -348,7 +357,7 @@ cerus.autoroute().view(<span class="hljs-string">"/home"</span>, <span class="hl
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-							<a href="/views/cerus/source/lib/autoroute.js.html#line140">Line 140</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html#line139">Line 139</a>
 						</div>
 					</div>
 																				<div class="item">
