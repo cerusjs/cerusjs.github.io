@@ -150,83 +150,83 @@
 			</div>
 					<div class="line" id="line6">
 				<div class="number">6.</div>
-				<pre class="content"><span class="hljs-comment"> * @class response</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the response class. With this class you can manage the response that is send to the </span></pre>
 			</div>
 					<div class="line" id="line7">
 				<div class="number">7.</div>
-				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
+				<pre class="content"><span class="hljs-comment"> * client. It is supplied as the second parameter in a router handler.</span></pre>
 			</div>
 					<div class="line" id="line8">
 				<div class="number">8.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @example</span></pre>
 			</div>
 					<div class="line" id="line9">
 				<div class="number">9.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">response</span> </span>{</pre>
+				<pre class="content"><span class="hljs-comment"> * // this is an example of how to get the response class</span></pre>
 			</div>
 					<div class="line" id="line10">
 				<div class="number">10.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(response, request, cerus) {</pre>
+				<pre class="content"><span class="hljs-comment"> * cerus.router().route("/")</span></pre>
 			</div>
 					<div class="line" id="line11">
 				<div class="number">11.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._response = response;</pre>
+				<pre class="content"><span class="hljs-comment"> * .then(req, res, next) {</span></pre>
 			</div>
 					<div class="line" id="line12">
 				<div class="number">12.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._request = request;</pre>
+				<pre class="content"><span class="hljs-comment"> *   // the res parameter is the response class</span></pre>
 			</div>
 					<div class="line" id="line13">
 				<div class="number">13.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._headers = <span class="hljs-keyword">new</span> headers(response);</pre>
+				<pre class="content"><span class="hljs-comment"> * });</span></pre>
 			</div>
 					<div class="line" id="line14">
 				<div class="number">14.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._cookies = <span class="hljs-keyword">new</span> cookies();</pre>
+				<pre class="content"><span class="hljs-comment"> * @class response</span></pre>
 			</div>
 					<div class="line" id="line15">
 				<div class="number">15.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._compression = <span class="hljs-literal">undefined</span>;</pre>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
 			</div>
 					<div class="line" id="line16">
 				<div class="number">16.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line17">
 				<div class="number">17.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">response</span> </span>{</pre>
 			</div>
 					<div class="line" id="line18">
 				<div class="number">18.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(response, request, cerus) {</pre>
 			</div>
 					<div class="line" id="line19">
 				<div class="number">19.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._response = response;</pre>
 			</div>
 					<div class="line" id="line20">
 				<div class="number">20.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function status</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._request = request;</pre>
 			</div>
 					<div class="line" id="line21">
 				<div class="number">21.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._headers = <span class="hljs-keyword">new</span> headers(response);</pre>
 			</div>
 					<div class="line" id="line22">
 				<div class="number">22.</div>
-				<pre class="content">	status(code) {</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cookies = <span class="hljs-keyword">new</span> cookies();</pre>
 			</div>
 					<div class="line" id="line23">
 				<div class="number">23.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> code === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._compression = <span class="hljs-literal">undefined</span>;</pre>
 			</div>
 					<div class="line" id="line24">
 				<div class="number">24.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._response.statusCode = code;</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
 			</div>
 					<div class="line" id="line25">
 				<div class="number">25.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line26">
 				<div class="number">26.</div>
@@ -234,203 +234,203 @@
 			</div>
 					<div class="line" id="line27">
 				<div class="number">27.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._response.statusCode;</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line28">
 				<div class="number">28.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the status code that is send in the response. The status </span></pre>
 			</div>
 					<div class="line" id="line29">
 				<div class="number">29.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * code is the code that tells the client how the request went. All 2xx codes means it was </span></pre>
 			</div>
 					<div class="line" id="line30">
 				<div class="number">30.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * successful, 3xx is used for redirection and 4xx/5xx are used for errors. If no status code </span></pre>
 			</div>
 					<div class="line" id="line31">
 				<div class="number">31.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function code</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * has been set the default, 200, will be used.</span></pre>
 			</div>
 					<div class="line" id="line32">
 				<div class="number">32.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @alias code</span></pre>
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content">	code(code) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the status code.</span></pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.status(code);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} (code) The new status code.</span></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The status code</span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function status</span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function finished</span></pre>
+				<pre class="content">	status(code) {</pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> code === <span class="hljs-string">"number"</span>) {</pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content">	finished() {</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._response.statusCode = code;</pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._response.finished;</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._response.statusCode;</pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function ended</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	code(code) {</pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
-				<pre class="content">	ended() {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.status(code);</pre>
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.finished();</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line49">
 				<div class="number">49.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line50">
 				<div class="number">50.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line51">
 				<div class="number">51.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function returns if the request has been finished.</span></pre>
 			</div>
 					<div class="line" id="line52">
 				<div class="number">52.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function headers</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @alias ended</span></pre>
 			</div>
 					<div class="line" id="line53">
 				<div class="number">53.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns if the request has been finished.</span></pre>
 			</div>
 					<div class="line" id="line54">
 				<div class="number">54.</div>
-				<pre class="content">	headers() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the request has been finished.</span></pre>
 			</div>
 					<div class="line" id="line55">
 				<div class="number">55.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._headers;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function finished</span></pre>
 			</div>
 					<div class="line" id="line56">
 				<div class="number">56.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line57">
 				<div class="number">57.</div>
-				<pre class="content"></pre>
+				<pre class="content">	finished() {</pre>
 			</div>
 					<div class="line" id="line58">
 				<div class="number">58.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._response.finished;</pre>
 			</div>
 					<div class="line" id="line59">
 				<div class="number">59.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function cookies</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line60">
 				<div class="number">60.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line61">
 				<div class="number">61.</div>
-				<pre class="content">	cookies() {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line62">
 				<div class="number">62.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cookies;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function ended</span></pre>
 			</div>
 					<div class="line" id="line63">
 				<div class="number">63.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line64">
 				<div class="number">64.</div>
-				<pre class="content"></pre>
+				<pre class="content">	ended() {</pre>
 			</div>
 					<div class="line" id="line65">
 				<div class="number">65.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.finished();</pre>
 			</div>
 					<div class="line" id="line66">
 				<div class="number">66.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function compression</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line67">
 				<div class="number">67.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line68">
 				<div class="number">68.</div>
-				<pre class="content">	compression(allowed) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line69">
 				<div class="number">69.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> encoding = <span class="hljs-keyword">this</span>._request.accepts().encoding([<span class="hljs-string">"gzip"</span>, <span class="hljs-string">"deflate"</span>]);</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function returns the headers class. With this class you can change the headers that are</span></pre>
 			</div>
 					<div class="line" id="line70">
 				<div class="number">70.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * send in the response.</span></pre>
 			</div>
 					<div class="line" id="line71">
 				<div class="number">71.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(allowed &amp;&amp; encoding) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the response.headers class.</span></pre>
 			</div>
 					<div class="line" id="line72">
 				<div class="number">72.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._compression = <span class="hljs-keyword">this</span>._cerus.compression(encoding);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The response.headers class.</span></pre>
 			</div>
 					<div class="line" id="line73">
 				<div class="number">73.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function headers</span></pre>
 			</div>
 					<div class="line" id="line74">
 				<div class="number">74.</div>
-				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line75">
 				<div class="number">75.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._compression = <span class="hljs-literal">undefined</span>;</pre>
+				<pre class="content">	headers() {</pre>
 			</div>
 					<div class="line" id="line76">
 				<div class="number">76.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._headers;</pre>
 			</div>
 					<div class="line" id="line77">
 				<div class="number">77.</div>
@@ -446,95 +446,95 @@
 			</div>
 					<div class="line" id="line80">
 				<div class="number">80.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function location</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function returns the cookies class. With this class you can change the cookies that are</span></pre>
 			</div>
 					<div class="line" id="line81">
 				<div class="number">81.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * send in the response.</span></pre>
 			</div>
 					<div class="line" id="line82">
 				<div class="number">82.</div>
-				<pre class="content">	location(url) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the response.cookies class.</span></pre>
 			</div>
 					<div class="line" id="line83">
 				<div class="number">83.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> url_ = url;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The response.cookies class.</span></pre>
 			</div>
 					<div class="line" id="line84">
 				<div class="number">84.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function cookies</span></pre>
 			</div>
 					<div class="line" id="line85">
 				<div class="number">85.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url_ !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line86">
 				<div class="number">86.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
+				<pre class="content">	cookies() {</pre>
 			</div>
 					<div class="line" id="line87">
 				<div class="number">87.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cookies;</pre>
 			</div>
 					<div class="line" id="line88">
 				<div class="number">88.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line89">
 				<div class="number">89.</div>
-				<pre class="content">		<span class="hljs-comment">// Go back when the url is set to "back", go to '/' when no referrer was specified</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line90">
 				<div class="number">90.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(url_ === <span class="hljs-string">"back"</span>) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line91">
 				<div class="number">91.</div>
-				<pre class="content">			url_ = <span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Referrer"</span>) || <span class="hljs-string">"/"</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can set if compression is allowed to be used. If you allow </span></pre>
 			</div>
 					<div class="line" id="line92">
 				<div class="number">92.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * compression to be use it will first check if the client accepts the gzip or deflate </span></pre>
 			</div>
 					<div class="line" id="line93">
 				<div class="number">93.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * compression types. If it isn't accepted by the client no compression will be used.</span></pre>
 			</div>
 					<div class="line" id="line94">
 				<div class="number">94.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Location"</span>, url_);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Sets if the compression is allowed to be used.</span></pre>
 			</div>
 					<div class="line" id="line95">
 				<div class="number">95.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} allowed If the compression is allowed to be used.</span></pre>
 			</div>
 					<div class="line" id="line96">
 				<div class="number">96.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function compression</span></pre>
 			</div>
 					<div class="line" id="line97">
 				<div class="number">97.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line98">
 				<div class="number">98.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function redirect</span></pre>
+				<pre class="content">	compression(allowed) {</pre>
 			</div>
 					<div class="line" id="line99">
 				<div class="number">99.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> encoding = <span class="hljs-keyword">this</span>._request.accepts().encoding([<span class="hljs-string">"gzip"</span>, <span class="hljs-string">"deflate"</span>]);</pre>
 			</div>
 					<div class="line" id="line100">
 				<div class="number">100.</div>
-				<pre class="content">	redirect(url) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line101">
 				<div class="number">101.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(allowed &amp;&amp; encoding) {</pre>
 			</div>
 					<div class="line" id="line102">
 				<div class="number">102.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._compression = <span class="hljs-keyword">this</span>._cerus.compression(encoding);</pre>
 			</div>
 					<div class="line" id="line103">
 				<div class="number">103.</div>
@@ -542,287 +542,287 @@
 			</div>
 					<div class="line" id="line104">
 				<div class="number">104.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
 			</div>
 					<div class="line" id="line105">
 				<div class="number">105.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>.location(url);</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._compression = <span class="hljs-literal">undefined</span>;</pre>
 			</div>
 					<div class="line" id="line106">
 				<div class="number">106.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line107">
 				<div class="number">107.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>.status(<span class="hljs-number">302</span>);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line108">
 				<div class="number">108.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>.end();</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line109">
 				<div class="number">109.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line110">
 				<div class="number">110.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is used to set the location of the url to go to. Meaning with this function </span></pre>
 			</div>
 					<div class="line" id="line111">
 				<div class="number">111.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * you can redirect the client to the supposed url. If the url is set to "back" the client will</span></pre>
 			</div>
 					<div class="line" id="line112">
 				<div class="number">112.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function type</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * be redirected to url gotten from the "Referrer" header, or if that header doesn't exist to </span></pre>
 			</div>
 					<div class="line" id="line113">
 				<div class="number">113.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * '/'.</span></pre>
 			</div>
 					<div class="line" id="line114">
 				<div class="number">114.</div>
-				<pre class="content">	type(type) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Sets the location of the url to go to.</span></pre>
 			</div>
 					<div class="line" id="line115">
 				<div class="number">115.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> type === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} url The location of the url to go to.</span></pre>
 			</div>
 					<div class="line" id="line116">
 				<div class="number">116.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Type"</span>, get_type(type));</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function location</span></pre>
 			</div>
 					<div class="line" id="line117">
 				<div class="number">117.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line118">
 				<div class="number">118.</div>
-				<pre class="content"></pre>
+				<pre class="content">	location(url) {</pre>
 			</div>
 					<div class="line" id="line119">
 				<div class="number">119.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Content-Type"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> url_ = url;</pre>
 			</div>
 					<div class="line" id="line120">
 				<div class="number">120.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line121">
 				<div class="number">121.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url_ !== <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line122">
 				<div class="number">122.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
 			</div>
 					<div class="line" id="line123">
 				<div class="number">123.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function end</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line124">
 				<div class="number">124.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line125">
 				<div class="number">125.</div>
-				<pre class="content">	end() {</pre>
+				<pre class="content">		<span class="hljs-comment">// Go back when the url is set to "back", go to '/' when no referrer was specified</span></pre>
 			</div>
 					<div class="line" id="line126">
 				<div class="number">126.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._response.end();</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(url_ === <span class="hljs-string">"back"</span>) {</pre>
 			</div>
 					<div class="line" id="line127">
 				<div class="number">127.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">			url_ = <span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Referrer"</span>) || <span class="hljs-string">"/"</span>;</pre>
 			</div>
 					<div class="line" id="line128">
 				<div class="number">128.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line129">
 				<div class="number">129.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line130">
 				<div class="number">130.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function send</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Location"</span>, url_);</pre>
 			</div>
 					<div class="line" id="line131">
 				<div class="number">131.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line132">
 				<div class="number">132.</div>
-				<pre class="content">	send(body, encoding = <span class="hljs-string">"urf-8"</span>) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line133">
 				<div class="number">133.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> body_ = body;</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line134">
 				<div class="number">134.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> encoding_ = encoding;</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function changes the location, but also changes the status to 302, meaning the </span></pre>
 			</div>
 					<div class="line" id="line135">
 				<div class="number">135.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * requested file was found on a other url. After that, this function ends the request.</span></pre>
 			</div>
 					<div class="line" id="line136">
 				<div class="number">136.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._response.finished) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Redirects the client to the inserted url.</span></pre>
 			</div>
 					<div class="line" id="line137">
 				<div class="number">137.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} url The location of the url to redirect to.</span></pre>
 			</div>
 					<div class="line" id="line138">
 				<div class="number">138.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function redirect</span></pre>
 			</div>
 					<div class="line" id="line139">
 				<div class="number">139.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line140">
 				<div class="number">140.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> body_ === <span class="hljs-string">"object"</span> &amp;&amp; !Buffer.isBuffer(body_)) {</pre>
+				<pre class="content">	redirect(url) {</pre>
 			</div>
 					<div class="line" id="line141">
 				<div class="number">141.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.json(body_);</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>.location(url);</pre>
 			</div>
 					<div class="line" id="line142">
 				<div class="number">142.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line143">
 				<div class="number">143.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>.status(<span class="hljs-number">302</span>);</pre>
 			</div>
 					<div class="line" id="line144">
 				<div class="number">144.</div>
-				<pre class="content">		<span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Catching on purpose isn't good</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>.end();</pre>
 			</div>
 					<div class="line" id="line145">
 				<div class="number">145.</div>
-				<pre class="content">		<span class="hljs-keyword">try</span> {</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line146">
 				<div class="number">146.</div>
-				<pre class="content">			body_ = Buffer.isBuffer(body_) ? body_ : Buffer.from(body_);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line147">
 				<div class="number">147.</div>
-				<pre class="content">		} </pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line148">
 				<div class="number">148.</div>
-				<pre class="content">		<span class="hljs-keyword">catch</span>(e) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the content type of the response. The content type </span></pre>
 			</div>
 					<div class="line" id="line149">
 				<div class="number">149.</div>
-				<pre class="content">			body_ = <span class="hljs-literal">undefined</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * contains the type of content that is send with the response. This function will parse the </span></pre>
 			</div>
 					<div class="line" id="line150">
 				<div class="number">150.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * inserted type and transform it to a correct MIME version. Because of this you can insert </span></pre>
 			</div>
 					<div class="line" id="line151">
 				<div class="number">151.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * things like "javascript" and this will be parsed to "script/javascript".</span></pre>
 			</div>
 					<div class="line" id="line152">
 				<div class="number">152.</div>
-				<pre class="content">		apply_cookies(<span class="hljs-keyword">this</span>._cookies, <span class="hljs-keyword">this</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the content type.</span></pre>
 			</div>
 					<div class="line" id="line153">
 				<div class="number">153.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (type) The new content type.</span></pre>
 			</div>
 					<div class="line" id="line154">
 				<div class="number">154.</div>
-				<pre class="content">		<span class="hljs-comment">// Set the length of the response if the ETag header isn't defined</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The content type.</span></pre>
 			</div>
 					<div class="line" id="line155">
 				<div class="number">155.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(body_ !== <span class="hljs-literal">undefined</span> &amp;&amp; !<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"ETag"</span>)) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function type</span></pre>
 			</div>
 					<div class="line" id="line156">
 				<div class="number">156.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Length"</span>, body_.length);</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line157">
 				<div class="number">157.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	type(type) {</pre>
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
-				<pre class="content">		</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> type === <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line159">
 				<div class="number">159.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(body_ !== <span class="hljs-literal">undefined</span> &amp;&amp; <span class="hljs-keyword">this</span>._compression !== <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Type"</span>, get_type(type));</pre>
 			</div>
 					<div class="line" id="line160">
 				<div class="number">160.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._compression.compress(body_)</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line161">
 				<div class="number">161.</div>
-				<pre class="content">			.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">compressed</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line162">
 				<div class="number">162.</div>
-				<pre class="content">				<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"ETag"</span>)) {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Content-Type"</span>);</pre>
 			</div>
 					<div class="line" id="line163">
 				<div class="number">163.</div>
-				<pre class="content">					<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Length"</span>, compressed.length);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line164">
 				<div class="number">164.</div>
-				<pre class="content">				}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line165">
 				<div class="number">165.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line166">
 				<div class="number">166.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Encoding"</span>, <span class="hljs-keyword">this</span>._compression.settings().type());</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can easily end the response. By ending the response you stop sending </span></pre>
 			</div>
 					<div class="line" id="line167">
 				<div class="number">167.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * data to the client. It is not possible to not send things like the headers when using this </span></pre>
 			</div>
 					<div class="line" id="line168">
 				<div class="number">168.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>._response.end(compressed, encoding_);</pre>
+				<pre class="content"><span class="hljs-comment">	 * function since those are still send.</span></pre>
 			</div>
 					<div class="line" id="line169">
 				<div class="number">169.</div>
-				<pre class="content">			});</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Ends the response.</span></pre>
 			</div>
 					<div class="line" id="line170">
 				<div class="number">170.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function end</span></pre>
 			</div>
 					<div class="line" id="line171">
 				<div class="number">171.</div>
-				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line172">
 				<div class="number">172.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Content-Type"</span>)) {</pre>
+				<pre class="content">	end() {</pre>
 			</div>
 					<div class="line" id="line173">
 				<div class="number">173.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>.type(<span class="hljs-string">"html"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._response.end();</pre>
 			</div>
 					<div class="line" id="line174">
 				<div class="number">174.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line175">
 				<div class="number">175.</div>
@@ -830,87 +830,87 @@
 			</div>
 					<div class="line" id="line176">
 				<div class="number">176.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._response.end(body_, encoding_);</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line177">
 				<div class="number">177.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * Using this function you can send data to the client. By sending data you will end the </span></pre>
 			</div>
 					<div class="line" id="line178">
 				<div class="number">178.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * request. This function will stop if the request has already been finsihed. If the inserted </span></pre>
 			</div>
 					<div class="line" id="line179">
 				<div class="number">179.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * body is an object response.json will be used to send the data. This function will convert </span></pre>
 			</div>
 					<div class="line" id="line180">
 				<div class="number">180.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * non-buffers to buffers, to always use buffers. It will also apply all the cookies that have </span></pre>
 			</div>
 					<div class="line" id="line181">
 				<div class="number">181.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function json</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * been set. If the "ETAG" header isn't defined it will set the content length to the length of</span></pre>
 			</div>
 					<div class="line" id="line182">
 				<div class="number">182.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * the body. If compression is allowed it will send the data to client compressed with the </span></pre>
 			</div>
 					<div class="line" id="line183">
 				<div class="number">183.</div>
-				<pre class="content">	json(body) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * content encoding set to the compression type. If the compression type is undefined it will </span></pre>
 			</div>
 					<div class="line" id="line184">
 				<div class="number">184.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> body !== <span class="hljs-string">"object"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * use "html" as type. You can also set the encoding of the response, by default this is </span></pre>
 			</div>
 					<div class="line" id="line185">
 				<div class="number">185.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument body must be an object"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * "utf-8".</span></pre>
 			</div>
 					<div class="line" id="line186">
 				<div class="number">186.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line187">
 				<div class="number">187.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * // this is an example of how to get the response class</span></pre>
 			</div>
 					<div class="line" id="line188">
 				<div class="number">188.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Content-Type"</span>)) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.router().route("/")</span></pre>
 			</div>
 					<div class="line" id="line189">
 				<div class="number">189.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>.type(<span class="hljs-string">"json"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * .then(req, res, next) {</span></pre>
 			</div>
 					<div class="line" id="line190">
 				<div class="number">190.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 *   res.send("data");</span></pre>
 			</div>
 					<div class="line" id="line191">
 				<div class="number">191.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 *   // -&gt; this will send the data "data"</span></pre>
 			</div>
 					<div class="line" id="line192">
 				<div class="number">192.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>.send(<span class="hljs-built_in">JSON</span>.stringify(body));</pre>
+				<pre class="content"><span class="hljs-comment"> 	 * });</span></pre>
 			</div>
 					<div class="line" id="line193">
 				<div class="number">193.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Sends data to the client.</span></pre>
 			</div>
 					<div class="line" id="line194">
 				<div class="number">194.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} body The body of the response.</span></pre>
 			</div>
 					<div class="line" id="line195">
 				<div class="number">195.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (encoding = "utf-8") The encoding of the body.</span></pre>
 			</div>
 					<div class="line" id="line196">
 				<div class="number">196.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function file</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function send</span></pre>
 			</div>
 					<div class="line" id="line197">
 				<div class="number">197.</div>
@@ -918,31 +918,31 @@
 			</div>
 					<div class="line" id="line198">
 				<div class="number">198.</div>
-				<pre class="content">	file(file) {</pre>
+				<pre class="content">	send(body, encoding = <span class="hljs-string">"utf-8"</span>) {</pre>
 			</div>
 					<div class="line" id="line199">
 				<div class="number">199.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> file !== <span class="hljs-string">"object"</span> || <span class="hljs-keyword">typeof</span> file.data !== <span class="hljs-string">"function"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> body_ = body;</pre>
 			</div>
 					<div class="line" id="line200">
 				<div class="number">200.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument file must be a (cerus) file"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> encoding_ = encoding;</pre>
 			</div>
 					<div class="line" id="line201">
 				<div class="number">201.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line202">
 				<div class="number">202.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._response.finished) {</pre>
 			</div>
 					<div class="line" id="line203">
 				<div class="number">203.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>.send(file.data());</pre>
+				<pre class="content">			<span class="hljs-keyword">return</span>;</pre>
 			</div>
 					<div class="line" id="line204">
 				<div class="number">204.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line205">
 				<div class="number">205.</div>
@@ -950,71 +950,71 @@
 			</div>
 					<div class="line" id="line206">
 				<div class="number">206.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> body_ === <span class="hljs-string">"object"</span> &amp;&amp; !Buffer.isBuffer(body_)) {</pre>
 			</div>
 					<div class="line" id="line207">
 				<div class="number">207.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function download</span></pre>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.json(body_);</pre>
 			</div>
 					<div class="line" id="line208">
 				<div class="number">208.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line209">
 				<div class="number">209.</div>
-				<pre class="content">	download(file, name, encoding) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line210">
 				<div class="number">210.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> data = <span class="hljs-string">""</span>;</pre>
+				<pre class="content">		<span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Catching on purpose isn't good</span></pre>
 			</div>
 					<div class="line" id="line211">
 				<div class="number">211.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> name_ = name;</pre>
+				<pre class="content">		<span class="hljs-keyword">try</span> {</pre>
 			</div>
 					<div class="line" id="line212">
 				<div class="number">212.</div>
-				<pre class="content"></pre>
+				<pre class="content">			body_ = Buffer.isBuffer(body_) ? body_ : Buffer.from(body_);</pre>
 			</div>
 					<div class="line" id="line213">
 				<div class="number">213.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the file argument is a file or a string, else error </span></pre>
+				<pre class="content">		} </pre>
 			</div>
 					<div class="line" id="line214">
 				<div class="number">214.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> file === <span class="hljs-string">"object"</span> &amp;&amp; <span class="hljs-keyword">typeof</span> file.data === <span class="hljs-string">"function"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">catch</span>(e) {</pre>
 			</div>
 					<div class="line" id="line215">
 				<div class="number">215.</div>
-				<pre class="content">			name_ = name_ || file.name();</pre>
+				<pre class="content">			body_ = <span class="hljs-literal">undefined</span>;</pre>
 			</div>
 					<div class="line" id="line216">
 				<div class="number">216.</div>
-				<pre class="content">			data = file.data();</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line217">
 				<div class="number">217.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line218">
 				<div class="number">218.</div>
-				<pre class="content">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> file === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		apply_cookies(<span class="hljs-keyword">this</span>._cookies, <span class="hljs-keyword">this</span>);</pre>
 			</div>
 					<div class="line" id="line219">
 				<div class="number">219.</div>
-				<pre class="content">			data = file;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line220">
 				<div class="number">220.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-comment">// Set the length of the response if the ETag header isn't defined</span></pre>
 			</div>
 					<div class="line" id="line221">
 				<div class="number">221.</div>
-				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(body_ !== <span class="hljs-literal">undefined</span> &amp;&amp; !<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"ETag"</span>)) {</pre>
 			</div>
 					<div class="line" id="line222">
 				<div class="number">222.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument file must be a (cerus) file or string"</span>);</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Length"</span>, body_.length);</pre>
 			</div>
 					<div class="line" id="line223">
 				<div class="number">223.</div>
@@ -1022,110 +1022,434 @@
 			</div>
 					<div class="line" id="line224">
 				<div class="number">224.</div>
-				<pre class="content"></pre>
+				<pre class="content">		</pre>
 			</div>
 					<div class="line" id="line225">
 				<div class="number">225.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name_ !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(body_ !== <span class="hljs-literal">undefined</span> &amp;&amp; <span class="hljs-keyword">this</span>._compression !== <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line226">
 				<div class="number">226.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._compression.compress(body_)</pre>
 			</div>
 					<div class="line" id="line227">
 				<div class="number">227.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">compressed</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line228">
 				<div class="number">228.</div>
-				<pre class="content"></pre>
+				<pre class="content">				<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"ETag"</span>)) {</pre>
 			</div>
 					<div class="line" id="line229">
 				<div class="number">229.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Content-Disposition"</span>)) {</pre>
+				<pre class="content">					<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Length"</span>, compressed.length);</pre>
 			</div>
 					<div class="line" id="line230">
 				<div class="number">230.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Disposition"</span>, <span class="hljs-string">"attachment; filename="</span> + name_);</pre>
+				<pre class="content">				}</pre>
 			</div>
 					<div class="line" id="line231">
 				<div class="number">231.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line232">
 				<div class="number">232.</div>
-				<pre class="content"></pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Encoding"</span>, <span class="hljs-keyword">this</span>._compression.settings().type());</pre>
 			</div>
 					<div class="line" id="line233">
 				<div class="number">233.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>.send(data, encoding);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line234">
 				<div class="number">234.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>._response.end(compressed, encoding_);</pre>
 			</div>
 					<div class="line" id="line235">
 				<div class="number">235.</div>
-				<pre class="content">}</pre>
+				<pre class="content">			});</pre>
 			</div>
 					<div class="line" id="line236">
 				<div class="number">236.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line237">
 				<div class="number">237.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = response;</pre>
+				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
 			</div>
 					<div class="line" id="line238">
 				<div class="number">238.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Content-Type"</span>)) {</pre>
 			</div>
 					<div class="line" id="line239">
 				<div class="number">239.</div>
-				<pre class="content"><span class="hljs-keyword">var</span> apply_cookies = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cookies, response</span>) </span>{</pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>.type(<span class="hljs-string">"html"</span>);</pre>
 			</div>
 					<div class="line" id="line240">
 				<div class="number">240.</div>
-				<pre class="content">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; cookies._cookies.length; i++) {</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line241">
 				<div class="number">241.</div>
-				<pre class="content">		response.headers().append(<span class="hljs-string">"Set-Cookie"</span>, cookies._cookies[i].build());</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line242">
 				<div class="number">242.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._response.end(body_, encoding_);</pre>
 			</div>
 					<div class="line" id="line243">
 				<div class="number">243.</div>
-				<pre class="content">};</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line244">
 				<div class="number">244.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line245">
 				<div class="number">245.</div>
-				<pre class="content"><span class="hljs-keyword">var</span> get_type = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line246">
 				<div class="number">246.</div>
-				<pre class="content">	<span class="hljs-keyword">var</span> type_ = mime.getType(type);</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line247">
 				<div class="number">247.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is used to send json objects to the client. It works just like the send </span></pre>
 			</div>
 					<div class="line" id="line248">
 				<div class="number">248.</div>
-				<pre class="content">	<span class="hljs-keyword">return</span> type_ === <span class="hljs-literal">null</span> ? type : type_;</pre>
+				<pre class="content"><span class="hljs-comment">	 * function, but then for json objects. If the body parameter isn't an object it will throw an </span></pre>
 			</div>
 					<div class="line" id="line249">
 				<div class="number">249.</div>
-				<pre class="content">};</pre>
+				<pre class="content"><span class="hljs-comment">	 * error. It will also set the content type if that isn't set yet. It will stringify the object</span></pre>
 			</div>
 					<div class="line" id="line250">
 				<div class="number">250.</div>
+				<pre class="content"><span class="hljs-comment">	 * using JSON.stringify().</span></pre>
+			</div>
+					<div class="line" id="line251">
+				<div class="number">251.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Sends json data to the client.</span></pre>
+			</div>
+					<div class="line" id="line252">
+				<div class="number">252.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} body The object body of the response.</span></pre>
+			</div>
+					<div class="line" id="line253">
+				<div class="number">253.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function json</span></pre>
+			</div>
+					<div class="line" id="line254">
+				<div class="number">254.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line255">
+				<div class="number">255.</div>
+				<pre class="content">	json(body) {</pre>
+			</div>
+					<div class="line" id="line256">
+				<div class="number">256.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> body !== <span class="hljs-string">"object"</span>) {</pre>
+			</div>
+					<div class="line" id="line257">
+				<div class="number">257.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument body must be an object"</span>);</pre>
+			</div>
+					<div class="line" id="line258">
+				<div class="number">258.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line259">
+				<div class="number">259.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line260">
+				<div class="number">260.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Content-Type"</span>)) {</pre>
+			</div>
+					<div class="line" id="line261">
+				<div class="number">261.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.type(<span class="hljs-string">"json"</span>);</pre>
+			</div>
+					<div class="line" id="line262">
+				<div class="number">262.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line263">
+				<div class="number">263.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line264">
+				<div class="number">264.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>.send(<span class="hljs-built_in">JSON</span>.stringify(body));</pre>
+			</div>
+					<div class="line" id="line265">
+				<div class="number">265.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line266">
+				<div class="number">266.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line267">
+				<div class="number">267.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line268">
+				<div class="number">268.</div>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can easily send a file object to the client. It also uses the .send()</span></pre>
+			</div>
+					<div class="line" id="line269">
+				<div class="number">269.</div>
+				<pre class="content"><span class="hljs-comment">	 * function. If the file parameter isn't a file it will throw an error.</span></pre>
+			</div>
+					<div class="line" id="line270">
+				<div class="number">270.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Sends a file to the client.</span></pre>
+			</div>
+					<div class="line" id="line271">
+				<div class="number">271.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {File} file The file to send.</span></pre>
+			</div>
+					<div class="line" id="line272">
+				<div class="number">272.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function file</span></pre>
+			</div>
+					<div class="line" id="line273">
+				<div class="number">273.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line274">
+				<div class="number">274.</div>
+				<pre class="content">	file(file) {</pre>
+			</div>
+					<div class="line" id="line275">
+				<div class="number">275.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> file !== <span class="hljs-string">"object"</span> || <span class="hljs-keyword">typeof</span> file.data !== <span class="hljs-string">"function"</span>) {</pre>
+			</div>
+					<div class="line" id="line276">
+				<div class="number">276.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument file must be a (cerus) file"</span>);</pre>
+			</div>
+					<div class="line" id="line277">
+				<div class="number">277.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line278">
+				<div class="number">278.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line279">
+				<div class="number">279.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>.send(file.data());</pre>
+			</div>
+					<div class="line" id="line280">
+				<div class="number">280.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line281">
+				<div class="number">281.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line282">
+				<div class="number">282.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line283">
+				<div class="number">283.</div>
+				<pre class="content"><span class="hljs-comment">	 * Using this function you can send a file that will be downloaded by the client. It will thrown an error if the file parameter isn't a file or a string. If it is a file it will be transformed to a string and the file's name will be used as name if the name wasn't set yet. You can set the name of the file using the name parameter and the encoding using the encoding parameter. It will also throw an error when the name parameter is not a string. To send the file it wil use the .send() function.</span></pre>
+			</div>
+					<div class="line" id="line284">
+				<div class="number">284.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Sends a file that will be doewnloaded by the client.</span></pre>
+			</div>
+					<div class="line" id="line285">
+				<div class="number">285.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {File|String} file The file to send to the client.</span></pre>
+			</div>
+					<div class="line" id="line286">
+				<div class="number">286.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the file to send.</span></pre>
+			</div>
+					<div class="line" id="line287">
+				<div class="number">287.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (encoding = "utf-8") The encoding of the file that will be send.</span></pre>
+			</div>
+					<div class="line" id="line288">
+				<div class="number">288.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function download</span></pre>
+			</div>
+					<div class="line" id="line289">
+				<div class="number">289.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line290">
+				<div class="number">290.</div>
+				<pre class="content">	download(file, name, encoding) {</pre>
+			</div>
+					<div class="line" id="line291">
+				<div class="number">291.</div>
+				<pre class="content">		<span class="hljs-keyword">var</span> data = <span class="hljs-string">""</span>;</pre>
+			</div>
+					<div class="line" id="line292">
+				<div class="number">292.</div>
+				<pre class="content">		<span class="hljs-keyword">var</span> name_ = name;</pre>
+			</div>
+					<div class="line" id="line293">
+				<div class="number">293.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line294">
+				<div class="number">294.</div>
+				<pre class="content">		<span class="hljs-comment">// Check if the file argument is a file or a string, else error </span></pre>
+			</div>
+					<div class="line" id="line295">
+				<div class="number">295.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> file === <span class="hljs-string">"object"</span> &amp;&amp; <span class="hljs-keyword">typeof</span> file.data === <span class="hljs-string">"function"</span>) {</pre>
+			</div>
+					<div class="line" id="line296">
+				<div class="number">296.</div>
+				<pre class="content">			name_ = name_ || file.name();</pre>
+			</div>
+					<div class="line" id="line297">
+				<div class="number">297.</div>
+				<pre class="content">			data = file.data();</pre>
+			</div>
+					<div class="line" id="line298">
+				<div class="number">298.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line299">
+				<div class="number">299.</div>
+				<pre class="content">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> file === <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line300">
+				<div class="number">300.</div>
+				<pre class="content">			data = file;</pre>
+			</div>
+					<div class="line" id="line301">
+				<div class="number">301.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line302">
+				<div class="number">302.</div>
+				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
+			</div>
+					<div class="line" id="line303">
+				<div class="number">303.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument file must be a (cerus) file or string"</span>);</pre>
+			</div>
+					<div class="line" id="line304">
+				<div class="number">304.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line305">
+				<div class="number">305.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line306">
+				<div class="number">306.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name_ !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line307">
+				<div class="number">307.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line308">
+				<div class="number">308.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line309">
+				<div class="number">309.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line310">
+				<div class="number">310.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.headers().get(<span class="hljs-string">"Content-Disposition"</span>)) {</pre>
+			</div>
+					<div class="line" id="line311">
+				<div class="number">311.</div>
+				<pre class="content">			<span class="hljs-keyword">this</span>.headers().set(<span class="hljs-string">"Content-Disposition"</span>, <span class="hljs-string">"attachment; filename="</span> + name_);</pre>
+			</div>
+					<div class="line" id="line312">
+				<div class="number">312.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line313">
+				<div class="number">313.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line314">
+				<div class="number">314.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>.send(data, encoding);</pre>
+			</div>
+					<div class="line" id="line315">
+				<div class="number">315.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line316">
+				<div class="number">316.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line317">
+				<div class="number">317.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line318">
+				<div class="number">318.</div>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = response;</pre>
+			</div>
+					<div class="line" id="line319">
+				<div class="number">319.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line320">
+				<div class="number">320.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> apply_cookies = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cookies, response</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line321">
+				<div class="number">321.</div>
+				<pre class="content">	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; cookies._cookies.length; i++) {</pre>
+			</div>
+					<div class="line" id="line322">
+				<div class="number">322.</div>
+				<pre class="content">		response.headers().append(<span class="hljs-string">"Set-Cookie"</span>, cookies._cookies[i].build());</pre>
+			</div>
+					<div class="line" id="line323">
+				<div class="number">323.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line324">
+				<div class="number">324.</div>
+				<pre class="content">};</pre>
+			</div>
+					<div class="line" id="line325">
+				<div class="number">325.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line326">
+				<div class="number">326.</div>
+				<pre class="content"><span class="hljs-keyword">var</span> get_type = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">type</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line327">
+				<div class="number">327.</div>
+				<pre class="content">	<span class="hljs-keyword">var</span> type_ = mime.getType(type);</pre>
+			</div>
+					<div class="line" id="line328">
+				<div class="number">328.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line329">
+				<div class="number">329.</div>
+				<pre class="content">	<span class="hljs-keyword">return</span> type_ === <span class="hljs-literal">null</span> ? type : type_;</pre>
+			</div>
+					<div class="line" id="line330">
+				<div class="number">330.</div>
+				<pre class="content">};</pre>
+			</div>
+					<div class="line" id="line331">
+				<div class="number">331.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>

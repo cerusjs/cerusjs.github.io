@@ -155,7 +155,7 @@
 </div>
 					<div class="examples">
 				<h3>Examples</h3>
-									<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// this is an example of how to get the request</span>
+									<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// this is an example of how to get the request class</span>
 cerus.router().route(<span class="hljs-string">"/"</span>)
 .then(req, res, next) {
   <span class="hljs-comment">// the req parameter is the request class</span>
@@ -661,7 +661,7 @@ req.method()
 							<div class="value">Returns the protocol used for the request.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This functions returns the protocol that is used for the request. This can be one of two values: &quot;http&quot; or &quot;https&quot;.</p>
+				<div class="desc"><p>This functions returns the protocol that is used for the request. This can be one of two values: &quot;http&quot; or &quot;https&quot;. &quot;https&quot; means that the request was secure.</p>
 </div>
 																									<div class="return">
 						<h3>Returns</h3>

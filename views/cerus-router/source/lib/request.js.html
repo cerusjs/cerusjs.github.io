@@ -170,7 +170,7 @@
 			</div>
 					<div class="line" id="line11">
 				<div class="number">11.</div>
-				<pre class="content"><span class="hljs-comment"> * // this is an example of how to get the request</span></pre>
+				<pre class="content"><span class="hljs-comment"> * // this is an example of how to get the request class</span></pre>
 			</div>
 					<div class="line" id="line12">
 				<div class="number">12.</div>
@@ -754,7 +754,7 @@
 			</div>
 					<div class="line" id="line157">
 				<div class="number">157.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._url.href;</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.url();</pre>
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
@@ -874,7 +874,7 @@
 			</div>
 					<div class="line" id="line187">
 				<div class="number">187.</div>
-				<pre class="content"><span class="hljs-comment">	 * values: "http" or "https".</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * values: "http" or "https". "https" means that the request was secure.</span></pre>
 			</div>
 					<div class="line" id="line188">
 				<div class="number">188.</div>
@@ -2342,91 +2342,91 @@
 			</div>
 					<div class="line" id="line554">
 				<div class="number">554.</div>
-				<pre class="content"><span class="hljs-comment"> * @class request.local</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the local address class. It contains information about the local address. The local </span></pre>
 			</div>
 					<div class="line" id="line555">
 				<div class="number">555.</div>
-				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
+				<pre class="content"><span class="hljs-comment"> * address is the address on the server the client connected to.</span></pre>
 			</div>
 					<div class="line" id="line556">
 				<div class="number">556.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class request.local</span></pre>
 			</div>
 					<div class="line" id="line557">
 				<div class="number">557.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">local</span> </span>{</pre>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
 			</div>
 					<div class="line" id="line558">
 				<div class="number">558.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line559">
 				<div class="number">559.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">local</span> </span>{</pre>
 			</div>
 					<div class="line" id="line560">
 				<div class="number">560.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
 			</div>
 					<div class="line" id="line561">
 				<div class="number">561.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
 			</div>
 					<div class="line" id="line562">
 				<div class="number">562.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line563">
 				<div class="number">563.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function address</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line564">
 				<div class="number">564.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line565">
 				<div class="number">565.</div>
-				<pre class="content">	address() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the IP address connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line566">
 				<div class="number">566.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.localAddress;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line567">
 				<div class="number">567.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * req.local().address();</span></pre>
 			</div>
 					<div class="line" id="line568">
 				<div class="number">568.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the IP connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line569">
 				<div class="number">569.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the IP connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line570">
 				<div class="number">570.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function port</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The IP connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line571">
 				<div class="number">571.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function address</span></pre>
 			</div>
 					<div class="line" id="line572">
 				<div class="number">572.</div>
-				<pre class="content">	port() {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line573">
 				<div class="number">573.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.localPort;</pre>
+				<pre class="content">	address() {</pre>
 			</div>
 					<div class="line" id="line574">
 				<div class="number">574.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.localAddress;</pre>
 			</div>
 					<div class="line" id="line575">
 				<div class="number">575.</div>
-				<pre class="content">}</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line576">
 				<div class="number">576.</div>
@@ -2434,98 +2434,186 @@
 			</div>
 					<div class="line" id="line577">
 				<div class="number">577.</div>
-				<pre class="content"><span class="hljs-comment">/**</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line578">
 				<div class="number">578.</div>
-				<pre class="content"><span class="hljs-comment"> * @class request.bytes</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the port connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line579">
 				<div class="number">579.</div>
-				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line580">
 				<div class="number">580.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.local().port();</span></pre>
 			</div>
 					<div class="line" id="line581">
 				<div class="number">581.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">bytes</span> </span>{</pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the port connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line582">
 				<div class="number">582.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the port connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line583">
 				<div class="number">583.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The port connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line584">
 				<div class="number">584.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function port</span></pre>
 			</div>
 					<div class="line" id="line585">
 				<div class="number">585.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line586">
 				<div class="number">586.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	port() {</pre>
 			</div>
 					<div class="line" id="line587">
 				<div class="number">587.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function read</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.localPort;</pre>
 			</div>
 					<div class="line" id="line588">
 				<div class="number">588.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line589">
 				<div class="number">589.</div>
-				<pre class="content">	read() {</pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line590">
 				<div class="number">590.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.bytesRead;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line591">
 				<div class="number">591.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line592">
 				<div class="number">592.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the bytes class. It contains information about the amount bytes written and read during </span></pre>
 			</div>
 					<div class="line" id="line593">
 				<div class="number">593.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment"> * this request.</span></pre>
 			</div>
 					<div class="line" id="line594">
 				<div class="number">594.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function written</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class request.bytes</span></pre>
 			</div>
 					<div class="line" id="line595">
 				<div class="number">595.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
 			</div>
 					<div class="line" id="line596">
 				<div class="number">596.</div>
-				<pre class="content">	written() {</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line597">
 				<div class="number">597.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.bytesWritten;</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">bytes</span> </span>{</pre>
 			</div>
 					<div class="line" id="line598">
 				<div class="number">598.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
 			</div>
 					<div class="line" id="line599">
 				<div class="number">599.</div>
-				<pre class="content">}</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
 			</div>
 					<div class="line" id="line600">
 				<div class="number">600.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line601">
+				<div class="number">601.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line602">
+				<div class="number">602.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line603">
+				<div class="number">603.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the amount of bytes that have been read from the request.</span></pre>
+			</div>
+					<div class="line" id="line604">
+				<div class="number">604.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the amount of bytes read.</span></pre>
+			</div>
+					<div class="line" id="line605">
+				<div class="number">605.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The amount of bytes read.</span></pre>
+			</div>
+					<div class="line" id="line606">
+				<div class="number">606.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function read</span></pre>
+			</div>
+					<div class="line" id="line607">
+				<div class="number">607.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line608">
+				<div class="number">608.</div>
+				<pre class="content">	read() {</pre>
+			</div>
+					<div class="line" id="line609">
+				<div class="number">609.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.bytesRead;</pre>
+			</div>
+					<div class="line" id="line610">
+				<div class="number">610.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line611">
+				<div class="number">611.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line612">
+				<div class="number">612.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line613">
+				<div class="number">613.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function returns the amount of bytes that have been written to the response.</span></pre>
+			</div>
+					<div class="line" id="line614">
+				<div class="number">614.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the amount of bytes written.</span></pre>
+			</div>
+					<div class="line" id="line615">
+				<div class="number">615.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The amount of bytes written.</span></pre>
+			</div>
+					<div class="line" id="line616">
+				<div class="number">616.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function written</span></pre>
+			</div>
+					<div class="line" id="line617">
+				<div class="number">617.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line618">
+				<div class="number">618.</div>
+				<pre class="content">	written() {</pre>
+			</div>
+					<div class="line" id="line619">
+				<div class="number">619.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.bytesWritten;</pre>
+			</div>
+					<div class="line" id="line620">
+				<div class="number">620.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line621">
+				<div class="number">621.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line622">
+				<div class="number">622.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>

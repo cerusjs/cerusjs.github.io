@@ -151,7 +151,8 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"></div>
+		<div class="desc"><p>This is the local address class. It contains information about the local address. The local address is the address on the server the client connected to.</p>
+</div>
 			</div>
 
 	<!-- SUMMARY -->
@@ -166,13 +167,13 @@
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.local.html#address">address</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the IP connected to by the client.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.local.html#port">port</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the port connected to by the client.</div>
 				</div>
 					</div>
 	</div>
@@ -189,16 +190,39 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line562">Line 562</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line564">Line 564</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the IP connected to by the client.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the IP address connected to by the client.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">req.local().address();
+<span class="hljs-comment">// -&gt; will return the IP connected to by the client.</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The IP connected to by the client.</div>
+						</div>
+					</div>
+							</div>
 					<div id="port" class="function">
 				<div class="name">
 					.port()
@@ -208,16 +232,39 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line569">Line 569</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line577">Line 577</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the port connected to by the client.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the port connected to by the client.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">req.local().port();
+<span class="hljs-comment">// -&gt; will return the port connected to by the client.</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The port connected to by the client.</div>
+						</div>
+					</div>
+							</div>
 		
 	</div>
 </div>
