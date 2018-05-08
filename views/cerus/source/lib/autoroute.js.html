@@ -251,223 +251,223 @@
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content"><span class="hljs-comment">	 * replacing all \\\\ with / to add support for all platforms. The promise this function </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * replacing all \\\\ with / to add support for all platforms.</span></pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content"><span class="hljs-comment">	 * returns will call the "file" event when the file has been loaded (with the file as parameter) and the "request" event </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content"><span class="hljs-comment">	 * when the favicon has been requested (with the request and response as </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // with as project root "C:/project/"</span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content"><span class="hljs-comment">	 * parameters).</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.autoroute().favicon("favicon.png");</span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will load and route "C:/project/favicon.png" to the "/favicon.ico" url</span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content"><span class="hljs-comment">	 * // with as project root "C:/project/"</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits file When the specified file has been loaded. With the file as first parameter.</span></pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.autoroute().favicon("favicon.png");</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits request When the favicon is requested. With the request as first parameter and </span></pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will load and route "C:/project/favicon.png" to the "/favicon.ico" url</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * response as second.</span></pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Loads and routes the favicon.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits error When there was an error while loading the file. With the error as first </span></pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path to the icon.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * parameter.</span></pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Loads and routes the favicon.</span></pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function favicon</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path to the icon.</span></pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content">	favicon(path) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function favicon</span></pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument path must be a string"</span>);</pre>
+				<pre class="content">	favicon(path) {</pre>
 			</div>
 					<div class="line" id="line49">
 				<div class="number">49.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line50">
 				<div class="number">50.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument path must be a string"</span>);</pre>
 			</div>
 					<div class="line" id="line51">
 				<div class="number">51.</div>
-				<pre class="content">		<span class="hljs-comment">// Fix the url by replacing \\ with / to support all platforms</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line52">
 				<div class="number">52.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> fixed_path = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line53">
 				<div class="number">53.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-comment">// Fix the url by replacing \\ with / to support all platforms</span></pre>
 			</div>
 					<div class="line" id="line54">
 				<div class="number">54.</div>
-				<pre class="content">		<span class="hljs-comment">// Append the root path if the path isn't absolute</span></pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> fixed_path = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line55">
 				<div class="number">55.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!path_.isAbsolute(path)) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line56">
 				<div class="number">56.</div>
-				<pre class="content">			fixed_path = <span class="hljs-keyword">this</span>._cerus.root() + fixed_path;</pre>
+				<pre class="content">		<span class="hljs-comment">// Append the root path if the path isn't absolute</span></pre>
 			</div>
 					<div class="line" id="line57">
 				<div class="number">57.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!path_.isAbsolute(path)) {</pre>
 			</div>
 					<div class="line" id="line58">
 				<div class="number">58.</div>
-				<pre class="content"></pre>
+				<pre class="content">			fixed_path = <span class="hljs-keyword">this</span>._cerus.root() + fixed_path;</pre>
 			</div>
 					<div class="line" id="line59">
 				<div class="number">59.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line60">
 				<div class="number">60.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.file(fixed_path).read()</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line61">
 				<div class="number">61.</div>
-				<pre class="content">			.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data, file</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line62">
 				<div class="number">62.</div>
-				<pre class="content">				event(<span class="hljs-string">"file"</span>, file);</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.file(fixed_path).read()</pre>
 			</div>
 					<div class="line" id="line63">
 				<div class="number">63.</div>
-				<pre class="content"></pre>
+				<pre class="content">			.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data, file</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line64">
 				<div class="number">64.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>._cerus.router().get(<span class="hljs-string">"/favicon.ico"</span>)</pre>
+				<pre class="content">				event(<span class="hljs-string">"file"</span>, file);</pre>
 			</div>
 					<div class="line" id="line65">
 				<div class="number">65.</div>
-				<pre class="content">				.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line66">
 				<div class="number">66.</div>
-				<pre class="content">					event(<span class="hljs-string">"request"</span>, req, res);</pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>._cerus.router().get(<span class="hljs-string">"/favicon.ico"</span>)</pre>
 			</div>
 					<div class="line" id="line67">
 				<div class="number">67.</div>
-				<pre class="content"></pre>
+				<pre class="content">				.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line68">
 				<div class="number">68.</div>
-				<pre class="content">					res.file(file);</pre>
+				<pre class="content">					event(<span class="hljs-string">"request"</span>, req, res);</pre>
 			</div>
 					<div class="line" id="line69">
 				<div class="number">69.</div>
-				<pre class="content">				});</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line70">
 				<div class="number">70.</div>
-				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>))</pre>
+				<pre class="content">					res.file(file);</pre>
 			</div>
 					<div class="line" id="line71">
 				<div class="number">71.</div>
-				<pre class="content">			.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
+				<pre class="content">				});</pre>
 			</div>
 					<div class="line" id="line72">
 				<div class="number">72.</div>
-				<pre class="content">				event(<span class="hljs-string">"error"</span>, err);</pre>
+				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>))</pre>
 			</div>
 					<div class="line" id="line73">
 				<div class="number">73.</div>
-				<pre class="content">			});</pre>
+				<pre class="content">			.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line74">
 				<div class="number">74.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content">				event(<span class="hljs-string">"error"</span>, err);</pre>
 			</div>
 					<div class="line" id="line75">
 				<div class="number">75.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">			});</pre>
 			</div>
 					<div class="line" id="line76">
 				<div class="number">76.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
 			</div>
 					<div class="line" id="line77">
 				<div class="number">77.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line78">
 				<div class="number">78.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function is used to easily route a view. Views are often .html files, but can be </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line79">
 				<div class="number">79.</div>
-				<pre class="content"><span class="hljs-comment">	 * generalized as a markup file. If you want to learn more about views you can read the </span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line80">
 				<div class="number">80.</div>
-				<pre class="content"><span class="hljs-comment">	 * tutorial about it. By default views are stored in the views folder, but you can change this </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is used to easily route a view. Views are often .html files, but can be </span></pre>
 			</div>
 					<div class="line" id="line81">
 				<div class="number">81.</div>
-				<pre class="content"><span class="hljs-comment">	 * with the .folders().views() function or by using an absolute path. When your path isn't </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * generalized as a markup file. If you want to learn more about views you can read the </span></pre>
 			</div>
 					<div class="line" id="line82">
 				<div class="number">82.</div>
-				<pre class="content"><span class="hljs-comment">	 * absolute it is prefixed by the root and the views folder. If it is absolute the specified </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * tutorial about it. By default views are stored in the views folder, but you can change this </span></pre>
 			</div>
 					<div class="line" id="line83">
 				<div class="number">83.</div>
-				<pre class="content"><span class="hljs-comment">	 * path won't be prefixed. All paths do however get fixed, all \\ are changed to a / to support</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * with the .folders().views() function or by using an absolute path. When your path isn't </span></pre>
 			</div>
 					<div class="line" id="line84">
 				<div class="number">84.</div>
-				<pre class="content"><span class="hljs-comment">	 * all platforms. The files also get suffixed by default. The suffix can be removed or changed </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * absolute it is prefixed by the root and the views folder. If it is absolute the specified </span></pre>
 			</div>
 					<div class="line" id="line85">
 				<div class="number">85.</div>
-				<pre class="content"><span class="hljs-comment">	 * with the ext parameter. The view will be routed to specified url. The promise this function </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * path won't be prefixed. All paths do however get fixed, all \\ are changed to a / to support</span></pre>
 			</div>
 					<div class="line" id="line86">
 				<div class="number">86.</div>
-				<pre class="content"><span class="hljs-comment">	 * returns emits a file event the view was loaded, a request event when the view was requested</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * all platforms. The files also get suffixed by default. The suffix can be removed or changed </span></pre>
 			</div>
 					<div class="line" id="line87">
 				<div class="number">87.</div>
-				<pre class="content"><span class="hljs-comment">	 * and a finish event when the view has finished routing.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * with the ext parameter. The view will be routed to the specified url.</span></pre>
 			</div>
 					<div class="line" id="line88">
 				<div class="number">88.</div>
@@ -487,107 +487,107 @@
 			</div>
 					<div class="line" id="line92">
 				<div class="number">92.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Loads and routes a view.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits file When the specified view has been loaded. With the file as first parameter.</span></pre>
 			</div>
 					<div class="line" id="line93">
 				<div class="number">93.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} url The url the view will be routed to.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits request When the view is requested. With the request as first parameter and </span></pre>
 			</div>
 					<div class="line" id="line94">
 				<div class="number">94.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} filename The filename or path of the view.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * response as second.</span></pre>
 			</div>
 					<div class="line" id="line95">
 				<div class="number">95.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (ext = ".html") The extension of the view.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits error When there was an error while loading the file. With the error as first </span></pre>
 			</div>
 					<div class="line" id="line96">
 				<div class="number">96.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * parameter.</span></pre>
 			</div>
 					<div class="line" id="line97">
 				<div class="number">97.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function view</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits finish When it is finsihed loading and routing the file. This event has no </span></pre>
 			</div>
 					<div class="line" id="line98">
 				<div class="number">98.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * parameters.</span></pre>
 			</div>
 					<div class="line" id="line99">
 				<div class="number">99.</div>
-				<pre class="content">	view(url, filename, ext = <span class="hljs-string">".html"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Loads and routes a view.</span></pre>
 			</div>
 					<div class="line" id="line100">
 				<div class="number">100.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} url The url the view will be routed to.</span></pre>
 			</div>
 					<div class="line" id="line101">
 				<div class="number">101.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} filename The filename or path of the view.</span></pre>
 			</div>
 					<div class="line" id="line102">
 				<div class="number">102.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (ext = ".html") The extension of the view.</span></pre>
 			</div>
 					<div class="line" id="line103">
 				<div class="number">103.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> filename !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line104">
 				<div class="number">104.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument filename must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function view</span></pre>
 			</div>
 					<div class="line" id="line105">
 				<div class="number">105.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line106">
 				<div class="number">106.</div>
-				<pre class="content"></pre>
+				<pre class="content">	view(url, filename, ext = <span class="hljs-string">".html"</span>) {</pre>
 			</div>
 					<div class="line" id="line107">
 				<div class="number">107.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> path = <span class="hljs-string">""</span>;</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url !== <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line108">
 				<div class="number">108.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
 			</div>
 					<div class="line" id="line109">
 				<div class="number">109.</div>
-				<pre class="content">		<span class="hljs-comment">// Fix the filename by replacing \\ with / to support all platforms</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line110">
 				<div class="number">110.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> filename_ = filename.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> filename !== <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line111">
 				<div class="number">111.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument filename must be a string"</span>);</pre>
 			</div>
 					<div class="line" id="line112">
 				<div class="number">112.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(path_.isAbsolute(filename_)) {</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line113">
 				<div class="number">113.</div>
-				<pre class="content">			path = filename_ + (filename_.endsWith(ext) ? <span class="hljs-string">""</span> : ext);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line114">
 				<div class="number">114.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> path = <span class="hljs-string">""</span>;</pre>
 			</div>
 					<div class="line" id="line115">
 				<div class="number">115.</div>
-				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line116">
 				<div class="number">116.</div>
-				<pre class="content">			path = <span class="hljs-keyword">this</span>._cerus.root() + <span class="hljs-keyword">this</span>._folders._views + <span class="hljs-string">"/"</span> + filename_ + (filename_.endsWith(ext) ? <span class="hljs-string">""</span> : ext);</pre>
+				<pre class="content">		<span class="hljs-comment">// Fix the filename by replacing \\ with / to support all platforms</span></pre>
 			</div>
 					<div class="line" id="line117">
 				<div class="number">117.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> filename_ = filename.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line118">
 				<div class="number">118.</div>
@@ -595,47 +595,47 @@
 			</div>
 					<div class="line" id="line119">
 				<div class="number">119.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(path_.isAbsolute(filename_)) {</pre>
 			</div>
 					<div class="line" id="line120">
 				<div class="number">120.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.file(path).read()</pre>
+				<pre class="content">			path = filename_ + (filename_.endsWith(ext) ? <span class="hljs-string">""</span> : ext);</pre>
 			</div>
 					<div class="line" id="line121">
 				<div class="number">121.</div>
-				<pre class="content">			.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data, file</span>) </span>{</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line122">
 				<div class="number">122.</div>
-				<pre class="content">				event(<span class="hljs-string">"file"</span>, file);</pre>
+				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
 			</div>
 					<div class="line" id="line123">
 				<div class="number">123.</div>
-				<pre class="content"></pre>
+				<pre class="content">			path = <span class="hljs-keyword">this</span>._cerus.root() + <span class="hljs-keyword">this</span>._folders._views + <span class="hljs-string">"/"</span> + filename_ + (filename_.endsWith(ext) ? <span class="hljs-string">""</span> : ext);</pre>
 			</div>
 					<div class="line" id="line124">
 				<div class="number">124.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>._cerus.router().get(url)</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line125">
 				<div class="number">125.</div>
-				<pre class="content">				.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line126">
 				<div class="number">126.</div>
-				<pre class="content">					event(<span class="hljs-string">"request"</span>, req, res);</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line127">
 				<div class="number">127.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.file(path).read()</pre>
 			</div>
 					<div class="line" id="line128">
 				<div class="number">128.</div>
-				<pre class="content">					res.file(file);</pre>
+				<pre class="content">			.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data, file</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line129">
 				<div class="number">129.</div>
-				<pre class="content">				});</pre>
+				<pre class="content">				event(<span class="hljs-string">"file"</span>, file);</pre>
 			</div>
 					<div class="line" id="line130">
 				<div class="number">130.</div>
@@ -643,187 +643,187 @@
 			</div>
 					<div class="line" id="line131">
 				<div class="number">131.</div>
-				<pre class="content">				event(<span class="hljs-string">"finish"</span>);</pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>._cerus.router().get(url)</pre>
 			</div>
 					<div class="line" id="line132">
 				<div class="number">132.</div>
-				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>))</pre>
+				<pre class="content">				.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line133">
 				<div class="number">133.</div>
-				<pre class="content">			.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
+				<pre class="content">					event(<span class="hljs-string">"request"</span>, req, res);</pre>
 			</div>
 					<div class="line" id="line134">
 				<div class="number">134.</div>
-				<pre class="content">				event(<span class="hljs-string">"error"</span>, err);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line135">
 				<div class="number">135.</div>
-				<pre class="content">			});</pre>
+				<pre class="content">					res.file(file);</pre>
 			</div>
 					<div class="line" id="line136">
 				<div class="number">136.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content">				});</pre>
 			</div>
 					<div class="line" id="line137">
 				<div class="number">137.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line138">
 				<div class="number">138.</div>
-				<pre class="content"></pre>
+				<pre class="content">				event(<span class="hljs-string">"finish"</span>);</pre>
 			</div>
 					<div class="line" id="line139">
 				<div class="number">139.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>))</pre>
 			</div>
 					<div class="line" id="line140">
 				<div class="number">140.</div>
-				<pre class="content"><span class="hljs-comment">	 * With this function you can route assets. Assets are folders containing a certain type of </span></pre>
+				<pre class="content">			.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line141">
 				<div class="number">141.</div>
-				<pre class="content"><span class="hljs-comment">	 * "assets", e.g. stylesheets, scripts, images, etc. If you want to learn more about how to use</span></pre>
+				<pre class="content">				event(<span class="hljs-string">"error"</span>, err);</pre>
 			</div>
 					<div class="line" id="line142">
 				<div class="number">142.</div>
-				<pre class="content"><span class="hljs-comment">	 * assets take a look at the assets tutorial. By default all the assets are stored in the </span></pre>
+				<pre class="content">			});</pre>
 			</div>
 					<div class="line" id="line143">
 				<div class="number">143.</div>
-				<pre class="content"><span class="hljs-comment">	 * assets folder. You can change this folder with .folder().assets(). You can also use an </span></pre>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
 			</div>
 					<div class="line" id="line144">
 				<div class="number">144.</div>
-				<pre class="content"><span class="hljs-comment">	 * absolute path. When using an absolute path the default prefix, the root and assets folder,</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line145">
 				<div class="number">145.</div>
-				<pre class="content"><span class="hljs-comment">	 * won't be used. This path is also fixed (\\\\ is changed to /) before being used to support </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line146">
 				<div class="number">146.</div>
-				<pre class="content"><span class="hljs-comment">	 * all the platforms. The assets will be routed to /{FOLDER}/{FILE}. You can also override the </span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line147">
 				<div class="number">147.</div>
-				<pre class="content"><span class="hljs-comment">	 * type that will be send with the request by using the type parameter. This function will a </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can route assets. Assets are folders containing a certain type of </span></pre>
 			</div>
 					<div class="line" id="line148">
 				<div class="number">148.</div>
-				<pre class="content"><span class="hljs-comment">	 * promise that emits the following events: file when a new file is loaded, request when a file</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * "assets", e.g. stylesheets, scripts, images, etc. If you want to learn more about how to use</span></pre>
 			</div>
 					<div class="line" id="line149">
 				<div class="number">149.</div>
-				<pre class="content"><span class="hljs-comment">	 * has been requested and finish when all files in the folder are loaded and routed.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * assets take a look at the assets tutorial. By default all the assets are stored in the </span></pre>
 			</div>
 					<div class="line" id="line150">
 				<div class="number">150.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * assets folder. You can change this folder with .folder().assets(). You can also use an </span></pre>
 			</div>
 					<div class="line" id="line151">
 				<div class="number">151.</div>
-				<pre class="content"><span class="hljs-comment">	 * // with as project env "C:\\project\\example.js" and folder "C:\\project\\assets\\css\\" containing two files:</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * absolute path. When using an absolute path the default prefix, the root and assets folder,</span></pre>
 			</div>
 					<div class="line" id="line152">
 				<div class="number">152.</div>
-				<pre class="content"><span class="hljs-comment">	 * // "example1.css" and "example2.css"</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * won't be used. This path is also fixed (\\\\ is changed to /) before being used to support </span></pre>
 			</div>
 					<div class="line" id="line153">
 				<div class="number">153.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.autoroute().assets("css");</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * all the platforms. The assets will be routed to /{FOLDER}/{FILE}, for example: "styles.css" </span></pre>
 			</div>
 					<div class="line" id="line154">
 				<div class="number">154.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will load and route "example1.css" to "/css/example1.css" and "example2.css" to "/css/example2.css"</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * from folder "css" will routed to "/css/styles.css". You can also override the type that will</span></pre>
 			</div>
 					<div class="line" id="line155">
 				<div class="number">155.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Loads and routes an assets folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * be send with the request by using the type parameter.</span></pre>
 			</div>
 					<div class="line" id="line156">
 				<div class="number">156.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} folder The assets folder that will be routed.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line157">
 				<div class="number">157.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (type) The type that will be used for the response.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // with as project env "C:\\project\\example.js" and folder "C:\\project\\assets\\css\\" containing two files:</span></pre>
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // "example1.css" and "example2.css"</span></pre>
 			</div>
 					<div class="line" id="line159">
 				<div class="number">159.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function assets</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.autoroute().assets("css");</span></pre>
 			</div>
 					<div class="line" id="line160">
 				<div class="number">160.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will load and route "example1.css" to "/css/example1.css" and "example2.css" to "/css/example2.css"</span></pre>
 			</div>
 					<div class="line" id="line161">
 				<div class="number">161.</div>
-				<pre class="content">	assets(folder, type) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits file When one of the assets has been loaded. With the file as first parameter.</span></pre>
 			</div>
 					<div class="line" id="line162">
 				<div class="number">162.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> folder !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits request When an asset is requested. With the request as first parameter and response </span></pre>
 			</div>
 					<div class="line" id="line163">
 				<div class="number">163.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument folder must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * as second.</span></pre>
 			</div>
 					<div class="line" id="line164">
 				<div class="number">164.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits error When there was an error while loading the file. With the error as first </span></pre>
 			</div>
 					<div class="line" id="line165">
 				<div class="number">165.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * parameter.</span></pre>
 			</div>
 					<div class="line" id="line166">
 				<div class="number">166.</div>
-				<pre class="content">		<span class="hljs-comment">// Fix the filename by replacing \\ with / to support all platforms</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits finish When it is finsihed loading and routing all the assets. This event has no </span></pre>
 			</div>
 					<div class="line" id="line167">
 				<div class="number">167.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> folder_ = folder.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * parameters.</span></pre>
 			</div>
 					<div class="line" id="line168">
 				<div class="number">168.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Loads and routes an assets folder.</span></pre>
 			</div>
 					<div class="line" id="line169">
 				<div class="number">169.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> path = <span class="hljs-string">""</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} folder The assets folder that will be routed.</span></pre>
 			</div>
 					<div class="line" id="line170">
 				<div class="number">170.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (type) The type that will be used for the response.</span></pre>
 			</div>
 					<div class="line" id="line171">
 				<div class="number">171.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(path_.isAbsolute(folder_)) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line172">
 				<div class="number">172.</div>
-				<pre class="content">			path = folder_ + <span class="hljs-string">"/"</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function assets</span></pre>
 			</div>
 					<div class="line" id="line173">
 				<div class="number">173.</div>
-				<pre class="content">			folder_ = folder_.substring(folder_.lastIndexOf(<span class="hljs-keyword">this</span>._folders._assets) + <span class="hljs-keyword">this</span>._folders._assets.length + <span class="hljs-number">1</span>, folder_.length);</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line174">
 				<div class="number">174.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	assets(folder, type) {</pre>
 			</div>
 					<div class="line" id="line175">
 				<div class="number">175.</div>
-				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> folder !== <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line176">
 				<div class="number">176.</div>
-				<pre class="content">			path = <span class="hljs-keyword">this</span>._cerus.root() + <span class="hljs-keyword">this</span>._folders._assets + <span class="hljs-string">"/"</span> + folder_ + <span class="hljs-string">"/"</span>;</pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument folder must be a string"</span>);</pre>
 			</div>
 					<div class="line" id="line177">
 				<div class="number">177.</div>
@@ -835,51 +835,51 @@
 			</div>
 					<div class="line" id="line179">
 				<div class="number">179.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-comment">// Fix the filename by replacing \\ with / to support all platforms</span></pre>
 			</div>
 					<div class="line" id="line180">
 				<div class="number">180.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.folder(path).files()</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> folder_ = folder.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line181">
 				<div class="number">181.</div>
-				<pre class="content">			.on(<span class="hljs-string">"file"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">file, last</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line182">
 				<div class="number">182.</div>
-				<pre class="content">				file.read()</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> path = <span class="hljs-string">""</span>;</pre>
 			</div>
 					<div class="line" id="line183">
 				<div class="number">183.</div>
-				<pre class="content">				.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line184">
 				<div class="number">184.</div>
-				<pre class="content">					event(<span class="hljs-string">"file"</span>, file);</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(path_.isAbsolute(folder_)) {</pre>
 			</div>
 					<div class="line" id="line185">
 				<div class="number">185.</div>
-				<pre class="content"></pre>
+				<pre class="content">			path = folder_ + <span class="hljs-string">"/"</span>;</pre>
 			</div>
 					<div class="line" id="line186">
 				<div class="number">186.</div>
-				<pre class="content">					<span class="hljs-keyword">this</span>._cerus.router().get(<span class="hljs-string">"/"</span> + folder_ + <span class="hljs-string">"/"</span> + file.base())</pre>
+				<pre class="content">			folder_ = folder_.substring(folder_.lastIndexOf(<span class="hljs-keyword">this</span>._folders._assets) + <span class="hljs-keyword">this</span>._folders._assets.length + <span class="hljs-number">1</span>, folder_.length);</pre>
 			</div>
 					<div class="line" id="line187">
 				<div class="number">187.</div>
-				<pre class="content">					.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line188">
 				<div class="number">188.</div>
-				<pre class="content">						event(<span class="hljs-string">"request"</span>, req, res);</pre>
+				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
 			</div>
 					<div class="line" id="line189">
 				<div class="number">189.</div>
-				<pre class="content">						</pre>
+				<pre class="content">			path = <span class="hljs-keyword">this</span>._cerus.root() + <span class="hljs-keyword">this</span>._folders._assets + <span class="hljs-string">"/"</span> + folder_ + <span class="hljs-string">"/"</span>;</pre>
 			</div>
 					<div class="line" id="line190">
 				<div class="number">190.</div>
-				<pre class="content">						res.type(type || file.type());</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line191">
 				<div class="number">191.</div>
@@ -887,234 +887,286 @@
 			</div>
 					<div class="line" id="line192">
 				<div class="number">192.</div>
-				<pre class="content">						<span class="hljs-keyword">if</span>(res.type().startsWith(<span class="hljs-string">"image"</span>)) {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line193">
 				<div class="number">193.</div>
-				<pre class="content">							res.send(file.data(), <span class="hljs-string">"binary"</span>);</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.folder(path).files()</pre>
 			</div>
 					<div class="line" id="line194">
 				<div class="number">194.</div>
-				<pre class="content">						}</pre>
+				<pre class="content">			.on(<span class="hljs-string">"file"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">file, last</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line195">
 				<div class="number">195.</div>
-				<pre class="content">						<span class="hljs-keyword">else</span> {</pre>
+				<pre class="content">				file.read()</pre>
 			</div>
 					<div class="line" id="line196">
 				<div class="number">196.</div>
-				<pre class="content">							res.file(file);</pre>
+				<pre class="content">				.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line197">
 				<div class="number">197.</div>
-				<pre class="content">						}</pre>
+				<pre class="content">					event(<span class="hljs-string">"file"</span>, file);</pre>
 			</div>
 					<div class="line" id="line198">
 				<div class="number">198.</div>
-				<pre class="content">					});</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line199">
 				<div class="number">199.</div>
-				<pre class="content"></pre>
+				<pre class="content">					<span class="hljs-keyword">this</span>._cerus.router().get(<span class="hljs-string">"/"</span> + folder_ + <span class="hljs-string">"/"</span> + file.base())</pre>
 			</div>
 					<div class="line" id="line200">
 				<div class="number">200.</div>
-				<pre class="content">					<span class="hljs-keyword">if</span>(last) {</pre>
+				<pre class="content">					.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line201">
 				<div class="number">201.</div>
-				<pre class="content">						event(<span class="hljs-string">"finish"</span>);</pre>
+				<pre class="content">						event(<span class="hljs-string">"request"</span>, req, res);</pre>
 			</div>
 					<div class="line" id="line202">
 				<div class="number">202.</div>
-				<pre class="content">					}</pre>
+				<pre class="content">						</pre>
 			</div>
 					<div class="line" id="line203">
 				<div class="number">203.</div>
-				<pre class="content">				}.bind(<span class="hljs-keyword">this</span>))</pre>
+				<pre class="content">						res.type(type || file.type());</pre>
 			</div>
 					<div class="line" id="line204">
 				<div class="number">204.</div>
-				<pre class="content">				.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line205">
 				<div class="number">205.</div>
-				<pre class="content">					event(<span class="hljs-string">"error"</span>, err);</pre>
+				<pre class="content">						<span class="hljs-keyword">if</span>(res.type().startsWith(<span class="hljs-string">"image"</span>)) {</pre>
 			</div>
 					<div class="line" id="line206">
 				<div class="number">206.</div>
-				<pre class="content">				});</pre>
+				<pre class="content">							res.send(file.data(), <span class="hljs-string">"binary"</span>);</pre>
 			</div>
 					<div class="line" id="line207">
 				<div class="number">207.</div>
-				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>))</pre>
+				<pre class="content">						}</pre>
 			</div>
 					<div class="line" id="line208">
 				<div class="number">208.</div>
-				<pre class="content">			.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
+				<pre class="content">						<span class="hljs-keyword">else</span> {</pre>
 			</div>
 					<div class="line" id="line209">
 				<div class="number">209.</div>
-				<pre class="content">				event(<span class="hljs-string">"error"</span>, err);</pre>
+				<pre class="content">							res.file(file);</pre>
 			</div>
 					<div class="line" id="line210">
 				<div class="number">210.</div>
-				<pre class="content">			});</pre>
+				<pre class="content">						}</pre>
 			</div>
 					<div class="line" id="line211">
 				<div class="number">211.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content">					});</pre>
 			</div>
 					<div class="line" id="line212">
 				<div class="number">212.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line213">
 				<div class="number">213.</div>
-				<pre class="content">}</pre>
+				<pre class="content">					<span class="hljs-keyword">if</span>(last) {</pre>
 			</div>
 					<div class="line" id="line214">
 				<div class="number">214.</div>
-				<pre class="content"></pre>
+				<pre class="content">						event(<span class="hljs-string">"finish"</span>);</pre>
 			</div>
 					<div class="line" id="line215">
 				<div class="number">215.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+				<pre class="content">					}</pre>
 			</div>
 					<div class="line" id="line216">
 				<div class="number">216.</div>
-				<pre class="content">	<span class="hljs-keyword">var</span> plugin = {};</pre>
+				<pre class="content">				}.bind(<span class="hljs-keyword">this</span>))</pre>
 			</div>
 					<div class="line" id="line217">
 				<div class="number">217.</div>
-				<pre class="content">	<span class="hljs-keyword">var</span> autoroute_;</pre>
+				<pre class="content">				.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line218">
 				<div class="number">218.</div>
-				<pre class="content"></pre>
+				<pre class="content">					event(<span class="hljs-string">"error"</span>, err);</pre>
 			</div>
 					<div class="line" id="line219">
 				<div class="number">219.</div>
-				<pre class="content">	plugin.name = <span class="hljs-string">"cerus-autoroute"</span>;</pre>
+				<pre class="content">				});</pre>
 			</div>
 					<div class="line" id="line220">
 				<div class="number">220.</div>
-				<pre class="content">	plugin.version = <span class="hljs-string">"0.2.0"</span>;</pre>
+				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>))</pre>
 			</div>
 					<div class="line" id="line221">
 				<div class="number">221.</div>
-				<pre class="content">	plugin.dependencies = [</pre>
+				<pre class="content">			.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line222">
 				<div class="number">222.</div>
-				<pre class="content">		<span class="hljs-string">"cerus"</span>,</pre>
+				<pre class="content">				event(<span class="hljs-string">"error"</span>, err);</pre>
 			</div>
 					<div class="line" id="line223">
 				<div class="number">223.</div>
-				<pre class="content">		<span class="hljs-string">"cerus-router"</span>,</pre>
+				<pre class="content">			});</pre>
 			</div>
 					<div class="line" id="line224">
 				<div class="number">224.</div>
-				<pre class="content">		<span class="hljs-string">"cerus-fs"</span></pre>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
 			</div>
 					<div class="line" id="line225">
 				<div class="number">225.</div>
-				<pre class="content">	];</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line226">
 				<div class="number">226.</div>
-				<pre class="content"></pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line227">
 				<div class="number">227.</div>
-				<pre class="content">	plugin._init = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cerus</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line228">
 				<div class="number">228.</div>
-				<pre class="content">		autoroute_ = <span class="hljs-keyword">new</span> autoroute(cerus);</pre>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line229">
 				<div class="number">229.</div>
-				<pre class="content">	};</pre>
+				<pre class="content">	<span class="hljs-keyword">var</span> plugin = {};</pre>
 			</div>
 					<div class="line" id="line230">
 				<div class="number">230.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-keyword">var</span> autoroute_;</pre>
 			</div>
 					<div class="line" id="line231">
 				<div class="number">231.</div>
-				<pre class="content">	plugin.autoroute = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line232">
 				<div class="number">232.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_;</pre>
+				<pre class="content">	plugin.name = <span class="hljs-string">"cerus-autoroute"</span>;</pre>
 			</div>
 					<div class="line" id="line233">
 				<div class="number">233.</div>
-				<pre class="content">	};</pre>
+				<pre class="content">	plugin.version = <span class="hljs-string">"0.2.0"</span>;</pre>
 			</div>
 					<div class="line" id="line234">
 				<div class="number">234.</div>
-				<pre class="content"></pre>
+				<pre class="content">	plugin.dependencies = [</pre>
 			</div>
 					<div class="line" id="line235">
 				<div class="number">235.</div>
-				<pre class="content">	plugin.favicon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">path</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-string">"cerus"</span>,</pre>
 			</div>
 					<div class="line" id="line236">
 				<div class="number">236.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.favicon(path);</pre>
+				<pre class="content">		<span class="hljs-string">"cerus-router"</span>,</pre>
 			</div>
 					<div class="line" id="line237">
 				<div class="number">237.</div>
-				<pre class="content">	};</pre>
+				<pre class="content">		<span class="hljs-string">"cerus-fs"</span></pre>
 			</div>
 					<div class="line" id="line238">
 				<div class="number">238.</div>
-				<pre class="content"></pre>
+				<pre class="content">	];</pre>
 			</div>
 					<div class="line" id="line239">
 				<div class="number">239.</div>
-				<pre class="content">	plugin.view = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, filename, ext</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line240">
 				<div class="number">240.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.view(url, filename, ext);</pre>
+				<pre class="content">	plugin._init = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cerus</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line241">
 				<div class="number">241.</div>
-				<pre class="content">	};</pre>
+				<pre class="content">		autoroute_ = <span class="hljs-keyword">new</span> autoroute(cerus);</pre>
 			</div>
 					<div class="line" id="line242">
 				<div class="number">242.</div>
-				<pre class="content"></pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line243">
 				<div class="number">243.</div>
-				<pre class="content">	plugin.assets = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">folder, type</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line244">
 				<div class="number">244.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.assets(folder, type);</pre>
+				<pre class="content">	plugin.autoroute = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line245">
 				<div class="number">245.</div>
-				<pre class="content">	};</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_;</pre>
 			</div>
 					<div class="line" id="line246">
 				<div class="number">246.</div>
-				<pre class="content"></pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line247">
 				<div class="number">247.</div>
-				<pre class="content">	<span class="hljs-keyword">return</span> plugin;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line248">
 				<div class="number">248.</div>
-				<pre class="content">};</pre>
+				<pre class="content">	plugin.favicon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">path</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line249">
 				<div class="number">249.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.favicon(path);</pre>
+			</div>
+					<div class="line" id="line250">
+				<div class="number">250.</div>
+				<pre class="content">	};</pre>
+			</div>
+					<div class="line" id="line251">
+				<div class="number">251.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line252">
+				<div class="number">252.</div>
+				<pre class="content">	plugin.view = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, filename, ext</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line253">
+				<div class="number">253.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.view(url, filename, ext);</pre>
+			</div>
+					<div class="line" id="line254">
+				<div class="number">254.</div>
+				<pre class="content">	};</pre>
+			</div>
+					<div class="line" id="line255">
+				<div class="number">255.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line256">
+				<div class="number">256.</div>
+				<pre class="content">	plugin.assets = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">folder, type</span>) </span>{</pre>
+			</div>
+					<div class="line" id="line257">
+				<div class="number">257.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.assets(folder, type);</pre>
+			</div>
+					<div class="line" id="line258">
+				<div class="number">258.</div>
+				<pre class="content">	};</pre>
+			</div>
+					<div class="line" id="line259">
+				<div class="number">259.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line260">
+				<div class="number">260.</div>
+				<pre class="content">	<span class="hljs-keyword">return</span> plugin;</pre>
+			</div>
+					<div class="line" id="line261">
+				<div class="number">261.</div>
+				<pre class="content">};</pre>
+			</div>
+					<div class="line" id="line262">
+				<div class="number">262.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>
