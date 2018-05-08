@@ -811,7 +811,7 @@
 			</div>
 					<div class="line" id="line173">
 				<div class="number">173.</div>
-				<pre class="content">			folder_ = folder_.substring(folder_.lastIndexOf(<span class="hljs-keyword">this</span>._folders._assets) + <span class="hljs-keyword">this</span>._folders._assets.length, folder_.length);</pre>
+				<pre class="content">			folder_ = folder_.substring(folder_.lastIndexOf(<span class="hljs-keyword">this</span>._folders._assets) + <span class="hljs-keyword">this</span>._folders._assets.length + <span class="hljs-number">1</span>, folder_.length);</pre>
 			</div>
 					<div class="line" id="line174">
 				<div class="number">174.</div>
@@ -947,162 +947,174 @@
 			</div>
 					<div class="line" id="line207">
 				<div class="number">207.</div>
-				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>))</pre>
 			</div>
 					<div class="line" id="line208">
 				<div class="number">208.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content">			.catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line209">
 				<div class="number">209.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">				event(<span class="hljs-string">"error"</span>, err);</pre>
 			</div>
 					<div class="line" id="line210">
 				<div class="number">210.</div>
-				<pre class="content">}</pre>
+				<pre class="content">			});</pre>
 			</div>
 					<div class="line" id="line211">
 				<div class="number">211.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
 			</div>
 					<div class="line" id="line212">
 				<div class="number">212.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line213">
 				<div class="number">213.</div>
-				<pre class="content">	<span class="hljs-keyword">var</span> plugin = {};</pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line214">
 				<div class="number">214.</div>
-				<pre class="content">	<span class="hljs-keyword">var</span> autoroute_;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line215">
 				<div class="number">215.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line216">
 				<div class="number">216.</div>
-				<pre class="content">	plugin.name = <span class="hljs-string">"cerus-autoroute"</span>;</pre>
+				<pre class="content">	<span class="hljs-keyword">var</span> plugin = {};</pre>
 			</div>
 					<div class="line" id="line217">
 				<div class="number">217.</div>
-				<pre class="content">	plugin.version = <span class="hljs-string">"0.2.0"</span>;</pre>
+				<pre class="content">	<span class="hljs-keyword">var</span> autoroute_;</pre>
 			</div>
 					<div class="line" id="line218">
 				<div class="number">218.</div>
-				<pre class="content">	plugin.dependencies = [</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line219">
 				<div class="number">219.</div>
-				<pre class="content">		<span class="hljs-string">"cerus"</span>,</pre>
+				<pre class="content">	plugin.name = <span class="hljs-string">"cerus-autoroute"</span>;</pre>
 			</div>
 					<div class="line" id="line220">
 				<div class="number">220.</div>
-				<pre class="content">		<span class="hljs-string">"cerus-router"</span>,</pre>
+				<pre class="content">	plugin.version = <span class="hljs-string">"0.2.0"</span>;</pre>
 			</div>
 					<div class="line" id="line221">
 				<div class="number">221.</div>
-				<pre class="content">		<span class="hljs-string">"cerus-fs"</span></pre>
+				<pre class="content">	plugin.dependencies = [</pre>
 			</div>
 					<div class="line" id="line222">
 				<div class="number">222.</div>
-				<pre class="content">	];</pre>
+				<pre class="content">		<span class="hljs-string">"cerus"</span>,</pre>
 			</div>
 					<div class="line" id="line223">
 				<div class="number">223.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-string">"cerus-router"</span>,</pre>
 			</div>
 					<div class="line" id="line224">
 				<div class="number">224.</div>
-				<pre class="content">	plugin._init = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cerus</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-string">"cerus-fs"</span></pre>
 			</div>
 					<div class="line" id="line225">
 				<div class="number">225.</div>
-				<pre class="content">		autoroute_ = <span class="hljs-keyword">new</span> autoroute(cerus);</pre>
+				<pre class="content">	];</pre>
 			</div>
 					<div class="line" id="line226">
 				<div class="number">226.</div>
-				<pre class="content">	};</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line227">
 				<div class="number">227.</div>
-				<pre class="content"></pre>
+				<pre class="content">	plugin._init = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cerus</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line228">
 				<div class="number">228.</div>
-				<pre class="content">	plugin.autoroute = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+				<pre class="content">		autoroute_ = <span class="hljs-keyword">new</span> autoroute(cerus);</pre>
 			</div>
 					<div class="line" id="line229">
 				<div class="number">229.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_;</pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line230">
 				<div class="number">230.</div>
-				<pre class="content">	};</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line231">
 				<div class="number">231.</div>
-				<pre class="content"></pre>
+				<pre class="content">	plugin.autoroute = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line232">
 				<div class="number">232.</div>
-				<pre class="content">	plugin.favicon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">path</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_;</pre>
 			</div>
 					<div class="line" id="line233">
 				<div class="number">233.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.favicon(path);</pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line234">
 				<div class="number">234.</div>
-				<pre class="content">	};</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line235">
 				<div class="number">235.</div>
-				<pre class="content"></pre>
+				<pre class="content">	plugin.favicon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">path</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line236">
 				<div class="number">236.</div>
-				<pre class="content">	plugin.view = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, filename, ext</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.favicon(path);</pre>
 			</div>
 					<div class="line" id="line237">
 				<div class="number">237.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.view(url, filename, ext);</pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line238">
 				<div class="number">238.</div>
-				<pre class="content">	};</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line239">
 				<div class="number">239.</div>
-				<pre class="content"></pre>
+				<pre class="content">	plugin.view = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url, filename, ext</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line240">
 				<div class="number">240.</div>
-				<pre class="content">	plugin.assets = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">folder, type</span>) </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.view(url, filename, ext);</pre>
 			</div>
 					<div class="line" id="line241">
 				<div class="number">241.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.assets(folder, type);</pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line242">
 				<div class="number">242.</div>
-				<pre class="content">	};</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line243">
 				<div class="number">243.</div>
-				<pre class="content"></pre>
+				<pre class="content">	plugin.assets = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">folder, type</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line244">
 				<div class="number">244.</div>
-				<pre class="content">	<span class="hljs-keyword">return</span> plugin;</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> autoroute_.assets(folder, type);</pre>
 			</div>
 					<div class="line" id="line245">
 				<div class="number">245.</div>
-				<pre class="content">};</pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line246">
 				<div class="number">246.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line247">
+				<div class="number">247.</div>
+				<pre class="content">	<span class="hljs-keyword">return</span> plugin;</pre>
+			</div>
+					<div class="line" id="line248">
+				<div class="number">248.</div>
+				<pre class="content">};</pre>
+			</div>
+					<div class="line" id="line249">
+				<div class="number">249.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>
