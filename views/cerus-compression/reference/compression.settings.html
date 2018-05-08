@@ -158,37 +158,37 @@
 					<div class="col a4">
 						<a href="/views/cerus-compression/reference/compression.settings.html#flush">flush</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">The setter/getter for the flush setting.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-compression/reference/compression.settings.html#finish">finish</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">The setter/getter for the finish setting.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-compression/reference/compression.settings.html#chunk">chunk</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">The setter/getter for the chunk setting.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-compression/reference/compression.settings.html#level">level</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">The setter/getter for the level setting.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-compression/reference/compression.settings.html#memory">memory</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">The setter/getter for the memory setting.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-compression/reference/compression.settings.html#strategy">strategy</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">The setter/getter for the strategy setting.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
@@ -210,7 +210,7 @@
 		<h2>Functions</h2>
 					<div id="flush" class="function">
 				<div class="name">
-					.flush()
+					.flush(flush)
 				</div>
 				<div class="list">
 					<div class="item">
@@ -224,50 +224,97 @@
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The setter/getter for the flush setting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the setter and getter for the flush setting. The flush setting sets how much of the data needs to be flushed. The default value is NO_FLUSH, meaning there will be no flushes.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">flush</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new flush setting. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The flush setting.</div>
+						</div>
+					</div>
+							</div>
 					<div id="finish" class="function">
 				<div class="name">
-					.finish()
+					.finish(finish)
 				</div>
 				<div class="list">
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line292">Line 292</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line297">Line 297</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The setter/getter for the finish setting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the setter and getter for the finish setting. The finish setting sets what type of flush needs to be used when the compression is done. By default this is FINISH, meaning all remaining data will be flushed.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">finish</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new finish setting. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The finish setting.</div>
+						</div>
+					</div>
+							</div>
 					<div id="chunk" class="function">
 				<div class="name">
-					.chunk()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line303">Line 303</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
-					<div id="level" class="function">
-				<div class="name">
-					.level()
+					.chunk(chunk)
 				</div>
 				<div class="list">
 					<div class="item">
@@ -281,47 +328,198 @@
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The setter/getter for the chunk setting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the setter and getter for the chunk setting. The chunk setting sets what size a chunk is. That size will than be used during the compression. By default the chunk size is DEFAULT_CHUNK, which is 16*1024 bytes.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">chunk</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new chunk setting. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The chunk setting.</div>
+						</div>
+					</div>
+							</div>
+					<div id="level" class="function">
+				<div class="name">
+					.level(level)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line331">Line 331</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The setter/getter for the level setting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the setter and getter for the level setting. The level setting sets the level of compression that will be used. This setting will only work for compression and not for decompression. By default the compression level is set to DEFAULT_COMPRESSION.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">level</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new level setting. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The level setting.</div>
+						</div>
+					</div>
+							</div>
 					<div id="memory" class="function">
 				<div class="name">
-					.memory()
+					.memory(memory)
 				</div>
 				<div class="list">
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line325">Line 325</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line348">Line 348</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The setter/getter for the memory setting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the setter and getter for the memory setting. The memory setting sets the amount of memory that may be allocated to compressing the data. By default the memory level is set to DEFAULT_MEMLEVEL.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">memory</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new memory setting. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The memory setting.</div>
+						</div>
+					</div>
+							</div>
 					<div id="strategy" class="function">
 				<div class="name">
-					.strategy()
+					.strategy(strategy)
 				</div>
 				<div class="list">
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line336">Line 336</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line365">Line 365</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The setter/getter for the strategy setting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the setter and getter for the compression strategy. The strategy setting sets the strategy type that will be used while compressing the inserted data. By default this is set to DEFAULT_STRATEGY.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">strategy</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new strategy setting. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The strategy setting.</div>
+						</div>
+					</div>
+							</div>
 					<div id="windowbits" class="function">
 				<div class="name">
 					.windowbits()
@@ -331,7 +529,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line347">Line 347</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line382">Line 382</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -350,7 +548,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line358">Line 358</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line393">Line 393</a>
 						</div>
 					</div>
 																				<div class="item">
