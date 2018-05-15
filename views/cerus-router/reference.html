@@ -283,6 +283,18 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 				</div>
 							<div class="row">
 					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#undefined"></a>
+					</div>
+					<div class="col a8">Sets for how long the socket can be kept alive.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#undefined"></a>
+					</div>
+					<div class="col a8">Timeouts the request for the specified amount of time.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.html#is">is</a>
 					</div>
 					<div class="col a8">Returns the matched content-type.</div>
@@ -396,9 +408,42 @@ req.event()
 							<div class="value">Returns a promise that is called on every event.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>With this function you can listen for all the request events. It&#39;ll return a promise that will be called on a number of events. The &quot;data&quot; event will be called when there was data received from the client with the data as parameter. The &quot;end&quot; request when all data was received and there is no data left. You should for this event until working with the request data. The &quot;close&quot; event will be called when the response was closed. The &quot;aborted&quot; event will be called when it was aborted by the socket. The &quot;error&quot; event is thrown when there was an error and the &quot;timeout&quot; event will be called when the client timed out.</p>
+				<div class="desc"><p>With this function you can listen for all the request events. It&#39;ll return a promise that will be called on a number of events.</p>
 </div>
-																									<div class="return">
+																					<div class="emits">
+						<h3>Emits</h3>
+						<div class="table">
+							<div class="row head">
+								<div class="col a3">Event</div>
+								<div class="col a9">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">data</div>
+									<div class="col a9">This event will be called when there was data received from the client. It will have the data as first parameter.</div>
+								</div>
+															<div class="row">
+									<div class="col a3">end</div>
+									<div class="col a9">This event will be called when all data was received and there is no data left. You should for this event until working with the request data.</div>
+								</div>
+															<div class="row">
+									<div class="col a3">close</div>
+									<div class="col a9">This event will be called when the response was closed.</div>
+								</div>
+															<div class="row">
+									<div class="col a3">aborted</div>
+									<div class="col a9">This event will be called when it was aborted by the socket.</div>
+								</div>
+															<div class="row">
+									<div class="col a3">error</div>
+									<div class="col a9">This event is thrown when there was an error.</div>
+								</div>
+															<div class="row">
+									<div class="col a3">timeout</div>
+									<div class="col a9">This event will be called when the client timed out.</div>
+								</div>
+													</div>
+					</div>
+													<div class="return">
 						<h3>Returns</h3>
 						<div class="item">
 							<div class="key">Type</div>
@@ -419,7 +464,7 @@ req.event()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line99">Line 99</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line102">Line 102</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -454,7 +499,7 @@ req.event()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line114">Line 114</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line117">Line 117</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -489,7 +534,7 @@ req.event()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line129">Line 129</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line132">Line 132</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -524,7 +569,7 @@ req.event()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line140">Line 140</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line143">Line 143</a>
 						</div>
 					</div>
 																					<div class="item">
@@ -571,7 +616,7 @@ req.url()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line160">Line 160</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line163">Line 163</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -614,7 +659,7 @@ req.method()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line174">Line 174</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line177">Line 177</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -649,7 +694,7 @@ req.method()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line185">Line 185</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line188">Line 188</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -684,7 +729,7 @@ req.method()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line196">Line 196</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line199">Line 199</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -719,7 +764,7 @@ req.method()
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line211">Line 211</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line214">Line 214</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -779,7 +824,7 @@ req.header(<span class="hljs-string">"host"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line227">Line 227</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line230">Line 230</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -814,7 +859,7 @@ req.header(<span class="hljs-string">"host"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line242">Line 242</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line245">Line 245</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -874,7 +919,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line258">Line 258</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line261">Line 261</a>
 						</div>
 					</div>
 																					<div class="item">
@@ -913,7 +958,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line286">Line 286</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line289">Line 289</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -948,7 +993,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line298">Line 298</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line301">Line 301</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -983,7 +1028,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line310">Line 310</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line313">Line 313</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1018,7 +1063,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line325">Line 325</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line328">Line 328</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1044,6 +1089,106 @@ req.header(<span class="hljs-string">"example"</span>);
 						</div>
 					</div>
 							</div>
+					<div id="" class="function">
+				<div class="name">
+					.undefined(enable, delay)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+							<a href="/views/cerus-router/source/lib/request.js.html#line339">Line 339</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Sets for how long the socket can be kept alive.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can set for how long the socket can be kept alive. With the first parameter you can also set if keep alive is enabled. This needs to be set to true if you want the delay to work.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">enable</div>
+									<div class="col a3">Boolean</div>
+									<div class="col a6"><span>
+										If keep alive may be enabled.
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">delay</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										How long to keep the socket alive.
+									</span></div>
+								</div>
+													</div>
+					</div>
+																							</div>
+					<div id="" class="function">
+				<div class="name">
+					.undefined(timeout)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+							<a href="/views/cerus-router/source/lib/request.js.html#line351">Line 351</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Timeouts the request for the specified amount of time.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>Using this function you can timeout the request for a certain amount of time. By timing the connection out the request will have to wait for the specified amount of time. Since this happens asynchronous this function will return promise.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">timeout</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										How long to timeout the connection for.
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function returns a promise.</div>
+						</div>
+					</div>
+							</div>
 					<div id="is" class="function">
 				<div class="name">
 					.is(types)
@@ -1053,7 +1198,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line355">Line 355</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line371">Line 371</a>
 						</div>
 					</div>
 																					<div class="item">
@@ -1100,7 +1245,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<h3>Returns</h3>
 						<div class="item">
 							<div class="key">Type</div>
-							<div class="value">String|Boolean</div>
+							<div class="value">String, Boolean</div>
 						</div>
 						<div class="item">
 							<div class="key">Description</div>
@@ -1117,7 +1262,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line379">Line 379</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line395">Line 395</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1152,7 +1297,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line391">Line 391</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line407">Line 407</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1193,7 +1338,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line403">Line 403</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line419">Line 419</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1228,7 +1373,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line418">Line 418</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line434">Line 434</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1288,7 +1433,7 @@ req.get(<span class="hljs-string">"data"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line447">Line 447</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line463">Line 463</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1323,7 +1468,7 @@ req.get(<span class="hljs-string">"data"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line460">Line 460</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line476">Line 476</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1358,7 +1503,7 @@ req.get(<span class="hljs-string">"data"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line471">Line 471</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line487">Line 487</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1393,7 +1538,7 @@ req.get(<span class="hljs-string">"data"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line481">Line 481</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line497">Line 497</a>
 						</div>
 					</div>
 																				<div class="item">

@@ -142,175 +142,175 @@
 			</div>
 					<div class="line" id="line4">
 				<div class="number">4.</div>
-				<pre class="content"><span class="hljs-comment"> * @class request.accepts</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the accepts class. With this class you can check if the client accepts certain content </span></pre>
 			</div>
 					<div class="line" id="line5">
 				<div class="number">5.</div>
-				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
+				<pre class="content"><span class="hljs-comment"> * types, encodings, charsets and/or languages.</span></pre>
 			</div>
 					<div class="line" id="line6">
 				<div class="number">6.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class request.accepts</span></pre>
 			</div>
 					<div class="line" id="line7">
 				<div class="number">7.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">accepts</span> </span>{</pre>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
 			</div>
 					<div class="line" id="line8">
 				<div class="number">8.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(request) {</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line9">
 				<div class="number">9.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._accepts = accepts_(request);</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">accepts</span> </span>{</pre>
 			</div>
 					<div class="line" id="line10">
 				<div class="number">10.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(request) {</pre>
 			</div>
 					<div class="line" id="line11">
 				<div class="number">11.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._accepts = accepts_(request);</pre>
 			</div>
 					<div class="line" id="line12">
 				<div class="number">12.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line13">
 				<div class="number">13.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function type</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line14">
 				<div class="number">14.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line15">
 				<div class="number">15.</div>
-				<pre class="content">	type(type) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can get or check what types are accepted. If the type parameter is </span></pre>
 			</div>
 					<div class="line" id="line16">
 				<div class="number">16.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(type === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * undefined it will return all the accepted types. You can also insert an array of types and </span></pre>
 			</div>
 					<div class="line" id="line17">
 				<div class="number">17.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.types();</pre>
+				<pre class="content"><span class="hljs-comment">	 * the first item that is accepted will be returned.</span></pre>
 			</div>
 					<div class="line" id="line18">
 				<div class="number">18.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line19">
 				<div class="number">19.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * // with as content-type "application/javascript"</span></pre>
 			</div>
 					<div class="line" id="line20">
 				<div class="number">20.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.type(type);</pre>
+				<pre class="content"><span class="hljs-comment">	 * req.charset(["css", "js", "html"]);</span></pre>
 			</div>
 					<div class="line" id="line21">
 				<div class="number">21.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return "application/javascript"</span></pre>
 			</div>
 					<div class="line" id="line22">
 				<div class="number">22.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks or returns what types are accepted.</span></pre>
 			</div>
 					<div class="line" id="line23">
 				<div class="number">23.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String[]} (type) The array of types to check.</span></pre>
 			</div>
 					<div class="line" id="line24">
 				<div class="number">24.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function encoding</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @returns {String[]|String} Returns all accept types or the type that matched.</span></pre>
 			</div>
 					<div class="line" id="line25">
 				<div class="number">25.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function type</span></pre>
 			</div>
 					<div class="line" id="line26">
 				<div class="number">26.</div>
-				<pre class="content">	encoding(encoding) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line27">
 				<div class="number">27.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(encoding === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content">	type(type) {</pre>
 			</div>
 					<div class="line" id="line28">
 				<div class="number">28.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.encodings();</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(type === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line29">
 				<div class="number">29.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.types();</pre>
 			</div>
 					<div class="line" id="line30">
 				<div class="number">30.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line31">
 				<div class="number">31.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.encoding(encoding);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line32">
 				<div class="number">32.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.type(type);</pre>
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function charset</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can get or check what encodings are accepted. If the type parameter </span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content">	charset(charset) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * is undefined it will return all the accepted encodings. You can also insert an array of </span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(charset === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * encodings and the first item that is accepted will be returned.</span></pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.charsets();</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * // with as content-type "deflate"</span></pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.charset(["utf-8", "deflate", "gzip"]);</span></pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.charset(charset);</pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return "deflate"</span></pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks or returns what encodings are accepted.</span></pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String[]} (type) The array of encodings to check.</span></pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @returns {String[]|String} Returns all accept encodings or the type that matched.</span></pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function language</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function encoding</span></pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
@@ -318,15 +318,15 @@
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content">	language(language) {</pre>
+				<pre class="content">	encoding(encoding) {</pre>
 			</div>
 					<div class="line" id="line49">
 				<div class="number">49.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(language === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(encoding === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line50">
 				<div class="number">50.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.languages();</pre>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.encodings();</pre>
 			</div>
 					<div class="line" id="line51">
 				<div class="number">51.</div>
@@ -338,7 +338,7 @@
 			</div>
 					<div class="line" id="line53">
 				<div class="number">53.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.language(language);</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.encoding(encoding);</pre>
 			</div>
 					<div class="line" id="line54">
 				<div class="number">54.</div>
@@ -346,18 +346,186 @@
 			</div>
 					<div class="line" id="line55">
 				<div class="number">55.</div>
-				<pre class="content">}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line56">
 				<div class="number">56.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line57">
 				<div class="number">57.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = accepts;</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can get or check what charsets are accepted. If the type parameter is</span></pre>
 			</div>
 					<div class="line" id="line58">
 				<div class="number">58.</div>
+				<pre class="content"><span class="hljs-comment">	 *  undefined it will return all the accepted charsets. You can also insert an array of </span></pre>
+			</div>
+					<div class="line" id="line59">
+				<div class="number">59.</div>
+				<pre class="content"><span class="hljs-comment">	 * charsets and the first item that is accepted will be returned.</span></pre>
+			</div>
+					<div class="line" id="line60">
+				<div class="number">60.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line61">
+				<div class="number">61.</div>
+				<pre class="content"><span class="hljs-comment">	 * // with as content-type "utf-8"</span></pre>
+			</div>
+					<div class="line" id="line62">
+				<div class="number">62.</div>
+				<pre class="content"><span class="hljs-comment">	 * req.charset(["ascii", "utf-8", "utf-16"]);</span></pre>
+			</div>
+					<div class="line" id="line63">
+				<div class="number">63.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return "utf-8"</span></pre>
+			</div>
+					<div class="line" id="line64">
+				<div class="number">64.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks or returns what charsets are accepted.</span></pre>
+			</div>
+					<div class="line" id="line65">
+				<div class="number">65.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String[]} (type) The array of charsets to check.</span></pre>
+			</div>
+					<div class="line" id="line66">
+				<div class="number">66.</div>
+				<pre class="content"><span class="hljs-comment">	 * @returns {String[]|String} Returns all accept charsets or the type that matched.</span></pre>
+			</div>
+					<div class="line" id="line67">
+				<div class="number">67.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function charset</span></pre>
+			</div>
+					<div class="line" id="line68">
+				<div class="number">68.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line69">
+				<div class="number">69.</div>
+				<pre class="content">	charset(charset) {</pre>
+			</div>
+					<div class="line" id="line70">
+				<div class="number">70.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(charset === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line71">
+				<div class="number">71.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.charsets();</pre>
+			</div>
+					<div class="line" id="line72">
+				<div class="number">72.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line73">
+				<div class="number">73.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line74">
+				<div class="number">74.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.charset(charset);</pre>
+			</div>
+					<div class="line" id="line75">
+				<div class="number">75.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line76">
+				<div class="number">76.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line77">
+				<div class="number">77.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line78">
+				<div class="number">78.</div>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can get or check what languages are accepted. If the type parameter </span></pre>
+			</div>
+					<div class="line" id="line79">
+				<div class="number">79.</div>
+				<pre class="content"><span class="hljs-comment">	 * is undefined it will return all the accepted languages. You can also insert an array of </span></pre>
+			</div>
+					<div class="line" id="line80">
+				<div class="number">80.</div>
+				<pre class="content"><span class="hljs-comment">	 * languages and the first item that is accepted will be returned.</span></pre>
+			</div>
+					<div class="line" id="line81">
+				<div class="number">81.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line82">
+				<div class="number">82.</div>
+				<pre class="content"><span class="hljs-comment">	 * // with as content-type "en"</span></pre>
+			</div>
+					<div class="line" id="line83">
+				<div class="number">83.</div>
+				<pre class="content"><span class="hljs-comment">	 * req.charset(["nl", "en", "de"]);</span></pre>
+			</div>
+					<div class="line" id="line84">
+				<div class="number">84.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return "en"</span></pre>
+			</div>
+					<div class="line" id="line85">
+				<div class="number">85.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks or returns what languages are accepted.</span></pre>
+			</div>
+					<div class="line" id="line86">
+				<div class="number">86.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String[]} (type) The array of languages to check.</span></pre>
+			</div>
+					<div class="line" id="line87">
+				<div class="number">87.</div>
+				<pre class="content"><span class="hljs-comment">	 * @returns {String[]|String} Returns all accept languages or the type that matched.</span></pre>
+			</div>
+					<div class="line" id="line88">
+				<div class="number">88.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function language</span></pre>
+			</div>
+					<div class="line" id="line89">
+				<div class="number">89.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line90">
+				<div class="number">90.</div>
+				<pre class="content">	language(language) {</pre>
+			</div>
+					<div class="line" id="line91">
+				<div class="number">91.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(language === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line92">
+				<div class="number">92.</div>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.languages();</pre>
+			</div>
+					<div class="line" id="line93">
+				<div class="number">93.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line94">
+				<div class="number">94.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line95">
+				<div class="number">95.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accepts.language(language);</pre>
+			</div>
+					<div class="line" id="line96">
+				<div class="number">96.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line97">
+				<div class="number">97.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line98">
+				<div class="number">98.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line99">
+				<div class="number">99.</div>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = accepts;</pre>
+			</div>
+					<div class="line" id="line100">
+				<div class="number">100.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>
