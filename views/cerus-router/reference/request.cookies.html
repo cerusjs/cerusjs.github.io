@@ -151,7 +151,8 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"></div>
+		<div class="desc"><p>This is the cookies class. With this class you can get the cookies that were sent by the client.</p>
+</div>
 			</div>
 
 	<!-- SUMMARY -->
@@ -166,19 +167,19 @@
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.cookies.html#get">get</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the specified cookie.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.cookies.html#has">has</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Checks if the cookie exists.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.cookies.html#list">list</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns an array of all the cookies.</div>
 				</div>
 					</div>
 	</div>
@@ -195,16 +196,32 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request/cookies.js.html">lib/request/cookies.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/cookies.js.html#line10">Line 10</a>
+							<a href="/views/cerus-router/source/lib/request/cookies.js.html#line11">Line 11</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the specified cookie.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can get a certain cookie that has been sent by the client. You specify the cookie you want to get using the key parameter. If the key parameter isn&#39;t a string it&#39;ll throw a TypeError and when the cookie wasn&#39;t found it&#39;ll return undefined.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The specified cookie.</div>
+						</div>
+					</div>
+							</div>
 					<div id="has" class="function">
 				<div class="name">
 					.has()
@@ -214,16 +231,32 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request/cookies.js.html">lib/request/cookies.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/cookies.js.html#line21">Line 21</a>
+							<a href="/views/cerus-router/source/lib/request/cookies.js.html#line27">Line 27</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Checks if the cookie exists.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns if the client has sent the specified cookie. You can specify the cookie you want to check using the key parameter. If the key parameter isn&#39;t a string it&#39;ll throw a TypeError.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Boolean</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">If the cookie exists.</div>
+						</div>
+					</div>
+							</div>
 					<div id="list" class="function">
 				<div class="name">
 					.list()
@@ -233,16 +266,32 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request/cookies.js.html">lib/request/cookies.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/cookies.js.html#line32">Line 32</a>
+							<a href="/views/cerus-router/source/lib/request/cookies.js.html#line43">Line 43</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns an array of all the cookies.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns an array of the names of all the cookies that were sent by the client.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String[]</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">An array of all the cookies.</div>
+						</div>
+					</div>
+							</div>
 		
 	</div>
 </div>

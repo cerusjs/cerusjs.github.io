@@ -265,6 +265,12 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 				</div>
 							<div class="row">
 					<div class="col a4">
+						<a href="/views/cerus-router/reference/request.html#pathname">pathname</a>
+					</div>
+					<div class="col a8">Returns the pathname of the request.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.html#hash">hash</a>
 					</div>
 					<div class="col a8">Returns the hash part of the requested url.</div>
@@ -970,7 +976,7 @@ req.header(<span class="hljs-string">"example"</span>);
 							<div class="value">Returns the path of the request.</div>
 						</div>
 																			</div>
-				<div class="desc"><p>This function will return the path for this request. The path is a bit different from the url or href since it only contains the path. For example, from the url &quot;/home?123&quot; the path is just &quot;/home&quot;.</p>
+				<div class="desc"><p>This function will return the path for this request. The path is different from the href and url since it doesn&#39;t contain things like the hash and domain. For example, from the url &quot;/home#test&quot; the path is &quot;/home&quot;. Please make sure that when you&#39;re not using the possible arguments in the url to use pathname instead.</p>
 </div>
 																									<div class="return">
 						<h3>Returns</h3>
@@ -984,6 +990,41 @@ req.header(<span class="hljs-string">"example"</span>);
 						</div>
 					</div>
 							</div>
+					<div id="pathname" class="function">
+				<div class="name">
+					.pathname()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+							<a href="/views/cerus-router/source/lib/request.js.html#line302">Line 302</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the pathname of the request.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the pathname for this request. The pathname is completely different from the path, since it doesn&#39;t contain the arguments that the path might also contain. For example pathname for the url &quot;/home?test&quot; is &quot;/home&quot;, where .path() will return it fully.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The pathname of the request.</div>
+						</div>
+					</div>
+							</div>
 					<div id="hash" class="function">
 				<div class="name">
 					.hash()
@@ -993,7 +1034,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line301">Line 301</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line315">Line 315</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1028,7 +1069,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line313">Line 313</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line327">Line 327</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1063,7 +1104,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line328">Line 328</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line342">Line 342</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1098,7 +1139,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line339">Line 339</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line353">Line 353</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1146,7 +1187,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line351">Line 351</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line365">Line 365</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1198,7 +1239,7 @@ req.header(<span class="hljs-string">"example"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line371">Line 371</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line385">Line 385</a>
 						</div>
 					</div>
 																					<div class="item">
@@ -1262,7 +1303,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line395">Line 395</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line409">Line 409</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1297,7 +1338,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line407">Line 407</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line421">Line 421</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1338,7 +1379,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line419">Line 419</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line433">Line 433</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1373,7 +1414,7 @@ req.is(<span class="hljs-string">"html"</span>, <span class="hljs-string">"json"
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line434">Line 434</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line448">Line 448</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1433,7 +1474,7 @@ req.get(<span class="hljs-string">"data"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line463">Line 463</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line477">Line 477</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1468,7 +1509,7 @@ req.get(<span class="hljs-string">"data"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line476">Line 476</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line490">Line 490</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1503,7 +1544,7 @@ req.get(<span class="hljs-string">"data"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line487">Line 487</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line501">Line 501</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -1538,7 +1579,7 @@ req.get(<span class="hljs-string">"data"</span>);
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line497">Line 497</a>
+							<a href="/views/cerus-router/source/lib/request.js.html#line511">Line 511</a>
 						</div>
 					</div>
 																				<div class="item">

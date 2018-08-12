@@ -112,36 +112,33 @@
 </div>
 			<div class="inner">
 				<div class="markdown-body">
-	<p><img src="https://i.imgur.com/owrQCO9.png" alt="alt text" title="CerusJS"></p>
-<p>CerusJS is a open, pluginable and free to use framework for NodeJS. Since everything is based around plugins, it can be as lightweight as you want it to be. This is a &quot;hub&quot; module. It contains all the basic modules and plugins you need to create a basic webserver.</p>
+	<p align="center">
+    <img height="200" width="500" src="https://i.imgur.com/owrQCO9.png">
+    <p align="center"><a href="https://www.npmjs.com/~cerusjs">NPM</a> | <a href="https://github.com/cerusjs">Github</a> | <a href="https://cerusjs.github.io/">Docs</a></p>
+</p>
+
+<p>CerusJS is a modular, and even more important, understandable NodeJS framework. It is built to be as lightweight as you want it to be. Pick what you want to use to maximize performance or just be free of bloat. On top of that, CerusJS is also created to be easy to learn and easy to master. All names are styled similarly to make everything intuitive to use. This module is used as &quot;hub&quot;, containing all the basic modules you&#39;ll need to create a basic webserver.</p>
 <h2 id="installation">Installation</h2>
-<p>CerusJS is available through <a href="https://www.npmjs.com">NPM</a>. 
-Before installing CerusJS make sure you have <a href="https://nodejs.org/en/download/">NodeJS</a> installed.</p>
+<p>CerusJS is available through <a href="https://www.npmjs.com">NPM</a>. Make sure you have <a href="https://nodejs.org/en/download/">NodeJS</a> installed when installing and using CerusJS.</p>
 <pre><code class="hljs bash"><span class="hljs-comment"># Installs the latest version of CerusJS.</span>
 $ npm install cerus
 </code></pre>
-<h2 id="plugins-modules">Plugins &amp; Modules</h2>
+<h2 id="modules">Modules</h2>
+<p>Install the modules you want to shape CerusJS how you want it to be. A few example modules are:</p>
 <ul>
 <li>The <a href="https://github.com/cerusjs/cerus-server">cerus-server</a> module contains all the server related functions.</li>
 <li>With <a href="https://github.com/cerusjs/cerus-router">cerus-router</a> you can route requests based on their URL.</li>
 <li>The <a href="https://github.com/cerusjs/cerus-api">cerus-api</a> module is used for routing REST requests.</li>
-<li>With the <a href="https://github.com/cerusjs/cerus-settings">cerus-settings</a> module you can easily create and use settings.</li>
 <li>The <a href="https://github.com/cerusjs/cerus-promise">cerus-promise</a> module is a custom promise.</li>
-<li>Use <a href="https://github.com/cerusjs/cerus-uuid">cerus-uuid</a> for working with UUIDs.</li>
-<li>The <a href="https://github.com/cerusjs/cerus-compression">cerus-compression</a> module is a compression utility.</li>
 <li>With <a href="https://github.com/cerusjs/cerus-fs">cerus-fs</a> you can write to, read from and monitor files and directories.</li>
-<li>Use <a href="https://github.com/cerusjs/cerus-sessions">cerus-sessions</a> to control user-sessions.</li>
 </ul>
-<h2 id="creating-a-server">Creating a Server</h2>
+<h2 id="creating-a-server">Creating a server</h2>
 <p>To create a basic server you only have to use the following code.</p>
 <pre><code class="hljs javascript"><span class="hljs-keyword">var</span> cerus = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus"</span>)();
 cerus.server().start();
 </code></pre>
-<h2 id="links">Links</h2>
-<ul>
-<li><a href="https://www.npmjs.com/~cerusjs">NPM</a></li>
-<li><a href="https://github.com/cerusjs">Github</a></li>
-</ul>
+<h2 id="documentation">Documentation</h2>
+<p>The documentation for all official modules can be found <a href="https://cerusjs.github.io/">here</a>. </p>
 <h2 id="contributers">Contributers</h2>
 <p>The author of CerusJS is <a href="https://github.com/JortvD">JortvD</a>.</p>
 

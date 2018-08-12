@@ -461,7 +461,30 @@
 								</div>
 													</div>
 					</div>
-																									<div class="return">
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">cerus.api().add(<span class="hljs-string">"test"</span>)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+  res.emit();
+});
+<span class="hljs-comment">// -&gt; routes the api route to "/api/test"</span>
+</code></pre>
+</div>
+											</div>
+																	<div class="emits">
+						<h3>Emits</h3>
+						<div class="table">
+							<div class="row head">
+								<div class="col a3">Event</div>
+								<div class="col a9">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">request</div>
+									<div class="col a9">When the api route has been requested. With the request class as first parameter, the json class as second parameter and the cerus object as last parameter.</div>
+								</div>
+													</div>
+					</div>
+													<div class="return">
 						<h3>Returns</h3>
 						<div class="item">
 							<div class="key">Type</div>
@@ -482,7 +505,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
-							<a href="/views/cerus-api/source/lib/api.js.html#line148">Line 148</a>
+							<a href="/views/cerus-api/source/lib/api.js.html#line156">Line 156</a>
 						</div>
 					</div>
 																				<div class="item">

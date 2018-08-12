@@ -248,70 +248,66 @@
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content"><span class="hljs-comment">	 * //   version: "0.0.1",</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * //   dependencies: []</span></pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content"><span class="hljs-comment">	 * //   dependencies: []</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // }</span></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content"><span class="hljs-comment">	 * // }</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * </span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content"><span class="hljs-comment">	 * </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.use(plugin);</span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.use(plugin);</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will add the plugin to the cerus core</span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will add the plugin to the cerus core</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Adds a new plugin to the core.</span></pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Adds a new plugin to the core.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Object} plugin The plugin object that contains the plugin that will be added.</span></pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Object} plugin The plugin object that contains the plugin that will be added.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function use</span></pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function use</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	cerus.use = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">plugin</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content">	cerus.use = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">plugin</span>) </span>{</pre>
+				<pre class="content">		plugins.add(plugin);</pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content">		plugins.add(plugin);</pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content">	};</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-keyword">return</span> cerus;</pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
-				<pre class="content">	<span class="hljs-keyword">return</span> cerus;</pre>
+				<pre class="content">};</pre>
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content">};</pre>
-			</div>
-					<div class="line" id="line49">
-				<div class="number">49.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>

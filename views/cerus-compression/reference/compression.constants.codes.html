@@ -134,7 +134,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-					<a href="/views/cerus-compression/source/lib/compression.js.html#line501">Line 501</a>
+					<a href="/views/cerus-compression/source/lib/compression.js.html#line618">Line 618</a>
 				</div>
 			</div>
 												<div class="item">
@@ -142,7 +142,8 @@
 				<div class="value">public</div>
 			</div>
 																																</div>
-		<div class="desc"></div>
+		<div class="desc"><p>This is the codes contants class. It contains possible error or messages that can be returned by the compression class.</p>
+</div>
 			</div>
 
 	<!-- SUMMARY -->
@@ -153,12 +154,381 @@
 				<div class="col a4">Name</div>
 				<div class="col a8">Description</div>
 			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#ok">ok</a>
+					</div>
+					<div class="col a8">Returns the OK code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#streamend">streamend</a>
+					</div>
+					<div class="col a8">Returns the STREAM_END code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#needdict">needdict</a>
+					</div>
+					<div class="col a8">Returns the NEED_DICT code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#errno">errno</a>
+					</div>
+					<div class="col a8">Returns the ERRNO code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#streamerror">streamerror</a>
+					</div>
+					<div class="col a8">Returns the STREAM_ERROR code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#dataerror">dataerror</a>
+					</div>
+					<div class="col a8">Returns the DATA_ERROR code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#memerror">memerror</a>
+					</div>
+					<div class="col a8">Returns the MEM_ERROR code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#buferror">buferror</a>
+					</div>
+					<div class="col a8">Returns the BUF_ERROR code.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-compression/reference/compression.constants.codes.html#versionerror">versionerror</a>
+					</div>
+					<div class="col a8">Returns the VERSION_ERROR code.</div>
+				</div>
 					</div>
 	</div>
 
 	<!-- FUNCTIONS -->
 	<div class="functions">
 		<h2>Functions</h2>
+					<div id="ok" class="function">
+				<div class="name">
+					.ok()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line625">Line 625</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the OK code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the OK code. This code means that the compression was succesful and that there was no error while compressing.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_OK</div>
+						</div>
+					</div>
+							</div>
+					<div id="streamend" class="function">
+				<div class="name">
+					.streamend()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line636">Line 636</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the STREAM_END code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the STREAM_END code. This code means that the stream has been enden but something is still trying to add data to the stream.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_STREAM_END</div>
+						</div>
+					</div>
+							</div>
+					<div id="needdict" class="function">
+				<div class="name">
+					.needdict()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line648">Line 648</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the NEED_DICT code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the NEED_DICT code. This code means that the compression stream was trying to decompress something but couldn&#39;t find a dictionary. This is list of quick translations the decompression class uses to quickly decompress data.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_NEED_DICT</div>
+						</div>
+					</div>
+							</div>
+					<div id="errno" class="function">
+				<div class="name">
+					.errno()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line660">Line 660</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the ERRNO code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the ERRNO code. This code means that there was an error while flushing the data.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_ERRNO</div>
+						</div>
+					</div>
+							</div>
+					<div id="streamerror" class="function">
+				<div class="name">
+					.streamerror()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line670">Line 670</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the STREAM_ERROR code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the STREAM_ERROR code. This code means that there was an error while accessing a file that needs to be written to or read from.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_STREAM_ERROR</div>
+						</div>
+					</div>
+							</div>
+					<div id="dataerror" class="function">
+				<div class="name">
+					.dataerror()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line681">Line 681</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the DATA_ERROR code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the DATA_ERROR code. This code means that there was something that stopped the stream while it was compressing or decompressing data.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_DATA_ERROR</div>
+						</div>
+					</div>
+							</div>
+					<div id="memerror" class="function">
+				<div class="name">
+					.memerror()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line692">Line 692</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the MEM_ERROR code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the MEM_ERROR code. This code means that there was an error while allocating memory to the compression or decompression process.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_MEM_ERROR</div>
+						</div>
+					</div>
+							</div>
+					<div id="buferror" class="function">
+				<div class="name">
+					.buferror()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line703">Line 703</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the BUF_ERROR code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the BUF_ERROR code. This code means that there was an error while trying to write data to the buffer since it was full.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_BUF_ERROR</div>
+						</div>
+					</div>
+							</div>
+					<div id="versionerror" class="function">
+				<div class="name">
+					.versionerror()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line714">Line 714</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the VERSION_ERROR code.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the VERSION_ERROR code. This code means that there was an error since the version for zlib the user is using doesn&#39;t support the requested compression or decompression type.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Constant</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">Z_VERSION_ERROR</div>
+						</div>
+					</div>
+							</div>
 		
 	</div>
 </div>

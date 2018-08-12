@@ -194,13 +194,13 @@
 					<div class="col a4">
 						<a href="/views/cerus-compression/reference/compression.settings.html#windowbits">windowbits</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">The setter/getter for the windowbits setting.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-compression/reference/compression.settings.html#type">type</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">The setter/getter for the type setting.</div>
 				</div>
 					</div>
 	</div>
@@ -522,7 +522,7 @@
 							</div>
 					<div id="windowbits" class="function">
 				<div class="name">
-					.windowbits()
+					.windowbits(windowbits)
 				</div>
 				<div class="list">
 					<div class="item">
@@ -536,28 +536,94 @@
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The setter/getter for the windowbits setting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the setter and getter for the windowbits. The windowbits setting sets the size of the history buffer while compression. The higher this value, the more bytes will be kept in memory while compressing.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">windowbits</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new windowbits setting. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The windowbits setting.</div>
+						</div>
+					</div>
+							</div>
 					<div id="type" class="function">
 				<div class="name">
-					.type()
+					.type(type)
 				</div>
 				<div class="list">
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line393">Line 393</a>
+							<a href="/views/cerus-compression/source/lib/compression.js.html#line399">Line 399</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">The setter/getter for the type setting.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This is the setter and getter for the compression type. With the type setting you can change if the class is used to compress or decompress data. You can also change what type of compression to use. There are: deflate and inflate, deflateraw and inflateraw, gzip and gunzip and there is also unzip to decompress data. By default this setting is DEFLATE.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">type</div>
+									<div class="col a3">Number</div>
+									<div class="col a6"><span>
+										The new type setting. (optional)
+									</span></div>
+								</div>
+													</div>
+					</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Number</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The type setting.</div>
+						</div>
+					</div>
+							</div>
 		
 	</div>
 </div>

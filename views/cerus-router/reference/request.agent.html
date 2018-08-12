@@ -167,38 +167,37 @@
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.agent.html#string">string</a>
 					</div>
-					<div class="col a8"><p>This function will return the full User-Agent string the client send.</p>
-</div>
+					<div class="col a8">Returns the full User-Agent string.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.agent.html#browser">browser</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the browser class.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.agent.html#device">device</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the device class.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.agent.html#engine">engine</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the engine class.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.agent.html#os">os</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the os class.</div>
 				</div>
 							<div class="row">
 					<div class="col a4">
 						<a href="/views/cerus-router/reference/request.agent.html#cpu">cpu</a>
 					</div>
-					<div class="col a8"></div>
+					<div class="col a8">Returns the cpu class.</div>
 				</div>
 					</div>
 	</div>
@@ -222,10 +221,25 @@
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"><p>This function will return the full User-Agent string the client send.</p>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the full User-Agent string.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the full User-Agent header the client send. The User-Agent header contains information about the system the client is using and can therefore be used to get some information about the client. Please note that the client is able to fake his/her User-Agent, so this information shouldn&#39;t be depended on.</p>
 </div>
-																							</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The full User-Agent string.</div>
+						</div>
+					</div>
+							</div>
 					<div id="browser" class="function">
 				<div class="name">
 					.browser()
@@ -235,16 +249,32 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/agent.js.html#line27">Line 27</a>
+							<a href="/views/cerus-router/source/lib/request/agent.js.html#line32">Line 32</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the browser class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns the browser class. This class contains information about the browser the client was using when sending the request.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The browser class.</div>
+						</div>
+					</div>
+							</div>
 					<div id="device" class="function">
 				<div class="name">
 					.device()
@@ -254,16 +284,32 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/agent.js.html#line34">Line 34</a>
+							<a href="/views/cerus-router/source/lib/request/agent.js.html#line43">Line 43</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the device class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns the device class. This class contains information about the device the client was using when sending the request.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The device class.</div>
+						</div>
+					</div>
+							</div>
 					<div id="engine" class="function">
 				<div class="name">
 					.engine()
@@ -273,16 +319,32 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/agent.js.html#line41">Line 41</a>
+							<a href="/views/cerus-router/source/lib/request/agent.js.html#line54">Line 54</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the engine class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns the engine class. This class contains information about the engine the client was using when sending the request.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The engine class.</div>
+						</div>
+					</div>
+							</div>
 					<div id="os" class="function">
 				<div class="name">
 					.os()
@@ -292,16 +354,32 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/agent.js.html#line48">Line 48</a>
+							<a href="/views/cerus-router/source/lib/request/agent.js.html#line65">Line 65</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the os class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns the os class. This class contains information about the os the client was using when sending the request.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The os class.</div>
+						</div>
+					</div>
+							</div>
 					<div id="cpu" class="function">
 				<div class="name">
 					.cpu()
@@ -311,16 +389,32 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/agent.js.html#line55">Line 55</a>
+							<a href="/views/cerus-router/source/lib/request/agent.js.html#line76">Line 76</a>
 						</div>
 					</div>
 																				<div class="item">
 						<div class="key">Access:</div>
 						<div class="value">public</div>
 					</div>
-																																																						</div>
-				<div class="desc"></div>
-																							</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the cpu class.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function returns the cpu class. This class contains information about the cpu the client was using when sending the request.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The cpu class.</div>
+						</div>
+					</div>
+							</div>
 		
 	</div>
 </div>
