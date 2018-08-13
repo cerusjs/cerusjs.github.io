@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-database-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-database')">
+				cerus-database				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-database/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-database/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-database/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="docs-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('docs')">
+				docs				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/docs/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/docs/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus-database').open(this)">
+						<option value="database.html" undefined>database</option>
+						<option value="database.database.html" selected>database.database</option>
+						<option value="database.database.table.html" undefined>database.database.table</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<div class="name">
+							.database().database()
+					</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+					<a href="/views/cerus-database/source/lib/database.js.html#line75">Line 75</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This is the database class. With this class you can manage a database and get tables. You can also close the database with this class.</p>
+</div>
+			</div>
+
+	<!-- SUMMARY -->
+	<div class="summary">
+		<h2>Summary</h2>
+		<div class="table">
+			<div class="row head">
+				<div class="col a4">Name</div>
+				<div class="col a8">Description</div>
+			</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-database/reference/database.database.html#clone">clone</a>
+					</div>
+					<div class="col a8">Clones the database.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-database/reference/database.database.html#close">close</a>
+					</div>
+					<div class="col a8">Closes the database.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-database/reference/database.database.html#table">table</a>
+					</div>
+					<div class="col a8">Returns the specified table.</div>
+				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-database/reference/database.database.html#name">name</a>
+					</div>
+					<div class="col a8">Returns the name of the database.</div>
+				</div>
+					</div>
+	</div>
+
+	<!-- FUNCTIONS -->
+	<div class="functions">
+		<h2>Functions</h2>
+					<div id="clone" class="function">
+				<div class="name">
+					.clone(newdb)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+							<a href="/views/cerus-database/source/lib/database.js.html#line94">Line 94</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Clones the database.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this database you can clone the database. The database is cloned to the name specified with the newdb parameter. It will return a promise that is called when the database is closed.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">newdb</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the new database.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">cerus.database().database(<span class="hljs-string">"test1"</span>).clone(<span class="hljs-string">"test2"</span>);
+<span class="hljs-comment">// -&gt; clones the database to test2</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function returns a promise.</div>
+						</div>
+					</div>
+							</div>
+					<div id="close" class="function">
+				<div class="name">
+					.close()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+							<a href="/views/cerus-database/source/lib/database.js.html#line114">Line 114</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Closes the database.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function lets you close the connection to the database. This is done to close unneeded connections to relieve stress, since they are a pretty expensive resource. The function will return a promise that is called when the database has been closed.</p>
+</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">cerus.database().database(<span class="hljs-string">"test"</span>).close();
+<span class="hljs-comment">// -&gt; closes the connection to the database</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function returns a promise.</div>
+						</div>
+					</div>
+							</div>
+					<div id="table" class="function">
+				<div class="name">
+					.table(name)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+							<a href="/views/cerus-database/source/lib/database.js.html#line129">Line 129</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the specified table.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function will return the specified table.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">name</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The name of the table to return.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">cerus.database().database(<span class="hljs-string">"test"</span>).table(<span class="hljs-string">"test_table"</span>);
+<span class="hljs-comment">// -&gt; return the "test_table" table</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Class</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The specified table.</div>
+						</div>
+					</div>
+							</div>
+					<div id="name" class="function">
+				<div class="name">
+					.name()
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+							<a href="/views/cerus-database/source/lib/database.js.html#line143">Line 143</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Returns the name of the database.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>This function return the name of the database.</p>
+</div>
+																									<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">String</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">The name of the database.</div>
+						</div>
+					</div>
+							</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

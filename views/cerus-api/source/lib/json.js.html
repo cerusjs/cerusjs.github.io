@@ -78,6 +78,16 @@
 				<li><a class= "selected" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-database-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-database')">
+				cerus-database				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-database/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-database/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-database/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-compression-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-compression')">
 				cerus-compression				<i class="fas fa-plus"></i>
@@ -107,9 +117,9 @@
 	</div>
 	<div class="right">
 				<select class="list" onchange="title_('source', 'cerus-api').open(this)">
-						<option value="lib/api.js.html" undefined>lib/api.js.html</option>
-						<option value="lib/api/policies.js.html" undefined>lib/api/policies.js.html</option>
-						<option value="lib/json.js.html" selected>lib/json.js.html</option>
+						<option value="lib/api.js.html" undefined>lib/api.js</option>
+						<option value="lib/api/policies.js.html" undefined>lib/api/policies.js</option>
+						<option value="lib/json.js.html" selected>lib/json.js</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>

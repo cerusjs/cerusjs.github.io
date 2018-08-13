@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>The CerusJS site!</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-database-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-database')">
+				cerus-database				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-database/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-database/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-database/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="docs-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('docs')">
+				docs				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/docs/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/docs/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('source', 'cerus-database').open(this)">
+						<option value="lib/database.js.html" selected>lib/database.js</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="source">
+	<h1>lib/database.js</h1>
+	<div class="lines">
+					<div class="line" id="line1">
+				<div class="number">1.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line2">
+				<div class="number">2.</div>
+				<pre class="content"><span class="hljs-comment"> * This is the database manager class. With this class you can select the database driver, connect </span></pre>
+			</div>
+					<div class="line" id="line3">
+				<div class="number">3.</div>
+				<pre class="content"><span class="hljs-comment"> * to the driver and get a specific database.</span></pre>
+			</div>
+					<div class="line" id="line4">
+				<div class="number">4.</div>
+				<pre class="content"><span class="hljs-comment"> * @class database</span></pre>
+			</div>
+					<div class="line" id="line5">
+				<div class="number">5.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line6">
+				<div class="number">6.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">manager</span> </span>{</pre>
+			</div>
+					<div class="line" id="line7">
+				<div class="number">7.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(cerus) {</pre>
+			</div>
+					<div class="line" id="line8">
+				<div class="number">8.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
+			</div>
+					<div class="line" id="line9">
+				<div class="number">9.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line10">
+				<div class="number">10.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line11">
+				<div class="number">11.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line12">
+				<div class="number">12.</div>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can select the driver the database manager will use. The driver is </span></pre>
+			</div>
+					<div class="line" id="line13">
+				<div class="number">13.</div>
+				<pre class="content"><span class="hljs-comment">	 * the module that is used to interact with the database. This module depends on what you're </span></pre>
+			</div>
+					<div class="line" id="line14">
+				<div class="number">14.</div>
+				<pre class="content"><span class="hljs-comment">	 * using, like MySQL or MongoDB. The function will automatically load the driver and if the</span></pre>
+			</div>
+					<div class="line" id="line15">
+				<div class="number">15.</div>
+				<pre class="content"><span class="hljs-comment">	 * driver is unknown it will throw an error.</span></pre>
+			</div>
+					<div class="line" id="line16">
+				<div class="number">16.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Changes the database driver.</span></pre>
+			</div>
+					<div class="line" id="line17">
+				<div class="number">17.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the driver.</span></pre>
+			</div>
+					<div class="line" id="line18">
+				<div class="number">18.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function driver</span></pre>
+			</div>
+					<div class="line" id="line19">
+				<div class="number">19.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line20">
+				<div class="number">20.</div>
+				<pre class="content">	driver(name) {</pre>
+			</div>
+					<div class="line" id="line21">
+				<div class="number">21.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line22">
+				<div class="number">22.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line23">
+				<div class="number">23.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line24">
+				<div class="number">24.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line25">
+				<div class="number">25.</div>
+				<pre class="content">		<span class="hljs-keyword">switch</span>(name) {</pre>
+			</div>
+					<div class="line" id="line26">
+				<div class="number">26.</div>
+				<pre class="content">			<span class="hljs-keyword">case</span> <span class="hljs-string">"mongo"</span>:</pre>
+			</div>
+					<div class="line" id="line27">
+				<div class="number">27.</div>
+				<pre class="content">				<span class="hljs-keyword">this</span>._driver = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cerus-"</span> + name)(<span class="hljs-keyword">this</span>._cerus);</pre>
+			</div>
+					<div class="line" id="line28">
+				<div class="number">28.</div>
+				<pre class="content">				<span class="hljs-keyword">this</span>._name = name;</pre>
+			</div>
+					<div class="line" id="line29">
+				<div class="number">29.</div>
+				<pre class="content">				<span class="hljs-keyword">break</span>;</pre>
+			</div>
+					<div class="line" id="line30">
+				<div class="number">30.</div>
+				<pre class="content">			<span class="hljs-keyword">default</span>:</pre>
+			</div>
+					<div class="line" id="line31">
+				<div class="number">31.</div>
+				<pre class="content">				<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the driver "</span> + name + <span class="hljs-string">" is unknown"</span>);</pre>
+			</div>
+					<div class="line" id="line32">
+				<div class="number">32.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line33">
+				<div class="number">33.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line34">
+				<div class="number">34.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line35">
+				<div class="number">35.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line36">
+				<div class="number">36.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function lets the driver connect to the database. How the driver connects to the </span></pre>
+			</div>
+					<div class="line" id="line37">
+				<div class="number">37.</div>
+				<pre class="content"><span class="hljs-comment">	 * database depends on the driver. If your connecting to a local database, often you can use </span></pre>
+			</div>
+					<div class="line" id="line38">
+				<div class="number">38.</div>
+				<pre class="content"><span class="hljs-comment">	 * "localhost" as domain to connect. This function returns a promise that will continue </span></pre>
+			</div>
+					<div class="line" id="line39">
+				<div class="number">39.</div>
+				<pre class="content"><span class="hljs-comment">	 * depending on the events returned by the driver.</span></pre>
+			</div>
+					<div class="line" id="line40">
+				<div class="number">40.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line41">
+				<div class="number">41.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.database().connect("localhost");</span></pre>
+			</div>
+					<div class="line" id="line42">
+				<div class="number">42.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; connects to the database at localhost</span></pre>
+			</div>
+					<div class="line" id="line43">
+				<div class="number">43.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Connects to the database.</span></pre>
+			</div>
+					<div class="line" id="line44">
+				<div class="number">44.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} domain The domain to connect to.</span></pre>
+			</div>
+					<div class="line" id="line45">
+				<div class="number">45.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Object} [options] </span></pre>
+			</div>
+					<div class="line" id="line46">
+				<div class="number">46.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function returns a promise.</span></pre>
+			</div>
+					<div class="line" id="line47">
+				<div class="number">47.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function connect</span></pre>
+			</div>
+					<div class="line" id="line48">
+				<div class="number">48.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line49">
+				<div class="number">49.</div>
+				<pre class="content">	connect(domain, options = {}) {</pre>
+			</div>
+					<div class="line" id="line50">
+				<div class="number">50.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> domain !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line51">
+				<div class="number">51.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line52">
+				<div class="number">52.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line53">
+				<div class="number">53.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line54">
+				<div class="number">54.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._driver === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line55">
+				<div class="number">55.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the driver must be set before connecting to a database"</span>);</pre>
+			</div>
+					<div class="line" id="line56">
+				<div class="number">56.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line57">
+				<div class="number">57.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line58">
+				<div class="number">58.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._driver.connect(domain, options);</pre>
+			</div>
+					<div class="line" id="line59">
+				<div class="number">59.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line60">
+				<div class="number">60.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line61">
+				<div class="number">61.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line62">
+				<div class="number">62.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the specified database.</span></pre>
+			</div>
+					<div class="line" id="line63">
+				<div class="number">63.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the specified database.</span></pre>
+			</div>
+					<div class="line" id="line64">
+				<div class="number">64.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the database to return.</span></pre>
+			</div>
+					<div class="line" id="line65">
+				<div class="number">65.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The database class.</span></pre>
+			</div>
+					<div class="line" id="line66">
+				<div class="number">66.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function database</span></pre>
+			</div>
+					<div class="line" id="line67">
+				<div class="number">67.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line68">
+				<div class="number">68.</div>
+				<pre class="content">	database(name) {</pre>
+			</div>
+					<div class="line" id="line69">
+				<div class="number">69.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> database(<span class="hljs-keyword">this</span>._driver, name);</pre>
+			</div>
+					<div class="line" id="line70">
+				<div class="number">70.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line71">
+				<div class="number">71.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line72">
+				<div class="number">72.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line73">
+				<div class="number">73.</div>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = manager;</pre>
+			</div>
+					<div class="line" id="line74">
+				<div class="number">74.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line75">
+				<div class="number">75.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line76">
+				<div class="number">76.</div>
+				<pre class="content"><span class="hljs-comment"> * This is the database class. With this class you can manage a database and get tables. You can </span></pre>
+			</div>
+					<div class="line" id="line77">
+				<div class="number">77.</div>
+				<pre class="content"><span class="hljs-comment"> * also close the database with this class.</span></pre>
+			</div>
+					<div class="line" id="line78">
+				<div class="number">78.</div>
+				<pre class="content"><span class="hljs-comment"> * @class database.database</span></pre>
+			</div>
+					<div class="line" id="line79">
+				<div class="number">79.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line80">
+				<div class="number">80.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">database</span> </span>{</pre>
+			</div>
+					<div class="line" id="line81">
+				<div class="number">81.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(driver, name) {</pre>
+			</div>
+					<div class="line" id="line82">
+				<div class="number">82.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line83">
+				<div class="number">83.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line84">
+				<div class="number">84.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line85">
+				<div class="number">85.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line86">
+				<div class="number">86.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(driver === <span class="hljs-literal">undefined</span>) {</pre>
+			</div>
+					<div class="line" id="line87">
+				<div class="number">87.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the driver must be set before selecting a database"</span>);</pre>
+			</div>
+					<div class="line" id="line88">
+				<div class="number">88.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line89">
+				<div class="number">89.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line90">
+				<div class="number">90.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._driver = driver;</pre>
+			</div>
+					<div class="line" id="line91">
+				<div class="number">91.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._database = driver.database(name);</pre>
+			</div>
+					<div class="line" id="line92">
+				<div class="number">92.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line93">
+				<div class="number">93.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line94">
+				<div class="number">94.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line95">
+				<div class="number">95.</div>
+				<pre class="content"><span class="hljs-comment">	 * With this database you can clone the database. The database is cloned to the name specified </span></pre>
+			</div>
+					<div class="line" id="line96">
+				<div class="number">96.</div>
+				<pre class="content"><span class="hljs-comment">	 * with the newdb parameter. It will return a promise that is called when the database is </span></pre>
+			</div>
+					<div class="line" id="line97">
+				<div class="number">97.</div>
+				<pre class="content"><span class="hljs-comment">	 * closed.</span></pre>
+			</div>
+					<div class="line" id="line98">
+				<div class="number">98.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line99">
+				<div class="number">99.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.database().database("test1").clone("test2");</span></pre>
+			</div>
+					<div class="line" id="line100">
+				<div class="number">100.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; clones the database to test2</span></pre>
+			</div>
+					<div class="line" id="line101">
+				<div class="number">101.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Clones the database.</span></pre>
+			</div>
+					<div class="line" id="line102">
+				<div class="number">102.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} newdb The name of the new database.</span></pre>
+			</div>
+					<div class="line" id="line103">
+				<div class="number">103.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function returns a promise.</span></pre>
+			</div>
+					<div class="line" id="line104">
+				<div class="number">104.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function clone</span></pre>
+			</div>
+					<div class="line" id="line105">
+				<div class="number">105.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line106">
+				<div class="number">106.</div>
+				<pre class="content">	clone(newdb) {</pre>
+			</div>
+					<div class="line" id="line107">
+				<div class="number">107.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> newdb !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line108">
+				<div class="number">108.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument newdb must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line109">
+				<div class="number">109.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line110">
+				<div class="number">110.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line111">
+				<div class="number">111.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._database.clone(newdb);</pre>
+			</div>
+					<div class="line" id="line112">
+				<div class="number">112.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line113">
+				<div class="number">113.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line114">
+				<div class="number">114.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line115">
+				<div class="number">115.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function lets you close the connection to the database. This is done to close unneeded </span></pre>
+			</div>
+					<div class="line" id="line116">
+				<div class="number">116.</div>
+				<pre class="content"><span class="hljs-comment">	 * connections to relieve stress, since they are a pretty expensive resource. The function will</span></pre>
+			</div>
+					<div class="line" id="line117">
+				<div class="number">117.</div>
+				<pre class="content"><span class="hljs-comment">	 * return a promise that is called when the database has been closed.</span></pre>
+			</div>
+					<div class="line" id="line118">
+				<div class="number">118.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line119">
+				<div class="number">119.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.database().database("test").close();</span></pre>
+			</div>
+					<div class="line" id="line120">
+				<div class="number">120.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; closes the connection to the database</span></pre>
+			</div>
+					<div class="line" id="line121">
+				<div class="number">121.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Closes the database.</span></pre>
+			</div>
+					<div class="line" id="line122">
+				<div class="number">122.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function returns a promise.</span></pre>
+			</div>
+					<div class="line" id="line123">
+				<div class="number">123.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function close</span></pre>
+			</div>
+					<div class="line" id="line124">
+				<div class="number">124.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line125">
+				<div class="number">125.</div>
+				<pre class="content">	close() {</pre>
+			</div>
+					<div class="line" id="line126">
+				<div class="number">126.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._database.close();</pre>
+			</div>
+					<div class="line" id="line127">
+				<div class="number">127.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line128">
+				<div class="number">128.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line129">
+				<div class="number">129.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line130">
+				<div class="number">130.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the specified table.</span></pre>
+			</div>
+					<div class="line" id="line131">
+				<div class="number">131.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line132">
+				<div class="number">132.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.database().database("test").table("test_table");</span></pre>
+			</div>
+					<div class="line" id="line133">
+				<div class="number">133.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; return the "test_table" table</span></pre>
+			</div>
+					<div class="line" id="line134">
+				<div class="number">134.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the specified table.</span></pre>
+			</div>
+					<div class="line" id="line135">
+				<div class="number">135.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the table to return.</span></pre>
+			</div>
+					<div class="line" id="line136">
+				<div class="number">136.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The specified table.</span></pre>
+			</div>
+					<div class="line" id="line137">
+				<div class="number">137.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function table</span></pre>
+			</div>
+					<div class="line" id="line138">
+				<div class="number">138.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line139">
+				<div class="number">139.</div>
+				<pre class="content">	table(name) {</pre>
+			</div>
+					<div class="line" id="line140">
+				<div class="number">140.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> table(<span class="hljs-keyword">this</span>._database, name);</pre>
+			</div>
+					<div class="line" id="line141">
+				<div class="number">141.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line142">
+				<div class="number">142.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line143">
+				<div class="number">143.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line144">
+				<div class="number">144.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function return the name of the database.</span></pre>
+			</div>
+					<div class="line" id="line145">
+				<div class="number">145.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the name of the database.</span></pre>
+			</div>
+					<div class="line" id="line146">
+				<div class="number">146.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The name of the database.</span></pre>
+			</div>
+					<div class="line" id="line147">
+				<div class="number">147.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function name</span></pre>
+			</div>
+					<div class="line" id="line148">
+				<div class="number">148.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line149">
+				<div class="number">149.</div>
+				<pre class="content">	name() {</pre>
+			</div>
+					<div class="line" id="line150">
+				<div class="number">150.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._database.name();</pre>
+			</div>
+					<div class="line" id="line151">
+				<div class="number">151.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line152">
+				<div class="number">152.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line153">
+				<div class="number">153.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line154">
+				<div class="number">154.</div>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line155">
+				<div class="number">155.</div>
+				<pre class="content"><span class="hljs-comment"> * This is the table class. With this class you can manage the table returned by the </span></pre>
+			</div>
+					<div class="line" id="line156">
+				<div class="number">156.</div>
+				<pre class="content"><span class="hljs-comment"> * {@link database.database.table.constructor} function.</span></pre>
+			</div>
+					<div class="line" id="line157">
+				<div class="number">157.</div>
+				<pre class="content"><span class="hljs-comment"> * @example</span></pre>
+			</div>
+					<div class="line" id="line158">
+				<div class="number">158.</div>
+				<pre class="content"><span class="hljs-comment"> * cerus.database().database("test").table("test_table");</span></pre>
+			</div>
+					<div class="line" id="line159">
+				<div class="number">159.</div>
+				<pre class="content"><span class="hljs-comment"> * // -&gt; return the "test_table" table</span></pre>
+			</div>
+					<div class="line" id="line160">
+				<div class="number">160.</div>
+				<pre class="content"><span class="hljs-comment"> * @class database.database.table</span></pre>
+			</div>
+					<div class="line" id="line161">
+				<div class="number">161.</div>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
+			</div>
+					<div class="line" id="line162">
+				<div class="number">162.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">table</span> </span>{</pre>
+			</div>
+					<div class="line" id="line163">
+				<div class="number">163.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(database, name) {</pre>
+			</div>
+					<div class="line" id="line164">
+				<div class="number">164.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line165">
+				<div class="number">165.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line166">
+				<div class="number">166.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line167">
+				<div class="number">167.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line168">
+				<div class="number">168.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._database = database;</pre>
+			</div>
+					<div class="line" id="line169">
+				<div class="number">169.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._table = database.table(name);</pre>
+			</div>
+					<div class="line" id="line170">
+				<div class="number">170.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line171">
+				<div class="number">171.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line172">
+				<div class="number">172.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line173">
+				<div class="number">173.</div>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can close the connection to the database. It is basically an alias of</span></pre>
+			</div>
+					<div class="line" id="line174">
+				<div class="number">174.</div>
+				<pre class="content"><span class="hljs-comment">	 * the {@link database.database.close} function. You should close connections when you're </span></pre>
+			</div>
+					<div class="line" id="line175">
+				<div class="number">175.</div>
+				<pre class="content"><span class="hljs-comment">	 * finished with them, to relieve stress from the system. It returns a promise that is called </span></pre>
+			</div>
+					<div class="line" id="line176">
+				<div class="number">176.</div>
+				<pre class="content"><span class="hljs-comment">	 * when the connection has been closed.</span></pre>
+			</div>
+					<div class="line" id="line177">
+				<div class="number">177.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line178">
+				<div class="number">178.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.database().database("test").table("test_table").close();</span></pre>
+			</div>
+					<div class="line" id="line179">
+				<div class="number">179.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; closes the connection to the database</span></pre>
+			</div>
+					<div class="line" id="line180">
+				<div class="number">180.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Closes the connection to the database.</span></pre>
+			</div>
+					<div class="line" id="line181">
+				<div class="number">181.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function returns a promise.</span></pre>
+			</div>
+					<div class="line" id="line182">
+				<div class="number">182.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function close</span></pre>
+			</div>
+					<div class="line" id="line183">
+				<div class="number">183.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line184">
+				<div class="number">184.</div>
+				<pre class="content">	close() {</pre>
+			</div>
+					<div class="line" id="line185">
+				<div class="number">185.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._database.close();</pre>
+			</div>
+					<div class="line" id="line186">
+				<div class="number">186.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line187">
+				<div class="number">187.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line188">
+				<div class="number">188.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line189">
+				<div class="number">189.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function clears the table. This means removing everything that is in the table. Use</span></pre>
+			</div>
+					<div class="line" id="line190">
+				<div class="number">190.</div>
+				<pre class="content"><span class="hljs-comment">	 * {@link database.database.table.drop} to delete the whole table, instead of its contents. It</span></pre>
+			</div>
+					<div class="line" id="line191">
+				<div class="number">191.</div>
+				<pre class="content"><span class="hljs-comment">	 * returns a promise that is called when the table is cleared.</span></pre>
+			</div>
+					<div class="line" id="line192">
+				<div class="number">192.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line193">
+				<div class="number">193.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.database().database("test").table("test_table").clear();</span></pre>
+			</div>
+					<div class="line" id="line194">
+				<div class="number">194.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; clears everything in the table</span></pre>
+			</div>
+					<div class="line" id="line195">
+				<div class="number">195.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Clears the table.</span></pre>
+			</div>
+					<div class="line" id="line196">
+				<div class="number">196.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function returns a promise.</span></pre>
+			</div>
+					<div class="line" id="line197">
+				<div class="number">197.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function clear</span></pre>
+			</div>
+					<div class="line" id="line198">
+				<div class="number">198.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line199">
+				<div class="number">199.</div>
+				<pre class="content">	clear() {</pre>
+			</div>
+					<div class="line" id="line200">
+				<div class="number">200.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._table.clear();</pre>
+			</div>
+					<div class="line" id="line201">
+				<div class="number">201.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line202">
+				<div class="number">202.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line203">
+				<div class="number">203.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line204">
+				<div class="number">204.</div>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can delete the table. This means removing the whole table. Use </span></pre>
+			</div>
+					<div class="line" id="line205">
+				<div class="number">205.</div>
+				<pre class="content"><span class="hljs-comment">	 * {@link database.database.table.clear} to remove the contents of the table, instead of the whole</span></pre>
+			</div>
+					<div class="line" id="line206">
+				<div class="number">206.</div>
+				<pre class="content"><span class="hljs-comment">	 * table. It returns a promise that is called when the table has been dropped.</span></pre>
+			</div>
+					<div class="line" id="line207">
+				<div class="number">207.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line208">
+				<div class="number">208.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.database().database("test").table("test_table").drop();</span></pre>
+			</div>
+					<div class="line" id="line209">
+				<div class="number">209.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; deletes the table</span></pre>
+			</div>
+					<div class="line" id="line210">
+				<div class="number">210.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Drops the table.</span></pre>
+			</div>
+					<div class="line" id="line211">
+				<div class="number">211.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function returns a promise.</span></pre>
+			</div>
+					<div class="line" id="line212">
+				<div class="number">212.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function drop</span></pre>
+			</div>
+					<div class="line" id="line213">
+				<div class="number">213.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line214">
+				<div class="number">214.</div>
+				<pre class="content">	drop() {</pre>
+			</div>
+					<div class="line" id="line215">
+				<div class="number">215.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._table.drop();</pre>
+			</div>
+					<div class="line" id="line216">
+				<div class="number">216.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line217">
+				<div class="number">217.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line218">
+				<div class="number">218.</div>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+			</div>
+					<div class="line" id="line219">
+				<div class="number">219.</div>
+				<pre class="content"><span class="hljs-comment">	 * This function lets you insert a row into the database. A row is basically a new item that </span></pre>
+			</div>
+					<div class="line" id="line220">
+				<div class="number">220.</div>
+				<pre class="content"><span class="hljs-comment">	 * will be added to the table. This function will return a promise that is called when the row</span></pre>
+			</div>
+					<div class="line" id="line221">
+				<div class="number">221.</div>
+				<pre class="content"><span class="hljs-comment">	 * has been added.</span></pre>
+			</div>
+					<div class="line" id="line222">
+				<div class="number">222.</div>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+			</div>
+					<div class="line" id="line223">
+				<div class="number">223.</div>
+				<pre class="content"><span class="hljs-comment">	 * cerus.database().database("test").table("test_table").insert({row: "new_item"});</span></pre>
+			</div>
+					<div class="line" id="line224">
+				<div class="number">224.</div>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; adds the item {row: "new_item"} to the table</span></pre>
+			</div>
+					<div class="line" id="line225">
+				<div class="number">225.</div>
+				<pre class="content"><span class="hljs-comment">	 * @summary Adds a new row to the table.</span></pre>
+			</div>
+					<div class="line" id="line226">
+				<div class="number">226.</div>
+				<pre class="content"><span class="hljs-comment">	 * @param {Object} row The row that will be added.</span></pre>
+			</div>
+					<div class="line" id="line227">
+				<div class="number">227.</div>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function returns a promise.</span></pre>
+			</div>
+					<div class="line" id="line228">
+				<div class="number">228.</div>
+				<pre class="content"><span class="hljs-comment">	 * @function insert</span></pre>
+			</div>
+					<div class="line" id="line229">
+				<div class="number">229.</div>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+			</div>
+					<div class="line" id="line230">
+				<div class="number">230.</div>
+				<pre class="content">	insert(row) {</pre>
+			</div>
+					<div class="line" id="line231">
+				<div class="number">231.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> row !== <span class="hljs-string">"object"</span>) {</pre>
+			</div>
+					<div class="line" id="line232">
+				<div class="number">232.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument row must be an object"</span>);</pre>
+			</div>
+					<div class="line" id="line233">
+				<div class="number">233.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line234">
+				<div class="number">234.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line235">
+				<div class="number">235.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._table.insert(row);</pre>
+			</div>
+					<div class="line" id="line236">
+				<div class="number">236.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line237">
+				<div class="number">237.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line238">
+				<div class="number">238.</div>
+				<pre class="content">	modify(query, change) {</pre>
+			</div>
+					<div class="line" id="line239">
+				<div class="number">239.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> query !== <span class="hljs-string">"object"</span>) {</pre>
+			</div>
+					<div class="line" id="line240">
+				<div class="number">240.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument query must be an object"</span>);</pre>
+			</div>
+					<div class="line" id="line241">
+				<div class="number">241.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line242">
+				<div class="number">242.</div>
+				<pre class="content">		</pre>
+			</div>
+					<div class="line" id="line243">
+				<div class="number">243.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> change !== <span class="hljs-string">"object"</span>) {</pre>
+			</div>
+					<div class="line" id="line244">
+				<div class="number">244.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument change must be an object"</span>);</pre>
+			</div>
+					<div class="line" id="line245">
+				<div class="number">245.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line246">
+				<div class="number">246.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line247">
+				<div class="number">247.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line248">
+				<div class="number">248.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._table.modify(query, change);</pre>
+			</div>
+					<div class="line" id="line249">
+				<div class="number">249.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line250">
+				<div class="number">250.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line251">
+				<div class="number">251.</div>
+				<pre class="content">	<span class="hljs-keyword">delete</span>(query) {</pre>
+			</div>
+					<div class="line" id="line252">
+				<div class="number">252.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> query !== <span class="hljs-string">"object"</span>) {</pre>
+			</div>
+					<div class="line" id="line253">
+				<div class="number">253.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument query must be an object"</span>);</pre>
+			</div>
+					<div class="line" id="line254">
+				<div class="number">254.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line255">
+				<div class="number">255.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line256">
+				<div class="number">256.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._table.delete(query);</pre>
+			</div>
+					<div class="line" id="line257">
+				<div class="number">257.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line258">
+				<div class="number">258.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line259">
+				<div class="number">259.</div>
+				<pre class="content">	find(query) {</pre>
+			</div>
+					<div class="line" id="line260">
+				<div class="number">260.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> query !== <span class="hljs-string">"object"</span>) {</pre>
+			</div>
+					<div class="line" id="line261">
+				<div class="number">261.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument query must be an object"</span>);</pre>
+			</div>
+					<div class="line" id="line262">
+				<div class="number">262.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line263">
+				<div class="number">263.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line264">
+				<div class="number">264.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._table.find(query);</pre>
+			</div>
+					<div class="line" id="line265">
+				<div class="number">265.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line266">
+				<div class="number">266.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line267">
+				<div class="number">267.</div>
+				<pre class="content">	count(query) {</pre>
+			</div>
+					<div class="line" id="line268">
+				<div class="number">268.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> query !== <span class="hljs-string">"object"</span>) {</pre>
+			</div>
+					<div class="line" id="line269">
+				<div class="number">269.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument query must be an object"</span>);</pre>
+			</div>
+					<div class="line" id="line270">
+				<div class="number">270.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line271">
+				<div class="number">271.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line272">
+				<div class="number">272.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._table.count(query);</pre>
+			</div>
+					<div class="line" id="line273">
+				<div class="number">273.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line274">
+				<div class="number">274.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line275">
+				<div class="number">275.</div>
+				<pre class="content">	clone(new_) {</pre>
+			</div>
+					<div class="line" id="line276">
+				<div class="number">276.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> new_ !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line277">
+				<div class="number">277.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument new_ must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line278">
+				<div class="number">278.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line279">
+				<div class="number">279.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line280">
+				<div class="number">280.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._table.clone(new_);</pre>
+			</div>
+					<div class="line" id="line281">
+				<div class="number">281.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line282">
+				<div class="number">282.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line283">
+				<div class="number">283.</div>
+				<pre class="content">	columns() {</pre>
+			</div>
+					<div class="line" id="line284">
+				<div class="number">284.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> columns(<span class="hljs-keyword">this</span>._table);</pre>
+			</div>
+					<div class="line" id="line285">
+				<div class="number">285.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line286">
+				<div class="number">286.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line287">
+				<div class="number">287.</div>
+				<pre class="content">	keys() {</pre>
+			</div>
+					<div class="line" id="line288">
+				<div class="number">288.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> keys();</pre>
+			</div>
+					<div class="line" id="line289">
+				<div class="number">289.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line290">
+				<div class="number">290.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line291">
+				<div class="number">291.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line292">
+				<div class="number">292.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">columns</span> </span>{</pre>
+			</div>
+					<div class="line" id="line293">
+				<div class="number">293.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(table) {</pre>
+			</div>
+					<div class="line" id="line294">
+				<div class="number">294.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._columns = table.columns();</pre>
+			</div>
+					<div class="line" id="line295">
+				<div class="number">295.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line296">
+				<div class="number">296.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line297">
+				<div class="number">297.</div>
+				<pre class="content">	add(name, datatype, options) {</pre>
+			</div>
+					<div class="line" id="line298">
+				<div class="number">298.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line299">
+				<div class="number">299.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line300">
+				<div class="number">300.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line301">
+				<div class="number">301.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line302">
+				<div class="number">302.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._columns.add(name, datatype, options);</pre>
+			</div>
+					<div class="line" id="line303">
+				<div class="number">303.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line304">
+				<div class="number">304.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line305">
+				<div class="number">305.</div>
+				<pre class="content">	drop(name) {</pre>
+			</div>
+					<div class="line" id="line306">
+				<div class="number">306.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line307">
+				<div class="number">307.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line308">
+				<div class="number">308.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line309">
+				<div class="number">309.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line310">
+				<div class="number">310.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._columns.drop(name);</pre>
+			</div>
+					<div class="line" id="line311">
+				<div class="number">311.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line312">
+				<div class="number">312.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line313">
+				<div class="number">313.</div>
+				<pre class="content">	modify(name, options) {</pre>
+			</div>
+					<div class="line" id="line314">
+				<div class="number">314.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line315">
+				<div class="number">315.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line316">
+				<div class="number">316.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line317">
+				<div class="number">317.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line318">
+				<div class="number">318.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._columns.modify(name, options);</pre>
+			</div>
+					<div class="line" id="line319">
+				<div class="number">319.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line320">
+				<div class="number">320.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line321">
+				<div class="number">321.</div>
+				<pre class="content">	has(name) {</pre>
+			</div>
+					<div class="line" id="line322">
+				<div class="number">322.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line323">
+				<div class="number">323.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line324">
+				<div class="number">324.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line325">
+				<div class="number">325.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line326">
+				<div class="number">326.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._columns.exists(name);</pre>
+			</div>
+					<div class="line" id="line327">
+				<div class="number">327.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line328">
+				<div class="number">328.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line329">
+				<div class="number">329.</div>
+				<pre class="content">	get(name) {</pre>
+			</div>
+					<div class="line" id="line330">
+				<div class="number">330.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line331">
+				<div class="number">331.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line332">
+				<div class="number">332.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line333">
+				<div class="number">333.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line334">
+				<div class="number">334.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._columns.get(name);</pre>
+			</div>
+					<div class="line" id="line335">
+				<div class="number">335.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line336">
+				<div class="number">336.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line337">
+				<div class="number">337.</div>
+				<pre class="content">	list() {</pre>
+			</div>
+					<div class="line" id="line338">
+				<div class="number">338.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._columns.list();</pre>
+			</div>
+					<div class="line" id="line339">
+				<div class="number">339.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line340">
+				<div class="number">340.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line341">
+				<div class="number">341.</div>
+				<pre class="content">	clear() {</pre>
+			</div>
+					<div class="line" id="line342">
+				<div class="number">342.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._colums.clear();</pre>
+			</div>
+					<div class="line" id="line343">
+				<div class="number">343.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line344">
+				<div class="number">344.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line345">
+				<div class="number">345.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line346">
+				<div class="number">346.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">keys</span> </span>{</pre>
+			</div>
+					<div class="line" id="line347">
+				<div class="number">347.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(table) {</pre>
+			</div>
+					<div class="line" id="line348">
+				<div class="number">348.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._keys = table.keys();</pre>
+			</div>
+					<div class="line" id="line349">
+				<div class="number">349.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._primary = <span class="hljs-keyword">new</span> primary(<span class="hljs-keyword">this</span>._keys.primary());</pre>
+			</div>
+					<div class="line" id="line350">
+				<div class="number">350.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._secondary = <span class="hljs-keyword">new</span> secondary(<span class="hljs-keyword">this</span>._keys.secondary());</pre>
+			</div>
+					<div class="line" id="line351">
+				<div class="number">351.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line352">
+				<div class="number">352.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line353">
+				<div class="number">353.</div>
+				<pre class="content">	primary() {</pre>
+			</div>
+					<div class="line" id="line354">
+				<div class="number">354.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._primary;</pre>
+			</div>
+					<div class="line" id="line355">
+				<div class="number">355.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line356">
+				<div class="number">356.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line357">
+				<div class="number">357.</div>
+				<pre class="content">	secondary() {</pre>
+			</div>
+					<div class="line" id="line358">
+				<div class="number">358.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._secondary;</pre>
+			</div>
+					<div class="line" id="line359">
+				<div class="number">359.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line360">
+				<div class="number">360.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line361">
+				<div class="number">361.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line362">
+				<div class="number">362.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">primary</span> </span>{</pre>
+			</div>
+					<div class="line" id="line363">
+				<div class="number">363.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(primary) {</pre>
+			</div>
+					<div class="line" id="line364">
+				<div class="number">364.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._primary = primary;</pre>
+			</div>
+					<div class="line" id="line365">
+				<div class="number">365.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line366">
+				<div class="number">366.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line367">
+				<div class="number">367.</div>
+				<pre class="content">	create(column) {</pre>
+			</div>
+					<div class="line" id="line368">
+				<div class="number">368.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> column !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line369">
+				<div class="number">369.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument column must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line370">
+				<div class="number">370.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line371">
+				<div class="number">371.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line372">
+				<div class="number">372.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._primary.create(column);</pre>
+			</div>
+					<div class="line" id="line373">
+				<div class="number">373.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line374">
+				<div class="number">374.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line375">
+				<div class="number">375.</div>
+				<pre class="content">	drop() {</pre>
+			</div>
+					<div class="line" id="line376">
+				<div class="number">376.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._primary.drop();</pre>
+			</div>
+					<div class="line" id="line377">
+				<div class="number">377.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line378">
+				<div class="number">378.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line379">
+				<div class="number">379.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line380">
+				<div class="number">380.</div>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">secondary</span> </span>{</pre>
+			</div>
+					<div class="line" id="line381">
+				<div class="number">381.</div>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(secondary) {</pre>
+			</div>
+					<div class="line" id="line382">
+				<div class="number">382.</div>
+				<pre class="content">		<span class="hljs-keyword">this</span>._secondary = secondary;</pre>
+			</div>
+					<div class="line" id="line383">
+				<div class="number">383.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line384">
+				<div class="number">384.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line385">
+				<div class="number">385.</div>
+				<pre class="content">	create(name, column) {</pre>
+			</div>
+					<div class="line" id="line386">
+				<div class="number">386.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line387">
+				<div class="number">387.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line388">
+				<div class="number">388.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line389">
+				<div class="number">389.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line390">
+				<div class="number">390.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> column !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line391">
+				<div class="number">391.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument column must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line392">
+				<div class="number">392.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line393">
+				<div class="number">393.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line394">
+				<div class="number">394.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._secondary.create(name, column);</pre>
+			</div>
+					<div class="line" id="line395">
+				<div class="number">395.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line396">
+				<div class="number">396.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line397">
+				<div class="number">397.</div>
+				<pre class="content">	has(name) {</pre>
+			</div>
+					<div class="line" id="line398">
+				<div class="number">398.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line399">
+				<div class="number">399.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line400">
+				<div class="number">400.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line401">
+				<div class="number">401.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line402">
+				<div class="number">402.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._secondary.has(name);</pre>
+			</div>
+					<div class="line" id="line403">
+				<div class="number">403.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line404">
+				<div class="number">404.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line405">
+				<div class="number">405.</div>
+				<pre class="content">	drop(name) {</pre>
+			</div>
+					<div class="line" id="line406">
+				<div class="number">406.</div>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+			</div>
+					<div class="line" id="line407">
+				<div class="number">407.</div>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+			</div>
+					<div class="line" id="line408">
+				<div class="number">408.</div>
+				<pre class="content">		}</pre>
+			</div>
+					<div class="line" id="line409">
+				<div class="number">409.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line410">
+				<div class="number">410.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._secondary.drop(name);</pre>
+			</div>
+					<div class="line" id="line411">
+				<div class="number">411.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line412">
+				<div class="number">412.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line413">
+				<div class="number">413.</div>
+				<pre class="content">	list() {</pre>
+			</div>
+					<div class="line" id="line414">
+				<div class="number">414.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._secondary.list();</pre>
+			</div>
+					<div class="line" id="line415">
+				<div class="number">415.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line416">
+				<div class="number">416.</div>
+				<pre class="content"></pre>
+			</div>
+					<div class="line" id="line417">
+				<div class="number">417.</div>
+				<pre class="content">	clear() {</pre>
+			</div>
+					<div class="line" id="line418">
+				<div class="number">418.</div>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._secondary.clear();</pre>
+			</div>
+					<div class="line" id="line419">
+				<div class="number">419.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line420">
+				<div class="number">420.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line421">
+				<div class="number">421.</div>
+				<pre class="content"></pre>
+			</div>
+			</div>
+</div>
+			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>
