@@ -188,6 +188,12 @@
 					</div>
 					<div class="col a8">Adds a new row to the table.</div>
 				</div>
+							<div class="row">
+					<div class="col a4">
+						<a href="/views/cerus-database/reference/database.database.table.html#modify">modify</a>
+					</div>
+					<div class="col a8">Modifies the specfied rows.</div>
+				</div>
 					</div>
 	</div>
 
@@ -376,6 +382,72 @@
 						<div class="item">
 							<div class="key">Description</div>
 							<div class="value">This function returns a promise.</div>
+						</div>
+					</div>
+							</div>
+					<div id="modify" class="function">
+				<div class="name">
+					.modify(query, change)
+				</div>
+				<div class="list">
+					<div class="item">
+						<div class="key">Source:</div>
+						<div class="value">
+							<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+							<a href="/views/cerus-database/source/lib/database.js.html#line238">Line 238</a>
+						</div>
+					</div>
+																				<div class="item">
+						<div class="key">Access:</div>
+						<div class="value">public</div>
+					</div>
+																																														<div class="item">
+							<div class="key">Summary:</div>
+							<div class="value">Modifies the specfied rows.</div>
+						</div>
+																			</div>
+				<div class="desc"><p>With this function you can modify the specified row. You can specify the row using the query parameter. Multiple rows can be selected to be modified. The columns that will be modified are specified using the change paramater. This function will return a promise that is called when the rows have been modified.</p>
+</div>
+									<div class="params">
+						<h3>Parameters</h3>
+						<div class="table params">
+							<div class="row head">
+								<div class="col a3">Name</div>
+								<div class="col a3">Type</div>
+								<div class="col a6">Description</div>
+							</div>
+															<div class="row">
+									<div class="col a3">query</div>
+									<div class="col a3">Object</div>
+									<div class="col a6"><span>
+										The rows that will be modified.
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">change</div>
+									<div class="col a3">Object</div>
+									<div class="col a6"><span>
+										The changes that will be done to the rows.
+									</span></div>
+								</div>
+													</div>
+					</div>
+													<div class="examples">
+						<h3>Examples</h3>
+													<div class="example"><pre><code class="hljs javascript">cerus.database().database(<span class="hljs-string">"test"</span>).table(<span class="hljs-string">"test_table"</span>).modify({<span class="hljs-attr">id</span>: <span class="hljs-number">1</span>}, {<span class="hljs-attr">row</span>: <span class="hljs-string">"new_item"</span>});
+<span class="hljs-comment">// -&gt; changes the item {id: 1, row: "item"} to {id: 1, row: "new_item"}</span>
+</code></pre>
+</div>
+											</div>
+																					<div class="return">
+						<h3>Returns</h3>
+						<div class="item">
+							<div class="key">Type</div>
+							<div class="value">Promise</div>
+						</div>
+						<div class="item">
+							<div class="key">Description</div>
+							<div class="value">This function returns a promise</div>
 						</div>
 					</div>
 							</div>

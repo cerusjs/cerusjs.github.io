@@ -139,7 +139,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-					<a href="/views/cerus/source/lib/autoroute.js.html#line4">Line 4</a>
+					<a href="/views/cerus/source/lib/autoroute.js.html#line3">Line 3</a>
 				</div>
 			</div>
 												<div class="item">
@@ -198,7 +198,7 @@
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-							<a href="/views/cerus/source/lib/autoroute.js.html#line17">Line 17</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html#line16">Line 16</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -226,14 +226,14 @@
 							</div>
 					<div id="favicon" class="function">
 				<div class="name">
-					.favicon(path)
+					.favicon(path, options)
 				</div>
 				<div class="list">
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-							<a href="/views/cerus/source/lib/autoroute.js.html#line28">Line 28</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html#line27">Line 27</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -260,6 +260,34 @@
 									<div class="col a3">String</div>
 									<div class="col a6"><span>
 										The path to the icon.
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options</div>
+									<div class="col a3">Object</div>
+									<div class="col a6"><span>
+										The object of options. (optional) (default: {})
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options.absolute</div>
+									<div class="col a3">Boolean</div>
+									<div class="col a6"><span>
+										If the inserted path is absolute. (optional) (child)
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options.url</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The url to route the favicon to. (optional) (child) (default: "/favicon.ico")
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options.type</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The MIME type of the favicon. By default this is automatically selected. (optional) (child)
 									</span></div>
 								</div>
 													</div>
@@ -307,14 +335,14 @@ cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
 							</div>
 					<div id="view" class="function">
 				<div class="name">
-					.view(url, filename, ext)
+					.view(url, filename, options)
 				</div>
 				<div class="list">
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-							<a href="/views/cerus/source/lib/autoroute.js.html#line79">Line 79</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html#line90">Line 90</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -351,10 +379,31 @@ cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
 									</span></div>
 								</div>
 															<div class="row">
-									<div class="col a3">ext</div>
+									<div class="col a3">options</div>
+									<div class="col a3">Object</div>
+									<div class="col a6"><span>
+										The object of options. (optional) (default: {})
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options.ext</div>
 									<div class="col a3">String</div>
 									<div class="col a6"><span>
-										The extension of the view. (optional) (default: ".html")
+										The extension of the view. (optional) (child) (default: ".html")
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options.absolute</div>
+									<div class="col a3">Boolean</div>
+									<div class="col a6"><span>
+										If the inserted path is absolute. (optional) (child)
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options.type</div>
+									<div class="col a3">String</div>
+									<div class="col a6"><span>
+										The MIME type of the favicon. By default this is automatically selected. (optional) (child)
 									</span></div>
 								</div>
 													</div>
@@ -406,14 +455,14 @@ cerus.autoroute().view(<span class="hljs-string">"/home"</span>, <span class="hl
 							</div>
 					<div id="assets" class="function">
 				<div class="name">
-					.assets(folder, type)
+					.assets(folder, options)
 				</div>
 				<div class="list">
 					<div class="item">
 						<div class="key">Source:</div>
 						<div class="value">
 							<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-							<a href="/views/cerus/source/lib/autoroute.js.html#line146">Line 146</a>
+							<a href="/views/cerus/source/lib/autoroute.js.html#line173">Line 173</a>
 						</div>
 					</div>
 																				<div class="item">
@@ -443,10 +492,24 @@ cerus.autoroute().view(<span class="hljs-string">"/home"</span>, <span class="hl
 									</span></div>
 								</div>
 															<div class="row">
-									<div class="col a3">type</div>
+									<div class="col a3">options</div>
+									<div class="col a3">Object</div>
+									<div class="col a6"><span>
+										The object of options. (optional) (default: {})
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options.absolute</div>
+									<div class="col a3">Boolean</div>
+									<div class="col a6"><span>
+										If the inserted path is absolute. (optional) (child)
+									</span></div>
+								</div>
+															<div class="row">
+									<div class="col a3">options.type</div>
 									<div class="col a3">String</div>
 									<div class="col a6"><span>
-										The type that will be used for the response. (optional)
+										The MIME type of the favicon. By default this is automatically selected. (optional) (child)
 									</span></div>
 								</div>
 													</div>
