@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+		<link href="/assets/css/stylesheet.css" rel="stylesheet">
+		<link href="/assets/css/highlight.css" rel="stylesheet">
+		<link href="/assets/css/markdown.css" rel="stylesheet">
+
+		<title>CerusJS Documentation</title>
+	</head>
+	<body>
+		<div class="sidebar closed">
+	<div class="header">
+		<div class="logo">
+			<img src="/assets/gfx/logo.png" onclick="sidebar().index()">
+		</div>
+	</div>
+	<div class="links">
+		<div id="home-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('home')">
+				home				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/home/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/home/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+		<div id="cerus-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus')">
+				cerus				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-core-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-core')">
+				cerus-core				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-core/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-core/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-core/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-server-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-server')">
+				cerus-server				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-server/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-server/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-server/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-router-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-router')">
+				cerus-router				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-router/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-router/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-router/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-api-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-api')">
+				cerus-api				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-api/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-api/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-database-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-database')">
+				cerus-database				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-database/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-database/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-database/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-compression-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-compression')">
+				cerus-compression				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="docs-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('docs')">
+				docs				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/docs/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/docs/tutorials.html">Tutorials</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		<div class="overlay closed" onclick="sidebar().toggle()"></div>
+		<div class="content closed">
+			<div class="title">
+	<div class="left">
+		<div class="item" onclick="sidebar().toggle()"><i class="fas fa-bars"></i></div>
+	</div>
+	<div class="right">
+				<select class="list" onchange="title_('reference', 'cerus-database').open(this)">
+						<option value="database.html" undefined>database</option>
+						<option value="database.database.html" undefined>database.database</option>
+						<option value="database.table.html" undefined>database.table</option>
+						<option value="database.table.columns.html" selected>database.table.columns</option>
+						<option value="database.table.keys.html" undefined>database.table.keys</option>
+						<option value="database.table.keys.primary.html" undefined>database.table.keys.primary</option>
+						<option value="database.table.keys.secondary.html" undefined>database.table.keys.secondary</option>
+					</select>
+				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
+		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
+	</div>
+</div>
+			<div class="inner">
+				<div class="reference">
+	<!-- CLASS -->
+	<div class="class">
+		<div class="name">
+							.database().table().columns()
+						<i class="fas fa-link"></i>
+		</div>
+		<div class="list">
+			<div class="item">
+				<div class="key">Source:</div>
+				<div class="value">
+					<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+					<a href="/views/cerus-database/source/lib/database.js.html#line386">Line 386</a>
+				</div>
+			</div>
+												<div class="item">
+				<div class="key">Access:</div>
+				<div class="value">public</div>
+			</div>
+																																</div>
+		<div class="desc"><p>This is the columns class. Using this class you can manage the columns for the <a href="/views/cerus-database/reference/database.table.html#contructor">database.table.contructor</a> class.</p>
+</div>
+			</div>
+
+	<!-- SUMMARY -->
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
+				</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#add">add</a>
+						</div>
+						<div class="col a8">Adds a new columns to the table.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#drop">drop</a>
+						</div>
+						<div class="col a8">Drops the specified column.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#modify">modify</a>
+						</div>
+						<div class="col a8">Modifies the specified column.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#has">has</a>
+						</div>
+						<div class="col a8">Checks if the column exists.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#get">get</a>
+						</div>
+						<div class="col a8">Returns the specified column.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#list">list</a>
+						</div>
+						<div class="col a8">Lists all of the columns.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#clear">clear</a>
+						</div>
+						<div class="col a8">Clears all of the columns.</div>
+					</div>
+							</div>
+		</div>
+	
+	<!-- FUNCTIONS -->
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="add" class="function">
+					<a class="name" href="#add">
+						.add(name, datatype)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line395">Line 395</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Adds a new columns to the table.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function adds a column to the table. The name of the new column is specified using the name parameter. You can set the data type of the column using the datatype parameter. The function returns a promise that is resolved when the new column has been created.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the new column.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">datatype</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The data type of the new column.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="drop" class="function">
+					<a class="name" href="#drop">
+						.drop(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line413">Line 413</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Drops the specified column.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>Using this function you can drop the specified column. You can specify the column that will be dropped using the name parameter. The function returns a promise that is resolved when the column has been dropped.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the column to drop.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="modify" class="function">
+					<a class="name" href="#modify">
+						.modify(name, options)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line430">Line 430</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Modifies the specified column.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function modifies the specified column. The name of the columns that will be modified is specified using the name parameters and can be modified using the options parameter. The function returns a promise that is resolved when the column has been modified.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the column to modify.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The options containing what will be modified.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="has" class="function">
+					<a class="name" href="#has">
+						.has(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line448">Line 448</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Checks if the column exists.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can check if a column exists. The function returns a promise that is resolved with a boolean if the column exists.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the column exists.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="get" class="function">
+					<a class="name" href="#get">
+						.get(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line464">Line 464</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the specified column.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns a promise that resolves with the specified column as argument.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the column to return.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="list" class="function">
+					<a class="name" href="#list">
+						.list()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line479">Line 479</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Lists all of the columns.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns promise that is resolved with a list with all of the columns.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="clear" class="function">
+					<a class="name" href="#clear">
+						.clear()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line489">Line 489</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Clears all of the columns.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can remove all of the columns.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
+	</div>
+			</div>
+		</div>
+		<div id="scrollTop" class="scroll">
+			<div class="scroll-image"></div>
+		</div>
+		<script type="text/javascript" src="/assets/js/script.js"></script>
+	</body>
+</html>

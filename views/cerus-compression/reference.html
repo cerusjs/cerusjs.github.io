@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "selected" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -138,13 +148,14 @@
 	<div class="class">
 		<div class="name">
 							.compression()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-					<a href="/views/cerus-compression/source/lib/compression.js.html#line3">Line 3</a>
+					<a href="/views/cerus-compression/source/lib/compression.js.html#line13">Line 13</a>
 				</div>
 			</div>
 												<div class="item">
@@ -157,525 +168,577 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#settings">settings</a>
-					</div>
-					<div class="col a8">Returns the settings class.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#open">open</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#settings">settings</a>
+						</div>
+						<div class="col a8">Returns the settings class.</div>
 					</div>
-					<div class="col a8">Opens the compression stream.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#events">events</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#open">open</a>
+						</div>
+						<div class="col a8">Opens the compression stream.</div>
 					</div>
-					<div class="col a8">Returns a promise that's called for every event.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#stream">stream</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#events">events</a>
+						</div>
+						<div class="col a8">Returns a promise that's called for every event.</div>
 					</div>
-					<div class="col a8">Returns the compression stream.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#write">write</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#stream">stream</a>
+						</div>
+						<div class="col a8">Returns the compression stream.</div>
 					</div>
-					<div class="col a8">Writes data to the compression stream.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#end">end</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#write">write</a>
+						</div>
+						<div class="col a8">Writes data to the compression stream.</div>
 					</div>
-					<div class="col a8">Ends the compression stream after writing data.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#cork">cork</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#end">end</a>
+						</div>
+						<div class="col a8">Ends the compression stream after writing data.</div>
 					</div>
-					<div class="col a8">Forces the compression stream to write all data to the memory.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#uncork">uncork</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#cork">cork</a>
+						</div>
+						<div class="col a8">Forces the compression stream to write all data to the memory.</div>
 					</div>
-					<div class="col a8">Stops forcing the compression stream to write all data to the memory.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#destroy">destroy</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#uncork">uncork</a>
+						</div>
+						<div class="col a8">Stops forcing the compression stream to write all data to the memory.</div>
 					</div>
-					<div class="col a8">Destroys the compression stream.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.html#compress">compress</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#destroy">destroy</a>
+						</div>
+						<div class="col a8">Destroys the compression stream.</div>
 					</div>
-					<div class="col a8">Asynchronously compresses the inserted data.</div>
-				</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#compress">compress</a>
+						</div>
+						<div class="col a8">Asynchronously compresses the inserted data.</div>
 					</div>
-	</div>
-
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.html#constants">constants</a>
+						</div>
+						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.html">compression.constants</a> class.</div>
+					</div>
+							</div>
+		</div>
+	
 	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="settings" class="function">
-				<div class="name">
-					.settings()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line16">Line 16</a>
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="settings" class="function">
+					<a class="name" href="#settings">
+						.settings()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line26">Line 26</a>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the settings class.</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function returns the settings class. With this class you can change the settings for how the data will be compressed. You can also change the compression type with this class.</p>
-</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the settings class.</div>
+							</div>
 																							</div>
-					<div id="open" class="function">
-				<div class="name">
-					.open(opts)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line26">Line 26</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Opens the compression stream.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can open the compression stream. Opening it means you can start writing data, which will be compressed. You can also add the options you want. They will be overwritten by the settings if you don&#39;t add them.</p>
+					<div class="desc"><p>This function returns the settings class. With this class you can change the settings for how the data will be compressed. You can also change the compression type with this class.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+																													</div>
+							<div id="open" class="function">
+					<a class="name" href="#open">
+						.open(options)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line36">Line 36</a>
 							</div>
-															<div class="row">
-									<div class="col a3">opts</div>
-									<div class="col a3">Object</div>
-									<div class="col a6"><span>
-										The options for opening the stream. (optional)
-									</span></div>
-								</div>
-													</div>
-					</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Opens the compression stream.</div>
+							</div>
 																							</div>
-					<div id="events" class="function">
-				<div class="name">
-					.events()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line41">Line 41</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns a promise that's called for every event.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function returns a promise that will call a number of events. The &quot;drain&quot; event is called when something has been written to the stream and the stream is ready to be written to again. The &quot;error&quot; event is called when there was an error somewhere in the stream. The &quot;finish&quot; event is called when the compression.end() function has been called. The &quot;pipe&quot; event is called when the .pipe() function is used on a readable stream and the &quot;unpipe&quot; event when the .unpipe() function is used. This function will throw an error when when the stream has not been opened yet.</p>
+					<div class="desc"><p>With this function you can open the compression stream. Opening it means you can start writing data, which will be compressed. You can also add the options you want. They will be overwritten by the settings if you don&#39;t add them.</p>
 </div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Returns a promise.</div>
-						</div>
-					</div>
-							</div>
-					<div id="stream" class="function">
-				<div class="name">
-					.stream()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line81">Line 81</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the compression stream.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function will return the compression stream. It will be undefined until you&#39;ve opened it. This stream is used for async compression. Use .compress() when you want to compress it synchronously.</p>
-</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Stream</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The compression stream.</div>
-						</div>
-					</div>
-							</div>
-					<div id="write" class="function">
-				<div class="name">
-					.write(chunk, encoding)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line93">Line 93</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Writes data to the compression stream.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can write to the compression stream. What you write to the compression stream is defined with the chunk parameter. You can also change the encoding with the encoding parameter. There will be an error of the stream has not been opened yet. This function will return a promise that calls the &quot;written&quot; event when the data has been written to the compression stream.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">chunk</div>
-									<div class="col a3">String, Buffer</div>
-									<div class="col a6"><span>
-										The data to write to the stream.
-									</span></div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-															<div class="row">
-									<div class="col a3">encoding</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The encoding the data will be written in. (optional)
-									</span></div>
+																	<div class="row">
+										<div class="col a3">options</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The options for opening the stream. (optional) (default: {})
+										</span></div>
+									</div>
+															</div>
+						</div>
+																													</div>
+							<div id="events" class="function">
+					<a class="name" href="#events">
+						.events()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line51">Line 51</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns a promise that's called for every event.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns a promise that will call a number of events. The &quot;drain&quot; event is called when something has been written to the stream and the stream is ready to be written to again. The &quot;error&quot; event is called when there was an error somewhere in the stream. The &quot;finish&quot; event is called when the compression.end() function has been called. The &quot;pipe&quot; event is called when the .pipe() function is used on a readable stream and the &quot;unpipe&quot; event when the .unpipe() function is used. This function will throw an error when when the stream has not been opened yet.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Returns a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="stream" class="function">
+					<a class="name" href="#stream">
+						.stream()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line89">Line 89</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the compression stream.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return the compression stream. It will be undefined until you&#39;ve opened it. This stream is used for async compression. Use .compress() when you want to compress it synchronously.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Stream</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The compression stream.</div>
+							</div>
+						</div>
+									</div>
+							<div id="write" class="function">
+					<a class="name" href="#write">
+						.write(chunk, encoding)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line101">Line 101</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Writes data to the compression stream.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can write to the compression stream. What you write to the compression stream is defined with the chunk parameter. You can also change the encoding with the encoding parameter. There will be an error of the stream has not been opened yet. This function will return a promise that calls the &quot;written&quot; event when the data has been written to the compression stream.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> compression = cerus.compression();
+																	<div class="row">
+										<div class="col a3">chunk</div>
+										<div class="col a3">param</div>
+										<div class="col a6"><span>
+											The data to write to the stream.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">encoding</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The encoding the data will be written in. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> compression = cerus.compression();
 compression.open();
 compression.write(<span class="hljs-string">"data"</span>);
 <span class="hljs-comment">// -&gt; this function will write the string "data" to the compression stream</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
-							</div>
-					<div id="end" class="function">
-				<div class="name">
-					.end(chunk, encoding)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line126">Line 126</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Ends the compression stream after writing data.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function will end the compression stream. While ending the stream you can also supply the last data that will be written to the stream. The data you want to write to the stream is specified with the chunk parameter. You can also set the encoding it will be written in using the encoding parameter. This function will throw an error when the stream hasn&#39;t been opened yet when this function is called. This function will also return a promise that calls the &quot;ended&quot; event when the stream has succesfully ended and all the data has been flushed.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">chunk</div>
-									<div class="col a3">String, Buffer</div>
-									<div class="col a6"><span>
-										The last data to write to the stream.
-									</span></div>
-								</div>
-															<div class="row">
-									<div class="col a3">encoding</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The encoding the data will be written in. (optional)
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> compression = cerus.compression();
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="end" class="function">
+					<a class="name" href="#end">
+						.end(chunk, encoding)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line124">Line 124</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Ends the compression stream after writing data.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will end the compression stream. While ending the stream you can also supply the last data that will be written to the stream. The data you want to write to the stream is specified with the chunk parameter. You can also set the encoding it will be written in using the encoding parameter. This function will throw an error when the stream hasn&#39;t been opened yet when this function is called. This function will also return a promise that calls the &quot;ended&quot; event when the stream has succesfully ended and all the data has been flushed.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">chunk</div>
+										<div class="col a3">param</div>
+										<div class="col a6"><span>
+											The last data to write to the stream.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">encoding</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The encoding the data will be written in. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> compression = cerus.compression();
 compression.open();
 compression.end(<span class="hljs-string">"data"</span>);
 <span class="hljs-comment">// -&gt; this function will write the string "data" to the compression stream end then end the stream</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
-							</div>
-					<div id="cork" class="function">
-				<div class="name">
-					.cork()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line156">Line 156</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Forces the compression stream to write all data to the memory.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can force the compression stream to buffer all the data to the memory. By doing this a situation can be avoided where a backup would be created when a lot of small chunks of data are added to the internal buffer. When this happens performance will be heavily impacted. This behaviour is stopped using the .uncork() function or when the stream is ended. This function will throw an error when the stream hasn&#39;t been started yet.</p>
-</div>
-																							</div>
-					<div id="uncork" class="function">
-				<div class="name">
-					.uncork()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line174">Line 174</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Stops forcing the compression stream to write all data to the memory.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>Using this function you can stop the behaviour that was started using the .cork() method. This can also be done by ending the compression stream. This function will throw an error when the stream hasn&#39;t been started yet.</p>
-</div>
-																							</div>
-					<div id="destroy" class="function">
-				<div class="name">
-					.destroy(error)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line189">Line 189</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Destroys the compression stream.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can destroy the compression stream. Destroying it is basically ending it with a possible error. This error can be inserted using the error parameter. You can get this error from the &quot;error&quot; event. This function will throw an error when the stream hasn&#39;t started yet.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">error</div>
-									<div class="col a3">Error</div>
-									<div class="col a6"><span>
-										The error that will be used in the "error" event. (optional)
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> compression = cerus.compression();
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="cork" class="function">
+					<a class="name" href="#cork">
+						.cork()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line148">Line 148</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Forces the compression stream to write all data to the memory.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can force the compression stream to buffer all the data to the memory. By doing this a situation can be avoided where a backup would be created when a lot of small chunks of data are added to the internal buffer. When this happens performance will be heavily impacted. This behaviour is stopped using the .uncork() function or when the stream is ended. This function will throw an error when the stream hasn&#39;t been started yet.</p>
+</div>
+																													</div>
+							<div id="uncork" class="function">
+					<a class="name" href="#uncork">
+						.uncork()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line164">Line 164</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Stops forcing the compression stream to write all data to the memory.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>Using this function you can stop the behaviour that was started using the .cork() method. This can also be done by ending the compression stream. This function will throw an error when the stream hasn&#39;t been started yet.</p>
+</div>
+																													</div>
+							<div id="destroy" class="function">
+					<a class="name" href="#destroy">
+						.destroy(error)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line177">Line 177</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Destroys the compression stream.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can destroy the compression stream. Destroying it is basically ending it with a possible error. This error can be inserted using the error parameter. You can get this error from the &quot;error&quot; event. This function will throw an error when the stream hasn&#39;t started yet.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">error</div>
+										<div class="col a3">Error</div>
+										<div class="col a6"><span>
+											The error that will be used in the "error" event. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> compression = cerus.compression();
 compression.open();
 compression.destroy(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"destroyed"</span>));
 <span class="hljs-comment">// -&gt; this function will destroy the compression stream and throw the error "destroyed"</span>
 </code></pre>
 </div>
-											</div>
-																			</div>
-					<div id="compress" class="function">
-				<div class="name">
-					.compress(data, opts)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line211">Line 211</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Asynchronously compresses the inserted data.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can asynchronously compress data. This means this function will immediately compress the data instead of having to use a stream. The data you want to compress is specified with the data parameter. You can also override the settings using the opts parameter. This function will return a promise that calls the &quot;data&quot; event when the data has been compressed, with the data as first argument, and the &quot;error&quot; event when there was an error while compressing the data.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">data</div>
-									<div class="col a3">String, Buffer</div>
-									<div class="col a6"><span>
-										The data that has to be compressed.
-									</span></div>
-								</div>
-															<div class="row">
-									<div class="col a3">opts</div>
-									<div class="col a3">Object</div>
-									<div class="col a6"><span>
-										The settings you want to override. (optional)
-									</span></div>
-								</div>
-															<div class="row">
-									<div class="col a3">opts.encoding</div>
-									<div class="col a3">Object</div>
-									<div class="col a6"><span>
-										The encoding you've used for the buffer. (optional) (child)
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> compression = cerus.compression();
+																								</div>
+							<div id="compress" class="function">
+					<a class="name" href="#compress">
+						.compress(data, options)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line197">Line 197</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Asynchronously compresses the inserted data.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can asynchronously compress data. This means this function will immediately compress the data instead of having to use a stream. The data you want to compress is specified with the data parameter. You can also override the settings using the opts parameter. This function will return a promise that calls the &quot;data&quot; event when the data has been compressed, with the data as first argument, and the &quot;error&quot; event when there was an error while compressing the data.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">data</div>
+										<div class="col a3">param</div>
+										<div class="col a6"><span>
+											The data that has to be compressed.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The settings you want to override. (optional)
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options.encoding</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The encoding you've used for the buffer. (optional) (child)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> compression = cerus.compression();
 compression.compress(<span class="hljs-string">"example string"</span>);
 <span class="hljs-comment">// -&gt; this function will compress the string "example string"</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
+													</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
 							</div>
-		
-	</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="constants" class="function">
+					<a class="name" href="#constants">
+						.constants()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
+								<a href="/views/cerus-compression/source/lib/compression.js.html#line222">Line 222</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the <a href="/views/cerus-compression/reference/compression.constants.html">compression.constants</a> class.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns the <a href="/views/cerus-compression/reference/compression.constants.html">compression.constants</a> class. If the class hasn&#39;t been created yet, it will create it.</p>
 </div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Returns the constants class.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
+	</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

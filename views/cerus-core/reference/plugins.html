@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -130,7 +140,8 @@
 	<div class="class">
 		<div class="name">
 							.plugins()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
@@ -165,106 +176,107 @@ cerus.example();
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-core/reference/plugins.html#add">add</a>
-					</div>
-					<div class="col a8">Adds a new plugin to the CerusJS core.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-core/reference/plugins.html#remove">remove</a>
-					</div>
-					<div class="col a8">Removes a plugin from the cerus core.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-core/reference/plugins.html#has">has</a>
-					</div>
-					<div class="col a8">Checks if the plugin has been added to the cerus core.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-core/reference/plugins.html#list">list</a>
-					</div>
-					<div class="col a8">Lists all plugins added to the cerus core.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-core/reference/plugins.html#clear">clear</a>
-					</div>
-					<div class="col a8">Clears all of the plugins.</div>
-				</div>
-					</div>
-	</div>
-
-	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="add" class="function">
-				<div class="name">
-					.add(plugin)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
-							<a href="/views/cerus-core/source/lib/plugins.js.html#line27">Line 27</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-core/reference/plugins.html#add">add</a>
 						</div>
+						<div class="col a8">Adds a new plugin to the CerusJS core.</div>
 					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Adds a new plugin to the CerusJS core.</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-core/reference/plugins.html#remove">remove</a>
 						</div>
-																			</div>
-				<div class="desc"><p>This function is used to add a new plugin to CerusJS&#39; core. You can add the plugin using the plugin parameter. The plugin object must contain a name else it will throw a TypeError. If the plugin has already been added it will also throw an Error. If you want to re-add a plugin you have to remove the old plugin first. You can also add dependencies to your plugin. This means that before adding the plugin your list of dependencies is checked. If a dependency isn&#39;t added yet it&#39;ll throw an error. All keys, apart from the name and dependencies, that aren&#39;t function are removed from the object. If you add a <em>init function (was init</em>, but that is deprecated) that function will not be added and will be called to initialize the plugin. It is called with the cerus object as parameter. This is how a plugin should get access to the cerus object. The rest of the functions are added to the cerus core if the key isn&#39;t taken yet.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+						<div class="col a8">Removes a plugin from the cerus core.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-core/reference/plugins.html#has">has</a>
+						</div>
+						<div class="col a8">Checks if the plugin has been added to the cerus core.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-core/reference/plugins.html#list">list</a>
+						</div>
+						<div class="col a8">Lists all plugins added to the cerus core.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-core/reference/plugins.html#clear">clear</a>
+						</div>
+						<div class="col a8">Clears all of the plugins.</div>
+					</div>
 							</div>
-															<div class="row">
-									<div class="col a3">plugin</div>
-									<div class="col a3">Object</div>
-									<div class="col a6"><span>
-										The plugin object that contains the plugin that will be added.
-									</span></div>
+		</div>
+	
+	<!-- FUNCTIONS -->
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="add" class="function">
+					<a class="name" href="#add">
+						.add(plugin)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+								<a href="/views/cerus-core/source/lib/plugins.js.html#line27">Line 27</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Adds a new plugin to the CerusJS core.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function is used to add a new plugin to CerusJS&#39; core. You can add the plugin using the plugin parameter. The plugin object must contain a name else it will throw a TypeError. If the plugin has already been added it will also throw an Error. If you want to re-add a plugin you have to remove the old plugin first. You can also add dependencies to your plugin. This means that before adding the plugin your list of dependencies is checked. If a dependency isn&#39;t added yet it&#39;ll throw an error. All keys, apart from the name and dependencies, that aren&#39;t function are removed from the object. If you add a <em>init function (was init</em>, but that is deprecated) that function will not be added and will be called to initialize the plugin. It is called with the cerus object as parameter. This is how a plugin should get access to the cerus object. The rest of the functions are added to the cerus core if the key isn&#39;t taken yet.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-															<div class="row">
-									<div class="col a3">plugin.name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the plugin. (child)
-									</span></div>
-								</div>
-															<div class="row">
-									<div class="col a3">plugin.dependencies</div>
-									<div class="col a3">String[]</div>
-									<div class="col a6"><span>
-										The dependencies for the plugin. (optional) (child)
-									</span></div>
-								</div>
-													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> plugin = {
+																	<div class="row">
+										<div class="col a3">plugin</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The plugin object that contains the plugin that will be added.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">plugin.name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the plugin. (child)
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">plugin.dependencies</div>
+										<div class="col a3">String[]</div>
+										<div class="col a6"><span>
+											The dependencies for the plugin. (optional) (child)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> plugin = {
   <span class="hljs-attr">name</span>: <span class="hljs-string">"example"</span>,
   <span class="hljs-attr">example</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">return</span> <span class="hljs-string">"example"</span>;
@@ -274,7 +286,7 @@ cerus.plugins().add(plugin);
 <span class="hljs-comment">// -&gt; this will add the specified plugin</span>
 </code></pre>
 </div>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> plugin = {
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> plugin = {
   <span class="hljs-attr">name</span>: <span class="hljs-string">"example"</span>,
   <span class="hljs-attr">_init</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"initialized the plugin"</span>);
@@ -287,168 +299,172 @@ cerus.plugins().add(plugin);
 <span class="hljs-comment">// -&gt; this will add the specified plugin and call the _init function.</span>
 </code></pre>
 </div>
-											</div>
-																			</div>
-					<div id="remove" class="function">
-				<div class="name">
-					.remove(name)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
-							<a href="/views/cerus-core/source/lib/plugins.js.html#line143">Line 143</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Removes a plugin from the cerus core.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can remove a plugin. The plugin removed can be specified with the name parameter. A plugin cannot be removed if it hasn&#39;t been added yet. All plugins are also checked if they don&#39;t depend on the plugin that will be removed. An error will be throw if this is the case. Before the plugin is removed of the list it&#39;s function are removed from the cerus core.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the plugin that will be removed.
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with plugin "example" already added</span>
+																								</div>
+							<div id="remove" class="function">
+					<a class="name" href="#remove">
+						.remove(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+								<a href="/views/cerus-core/source/lib/plugins.js.html#line122">Line 122</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Removes a plugin from the cerus core.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can remove a plugin. The plugin removed can be specified with the name parameter. A plugin cannot be removed if it hasn&#39;t been added yet. All plugins are also checked if they don&#39;t depend on the plugin that will be removed. An error will be throw if this is the case. Before the plugin is removed of the list it&#39;s function are removed from the cerus core.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the plugin that will be removed.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with plugin "example" already added</span>
 cerus.plugins().remove(<span class="hljs-string">"example"</span>);
 <span class="hljs-comment">// -&gt; will remove the cerus plugin</span>
 </code></pre>
 </div>
-											</div>
-																			</div>
-					<div id="has" class="function">
-				<div class="name">
-					.has(name)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
-							<a href="/views/cerus-core/source/lib/plugins.js.html#line190">Line 190</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Checks if the plugin has been added to the cerus core.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function will check if the specified plugin is added to CerusJS&#39; core.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the plugin that will be checked.
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with plugin "example" already added</span>
+																								</div>
+							<div id="has" class="function">
+					<a class="name" href="#has">
+						.has(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+								<a href="/views/cerus-core/source/lib/plugins.js.html#line160">Line 160</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Checks if the plugin has been added to the cerus core.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will check if the specified plugin is added to CerusJS&#39; core.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the plugin that will be checked.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with plugin "example" already added</span>
 cerus.plugins().has(<span class="hljs-string">"example"</span>);
 <span class="hljs-comment">// -&gt; will return true</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Boolean</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">If the plugin has been added to CerusJS' core.</div>
-						</div>
-					</div>
+													</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Boolean</div>
 							</div>
-					<div id="list" class="function">
-				<div class="name">
-					.list()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
-							<a href="/views/cerus-core/source/lib/plugins.js.html#line212">Line 212</a>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">If the plugin has been added to CerusJS' core.</div>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Lists all plugins added to the cerus core.</div>
+									</div>
+							<div id="list" class="function">
+					<a class="name" href="#list">
+						.list()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+								<a href="/views/cerus-core/source/lib/plugins.js.html#line176">Line 176</a>
+							</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will list all of the plugins that have been added to CerusJS&#39; core.</p>
-</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Lists all plugins added to the cerus core.</div>
+							</div>
 																							</div>
-					<div id="clear" class="function">
-				<div class="name">
-					.clear()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
-							<a href="/views/cerus-core/source/lib/plugins.js.html#line222">Line 222</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Clears all of the plugins.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can clear all of the current plugins. Before they are removed from the plugin list their functions are removed from the cerus core.</p>
+					<div class="desc"><p>This function will list all of the plugins that have been added to CerusJS&#39; core.</p>
 </div>
+																													</div>
+							<div id="clear" class="function">
+					<a class="name" href="#clear">
+						.clear()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-core/source/lib/plugins.js.html">lib/plugins.js</a>, 
+								<a href="/views/cerus-core/source/lib/plugins.js.html#line186">Line 186</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Clears all of the plugins.</div>
+							</div>
 																							</div>
-		
+					<div class="desc"><p>With this function you can clear all of the current plugins. Before they are removed from the plugin list their functions are removed from the cerus core.</p>
+</div>
+																													</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

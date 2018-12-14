@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -96,6 +96,16 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -406,463 +416,463 @@
 			</div>
 					<div class="line" id="line70">
 				<div class="number">70.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the arguments are correct</span></pre>
+				<pre class="content">		<span class="hljs-keyword">const</span> name = plugin[<span class="hljs-string">"name"</span>];</pre>
 			</div>
 					<div class="line" id="line71">
 				<div class="number">71.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> plugin !== <span class="hljs-string">"object"</span> || plugin === <span class="hljs-literal">null</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">let</span> dependencies = plugin[<span class="hljs-string">"dependencies"</span>];</pre>
 			</div>
 					<div class="line" id="line72">
 				<div class="number">72.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument plugin must be an object"</span>);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line73">
 				<div class="number">73.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line74">
 				<div class="number">74.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the name option must be a string"</span>);</pre>
 			</div>
 					<div class="line" id="line75">
 				<div class="number">75.</div>
-				<pre class="content">		<span class="hljs-comment">// Create variables for the name and dependencies</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line76">
 				<div class="number">76.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> name = plugin[<span class="hljs-string">"name"</span>];</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line77">
 				<div class="number">77.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> dependencies = plugin[<span class="hljs-string">"dependencies"</span>];</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._plugins[name] !== <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line78">
 				<div class="number">78.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the inserted plugin has already been added"</span>);</pre>
 			</div>
 					<div class="line" id="line79">
 				<div class="number">79.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the name is correct</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line80">
 				<div class="number">80.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line81">
 				<div class="number">81.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument plugin.name must be a string"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!(dependencies <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>)) {</pre>
 			</div>
 					<div class="line" id="line82">
 				<div class="number">82.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			dependencies = [];</pre>
 			</div>
 					<div class="line" id="line83">
 				<div class="number">83.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line84">
 				<div class="number">84.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the name isn't used yet</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line85">
 				<div class="number">85.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._plugins[name] !== <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; dependencies.length; i++) {</pre>
 			</div>
 					<div class="line" id="line86">
 				<div class="number">86.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the inserted plugin has already been added"</span>);</pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> dependencies[i] !== <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line87">
 				<div class="number">87.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">				<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the dependencies option can only be an array of strings"</span>);</pre>
 			</div>
 					<div class="line" id="line88">
 				<div class="number">88.</div>
-				<pre class="content"></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line89">
 				<div class="number">89.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the dependencies are correct</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line90">
 				<div class="number">90.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!(dependencies <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>)) {</pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._plugins[dependencies[i]] === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line91">
 				<div class="number">91.</div>
-				<pre class="content">			dependencies = [];</pre>
+				<pre class="content">				<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the dependency '"</span> + dependencies[i] + <span class="hljs-string">"' has not been loaded yet"</span>);</pre>
 			</div>
 					<div class="line" id="line92">
 				<div class="number">92.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line93">
 				<div class="number">93.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line94">
 				<div class="number">94.</div>
-				<pre class="content">		<span class="hljs-comment">// Loop through all of the dependencies</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line95">
 				<div class="number">95.</div>
-				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; dependencies.length; i++) {</pre>
+				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> plugin) {</pre>
 			</div>
 					<div class="line" id="line96">
 				<div class="number">96.</div>
-				<pre class="content">			<span class="hljs-comment">// Check if the dependency is correct</span></pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> plugin[key] !== <span class="hljs-string">"function"</span>) {</pre>
 			</div>
 					<div class="line" id="line97">
 				<div class="number">97.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> dependencies[i] !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">				<span class="hljs-keyword">delete</span> plugin[key];</pre>
 			</div>
 					<div class="line" id="line98">
 				<div class="number">98.</div>
-				<pre class="content">				<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument plugin.dependencies can only be an array of strings"</span>);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line99">
 				<div class="number">99.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">				<span class="hljs-keyword">continue</span>;</pre>
 			</div>
 					<div class="line" id="line100">
 				<div class="number">100.</div>
-				<pre class="content"></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line101">
 				<div class="number">101.</div>
-				<pre class="content">			<span class="hljs-comment">// Check if the dependency has been added</span></pre>
+				<pre class="content">			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(key === <span class="hljs-string">"init_"</span>) {</pre>
 			</div>
 					<div class="line" id="line102">
 				<div class="number">102.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._plugins[dependencies[i]] === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content">				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"(deprecation) using init_ is deprecated and _init should be used instead"</span>);</pre>
 			</div>
 					<div class="line" id="line103">
 				<div class="number">103.</div>
-				<pre class="content">				<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the dependency '"</span> + dependencies[i] + <span class="hljs-string">"' has not been loaded yet"</span>);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line104">
 				<div class="number">104.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">				plugin[key](<span class="hljs-keyword">this</span>._cerus);</pre>
 			</div>
 					<div class="line" id="line105">
 				<div class="number">105.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line106">
 				<div class="number">106.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(key === <span class="hljs-string">"_init"</span>) {</pre>
 			</div>
 					<div class="line" id="line107">
 				<div class="number">107.</div>
-				<pre class="content">		<span class="hljs-comment">// Loop though all the possible entries</span></pre>
+				<pre class="content">				plugin[key](<span class="hljs-keyword">this</span>._cerus);</pre>
 			</div>
 					<div class="line" id="line108">
 				<div class="number">108.</div>
-				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> plugin) {</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line109">
 				<div class="number">109.</div>
-				<pre class="content">			<span class="hljs-comment">// Skip the entries that aren't functions</span></pre>
+				<pre class="content">			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._cerus[key] === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line110">
 				<div class="number">110.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> plugin[key] !== <span class="hljs-string">"function"</span>) {</pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>._cerus[key] = plugin[key];</pre>
 			</div>
 					<div class="line" id="line111">
 				<div class="number">111.</div>
-				<pre class="content">				<span class="hljs-keyword">delete</span> plugin[key];</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line112">
 				<div class="number">112.</div>
-				<pre class="content">				<span class="hljs-keyword">continue</span>;</pre>
+				<pre class="content">			<span class="hljs-keyword">else</span> {</pre>
 			</div>
 					<div class="line" id="line113">
 				<div class="number">113.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">				<span class="hljs-keyword">delete</span> plugin[key];</pre>
 			</div>
 					<div class="line" id="line114">
 				<div class="number">114.</div>
-				<pre class="content"></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line115">
 				<div class="number">115.</div>
-				<pre class="content">			<span class="hljs-comment">// Say the init_ entry is deprecated and call it (will be removed in a future version)</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line116">
 				<div class="number">116.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(key === <span class="hljs-string">"init_"</span>) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line117">
 				<div class="number">117.</div>
-				<pre class="content">				<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"(deprecation) using init_ is deprecated and _init should be used instead"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._plugins[name] = {</pre>
 			</div>
 					<div class="line" id="line118">
 				<div class="number">118.</div>
-				<pre class="content">				plugin[key](<span class="hljs-keyword">this</span>._cerus);</pre>
+				<pre class="content">			name, dependencies, <span class="hljs-attr">funcs</span>: plugin</pre>
 			</div>
 					<div class="line" id="line119">
 				<div class="number">119.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">		};</pre>
 			</div>
 					<div class="line" id="line120">
 				<div class="number">120.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line121">
 				<div class="number">121.</div>
-				<pre class="content">			<span class="hljs-comment">// Call the _init functions</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line122">
 				<div class="number">122.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(key === <span class="hljs-string">"_init"</span>) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line123">
 				<div class="number">123.</div>
-				<pre class="content">				plugin[key](<span class="hljs-keyword">this</span>._cerus);</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can remove a plugin. The plugin removed can be specified with the name </span></pre>
 			</div>
 					<div class="line" id="line124">
 				<div class="number">124.</div>
-				<pre class="content">			}</pre>
+				<pre class="content"><span class="hljs-comment">	 * parameter. A plugin cannot be removed if it hasn't been added yet. All plugins are also checked</span></pre>
 			</div>
 					<div class="line" id="line125">
 				<div class="number">125.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * if they don't depend on the plugin that will be removed. An error will be throw if this is the </span></pre>
 			</div>
 					<div class="line" id="line126">
 				<div class="number">126.</div>
-				<pre class="content">			<span class="hljs-comment">// Add the entry if the specified key is still free</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * case. Before the plugin is removed of the list it's function are removed from the cerus core.</span></pre>
 			</div>
 					<div class="line" id="line127">
 				<div class="number">127.</div>
-				<pre class="content">			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._cerus[key] === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line128">
 				<div class="number">128.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>._cerus[key] = plugin[key];</pre>
+				<pre class="content"><span class="hljs-comment">	 * // with plugin "example" already added</span></pre>
 			</div>
 					<div class="line" id="line129">
 				<div class="number">129.</div>
-				<pre class="content">			}</pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.plugins().remove("example");</span></pre>
 			</div>
 					<div class="line" id="line130">
 				<div class="number">130.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will remove the cerus plugin</span></pre>
 			</div>
 					<div class="line" id="line131">
 				<div class="number">131.</div>
-				<pre class="content">			<span class="hljs-comment">// Remove the entries that are already used</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Removes a plugin from the cerus core.</span></pre>
 			</div>
 					<div class="line" id="line132">
 				<div class="number">132.</div>
-				<pre class="content">			<span class="hljs-keyword">else</span> {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the plugin that will be removed.</span></pre>
 			</div>
 					<div class="line" id="line133">
 				<div class="number">133.</div>
-				<pre class="content">				<span class="hljs-keyword">delete</span> plugin[key];</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
 			</div>
 					<div class="line" id="line134">
 				<div class="number">134.</div>
-				<pre class="content">			}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @id plugins.remove</span></pre>
 			</div>
 					<div class="line" id="line135">
 				<div class="number">135.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line136">
 				<div class="number">136.</div>
-				<pre class="content"></pre>
+				<pre class="content">	remove(name) {</pre>
 			</div>
 					<div class="line" id="line137">
 				<div class="number">137.</div>
-				<pre class="content">		<span class="hljs-comment">// Add the plugin and it's data to the array</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.has(name)) {</pre>
 			</div>
 					<div class="line" id="line138">
 				<div class="number">138.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._plugins[name] = {</pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the specified plugin doesn't exist"</span>);</pre>
 			</div>
 					<div class="line" id="line139">
 				<div class="number">139.</div>
-				<pre class="content">			name, dependencies, <span class="hljs-attr">funcs</span>: plugin</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line140">
 				<div class="number">140.</div>
-				<pre class="content">		};</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line141">
 				<div class="number">141.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> plugin <span class="hljs-keyword">in</span> <span class="hljs-keyword">this</span>._plugins) {</pre>
 			</div>
 					<div class="line" id="line142">
 				<div class="number">142.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._plugins[plugin].dependencies.includes(name)) {</pre>
 			</div>
 					<div class="line" id="line143">
 				<div class="number">143.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">				<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the plugin "</span> + plugin + <span class="hljs-string">" depends on this plugin"</span>);</pre>
 			</div>
 					<div class="line" id="line144">
 				<div class="number">144.</div>
-				<pre class="content"><span class="hljs-comment">	 * With this function you can remove a plugin. The plugin removed can be specified with the name </span></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line145">
 				<div class="number">145.</div>
-				<pre class="content"><span class="hljs-comment">	 * parameter. A plugin cannot be removed if it hasn't been added yet. All plugins are also checked</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line146">
 				<div class="number">146.</div>
-				<pre class="content"><span class="hljs-comment">	 * if they don't depend on the plugin that will be removed. An error will be throw if this is the </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line147">
 				<div class="number">147.</div>
-				<pre class="content"><span class="hljs-comment">	 * case. Before the plugin is removed of the list it's function are removed from the cerus core.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">const</span> _plugin = <span class="hljs-keyword">this</span>._plugins[name];</pre>
 			</div>
 					<div class="line" id="line148">
 				<div class="number">148.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line149">
 				<div class="number">149.</div>
-				<pre class="content"><span class="hljs-comment">	 * // with plugin "example" already added</span></pre>
+				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> func <span class="hljs-keyword">in</span> _plugin.funcs) {</pre>
 			</div>
 					<div class="line" id="line150">
 				<div class="number">150.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.plugins().remove("example");</span></pre>
+				<pre class="content">			func = _plugin.funcs[func];</pre>
 			</div>
 					<div class="line" id="line151">
 				<div class="number">151.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will remove the cerus plugin</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line152">
 				<div class="number">152.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Removes a plugin from the cerus core.</span></pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(func !== <span class="hljs-string">"_init"</span>) {</pre>
 			</div>
 					<div class="line" id="line153">
 				<div class="number">153.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the plugin that will be removed.</span></pre>
+				<pre class="content">				<span class="hljs-keyword">delete</span> <span class="hljs-keyword">this</span>._cerus[func];</pre>
 			</div>
 					<div class="line" id="line154">
 				<div class="number">154.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line155">
 				<div class="number">155.</div>
-				<pre class="content"><span class="hljs-comment">	 * @id plugins.remove</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line156">
 				<div class="number">156.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line157">
 				<div class="number">157.</div>
-				<pre class="content">	remove(name) {</pre>
+				<pre class="content">		<span class="hljs-keyword">delete</span> <span class="hljs-keyword">this</span>._plugins[name];</pre>
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the arguments are correct</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line159">
 				<div class="number">159.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line160">
 				<div class="number">160.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line161">
 				<div class="number">161.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will check if the specified plugin is added to CerusJS' core.</span></pre>
 			</div>
 					<div class="line" id="line162">
 				<div class="number">162.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line163">
 				<div class="number">163.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the specified plugin exists</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // with plugin "example" already added</span></pre>
 			</div>
 					<div class="line" id="line164">
 				<div class="number">164.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._plugins[name] === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.plugins().has("example");</span></pre>
 			</div>
 					<div class="line" id="line165">
 				<div class="number">165.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the specified plugin doesn't exist"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return true</span></pre>
 			</div>
 					<div class="line" id="line166">
 				<div class="number">166.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the plugin has been added to the cerus core.</span></pre>
 			</div>
 					<div class="line" id="line167">
 				<div class="number">167.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the plugin that will be checked.</span></pre>
 			</div>
 					<div class="line" id="line168">
 				<div class="number">168.</div>
-				<pre class="content">		<span class="hljs-comment">// Loop through the dependencies to check if the specified plugin isn't depended upon</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the plugin has been added to CerusJS' core.</span></pre>
 			</div>
 					<div class="line" id="line169">
 				<div class="number">169.</div>
-				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> plugin <span class="hljs-keyword">in</span> <span class="hljs-keyword">this</span>._plugins) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function has</span></pre>
 			</div>
 					<div class="line" id="line170">
 				<div class="number">170.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._plugins[plugin].dependencies.includes(name)) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @id plugins.has</span></pre>
 			</div>
 					<div class="line" id="line171">
 				<div class="number">171.</div>
-				<pre class="content">				<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the plugin "</span> + plugin + <span class="hljs-string">" depends on this plugin"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line172">
 				<div class="number">172.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">	has(name) {</pre>
 			</div>
 					<div class="line" id="line173">
 				<div class="number">173.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>._plugins).includes(name);</pre>
 			</div>
 					<div class="line" id="line174">
 				<div class="number">174.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line175">
 				<div class="number">175.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> plugin_ = <span class="hljs-keyword">this</span>._plugins[name];</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line176">
 				<div class="number">176.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line177">
 				<div class="number">177.</div>
-				<pre class="content">		<span class="hljs-comment">// Loop through the plugin's entries to remove them from cerus</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will list all of the plugins that have been added to CerusJS' core.</span></pre>
 			</div>
 					<div class="line" id="line178">
 				<div class="number">178.</div>
-				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> func <span class="hljs-keyword">in</span> plugin_.funcs) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Lists all plugins added to the cerus core.</span></pre>
 			</div>
 					<div class="line" id="line179">
 				<div class="number">179.</div>
-				<pre class="content">			func = plugin_.funcs[func];</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function list</span></pre>
 			</div>
 					<div class="line" id="line180">
 				<div class="number">180.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @id plugins.list</span></pre>
 			</div>
 					<div class="line" id="line181">
 				<div class="number">181.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(func !== <span class="hljs-string">"_init"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line182">
 				<div class="number">182.</div>
-				<pre class="content">				<span class="hljs-keyword">delete</span> <span class="hljs-keyword">this</span>._cerus[func];</pre>
+				<pre class="content">	list() {</pre>
 			</div>
 					<div class="line" id="line183">
 				<div class="number">183.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>._plugins);</pre>
 			</div>
 					<div class="line" id="line184">
 				<div class="number">184.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line185">
 				<div class="number">185.</div>
@@ -870,103 +880,103 @@
 			</div>
 					<div class="line" id="line186">
 				<div class="number">186.</div>
-				<pre class="content">		<span class="hljs-comment">// Delete the plugin from the list</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line187">
 				<div class="number">187.</div>
-				<pre class="content">		<span class="hljs-keyword">delete</span> <span class="hljs-keyword">this</span>._plugins[name];</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can clear all of the current plugins. Before they are removed from the </span></pre>
 			</div>
 					<div class="line" id="line188">
 				<div class="number">188.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * plugin list their functions are removed from the cerus core.</span></pre>
 			</div>
 					<div class="line" id="line189">
 				<div class="number">189.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Clears all of the plugins.</span></pre>
 			</div>
 					<div class="line" id="line190">
 				<div class="number">190.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function clear</span></pre>
 			</div>
 					<div class="line" id="line191">
 				<div class="number">191.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will check if the specified plugin is added to CerusJS' core.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @id plugins.clear</span></pre>
 			</div>
 					<div class="line" id="line192">
 				<div class="number">192.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line193">
 				<div class="number">193.</div>
-				<pre class="content"><span class="hljs-comment">	 * // with plugin "example" already added</span></pre>
+				<pre class="content">	clear() {</pre>
 			</div>
 					<div class="line" id="line194">
 				<div class="number">194.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.plugins().has("example");</span></pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> remaining = {};</pre>
 			</div>
 					<div class="line" id="line195">
 				<div class="number">195.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return true</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line196">
 				<div class="number">196.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the plugin has been added to the cerus core.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> plugin <span class="hljs-keyword">in</span> <span class="hljs-keyword">this</span>._plugins) {</pre>
 			</div>
 					<div class="line" id="line197">
 				<div class="number">197.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} name The name of the plugin that will be checked.</span></pre>
+				<pre class="content">			<span class="hljs-keyword">try</span> {</pre>
 			</div>
 					<div class="line" id="line198">
 				<div class="number">198.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the plugin has been added to CerusJS' core.</span></pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>.remove(plugin);</pre>
 			</div>
 					<div class="line" id="line199">
 				<div class="number">199.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function has</span></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line200">
 				<div class="number">200.</div>
-				<pre class="content"><span class="hljs-comment">	 * @id plugins.has</span></pre>
+				<pre class="content">			<span class="hljs-keyword">catch</span>(e) {</pre>
 			</div>
 					<div class="line" id="line201">
 				<div class="number">201.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">				remaining[plugin] = <span class="hljs-keyword">this</span>._plugins[plugin];</pre>
 			</div>
 					<div class="line" id="line202">
 				<div class="number">202.</div>
-				<pre class="content">	has(name) {</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line203">
 				<div class="number">203.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the arguments are correct</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line204">
 				<div class="number">204.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line205">
 				<div class="number">205.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument name must be a string"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-built_in">Object</span>.keys(remaining).length &gt; <span class="hljs-number">0</span>) {</pre>
 			</div>
 					<div class="line" id="line206">
 				<div class="number">206.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._plugins = remaining;</pre>
 			</div>
 					<div class="line" id="line207">
 				<div class="number">207.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>.clear();</pre>
 			</div>
 					<div class="line" id="line208">
 				<div class="number">208.</div>
-				<pre class="content">		<span class="hljs-comment">// Return if the list of plugins includes the specified name</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line209">
 				<div class="number">209.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>._plugins).includes(name);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line210">
 				<div class="number">210.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line211">
 				<div class="number">211.</div>
@@ -974,150 +984,6 @@
 			</div>
 					<div class="line" id="line212">
 				<div class="number">212.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line213">
-				<div class="number">213.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will list all of the plugins that have been added to CerusJS' core.</span></pre>
-			</div>
-					<div class="line" id="line214">
-				<div class="number">214.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Lists all plugins added to the cerus core.</span></pre>
-			</div>
-					<div class="line" id="line215">
-				<div class="number">215.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function list</span></pre>
-			</div>
-					<div class="line" id="line216">
-				<div class="number">216.</div>
-				<pre class="content"><span class="hljs-comment">	 * @id plugins.list</span></pre>
-			</div>
-					<div class="line" id="line217">
-				<div class="number">217.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line218">
-				<div class="number">218.</div>
-				<pre class="content">	list() {</pre>
-			</div>
-					<div class="line" id="line219">
-				<div class="number">219.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>._plugins);</pre>
-			</div>
-					<div class="line" id="line220">
-				<div class="number">220.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line221">
-				<div class="number">221.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line222">
-				<div class="number">222.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line223">
-				<div class="number">223.</div>
-				<pre class="content"><span class="hljs-comment">	 * With this function you can clear all of the current plugins. Before they are removed from the </span></pre>
-			</div>
-					<div class="line" id="line224">
-				<div class="number">224.</div>
-				<pre class="content"><span class="hljs-comment">	 * plugin list their functions are removed from the cerus core.</span></pre>
-			</div>
-					<div class="line" id="line225">
-				<div class="number">225.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Clears all of the plugins.</span></pre>
-			</div>
-					<div class="line" id="line226">
-				<div class="number">226.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function clear</span></pre>
-			</div>
-					<div class="line" id="line227">
-				<div class="number">227.</div>
-				<pre class="content"><span class="hljs-comment">	 * @id plugins.clear</span></pre>
-			</div>
-					<div class="line" id="line228">
-				<div class="number">228.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line229">
-				<div class="number">229.</div>
-				<pre class="content">	clear() {</pre>
-			</div>
-					<div class="line" id="line230">
-				<div class="number">230.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> left = {};</pre>
-			</div>
-					<div class="line" id="line231">
-				<div class="number">231.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line232">
-				<div class="number">232.</div>
-				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> plugin <span class="hljs-keyword">in</span> <span class="hljs-keyword">this</span>._plugins) {</pre>
-			</div>
-					<div class="line" id="line233">
-				<div class="number">233.</div>
-				<pre class="content">			<span class="hljs-keyword">try</span> {</pre>
-			</div>
-					<div class="line" id="line234">
-				<div class="number">234.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>.remove(plugin);</pre>
-			</div>
-					<div class="line" id="line235">
-				<div class="number">235.</div>
-				<pre class="content">			}</pre>
-			</div>
-					<div class="line" id="line236">
-				<div class="number">236.</div>
-				<pre class="content">			<span class="hljs-keyword">catch</span>(e) {</pre>
-			</div>
-					<div class="line" id="line237">
-				<div class="number">237.</div>
-				<pre class="content">				left[plugin] = <span class="hljs-keyword">this</span>._plugins[plugin];</pre>
-			</div>
-					<div class="line" id="line238">
-				<div class="number">238.</div>
-				<pre class="content">			}</pre>
-			</div>
-					<div class="line" id="line239">
-				<div class="number">239.</div>
-				<pre class="content">		}</pre>
-			</div>
-					<div class="line" id="line240">
-				<div class="number">240.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line241">
-				<div class="number">241.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-built_in">Object</span>.keys(left).length &gt; <span class="hljs-number">0</span>) {</pre>
-			</div>
-					<div class="line" id="line242">
-				<div class="number">242.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._plugins = left;</pre>
-			</div>
-					<div class="line" id="line243">
-				<div class="number">243.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>.clear();</pre>
-			</div>
-					<div class="line" id="line244">
-				<div class="number">244.</div>
-				<pre class="content">		}</pre>
-			</div>
-					<div class="line" id="line245">
-				<div class="number">245.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line246">
-				<div class="number">246.</div>
-				<pre class="content">}</pre>
-			</div>
-					<div class="line" id="line247">
-				<div class="number">247.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line248">
-				<div class="number">248.</div>
 				<pre class="content"><span class="hljs-built_in">module</span>.exports = plugins;</pre>
 			</div>
 			</div>

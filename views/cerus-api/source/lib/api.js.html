@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -120,6 +130,7 @@
 						<option value="lib/api.js.html" selected>lib/api.js</option>
 						<option value="lib/api/policies.js.html" undefined>lib/api/policies.js</option>
 						<option value="lib/json.js.html" undefined>lib/json.js</option>
+						<option value="lib/json/errors.js.html" undefined>lib/json/errors.js</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
@@ -179,19 +190,19 @@
 			</div>
 					<div class="line" id="line13">
 				<div class="number">13.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._policies = <span class="hljs-keyword">new</span> policies(cerus);</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
 			</div>
 					<div class="line" id="line14">
 				<div class="number">14.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._folders = <span class="hljs-keyword">new</span> folders();</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._policies = <span class="hljs-keyword">new</span> policies(cerus);</pre>
 			</div>
 					<div class="line" id="line15">
 				<div class="number">15.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._urls = <span class="hljs-keyword">new</span> urls();</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._folders = <span class="hljs-keyword">new</span> folders();</pre>
 			</div>
 					<div class="line" id="line16">
 				<div class="number">16.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._urls = <span class="hljs-keyword">new</span> urls();</pre>
 			</div>
 					<div class="line" id="line17">
 				<div class="number">17.</div>
@@ -451,23 +462,23 @@
 			</div>
 					<div class="line" id="line81">
 				<div class="number">81.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> name !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> _name = name.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line82">
 				<div class="number">82.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument name must be a string"</span>);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line83">
 				<div class="number">83.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">switch</span>(type) {</pre>
 			</div>
 					<div class="line" id="line84">
 				<div class="number">84.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">case</span> <span class="hljs-string">"policy"</span>:</pre>
 			</div>
 					<div class="line" id="line85">
 				<div class="number">85.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> name_ = name.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
+				<pre class="content">				<span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>(<span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>._cerus.root()}</span><span class="hljs-subst">${<span class="hljs-keyword">this</span>._folders._policies}</span>/<span class="hljs-subst">${_name}</span>`</span>);</pre>
 			</div>
 					<div class="line" id="line86">
 				<div class="number">86.</div>
@@ -475,155 +486,155 @@
 			</div>
 					<div class="line" id="line87">
 				<div class="number">87.</div>
-				<pre class="content">		<span class="hljs-keyword">switch</span>(type) {</pre>
+				<pre class="content">			<span class="hljs-keyword">case</span> <span class="hljs-string">"api"</span>:</pre>
 			</div>
 					<div class="line" id="line88">
 				<div class="number">88.</div>
-				<pre class="content">			<span class="hljs-comment">// If type is policy, load a policy class</span></pre>
+				<pre class="content">			<span class="hljs-keyword">default</span>:</pre>
 			</div>
 					<div class="line" id="line89">
 				<div class="number">89.</div>
-				<pre class="content">			<span class="hljs-keyword">case</span> <span class="hljs-string">"policy"</span>:</pre>
+				<pre class="content">				<span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>(<span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>._cerus.root()}</span><span class="hljs-subst">${<span class="hljs-keyword">this</span>._folders._api}</span>/<span class="hljs-subst">${_name}</span>`</span>);</pre>
 			</div>
 					<div class="line" id="line90">
 				<div class="number">90.</div>
-				<pre class="content">				<span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>(<span class="hljs-keyword">this</span>._cerus.root() + <span class="hljs-keyword">this</span>._folders._policies + <span class="hljs-string">"/"</span> + name_);</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line91">
 				<div class="number">91.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line92">
 				<div class="number">92.</div>
-				<pre class="content">			<span class="hljs-comment">// If type is api, load an api class</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line93">
 				<div class="number">93.</div>
-				<pre class="content">			<span class="hljs-keyword">case</span> <span class="hljs-string">"api"</span>:</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line94">
 				<div class="number">94.</div>
-				<pre class="content">			<span class="hljs-keyword">default</span>:</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is used to create a new api route. An api is a way to easily obtain data from </span></pre>
 			</div>
 					<div class="line" id="line95">
 				<div class="number">95.</div>
-				<pre class="content">				<span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>(<span class="hljs-keyword">this</span>._cerus.root() + <span class="hljs-keyword">this</span>._folders._api + <span class="hljs-string">"/"</span> + name_);</pre>
+				<pre class="content"><span class="hljs-comment">	 * you server that you need from your client. Apis can also be used to trigger actions on the </span></pre>
 			</div>
 					<div class="line" id="line96">
 				<div class="number">96.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * server. This can be things like logging users in. For more information about api you can </span></pre>
 			</div>
 					<div class="line" id="line97">
 				<div class="number">97.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * read the tutorial about it. You can set the url of the api with the url parameter. You can </span></pre>
 			</div>
 					<div class="line" id="line98">
 				<div class="number">98.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * also add policies to your api route. Policies are functions that check if the client is </span></pre>
 			</div>
 					<div class="line" id="line99">
 				<div class="number">99.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * allowed to continue on to the api function. You can manage policies using policies using the</span></pre>
 			</div>
 					<div class="line" id="line100">
 				<div class="number">100.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function is used to create a new api route. An api is a way to easily obtain data from </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * policy class and there also is a tutorial about policies.</span></pre>
 			</div>
 					<div class="line" id="line101">
 				<div class="number">101.</div>
-				<pre class="content"><span class="hljs-comment">	 * you server that you need from your client. Apis can also be used to trigger actions on the </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line102">
 				<div class="number">102.</div>
-				<pre class="content"><span class="hljs-comment">	 * server. This can be things like logging users in. For more information about api you can </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.api().add("test")</span></pre>
 			</div>
 					<div class="line" id="line103">
 				<div class="number">103.</div>
-				<pre class="content"><span class="hljs-comment">	 * read the tutorial about it. You can set the url of the api with the url parameter. You can </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * .then(function(req, res) {</span></pre>
 			</div>
 					<div class="line" id="line104">
 				<div class="number">104.</div>
-				<pre class="content"><span class="hljs-comment">	 * also add policies to your api route. Policies are functions that check if the client is </span></pre>
+				<pre class="content"><span class="hljs-comment">	 *   res.emit();</span></pre>
 			</div>
 					<div class="line" id="line105">
 				<div class="number">105.</div>
-				<pre class="content"><span class="hljs-comment">	 * allowed to continue on to the api function. You can manage policies using policies using the</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * });</span></pre>
 			</div>
 					<div class="line" id="line106">
 				<div class="number">106.</div>
-				<pre class="content"><span class="hljs-comment">	 * policy class and there also is a tutorial about policies.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; routes the api route to "/api/test"</span></pre>
 			</div>
 					<div class="line" id="line107">
 				<div class="number">107.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @emits request When the api route has been requested. With the request class as first </span></pre>
 			</div>
 					<div class="line" id="line108">
 				<div class="number">108.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.api().add("test")</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * parameter, the json class as second parameter and the cerus object as last parameter.</span></pre>
 			</div>
 					<div class="line" id="line109">
 				<div class="number">109.</div>
-				<pre class="content"><span class="hljs-comment">	 * .then(function(req, res) {</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Creates a new api route.</span></pre>
 			</div>
 					<div class="line" id="line110">
 				<div class="number">110.</div>
-				<pre class="content"><span class="hljs-comment">	 *   res.emit();</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} url The url the new api will route to.</span></pre>
 			</div>
 					<div class="line" id="line111">
 				<div class="number">111.</div>
-				<pre class="content"><span class="hljs-comment">	 * });</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Array|String} (policies = []) The policies for this api route.</span></pre>
 			</div>
 					<div class="line" id="line112">
 				<div class="number">112.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; routes the api route to "/api/test"</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line113">
 				<div class="number">113.</div>
-				<pre class="content"><span class="hljs-comment">	 * @emits request When the api route has been requested. With the request class as first </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function add</span></pre>
 			</div>
 					<div class="line" id="line114">
 				<div class="number">114.</div>
-				<pre class="content"><span class="hljs-comment">	 * parameter, the json class as second parameter and the cerus object as last parameter.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line115">
 				<div class="number">115.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Creates a new api route.</span></pre>
+				<pre class="content">	add(url, policies = []) {</pre>
 			</div>
 					<div class="line" id="line116">
 				<div class="number">116.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} url The url the new api will route to.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">const</span> _policies = policies <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span> ? policies : [policies];</pre>
 			</div>
 					<div class="line" id="line117">
 				<div class="number">117.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Array} policies The policies for this api route.</span></pre>
+				<pre class="content">		</pre>
 			</div>
 					<div class="line" id="line118">
 				<div class="number">118.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {</pre>
 			</div>
 					<div class="line" id="line119">
 				<div class="number">119.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function add</span></pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.router().route(<span class="hljs-keyword">this</span>._clean_url(url))</pre>
 			</div>
 					<div class="line" id="line120">
 				<div class="number">120.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">			.then(<span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {</pre>
 			</div>
 					<div class="line" id="line121">
 				<div class="number">121.</div>
-				<pre class="content">	add(url, policies = []) {</pre>
+				<pre class="content">				<span class="hljs-keyword">const</span> _json = <span class="hljs-keyword">new</span> json(req, res);</pre>
 			</div>
 					<div class="line" id="line122">
 				<div class="number">122.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line123">
 				<div class="number">123.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
+				<pre class="content">				<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> policy <span class="hljs-keyword">of</span> _policies) {</pre>
 			</div>
 					<div class="line" id="line124">
 				<div class="number">124.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">					<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>._policies.has(policy)) <span class="hljs-keyword">continue</span>;</pre>
 			</div>
 					<div class="line" id="line125">
 				<div class="number">125.</div>
@@ -631,7 +642,7 @@
 			</div>
 					<div class="line" id="line126">
 				<div class="number">126.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> policies_ = policies;</pre>
+				<pre class="content">					<span class="hljs-keyword">this</span>._policies.get(policy)(<span class="hljs-string">"policy"</span>, req, _json, <span class="hljs-keyword">this</span>._cerus);</pre>
 			</div>
 					<div class="line" id="line127">
 				<div class="number">127.</div>
@@ -639,107 +650,107 @@
 			</div>
 					<div class="line" id="line128">
 				<div class="number">128.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!(policies_ <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>)) {</pre>
+				<pre class="content">					<span class="hljs-keyword">if</span>(_json.emitted()) <span class="hljs-keyword">return</span>;</pre>
 			</div>
 					<div class="line" id="line129">
 				<div class="number">129.</div>
-				<pre class="content">			policies_ = [policies_];</pre>
+				<pre class="content">				}</pre>
 			</div>
 					<div class="line" id="line130">
 				<div class="number">130.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line131">
 				<div class="number">131.</div>
-				<pre class="content">		</pre>
+				<pre class="content">				event(<span class="hljs-string">"request"</span>, req, _json, <span class="hljs-keyword">this</span>._cerus);</pre>
 			</div>
 					<div class="line" id="line132">
 				<div class="number">132.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content">			});</pre>
 			</div>
 					<div class="line" id="line133">
 				<div class="number">133.</div>
-				<pre class="content">			<span class="hljs-comment">// Route all possible methods with the specified url</span></pre>
+				<pre class="content">		});</pre>
 			</div>
 					<div class="line" id="line134">
 				<div class="number">134.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._cerus.router().route(<span class="hljs-string">"/"</span> + <span class="hljs-keyword">this</span>._urls._api + <span class="hljs-string">"/"</span> + url)</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line135">
 				<div class="number">135.</div>
-				<pre class="content">			.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line136">
 				<div class="number">136.</div>
-				<pre class="content">				<span class="hljs-keyword">var</span> json_ = <span class="hljs-keyword">new</span> json(req, res);</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line137">
 				<div class="number">137.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can remove an api route. It basically directly removes it from the </span></pre>
 			</div>
 					<div class="line" id="line138">
 				<div class="number">138.</div>
-				<pre class="content">				<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; policies_.length; i++) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * router. </span></pre>
 			</div>
 					<div class="line" id="line139">
 				<div class="number">139.</div>
-				<pre class="content">					<span class="hljs-comment">// Continue if the policy doesn't exist</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line140">
 				<div class="number">140.</div>
-				<pre class="content">					<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._policies.has(policies_[i]) === <span class="hljs-literal">false</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.api().remove("/");</span></pre>
 			</div>
 					<div class="line" id="line141">
 				<div class="number">141.</div>
-				<pre class="content">						<span class="hljs-keyword">continue</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; this removes the "/" api route</span></pre>
 			</div>
 					<div class="line" id="line142">
 				<div class="number">142.</div>
-				<pre class="content">					}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Removes the specified api route.</span></pre>
 			</div>
 					<div class="line" id="line143">
 				<div class="number">143.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} url The url of the api route to remove.</span></pre>
 			</div>
 					<div class="line" id="line144">
 				<div class="number">144.</div>
-				<pre class="content">					<span class="hljs-keyword">this</span>._policies.get(policies_[i])(<span class="hljs-string">"policy"</span>, req, json_, <span class="hljs-keyword">this</span>._cerus);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
 			</div>
 					<div class="line" id="line145">
 				<div class="number">145.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line146">
 				<div class="number">146.</div>
-				<pre class="content">					<span class="hljs-keyword">if</span>(json_.emitted()) {</pre>
+				<pre class="content">	remove(url) {</pre>
 			</div>
 					<div class="line" id="line147">
 				<div class="number">147.</div>
-				<pre class="content">						<span class="hljs-keyword">return</span>;</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus.router().remove(<span class="hljs-keyword">this</span>._clean_url(url));</pre>
 			</div>
 					<div class="line" id="line148">
 				<div class="number">148.</div>
-				<pre class="content">					}</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line149">
 				<div class="number">149.</div>
-				<pre class="content">				}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line150">
 				<div class="number">150.</div>
-				<pre class="content"></pre>
+				<pre class="content">	_clean_url(url) {</pre>
 			</div>
 					<div class="line" id="line151">
 				<div class="number">151.</div>
-				<pre class="content">				event(<span class="hljs-string">"request"</span>, req, json_, <span class="hljs-keyword">this</span>._cerus);</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(url.startsWith(<span class="hljs-string">"/"</span>)) <span class="hljs-keyword">return</span> <span class="hljs-string">`/<span class="hljs-subst">${<span class="hljs-keyword">this</span>._urls._api}</span><span class="hljs-subst">${url}</span>`</span>;</pre>
 			</div>
 					<div class="line" id="line152">
 				<div class="number">152.</div>
-				<pre class="content">			}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line153">
 				<div class="number">153.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-string">`/<span class="hljs-subst">${<span class="hljs-keyword">this</span>._urls._api}</span>/<span class="hljs-subst">${url}</span>`</span>;</pre>
 			</div>
 					<div class="line" id="line154">
 				<div class="number">154.</div>
@@ -747,386 +758,290 @@
 			</div>
 					<div class="line" id="line155">
 				<div class="number">155.</div>
-				<pre class="content"></pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line156">
 				<div class="number">156.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line157">
 				<div class="number">157.</div>
-				<pre class="content"><span class="hljs-comment">	 * With this function you can remove an api route. It basically directly removes it from the </span></pre>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = api;</pre>
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
-				<pre class="content"><span class="hljs-comment">	 * router. </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line159">
 				<div class="number">159.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line160">
 				<div class="number">160.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.api().remove("/");</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the folders class. With this class you can change the folders that should be used to </span></pre>
 			</div>
 					<div class="line" id="line161">
 				<div class="number">161.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; this removes the "/" api route</span></pre>
+				<pre class="content"><span class="hljs-comment"> * store your policy and api classes.</span></pre>
 			</div>
 					<div class="line" id="line162">
 				<div class="number">162.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Removes the specified api route.</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class api.folders</span></pre>
 			</div>
 					<div class="line" id="line163">
 				<div class="number">163.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} url The url of the api route to remove.</span></pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line164">
 				<div class="number">164.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">folders</span> </span>{</pre>
 			</div>
 					<div class="line" id="line165">
 				<div class="number">165.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
 			</div>
 					<div class="line" id="line166">
 				<div class="number">166.</div>
-				<pre class="content">	remove(url) {</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._policies = <span class="hljs-string">"policies"</span>;</pre>
 			</div>
 					<div class="line" id="line167">
 				<div class="number">167.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._api = <span class="hljs-string">"api"</span>;</pre>
 			</div>
 					<div class="line" id="line168">
 				<div class="number">168.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument url must be a string"</span>);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line169">
 				<div class="number">169.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line170">
 				<div class="number">170.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line171">
 				<div class="number">171.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._cerus.router().remove(<span class="hljs-keyword">this</span>._urls._api + <span class="hljs-string">"/"</span> + url);</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is the getter and setter for the policies folder. This is the folder where the</span></pre>
 			</div>
 					<div class="line" id="line172">
 				<div class="number">172.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * policy classes should be put in. By default this path is "policies". This path is also fixed</span></pre>
 			</div>
 					<div class="line" id="line173">
 				<div class="number">173.</div>
-				<pre class="content">}</pre>
+				<pre class="content"><span class="hljs-comment">	 * (\\\\ is changed to /) before being used to support all the platforms.</span></pre>
 			</div>
 					<div class="line" id="line174">
 				<div class="number">174.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the policy folder.</span></pre>
 			</div>
 					<div class="line" id="line175">
 				<div class="number">175.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = api;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the policies folder.</span></pre>
 			</div>
 					<div class="line" id="line176">
 				<div class="number">176.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the policies folder.</span></pre>
 			</div>
 					<div class="line" id="line177">
 				<div class="number">177.</div>
-				<pre class="content"><span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function policies</span></pre>
 			</div>
 					<div class="line" id="line178">
 				<div class="number">178.</div>
-				<pre class="content"><span class="hljs-comment"> * This is the folders class. With this class you can change the folders that should be used to </span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line179">
 				<div class="number">179.</div>
-				<pre class="content"><span class="hljs-comment"> * store your policy and api classes.</span></pre>
+				<pre class="content">	policies(path) {</pre>
 			</div>
 					<div class="line" id="line180">
 				<div class="number">180.</div>
-				<pre class="content"><span class="hljs-comment"> * @class api.folders</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">"string"</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._policies;</pre>
 			</div>
 					<div class="line" id="line181">
 				<div class="number">181.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content">		</pre>
 			</div>
 					<div class="line" id="line182">
 				<div class="number">182.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">folders</span> </span>{</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._policies = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line183">
 				<div class="number">183.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line184">
 				<div class="number">184.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._policies = <span class="hljs-string">"policies"</span>;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line185">
 				<div class="number">185.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._api = <span class="hljs-string">"api"</span>;</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line186">
 				<div class="number">186.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is the getter and setter for the api folder. This is the folder where the api </span></pre>
 			</div>
 					<div class="line" id="line187">
 				<div class="number">187.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * classes should be put in. This path is also fixed (\\\\ is changed to /) before being used </span></pre>
 			</div>
 					<div class="line" id="line188">
 				<div class="number">188.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * to support all the platforms.</span></pre>
 			</div>
 					<div class="line" id="line189">
 				<div class="number">189.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function is the getter and setter for the policies folder. This is the folder where the</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the api folder.</span></pre>
 			</div>
 					<div class="line" id="line190">
 				<div class="number">190.</div>
-				<pre class="content"><span class="hljs-comment">	 * policy classes should be put in. By default this path is "policies". This path is also fixed</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the api folder.</span></pre>
 			</div>
 					<div class="line" id="line191">
 				<div class="number">191.</div>
-				<pre class="content"><span class="hljs-comment">	 * (\\\\ is changed to /) before being used to support all the platforms.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the api folder.</span></pre>
 			</div>
 					<div class="line" id="line192">
 				<div class="number">192.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the policy folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function api</span></pre>
 			</div>
 					<div class="line" id="line193">
 				<div class="number">193.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the policies folder.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line194">
 				<div class="number">194.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the policies folder.</span></pre>
+				<pre class="content">	api(path) {</pre>
 			</div>
 					<div class="line" id="line195">
 				<div class="number">195.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function policies</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">"string"</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._api;</pre>
 			</div>
 					<div class="line" id="line196">
 				<div class="number">196.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line197">
 				<div class="number">197.</div>
-				<pre class="content">	policies(path) {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._api = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
 			</div>
 					<div class="line" id="line198">
 				<div class="number">198.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line199">
 				<div class="number">199.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._policies = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line200">
 				<div class="number">200.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line201">
 				<div class="number">201.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line202">
 				<div class="number">202.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._policies;</pre>
+				<pre class="content"><span class="hljs-comment"> * This is the urls class. With this class you can change the url that is used as prefix for all </span></pre>
 			</div>
 					<div class="line" id="line203">
 				<div class="number">203.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment"> * the api routes.</span></pre>
 			</div>
 					<div class="line" id="line204">
 				<div class="number">204.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment"> * @class api.urls</span></pre>
 			</div>
 					<div class="line" id="line205">
 				<div class="number">205.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @id api.urls</span></pre>
 			</div>
 					<div class="line" id="line206">
 				<div class="number">206.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function is the getter and setter for the api folder. This is the folder where the api </span></pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line207">
 				<div class="number">207.</div>
-				<pre class="content"><span class="hljs-comment">	 * classes should be put in. This path is also fixed (\\\\ is changed to /) before being used </span></pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">urls</span> </span>{</pre>
 			</div>
 					<div class="line" id="line208">
 				<div class="number">208.</div>
-				<pre class="content"><span class="hljs-comment">	 * to support all the platforms.</span></pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
 			</div>
 					<div class="line" id="line209">
 				<div class="number">209.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the api folder.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._api = <span class="hljs-string">"api"</span>;</pre>
 			</div>
 					<div class="line" id="line210">
 				<div class="number">210.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (path) The new path for the api folder.</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line211">
 				<div class="number">211.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The path for the api folder.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line212">
 				<div class="number">212.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function api</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line213">
 				<div class="number">213.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the getter and setter for the api url. This url is used when a new api route is </span></pre>
 			</div>
 					<div class="line" id="line214">
 				<div class="number">214.</div>
-				<pre class="content">	api(path) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * created. </span></pre>
 			</div>
 					<div class="line" id="line215">
 				<div class="number">215.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the api url.</span></pre>
 			</div>
 					<div class="line" id="line216">
 				<div class="number">216.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._api = path.replace(<span class="hljs-regexp">/\\/g</span>,<span class="hljs-string">"/"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (url) The new url for the api routes.</span></pre>
 			</div>
 					<div class="line" id="line217">
 				<div class="number">217.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {[type]} The urls for the api routes.</span></pre>
 			</div>
 					<div class="line" id="line218">
 				<div class="number">218.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function api</span></pre>
 			</div>
 					<div class="line" id="line219">
 				<div class="number">219.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._api;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line220">
 				<div class="number">220.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	api(url) {</pre>
 			</div>
 					<div class="line" id="line221">
 				<div class="number">221.</div>
-				<pre class="content">}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url !== <span class="hljs-string">"string"</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._api;</pre>
 			</div>
 					<div class="line" id="line222">
 				<div class="number">222.</div>
-				<pre class="content"></pre>
+				<pre class="content">			</pre>
 			</div>
 					<div class="line" id="line223">
 				<div class="number">223.</div>
-				<pre class="content"><span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._api = url;</pre>
 			</div>
 					<div class="line" id="line224">
 				<div class="number">224.</div>
-				<pre class="content"><span class="hljs-comment"> * This is the urls class. With this class you can change the url that is used as prefix for all </span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line225">
 				<div class="number">225.</div>
-				<pre class="content"><span class="hljs-comment"> * the api routes.</span></pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line226">
 				<div class="number">226.</div>
-				<pre class="content"><span class="hljs-comment"> * @class api.urls</span></pre>
-			</div>
-					<div class="line" id="line227">
-				<div class="number">227.</div>
-				<pre class="content"><span class="hljs-comment"> * @id api.urls</span></pre>
-			</div>
-					<div class="line" id="line228">
-				<div class="number">228.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
-			</div>
-					<div class="line" id="line229">
-				<div class="number">229.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">urls</span> </span>{</pre>
-			</div>
-					<div class="line" id="line230">
-				<div class="number">230.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>() {</pre>
-			</div>
-					<div class="line" id="line231">
-				<div class="number">231.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._api = <span class="hljs-string">"api"</span>;</pre>
-			</div>
-					<div class="line" id="line232">
-				<div class="number">232.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line233">
-				<div class="number">233.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line234">
-				<div class="number">234.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line235">
-				<div class="number">235.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the getter and setter for the api url. This url is used when a new api route is </span></pre>
-			</div>
-					<div class="line" id="line236">
-				<div class="number">236.</div>
-				<pre class="content"><span class="hljs-comment">	 * created. </span></pre>
-			</div>
-					<div class="line" id="line237">
-				<div class="number">237.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The getter/setter for the api url.</span></pre>
-			</div>
-					<div class="line" id="line238">
-				<div class="number">238.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (url) The new url for the api routes.</span></pre>
-			</div>
-					<div class="line" id="line239">
-				<div class="number">239.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {[type]} The urls for the api routes.</span></pre>
-			</div>
-					<div class="line" id="line240">
-				<div class="number">240.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function api</span></pre>
-			</div>
-					<div class="line" id="line241">
-				<div class="number">241.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line242">
-				<div class="number">242.</div>
-				<pre class="content">	api(url) {</pre>
-			</div>
-					<div class="line" id="line243">
-				<div class="number">243.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> url === <span class="hljs-string">"string"</span>) {</pre>
-			</div>
-					<div class="line" id="line244">
-				<div class="number">244.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._api = url;</pre>
-			</div>
-					<div class="line" id="line245">
-				<div class="number">245.</div>
-				<pre class="content">		}</pre>
-			</div>
-					<div class="line" id="line246">
-				<div class="number">246.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line247">
-				<div class="number">247.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._api;</pre>
-			</div>
-					<div class="line" id="line248">
-				<div class="number">248.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line249">
-				<div class="number">249.</div>
-				<pre class="content">}</pre>
-			</div>
-					<div class="line" id="line250">
-				<div class="number">250.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>

@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -147,7 +157,8 @@
 	<div class="class">
 		<div class="name">
 							request.accepts()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
@@ -166,286 +177,290 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/request.accepts.html#type">type</a>
-					</div>
-					<div class="col a8">Checks or returns what types are accepted.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/request.accepts.html#encoding">encoding</a>
-					</div>
-					<div class="col a8">Checks or returns what encodings are accepted.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/request.accepts.html#charset">charset</a>
-					</div>
-					<div class="col a8">Checks or returns what charsets are accepted.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/request.accepts.html#language">language</a>
-					</div>
-					<div class="col a8">Checks or returns what languages are accepted.</div>
-				</div>
-					</div>
-	</div>
-
-	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="type" class="function">
-				<div class="name">
-					.type(type)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/request/accepts.js.html">lib/request/accepts.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/accepts.js.html#line14">Line 14</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.accepts.html#type">type</a>
 						</div>
+						<div class="col a8">Checks or returns what types are accepted.</div>
 					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Checks or returns what types are accepted.</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.accepts.html#encoding">encoding</a>
 						</div>
-																			</div>
-				<div class="desc"><p>With this function you can get or check what types are accepted. If the type parameter is undefined it will return all the accepted types. You can also insert an array of types and the first item that is accepted will be returned.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+						<div class="col a8">Checks or returns what encodings are accepted.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.accepts.html#charset">charset</a>
+						</div>
+						<div class="col a8">Checks or returns what charsets are accepted.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.accepts.html#language">language</a>
+						</div>
+						<div class="col a8">Checks or returns what languages are accepted.</div>
+					</div>
 							</div>
-															<div class="row">
-									<div class="col a3">type</div>
-									<div class="col a3">String[]</div>
-									<div class="col a6"><span>
-										The array of types to check. (optional)
-									</span></div>
+		</div>
+	
+	<!-- FUNCTIONS -->
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="type" class="function">
+					<a class="name" href="#type">
+						.type(type)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request/accepts.js.html">lib/request/accepts.js</a>, 
+								<a href="/views/cerus-router/source/lib/request/accepts.js.html#line14">Line 14</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Checks or returns what types are accepted.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can get or check what types are accepted. If the type parameter is undefined it will return all the accepted types. You can also insert an array of types and the first item that is accepted will be returned.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as content-type "application/javascript"</span>
+																	<div class="row">
+										<div class="col a3">type</div>
+										<div class="col a3">String[]</div>
+										<div class="col a6"><span>
+											The array of types to check. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as content-type "application/javascript"</span>
 req.charset([<span class="hljs-string">"css"</span>, <span class="hljs-string">"js"</span>, <span class="hljs-string">"html"</span>]);
 <span class="hljs-comment">// -&gt; will return "application/javascript"</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String[], String</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Returns all accept types or the type that matched.</div>
-						</div>
-					</div>
-							</div>
-					<div id="encoding" class="function">
-				<div class="name">
-					.encoding(type)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/request/accepts.js.html">lib/request/accepts.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/accepts.js.html#line35">Line 35</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Checks or returns what encodings are accepted.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can get or check what encodings are accepted. If the type parameter is undefined it will return all the accepted encodings. You can also insert an array of encodings and the first item that is accepted will be returned.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">type</div>
-									<div class="col a3">String[]</div>
-									<div class="col a6"><span>
-										The array of encodings to check. (optional)
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as content-type "deflate"</span>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String[], String</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Returns all accept types or the type that matched.</div>
+							</div>
+						</div>
+									</div>
+							<div id="encoding" class="function">
+					<a class="name" href="#encoding">
+						.encoding(type)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request/accepts.js.html">lib/request/accepts.js</a>, 
+								<a href="/views/cerus-router/source/lib/request/accepts.js.html#line35">Line 35</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Checks or returns what encodings are accepted.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can get or check what encodings are accepted. If the type parameter is undefined it will return all the accepted encodings. You can also insert an array of encodings and the first item that is accepted will be returned.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">type</div>
+										<div class="col a3">String[]</div>
+										<div class="col a6"><span>
+											The array of encodings to check. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as content-type "deflate"</span>
 req.charset([<span class="hljs-string">"utf-8"</span>, <span class="hljs-string">"deflate"</span>, <span class="hljs-string">"gzip"</span>]);
 <span class="hljs-comment">// -&gt; will return "deflate"</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String[], String</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Returns all accept encodings or the type that matched.</div>
-						</div>
-					</div>
-							</div>
-					<div id="charset" class="function">
-				<div class="name">
-					.charset(type)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/request/accepts.js.html">lib/request/accepts.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/accepts.js.html#line56">Line 56</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Checks or returns what charsets are accepted.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can get or check what charsets are accepted. If the type parameter is  undefined it will return all the accepted charsets. You can also insert an array of charsets and the first item that is accepted will be returned.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">type</div>
-									<div class="col a3">String[]</div>
-									<div class="col a6"><span>
-										The array of charsets to check. (optional)
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as content-type "utf-8"</span>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String[], String</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Returns all accept encodings or the type that matched.</div>
+							</div>
+						</div>
+									</div>
+							<div id="charset" class="function">
+					<a class="name" href="#charset">
+						.charset(type)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request/accepts.js.html">lib/request/accepts.js</a>, 
+								<a href="/views/cerus-router/source/lib/request/accepts.js.html#line56">Line 56</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Checks or returns what charsets are accepted.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can get or check what charsets are accepted. If the type parameter is  undefined it will return all the accepted charsets. You can also insert an array of charsets and the first item that is accepted will be returned.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">type</div>
+										<div class="col a3">String[]</div>
+										<div class="col a6"><span>
+											The array of charsets to check. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as content-type "utf-8"</span>
 req.charset([<span class="hljs-string">"ascii"</span>, <span class="hljs-string">"utf-8"</span>, <span class="hljs-string">"utf-16"</span>]);
 <span class="hljs-comment">// -&gt; will return "utf-8"</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String[], String</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Returns all accept charsets or the type that matched.</div>
-						</div>
-					</div>
-							</div>
-					<div id="language" class="function">
-				<div class="name">
-					.language(type)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/request/accepts.js.html">lib/request/accepts.js</a>, 
-							<a href="/views/cerus-router/source/lib/request/accepts.js.html#line77">Line 77</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Checks or returns what languages are accepted.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can get or check what languages are accepted. If the type parameter is undefined it will return all the accepted languages. You can also insert an array of languages and the first item that is accepted will be returned.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">type</div>
-									<div class="col a3">String[]</div>
-									<div class="col a6"><span>
-										The array of languages to check. (optional)
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as content-type "en"</span>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String[], String</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Returns all accept charsets or the type that matched.</div>
+							</div>
+						</div>
+									</div>
+							<div id="language" class="function">
+					<a class="name" href="#language">
+						.language(type)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request/accepts.js.html">lib/request/accepts.js</a>, 
+								<a href="/views/cerus-router/source/lib/request/accepts.js.html#line77">Line 77</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Checks or returns what languages are accepted.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can get or check what languages are accepted. If the type parameter is undefined it will return all the accepted languages. You can also insert an array of languages and the first item that is accepted will be returned.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">type</div>
+										<div class="col a3">String[]</div>
+										<div class="col a6"><span>
+											The array of languages to check. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as content-type "en"</span>
 req.charset([<span class="hljs-string">"nl"</span>, <span class="hljs-string">"en"</span>, <span class="hljs-string">"de"</span>]);
 <span class="hljs-comment">// -&gt; will return "en"</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String[], String</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Returns all accept languages or the type that matched.</div>
-						</div>
-					</div>
+													</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String[], String</div>
 							</div>
-		
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Returns all accept languages or the type that matched.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

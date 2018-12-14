@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -147,13 +157,14 @@
 	<div class="class">
 		<div class="name">
 							request.local()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-					<a href="/views/cerus-router/source/lib/request.js.html#line583">Line 583</a>
+					<a href="/views/cerus-router/source/lib/request.js.html#line585">Line 585</a>
 				</div>
 			</div>
 												<div class="item">
@@ -166,118 +177,120 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/request.local.html#address">address</a>
-					</div>
-					<div class="col a8">Returns the IP connected to by the client.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/request.local.html#port">port</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.local.html#address">address</a>
+						</div>
+						<div class="col a8">Returns the IP connected to by the client.</div>
 					</div>
-					<div class="col a8">Returns the port connected to by the client.</div>
-				</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.local.html#port">port</a>
+						</div>
+						<div class="col a8">Returns the port connected to by the client.</div>
 					</div>
-	</div>
-
+							</div>
+		</div>
+	
 	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="address" class="function">
-				<div class="name">
-					.address()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line594">Line 594</a>
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="address" class="function">
+					<a class="name" href="#address">
+						.address()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+								<a href="/views/cerus-router/source/lib/request.js.html#line596">Line 596</a>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the IP connected to by the client.</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will return the IP address connected to by the client.</p>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the IP connected to by the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return the IP address connected to by the client.</p>
 </div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript">req.local().address();
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">req.local().address();
 <span class="hljs-comment">// -&gt; will return the IP connected to by the client.</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The IP connected to by the client.</div>
-						</div>
-					</div>
+													</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
 							</div>
-					<div id="port" class="function">
-				<div class="name">
-					.port()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line607">Line 607</a>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The IP connected to by the client.</div>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the port connected to by the client.</div>
+									</div>
+							<div id="port" class="function">
+					<a class="name" href="#port">
+						.port()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+								<a href="/views/cerus-router/source/lib/request.js.html#line609">Line 609</a>
+							</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will return the port connected to by the client.</p>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the port connected to by the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return the port connected to by the client.</p>
 </div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript">req.local().port();
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">req.local().port();
 <span class="hljs-comment">// -&gt; will return the port connected to by the client.</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The port connected to by the client.</div>
-						</div>
-					</div>
+													</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
 							</div>
-		
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The port connected to by the client.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

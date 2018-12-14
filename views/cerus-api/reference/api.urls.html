@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -134,13 +144,14 @@
 	<div class="class">
 		<div class="name">
 							.api().urls()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
-					<a href="/views/cerus-api/source/lib/api.js.html#line223">Line 223</a>
+					<a href="/views/cerus-api/source/lib/api.js.html#line201">Line 201</a>
 				</div>
 			</div>
 												<div class="item">
@@ -153,80 +164,81 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.urls.html#api">api</a>
-					</div>
-					<div class="col a8">The getter/setter for the api url.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.urls.html#api">api</a>
+						</div>
+						<div class="col a8">The getter/setter for the api url.</div>
 					</div>
-	</div>
-
+							</div>
+		</div>
+	
 	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="api" class="function">
-				<div class="name">
-					.api(url)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
-							<a href="/views/cerus-api/source/lib/api.js.html#line234">Line 234</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">The getter/setter for the api url.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This is the getter and setter for the api url. This url is used when a new api route is created.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="api" class="function">
+					<a class="name" href="#api">
+						.api(url)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
+								<a href="/views/cerus-api/source/lib/api.js.html#line212">Line 212</a>
 							</div>
-															<div class="row">
-									<div class="col a3">url</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The new url for the api routes. (optional)
-									</span></div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The getter/setter for the api url.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the getter and setter for the api url. This url is used when a new api route is created.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">[type]</div>
+																	<div class="row">
+										<div class="col a3">url</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The new url for the api routes. (optional)
+										</span></div>
+									</div>
+															</div>
 						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The urls for the api routes.</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">[type]</div>
 							</div>
-		
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The urls for the api routes.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -96,6 +96,16 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
+			</ul>
+		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -1576,687 +1586,687 @@
 			</div>
 					<div class="line" id="line360">
 				<div class="number">360.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function alive</span></pre>
 			</div>
 					<div class="line" id="line361">
 				<div class="number">361.</div>
-				<pre class="content">	alive(enable, delay) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line362">
 				<div class="number">362.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._request.socket.setKeepAlive(enable, delay);</pre>
+				<pre class="content">	alive(enable, delay) {</pre>
 			</div>
 					<div class="line" id="line363">
 				<div class="number">363.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._request.socket.setKeepAlive(enable, delay);</pre>
 			</div>
 					<div class="line" id="line364">
 				<div class="number">364.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line365">
 				<div class="number">365.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line366">
 				<div class="number">366.</div>
-				<pre class="content"><span class="hljs-comment">	 * Using this function you can timeout the request for a certain amount of time. By timing the </span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line367">
 				<div class="number">367.</div>
-				<pre class="content"><span class="hljs-comment">	 * connection out the request will have to wait for the specified amount of time. Since this </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * Using this function you can timeout the request for a certain amount of time. By timing the </span></pre>
 			</div>
 					<div class="line" id="line368">
 				<div class="number">368.</div>
-				<pre class="content"><span class="hljs-comment">	 * happens asynchronous this function will return promise.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * connection out the request will have to wait for the specified amount of time. Since this </span></pre>
 			</div>
 					<div class="line" id="line369">
 				<div class="number">369.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Timeouts the request for the specified amount of time.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * happens asynchronous this function will return promise.</span></pre>
 			</div>
 					<div class="line" id="line370">
 				<div class="number">370.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Number} timeout How long to timeout the connection for.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Timeouts the request for the specified amount of time.</span></pre>
 			</div>
 					<div class="line" id="line371">
 				<div class="number">371.</div>
-				<pre class="content"><span class="hljs-comment">	 * @returns {Promise} This function returns a promise.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} timeout How long to timeout the connection for.</span></pre>
 			</div>
 					<div class="line" id="line372">
 				<div class="number">372.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @returns {Promise} This function returns a promise.</span></pre>
 			</div>
 					<div class="line" id="line373">
 				<div class="number">373.</div>
-				<pre class="content">	timeout(timeout) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function timeout</span></pre>
 			</div>
 					<div class="line" id="line374">
 				<div class="number">374.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> timeout !== <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line375">
 				<div class="number">375.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument timeout must be a number"</span>);</pre>
+				<pre class="content">	timeout(timeout) {</pre>
 			</div>
 					<div class="line" id="line376">
 				<div class="number">376.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> timeout !== <span class="hljs-string">"number"</span>) {</pre>
 			</div>
 					<div class="line" id="line377">
 				<div class="number">377.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument timeout must be a number"</span>);</pre>
 			</div>
 					<div class="line" id="line378">
 				<div class="number">378.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line379">
 				<div class="number">379.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._request.setTimeout(timeout, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line380">
 				<div class="number">380.</div>
-				<pre class="content">				event(<span class="hljs-string">"timeout"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line381">
 				<div class="number">381.</div>
-				<pre class="content">			});</pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._request.setTimeout(timeout, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
 			</div>
 					<div class="line" id="line382">
 				<div class="number">382.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content">				event(<span class="hljs-string">"timeout"</span>);</pre>
 			</div>
 					<div class="line" id="line383">
 				<div class="number">383.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">			});</pre>
 			</div>
 					<div class="line" id="line384">
 				<div class="number">384.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
 			</div>
 					<div class="line" id="line385">
 				<div class="number">385.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line386">
 				<div class="number">386.</div>
-				<pre class="content"><span class="hljs-comment">	 * With function you can check the content-type of the request. The content-type is the header </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line387">
 				<div class="number">387.</div>
-				<pre class="content"><span class="hljs-comment">	 * that is sent to inform what type of data the request data is. You can insert as many </span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line388">
 				<div class="number">388.</div>
-				<pre class="content"><span class="hljs-comment">	 * parameters as you want and the content-type will be returned from those parameters. If none</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * With function you can check the content-type of the request. The content-type is the header </span></pre>
 			</div>
 					<div class="line" id="line389">
 				<div class="number">389.</div>
-				<pre class="content"><span class="hljs-comment">	 * of the paramters match the content-type false is returned. This also a wrapper for one of </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * that is sent to inform what type of data the request data is. You can insert as many </span></pre>
 			</div>
 					<div class="line" id="line390">
 				<div class="number">390.</div>
-				<pre class="content"><span class="hljs-comment">	 * dougwilson's modules.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * parameters as you want and the content-type will be returned from those parameters. If none</span></pre>
 			</div>
 					<div class="line" id="line391">
 				<div class="number">391.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * of the paramters match the content-type false is returned. This also a wrapper for one of </span></pre>
 			</div>
 					<div class="line" id="line392">
 				<div class="number">392.</div>
-				<pre class="content"><span class="hljs-comment">	 * // inside a route handling function and with "application/json" as content-type</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * dougwilson's modules.</span></pre>
 			</div>
 					<div class="line" id="line393">
 				<div class="number">393.</div>
-				<pre class="content"><span class="hljs-comment">	 * req.is("html", "json");</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line394">
 				<div class="number">394.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return "json"</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // inside a route handling function and with "application/json" as content-type</span></pre>
 			</div>
 					<div class="line" id="line395">
 				<div class="number">395.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the matched content-type.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.is("html", "json");</span></pre>
 			</div>
 					<div class="line" id="line396">
 				<div class="number">396.</div>
-				<pre class="content"><span class="hljs-comment">	 * @alias type</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return "json"</span></pre>
 			</div>
 					<div class="line" id="line397">
 				<div class="number">397.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {...String} types The types to match.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the matched content-type.</span></pre>
 			</div>
 					<div class="line" id="line398">
 				<div class="number">398.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String|Boolean} Returns the matched content-type or false.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @alias type</span></pre>
 			</div>
 					<div class="line" id="line399">
 				<div class="number">399.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function is</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {...String} types The types to match.</span></pre>
 			</div>
 					<div class="line" id="line400">
 				<div class="number">400.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String|Boolean} Returns the matched content-type or false.</span></pre>
 			</div>
 					<div class="line" id="line401">
 				<div class="number">401.</div>
-				<pre class="content">	is(...types) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function is</span></pre>
 			</div>
 					<div class="line" id="line402">
 				<div class="number">402.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> typeis(<span class="hljs-keyword">this</span>._request, types);</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line403">
 				<div class="number">403.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	is(...types) {</pre>
 			</div>
 					<div class="line" id="line404">
 				<div class="number">404.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> typeis(<span class="hljs-keyword">this</span>._request, types);</pre>
 			</div>
 					<div class="line" id="line405">
 				<div class="number">405.</div>
-				<pre class="content">	type(...types) {</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line406">
 				<div class="number">406.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.is(...types);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line407">
 				<div class="number">407.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	type(...types) {</pre>
 			</div>
 					<div class="line" id="line408">
 				<div class="number">408.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.is(...types);</pre>
 			</div>
 					<div class="line" id="line409">
 				<div class="number">409.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line410">
 				<div class="number">410.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the connection header. This header contains the type of connection</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line411">
 				<div class="number">411.</div>
-				<pre class="content"><span class="hljs-comment">	 * the client requested. For example, "close" means the client would like to close the </span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line412">
 				<div class="number">412.</div>
-				<pre class="content"><span class="hljs-comment">	 * connection.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the connection header. This header contains the type of connection</span></pre>
 			</div>
 					<div class="line" id="line413">
 				<div class="number">413.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the connection header.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * the client requested. For example, "close" means the client would like to close the </span></pre>
 			</div>
 					<div class="line" id="line414">
 				<div class="number">414.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The connection header sent by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * connection.</span></pre>
 			</div>
 					<div class="line" id="line415">
 				<div class="number">415.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function connection</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the connection header.</span></pre>
 			</div>
 					<div class="line" id="line416">
 				<div class="number">416.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The connection header sent by the client.</span></pre>
 			</div>
 					<div class="line" id="line417">
 				<div class="number">417.</div>
-				<pre class="content">	connection() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function connection</span></pre>
 			</div>
 					<div class="line" id="line418">
 				<div class="number">418.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.header(<span class="hljs-string">"connection"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line419">
 				<div class="number">419.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	connection() {</pre>
 			</div>
 					<div class="line" id="line420">
 				<div class="number">420.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.header(<span class="hljs-string">"connection"</span>);</pre>
 			</div>
 					<div class="line" id="line421">
 				<div class="number">421.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line422">
 				<div class="number">422.</div>
-				<pre class="content"><span class="hljs-comment">	 * With this function you can destroy the socket that received the request. This makes the </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line423">
 				<div class="number">423.</div>
-				<pre class="content"><span class="hljs-comment">	 * server unusable and should therefor only be used when there is an important error. You </span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line424">
 				<div class="number">424.</div>
-				<pre class="content"><span class="hljs-comment">	 * can also add an error. This error will be used as parameter in the error event.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can destroy the socket that received the request. This makes the </span></pre>
 			</div>
 					<div class="line" id="line425">
 				<div class="number">425.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Destroys the socket that received the request.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * server unusable and should therefor only be used when there is an important error. You </span></pre>
 			</div>
 					<div class="line" id="line426">
 				<div class="number">426.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (error) The error you want to add.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * can also add an error. This error will be used as parameter in the error event.</span></pre>
 			</div>
 					<div class="line" id="line427">
 				<div class="number">427.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function destroy</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Destroys the socket that received the request.</span></pre>
 			</div>
 					<div class="line" id="line428">
 				<div class="number">428.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (error) The error you want to add.</span></pre>
 			</div>
 					<div class="line" id="line429">
 				<div class="number">429.</div>
-				<pre class="content">	destroy(error) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function destroy</span></pre>
 			</div>
 					<div class="line" id="line430">
 				<div class="number">430.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._request.destroy(error);</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line431">
 				<div class="number">431.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	destroy(error) {</pre>
 			</div>
 					<div class="line" id="line432">
 				<div class="number">432.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._request.destroy(error);</pre>
 			</div>
 					<div class="line" id="line433">
 				<div class="number">433.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line434">
 				<div class="number">434.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the request.bytes class for this request. This class contains </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line435">
 				<div class="number">435.</div>
-				<pre class="content"><span class="hljs-comment">	 * stats about the bytes that were read and written by the request.</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line436">
 				<div class="number">436.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the {@link request.bytes.constructor} class.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the request.bytes class for this request. This class contains </span></pre>
 			</div>
 					<div class="line" id="line437">
 				<div class="number">437.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Class} The {@link request.bytes.constructor} class.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * stats about the bytes that were read and written by the request.</span></pre>
 			</div>
 					<div class="line" id="line438">
 				<div class="number">438.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function bytes</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the {@link request.bytes.constructor} class.</span></pre>
 			</div>
 					<div class="line" id="line439">
 				<div class="number">439.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The {@link request.bytes.constructor} class.</span></pre>
 			</div>
 					<div class="line" id="line440">
 				<div class="number">440.</div>
-				<pre class="content">	bytes() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function bytes</span></pre>
 			</div>
 					<div class="line" id="line441">
 				<div class="number">441.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._bytes === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line442">
 				<div class="number">442.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._bytes = <span class="hljs-keyword">new</span> bytes(<span class="hljs-keyword">this</span>._request.socket);</pre>
+				<pre class="content">	bytes() {</pre>
 			</div>
 					<div class="line" id="line443">
 				<div class="number">443.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._bytes === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line444">
 				<div class="number">444.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._bytes = <span class="hljs-keyword">new</span> bytes(<span class="hljs-keyword">this</span>._request.socket);</pre>
 			</div>
 					<div class="line" id="line445">
 				<div class="number">445.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._bytes;</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line446">
 				<div class="number">446.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line447">
 				<div class="number">447.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._bytes;</pre>
 			</div>
 					<div class="line" id="line448">
 				<div class="number">448.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line449">
 				<div class="number">449.</div>
-				<pre class="content"><span class="hljs-comment">	 * With this function you can get the specified data that was send by the request. If it was a</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line450">
 				<div class="number">450.</div>
-				<pre class="content"><span class="hljs-comment">	 * POST request the data is currently just the parsed JSON. In the future this class will also</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line451">
 				<div class="number">451.</div>
-				<pre class="content"><span class="hljs-comment">	 * accept different types of data. For the other methods the data is fetched from the query </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can get the specified data that was send by the request. If it was a</span></pre>
 			</div>
 					<div class="line" id="line452">
 				<div class="number">452.</div>
-				<pre class="content"><span class="hljs-comment">	 * that is parsed from the url.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * POST request the data is currently just the parsed JSON. In the future this class will also</span></pre>
 			</div>
 					<div class="line" id="line453">
 				<div class="number">453.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * accept different types of data. For the other methods the data is fetched from the query </span></pre>
 			</div>
 					<div class="line" id="line454">
 				<div class="number">454.</div>
-				<pre class="content"><span class="hljs-comment">	 * // inside a route handling function and with "/home?data=example" as url</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * that is parsed from the url.</span></pre>
 			</div>
 					<div class="line" id="line455">
 				<div class="number">455.</div>
-				<pre class="content"><span class="hljs-comment">	 * req.get("data");</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line456">
 				<div class="number">456.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return "example"</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // inside a route handling function and with "/home?data=example" as url</span></pre>
 			</div>
 					<div class="line" id="line457">
 				<div class="number">457.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Fetches the specified data from the request.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.get("data");</span></pre>
 			</div>
 					<div class="line" id="line458">
 				<div class="number">458.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} key The key to specify which data to get.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return "example"</span></pre>
 			</div>
 					<div class="line" id="line459">
 				<div class="number">459.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The specified data from the request.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Fetches the specified data from the request.</span></pre>
 			</div>
 					<div class="line" id="line460">
 				<div class="number">460.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function get</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} key The key to specify which data to get.</span></pre>
 			</div>
 					<div class="line" id="line461">
 				<div class="number">461.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The specified data from the request.</span></pre>
 			</div>
 					<div class="line" id="line462">
 				<div class="number">462.</div>
-				<pre class="content">	get(key) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function get</span></pre>
 			</div>
 					<div class="line" id="line463">
 				<div class="number">463.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line464">
 				<div class="number">464.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument key must be a string"</span>);</pre>
+				<pre class="content">	get(key) {</pre>
 			</div>
 					<div class="line" id="line465">
 				<div class="number">465.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
 			</div>
 					<div class="line" id="line466">
 				<div class="number">466.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument key must be a string"</span>);</pre>
 			</div>
 					<div class="line" id="line467">
 				<div class="number">467.</div>
-				<pre class="content">		<span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> This needs to change to support more than json</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line468">
 				<div class="number">468.</div>
-				<pre class="content">		<span class="hljs-comment">// If it is a POST request use the parsed json</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line469">
 				<div class="number">469.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.method() === <span class="hljs-string">"POST"</span>) {</pre>
+				<pre class="content">		<span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> This needs to change to support more than json</span></pre>
 			</div>
 					<div class="line" id="line470">
 				<div class="number">470.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._json[key];</pre>
+				<pre class="content">		<span class="hljs-comment">// If it is a POST request use the parsed json</span></pre>
 			</div>
 					<div class="line" id="line471">
 				<div class="number">471.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.method() === <span class="hljs-string">"POST"</span>) {</pre>
 			</div>
 					<div class="line" id="line472">
 				<div class="number">472.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._json[key];</pre>
 			</div>
 					<div class="line" id="line473">
 				<div class="number">473.</div>
-				<pre class="content">		<span class="hljs-comment">// Use the query for other methods</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line474">
 				<div class="number">474.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._url.query[key];</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line475">
 				<div class="number">475.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-comment">// Use the query for other methods</span></pre>
 			</div>
 					<div class="line" id="line476">
 				<div class="number">476.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._url.query[key];</pre>
 			</div>
 					<div class="line" id="line477">
 				<div class="number">477.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line478">
 				<div class="number">478.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function is used to determine if the request was send using XHR, a.k.a. XMLHTTPRequest.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line479">
 				<div class="number">479.</div>
-				<pre class="content"><span class="hljs-comment">	 * It does this by checking if the X-Requested-With header matches "xmlhttprequest".</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line480">
 				<div class="number">480.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the request was send using XHR.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is used to determine if the request was send using XHR, a.k.a. XMLHTTPRequest.</span></pre>
 			</div>
 					<div class="line" id="line481">
 				<div class="number">481.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the request was send using XHR.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * It does this by checking if the X-Requested-With header matches "xmlhttprequest".</span></pre>
 			</div>
 					<div class="line" id="line482">
 				<div class="number">482.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function xhr</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the request was send using XHR.</span></pre>
 			</div>
 					<div class="line" id="line483">
 				<div class="number">483.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the request was send using XHR.</span></pre>
 			</div>
 					<div class="line" id="line484">
 				<div class="number">484.</div>
-				<pre class="content">	xhr() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function xhr</span></pre>
 			</div>
 					<div class="line" id="line485">
 				<div class="number">485.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> xhr = <span class="hljs-keyword">this</span>.header(<span class="hljs-string">"X-Requested-With"</span>) || <span class="hljs-string">""</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line486">
 				<div class="number">486.</div>
-				<pre class="content"></pre>
+				<pre class="content">	xhr() {</pre>
 			</div>
 					<div class="line" id="line487">
 				<div class="number">487.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> xhr.toLowerCase() === <span class="hljs-string">"xmlhttprequest"</span>;</pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> xhr = <span class="hljs-keyword">this</span>.header(<span class="hljs-string">"X-Requested-With"</span>) || <span class="hljs-string">""</span>;</pre>
 			</div>
 					<div class="line" id="line488">
 				<div class="number">488.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line489">
 				<div class="number">489.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> xhr.toLowerCase() === <span class="hljs-string">"xmlhttprequest"</span>;</pre>
 			</div>
 					<div class="line" id="line490">
 				<div class="number">490.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line491">
 				<div class="number">491.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will check if the request was send using a proxy. It does this by checking if </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line492">
 				<div class="number">492.</div>
-				<pre class="content"><span class="hljs-comment">	 * the X-Forwarded-Proto header was set.</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line493">
 				<div class="number">493.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the request was send using a proxy.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will check if the request was send using a proxy. It does this by checking if </span></pre>
 			</div>
 					<div class="line" id="line494">
 				<div class="number">494.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the request was send using a proxy.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * the X-Forwarded-Proto header was set.</span></pre>
 			</div>
 					<div class="line" id="line495">
 				<div class="number">495.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function proxy</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the request was send using a proxy.</span></pre>
 			</div>
 					<div class="line" id="line496">
 				<div class="number">496.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the request was send using a proxy.</span></pre>
 			</div>
 					<div class="line" id="line497">
 				<div class="number">497.</div>
-				<pre class="content">	proxy() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function proxy</span></pre>
 			</div>
 					<div class="line" id="line498">
 				<div class="number">498.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.header(<span class="hljs-string">"X-Forwarded-Proto"</span>) !== <span class="hljs-literal">undefined</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line499">
 				<div class="number">499.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	proxy() {</pre>
 			</div>
 					<div class="line" id="line500">
 				<div class="number">500.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.header(<span class="hljs-string">"X-Forwarded-Proto"</span>) !== <span class="hljs-literal">undefined</span>;</pre>
 			</div>
 					<div class="line" id="line501">
 				<div class="number">501.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line502">
 				<div class="number">502.</div>
-				<pre class="content"><span class="hljs-comment">	 * With this function you can check if the connection is secure, meaning it is over "https".</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line503">
 				<div class="number">503.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the connnection is secure.</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line504">
 				<div class="number">504.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the connection is secure.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can check if the connection is secure, meaning it is over "https".</span></pre>
 			</div>
 					<div class="line" id="line505">
 				<div class="number">505.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function secure</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the connnection is secure.</span></pre>
 			</div>
 					<div class="line" id="line506">
 				<div class="number">506.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the connection is secure.</span></pre>
 			</div>
 					<div class="line" id="line507">
 				<div class="number">507.</div>
-				<pre class="content">	secure() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function secure</span></pre>
 			</div>
 					<div class="line" id="line508">
 				<div class="number">508.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.protocol() === <span class="hljs-string">"https"</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line509">
 				<div class="number">509.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	secure() {</pre>
 			</div>
 					<div class="line" id="line510">
 				<div class="number">510.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.protocol() === <span class="hljs-string">"https"</span>;</pre>
 			</div>
 					<div class="line" id="line511">
 				<div class="number">511.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line512">
 				<div class="number">512.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function returns the request.agent class. This class contains more information about </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line513">
 				<div class="number">513.</div>
-				<pre class="content"><span class="hljs-comment">	 * the client by parsing the user-agent header. This is class is a wrapper of faisalman's </span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line514">
 				<div class="number">514.</div>
-				<pre class="content"><span class="hljs-comment">	 * ua-parser-js package.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function returns the request.agent class. This class contains more information about </span></pre>
 			</div>
 					<div class="line" id="line515">
 				<div class="number">515.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the {@link request.agent.constructor} class.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * the client by parsing the user-agent header. This is class is a wrapper of faisalman's </span></pre>
 			</div>
 					<div class="line" id="line516">
 				<div class="number">516.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Class} The {@link request.agent.constructor} class.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * ua-parser-js package.</span></pre>
 			</div>
 					<div class="line" id="line517">
 				<div class="number">517.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function agent</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the {@link request.agent.constructor} class.</span></pre>
 			</div>
 					<div class="line" id="line518">
 				<div class="number">518.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The {@link request.agent.constructor} class.</span></pre>
 			</div>
 					<div class="line" id="line519">
 				<div class="number">519.</div>
-				<pre class="content">	agent() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function agent</span></pre>
 			</div>
 					<div class="line" id="line520">
 				<div class="number">520.</div>
-				<pre class="content">		<span class="hljs-comment">// Create the agent object if it is undefined</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line521">
 				<div class="number">521.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._agent === <span class="hljs-literal">undefined</span>) {</pre>
+				<pre class="content">	agent() {</pre>
 			</div>
 					<div class="line" id="line522">
 				<div class="number">522.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._agent = <span class="hljs-keyword">new</span> agent(<span class="hljs-keyword">this</span>._request);</pre>
+				<pre class="content">		<span class="hljs-comment">// Create the agent object if it is undefined</span></pre>
 			</div>
 					<div class="line" id="line523">
 				<div class="number">523.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._agent === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line524">
 				<div class="number">524.</div>
-				<pre class="content"></pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._agent = <span class="hljs-keyword">new</span> agent(<span class="hljs-keyword">this</span>._request);</pre>
 			</div>
 					<div class="line" id="line525">
 				<div class="number">525.</div>
-				<pre class="content">		<span class="hljs-comment">// Return the agent object</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line526">
 				<div class="number">526.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._agent;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line527">
 				<div class="number">527.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-comment">// Return the agent object</span></pre>
 			</div>
 					<div class="line" id="line528">
 				<div class="number">528.</div>
-				<pre class="content">}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._agent;</pre>
 			</div>
 					<div class="line" id="line529">
 				<div class="number">529.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line530">
 				<div class="number">530.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = request;</pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line531">
 				<div class="number">531.</div>
@@ -2264,486 +2274,494 @@
 			</div>
 					<div class="line" id="line532">
 				<div class="number">532.</div>
-				<pre class="content"><span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = request;</pre>
 			</div>
 					<div class="line" id="line533">
 				<div class="number">533.</div>
-				<pre class="content"><span class="hljs-comment"> * This is the remote address class. It contains information about the remote address. The remote </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line534">
 				<div class="number">534.</div>
-				<pre class="content"><span class="hljs-comment"> * address that was used by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line535">
 				<div class="number">535.</div>
-				<pre class="content"><span class="hljs-comment"> * @class request.remote</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the remote address class. It contains information about the remote address. The remote </span></pre>
 			</div>
 					<div class="line" id="line536">
 				<div class="number">536.</div>
-				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
+				<pre class="content"><span class="hljs-comment"> * address that was used by the client.</span></pre>
 			</div>
 					<div class="line" id="line537">
 				<div class="number">537.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class request.remote</span></pre>
 			</div>
 					<div class="line" id="line538">
 				<div class="number">538.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">remote</span> </span>{</pre>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
 			</div>
 					<div class="line" id="line539">
 				<div class="number">539.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line540">
 				<div class="number">540.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">remote</span> </span>{</pre>
 			</div>
 					<div class="line" id="line541">
 				<div class="number">541.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
 			</div>
 					<div class="line" id="line542">
 				<div class="number">542.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
 			</div>
 					<div class="line" id="line543">
 				<div class="number">543.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line544">
 				<div class="number">544.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the IP address used by the client.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line545">
 				<div class="number">545.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line546">
 				<div class="number">546.</div>
-				<pre class="content"><span class="hljs-comment">	 * req.remote().address();</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the IP address used by the client.</span></pre>
 			</div>
 					<div class="line" id="line547">
 				<div class="number">547.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the client IP</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line548">
 				<div class="number">548.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the IP used by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.remote().address();</span></pre>
 			</div>
 					<div class="line" id="line549">
 				<div class="number">549.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The IP used by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the client IP</span></pre>
 			</div>
 					<div class="line" id="line550">
 				<div class="number">550.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function address</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the IP used by the client.</span></pre>
 			</div>
 					<div class="line" id="line551">
 				<div class="number">551.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The IP used by the client.</span></pre>
 			</div>
 					<div class="line" id="line552">
 				<div class="number">552.</div>
-				<pre class="content">	address() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function address</span></pre>
 			</div>
 					<div class="line" id="line553">
 				<div class="number">553.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.remoteAddress;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line554">
 				<div class="number">554.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	address() {</pre>
 			</div>
 					<div class="line" id="line555">
 				<div class="number">555.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.remoteAddress;</pre>
 			</div>
 					<div class="line" id="line556">
 				<div class="number">556.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line557">
 				<div class="number">557.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the port used by the client.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line558">
 				<div class="number">558.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line559">
 				<div class="number">559.</div>
-				<pre class="content"><span class="hljs-comment">	 * req.remote().port();</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the port used by the client.</span></pre>
 			</div>
 					<div class="line" id="line560">
 				<div class="number">560.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the client port</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line561">
 				<div class="number">561.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the port used by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.remote().port();</span></pre>
 			</div>
 					<div class="line" id="line562">
 				<div class="number">562.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The port used by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the client port</span></pre>
 			</div>
 					<div class="line" id="line563">
 				<div class="number">563.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function port</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the port used by the client.</span></pre>
 			</div>
 					<div class="line" id="line564">
 				<div class="number">564.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The port used by the client.</span></pre>
 			</div>
 					<div class="line" id="line565">
 				<div class="number">565.</div>
-				<pre class="content">	port() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function port</span></pre>
 			</div>
 					<div class="line" id="line566">
 				<div class="number">566.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.remotePort;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line567">
 				<div class="number">567.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	port() {</pre>
 			</div>
 					<div class="line" id="line568">
 				<div class="number">568.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.remotePort;</pre>
 			</div>
 					<div class="line" id="line569">
 				<div class="number">569.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line570">
 				<div class="number">570.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the family of the IP that was returned by the client.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line571">
 				<div class="number">571.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line572">
 				<div class="number">572.</div>
-				<pre class="content"><span class="hljs-comment">	 * req.remote().family();</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the family of the IP that was returned by the client.</span></pre>
 			</div>
 					<div class="line" id="line573">
 				<div class="number">573.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the family of the client IP</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line574">
 				<div class="number">574.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the family of the IP used by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.remote().family();</span></pre>
 			</div>
 					<div class="line" id="line575">
 				<div class="number">575.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The family of the IP used by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the family of the client IP</span></pre>
 			</div>
 					<div class="line" id="line576">
 				<div class="number">576.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function family</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the family of the IP used by the client.</span></pre>
 			</div>
 					<div class="line" id="line577">
 				<div class="number">577.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The family of the IP used by the client.</span></pre>
 			</div>
 					<div class="line" id="line578">
 				<div class="number">578.</div>
-				<pre class="content">	family() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function family</span></pre>
 			</div>
 					<div class="line" id="line579">
 				<div class="number">579.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.remoteFamily;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line580">
 				<div class="number">580.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	family() {</pre>
 			</div>
 					<div class="line" id="line581">
 				<div class="number">581.</div>
-				<pre class="content">}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.remoteFamily;</pre>
 			</div>
 					<div class="line" id="line582">
 				<div class="number">582.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line583">
 				<div class="number">583.</div>
-				<pre class="content"><span class="hljs-comment">/**</span></pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line584">
 				<div class="number">584.</div>
-				<pre class="content"><span class="hljs-comment"> * This is the local address class. It contains information about the local address. The local </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line585">
 				<div class="number">585.</div>
-				<pre class="content"><span class="hljs-comment"> * address is the address on the server the client connected to.</span></pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line586">
 				<div class="number">586.</div>
-				<pre class="content"><span class="hljs-comment"> * @class request.local</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the local address class. It contains information about the local address. The local </span></pre>
 			</div>
 					<div class="line" id="line587">
 				<div class="number">587.</div>
-				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
+				<pre class="content"><span class="hljs-comment"> * address is the address on the server the client connected to.</span></pre>
 			</div>
 					<div class="line" id="line588">
 				<div class="number">588.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class request.local</span></pre>
 			</div>
 					<div class="line" id="line589">
 				<div class="number">589.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">local</span> </span>{</pre>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
 			</div>
 					<div class="line" id="line590">
 				<div class="number">590.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line591">
 				<div class="number">591.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">local</span> </span>{</pre>
 			</div>
 					<div class="line" id="line592">
 				<div class="number">592.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
 			</div>
 					<div class="line" id="line593">
 				<div class="number">593.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
 			</div>
 					<div class="line" id="line594">
 				<div class="number">594.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line595">
 				<div class="number">595.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the IP address connected to by the client.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line596">
 				<div class="number">596.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line597">
 				<div class="number">597.</div>
-				<pre class="content"><span class="hljs-comment">	 * req.local().address();</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the IP address connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line598">
 				<div class="number">598.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the IP connected to by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line599">
 				<div class="number">599.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the IP connected to by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.local().address();</span></pre>
 			</div>
 					<div class="line" id="line600">
 				<div class="number">600.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The IP connected to by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the IP connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line601">
 				<div class="number">601.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function address</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the IP connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line602">
 				<div class="number">602.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The IP connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line603">
 				<div class="number">603.</div>
-				<pre class="content">	address() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function address</span></pre>
 			</div>
 					<div class="line" id="line604">
 				<div class="number">604.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.localAddress;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line605">
 				<div class="number">605.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	address() {</pre>
 			</div>
 					<div class="line" id="line606">
 				<div class="number">606.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.localAddress;</pre>
 			</div>
 					<div class="line" id="line607">
 				<div class="number">607.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line608">
 				<div class="number">608.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the port connected to by the client.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line609">
 				<div class="number">609.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line610">
 				<div class="number">610.</div>
-				<pre class="content"><span class="hljs-comment">	 * req.local().port();</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the port connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line611">
 				<div class="number">611.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the port connected to by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line612">
 				<div class="number">612.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the port connected to by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * req.local().port();</span></pre>
 			</div>
 					<div class="line" id="line613">
 				<div class="number">613.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The port connected to by the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return the port connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line614">
 				<div class="number">614.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function port</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the port connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line615">
 				<div class="number">615.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The port connected to by the client.</span></pre>
 			</div>
 					<div class="line" id="line616">
 				<div class="number">616.</div>
-				<pre class="content">	port() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function port</span></pre>
 			</div>
 					<div class="line" id="line617">
 				<div class="number">617.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.localPort;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line618">
 				<div class="number">618.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	port() {</pre>
 			</div>
 					<div class="line" id="line619">
 				<div class="number">619.</div>
-				<pre class="content">}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.localPort;</pre>
 			</div>
 					<div class="line" id="line620">
 				<div class="number">620.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line621">
 				<div class="number">621.</div>
-				<pre class="content"><span class="hljs-comment">/**</span></pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line622">
 				<div class="number">622.</div>
-				<pre class="content"><span class="hljs-comment"> * This is the bytes class. It contains information about the amount bytes written and read during </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line623">
 				<div class="number">623.</div>
-				<pre class="content"><span class="hljs-comment"> * this request.</span></pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line624">
 				<div class="number">624.</div>
-				<pre class="content"><span class="hljs-comment"> * @class request.bytes</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the bytes class. It contains information about the amount bytes written and read during </span></pre>
 			</div>
 					<div class="line" id="line625">
 				<div class="number">625.</div>
-				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
+				<pre class="content"><span class="hljs-comment"> * this request.</span></pre>
 			</div>
 					<div class="line" id="line626">
 				<div class="number">626.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class request.bytes</span></pre>
 			</div>
 					<div class="line" id="line627">
 				<div class="number">627.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">bytes</span> </span>{</pre>
+				<pre class="content"><span class="hljs-comment"> * @nofunction</span></pre>
 			</div>
 					<div class="line" id="line628">
 				<div class="number">628.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line629">
 				<div class="number">629.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">bytes</span> </span>{</pre>
 			</div>
 					<div class="line" id="line630">
 				<div class="number">630.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(socket) {</pre>
 			</div>
 					<div class="line" id="line631">
 				<div class="number">631.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._socket = socket;</pre>
 			</div>
 					<div class="line" id="line632">
 				<div class="number">632.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line633">
 				<div class="number">633.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the amount of bytes that have been read from the request.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line634">
 				<div class="number">634.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the amount of bytes read.</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line635">
 				<div class="number">635.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Number} The amount of bytes read.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the amount of bytes that have been read from the request.</span></pre>
 			</div>
 					<div class="line" id="line636">
 				<div class="number">636.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function read</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the amount of bytes read.</span></pre>
 			</div>
 					<div class="line" id="line637">
 				<div class="number">637.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The amount of bytes read.</span></pre>
 			</div>
 					<div class="line" id="line638">
 				<div class="number">638.</div>
-				<pre class="content">	read() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function read</span></pre>
 			</div>
 					<div class="line" id="line639">
 				<div class="number">639.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.bytesRead;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line640">
 				<div class="number">640.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	read() {</pre>
 			</div>
 					<div class="line" id="line641">
 				<div class="number">641.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.bytesRead;</pre>
 			</div>
 					<div class="line" id="line642">
 				<div class="number">642.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line643">
 				<div class="number">643.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function returns the amount of bytes that have been written to the response.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line644">
 				<div class="number">644.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the amount of bytes written.</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line645">
 				<div class="number">645.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Number} The amount of bytes written.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function returns the amount of bytes that have been written to the response.</span></pre>
 			</div>
 					<div class="line" id="line646">
 				<div class="number">646.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function written</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the amount of bytes written.</span></pre>
 			</div>
 					<div class="line" id="line647">
 				<div class="number">647.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The amount of bytes written.</span></pre>
 			</div>
 					<div class="line" id="line648">
 				<div class="number">648.</div>
-				<pre class="content">	written() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function written</span></pre>
 			</div>
 					<div class="line" id="line649">
 				<div class="number">649.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.bytesWritten;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line650">
 				<div class="number">650.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	written() {</pre>
 			</div>
 					<div class="line" id="line651">
 				<div class="number">651.</div>
-				<pre class="content">}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._socket.bytesWritten;</pre>
 			</div>
 					<div class="line" id="line652">
 				<div class="number">652.</div>
+				<pre class="content">	}</pre>
+			</div>
+					<div class="line" id="line653">
+				<div class="number">653.</div>
+				<pre class="content">}</pre>
+			</div>
+					<div class="line" id="line654">
+				<div class="number">654.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>

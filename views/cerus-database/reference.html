@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -119,7 +129,11 @@
 				<select class="list" onchange="title_('reference', 'cerus-database').open(this)">
 						<option value="database.html" selected>database</option>
 						<option value="database.database.html" undefined>database.database</option>
-						<option value="database.database.table.html" undefined>database.database.table</option>
+						<option value="database.table.html" undefined>database.table</option>
+						<option value="database.table.columns.html" undefined>database.table.columns</option>
+						<option value="database.table.keys.html" undefined>database.table.keys</option>
+						<option value="database.table.keys.primary.html" undefined>database.table.keys.primary</option>
+						<option value="database.table.keys.secondary.html" undefined>database.table.keys.secondary</option>
 					</select>
 				<div class="item" onclick="title_().github()"><i class="fab fa-github"></i></div>
 		<div class="item" onclick="title_().mail()"><i class="fas fa-at"></i></div>
@@ -131,7 +145,8 @@
 	<div class="class">
 		<div class="name">
 							.database()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
@@ -150,199 +165,251 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-database/reference/database.html#driver">driver</a>
-					</div>
-					<div class="col a8">Changes the database driver.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-database/reference/database.html#connect">connect</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.html#driver">driver</a>
+						</div>
+						<div class="col a8">Changes the database driver.</div>
 					</div>
-					<div class="col a8">Connects to the database.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-database/reference/database.html#database">database</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.html#connect">connect</a>
+						</div>
+						<div class="col a8">Connects to the database.</div>
 					</div>
-					<div class="col a8">Returns the specified database.</div>
-				</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.html#database">database</a>
+						</div>
+						<div class="col a8">Returns the specified database.</div>
 					</div>
-	</div>
-
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.html#close">close</a>
+						</div>
+						<div class="col a8">Closes the database.</div>
+					</div>
+							</div>
+		</div>
+	
 	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="driver" class="function">
-				<div class="name">
-					.driver(name)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
-							<a href="/views/cerus-database/source/lib/database.js.html#line11">Line 11</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Changes the database driver.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can select the driver the database manager will use. The driver is the module that is used to interact with the database. This module depends on what you&#39;re using, like MySQL or MongoDB. The function will automatically load the driver and if the driver is unknown it will throw an error.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="driver" class="function">
+					<a class="name" href="#driver">
+						.driver(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line11">Line 11</a>
 							</div>
-															<div class="row">
-									<div class="col a3">name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the driver.
-									</span></div>
-								</div>
-													</div>
-					</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Changes the database driver.</div>
+							</div>
 																							</div>
-					<div id="connect" class="function">
-				<div class="name">
-					.connect(domain, [options])
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
-							<a href="/views/cerus-database/source/lib/database.js.html#line35">Line 35</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Connects to the database.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function lets the driver connect to the database. How the driver connects to the database depends on the driver. If your connecting to a local database, often you can use &quot;localhost&quot; as domain to connect. This function returns a promise that will continue depending on the events returned by the driver.</p>
+					<div class="desc"><p>With this function you can select the driver the database manager will use. The driver is the module that is used to interact with the database. This module depends on what you&#39;re using, like MySQL or MongoDB. The function will automatically load the driver and if the driver is unknown it will throw an error.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the driver.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																													</div>
+							<div id="connect" class="function">
+					<a class="name" href="#connect">
+						.connect(domain, [options])
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line35">Line 35</a>
 							</div>
-															<div class="row">
-									<div class="col a3">domain</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The domain to connect to.
-									</span></div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Connects to the database.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function lets the driver connect to the database. How the driver connects to the database depends on the driver. If your connecting to a local database, often you can use &quot;localhost&quot; as domain to connect. This function returns a promise that will continue depending on the events returned by the driver.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-															<div class="row">
-									<div class="col a3">[options]</div>
-									<div class="col a3">Object</div>
-									<div class="col a6"><span>
-										
-									</span></div>
-								</div>
-													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript">cerus.database().connect(<span class="hljs-string">"localhost"</span>);
+																	<div class="row">
+										<div class="col a3">domain</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The domain to connect to.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">[options]</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">cerus.database().connect(<span class="hljs-string">"localhost"</span>);
 <span class="hljs-comment">// -&gt; connects to the database at localhost</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function returns a promise.</div>
-						</div>
-					</div>
-							</div>
-					<div id="database" class="function">
-				<div class="name">
-					.database(name)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
-							<a href="/views/cerus-database/source/lib/database.js.html#line61">Line 61</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the specified database.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function will return the specified database.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the database to return.
-									</span></div>
-								</div>
 													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Class</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The database class.</div>
-						</div>
-					</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
 							</div>
-		
-	</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="database" class="function">
+					<a class="name" href="#database">
+						.database(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line61">Line 61</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the specified database.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return the specified database. Read more about databases {@link database.database.constructor here}.</p>
 </div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the database to return.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The database class.</div>
+							</div>
+						</div>
+									</div>
+							<div id="close" class="function">
+					<a class="name" href="#close">
+						.close()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line72">Line 72</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Closes the database.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function lets you close the connection to the database. This is done to close unneeded connections to relieve stress, since they are a pretty expensive resource. The function will return a promise that is called when the database has been closed.</p>
+</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">cerus.database().database(<span class="hljs-string">"test"</span>).close();
+<span class="hljs-comment">// -&gt; closes the connection to the database</span>
+</code></pre>
+</div>
+													</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
+	</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

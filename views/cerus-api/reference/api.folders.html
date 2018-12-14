@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -134,13 +144,14 @@
 	<div class="class">
 		<div class="name">
 							.api().folders()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
-					<a href="/views/cerus-api/source/lib/api.js.html#line177">Line 177</a>
+					<a href="/views/cerus-api/source/lib/api.js.html#line159">Line 159</a>
 				</div>
 			</div>
 												<div class="item">
@@ -153,138 +164,140 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.folders.html#policies">policies</a>
-					</div>
-					<div class="col a8">The getter/setter for the policy folder.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.folders.html#api">api</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.folders.html#policies">policies</a>
+						</div>
+						<div class="col a8">The getter/setter for the policy folder.</div>
 					</div>
-					<div class="col a8">The getter/setter for the api folder.</div>
-				</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.folders.html#api">api</a>
+						</div>
+						<div class="col a8">The getter/setter for the api folder.</div>
 					</div>
-	</div>
-
+							</div>
+		</div>
+	
 	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="policies" class="function">
-				<div class="name">
-					.policies(path)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
-							<a href="/views/cerus-api/source/lib/api.js.html#line188">Line 188</a>
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="policies" class="function">
+					<a class="name" href="#policies">
+						.policies(path)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
+								<a href="/views/cerus-api/source/lib/api.js.html#line170">Line 170</a>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">The getter/setter for the policy folder.</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function is the getter and setter for the policies folder. This is the folder where the policy classes should be put in. By default this path is &quot;policies&quot;. This path is also fixed (\\ is changed to /) before being used to support all the platforms.</p>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The getter/setter for the policy folder.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function is the getter and setter for the policies folder. This is the folder where the policy classes should be put in. By default this path is &quot;policies&quot;. This path is also fixed (\\ is changed to /) before being used to support all the platforms.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The new path for the policies folder. (optional)
-									</span></div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The new path for the policies folder. (optional)
+										</span></div>
+									</div>
+															</div>
 						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The path for the policies folder.</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
 							</div>
-					<div id="api" class="function">
-				<div class="name">
-					.api(path)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
-							<a href="/views/cerus-api/source/lib/api.js.html#line205">Line 205</a>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The path for the policies folder.</div>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">The getter/setter for the api folder.</div>
+									</div>
+							<div id="api" class="function">
+					<a class="name" href="#api">
+						.api(path)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api.js.html">lib/api.js</a>, 
+								<a href="/views/cerus-api/source/lib/api.js.html#line185">Line 185</a>
+							</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function is the getter and setter for the api folder. This is the folder where the api classes should be put in. This path is also fixed (\\ is changed to /) before being used to support all the platforms.</p>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The getter/setter for the api folder.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function is the getter and setter for the api folder. This is the folder where the api classes should be put in. This path is also fixed (\\ is changed to /) before being used to support all the platforms.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The new path for the api folder. (optional)
-									</span></div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The new path for the api folder. (optional)
+										</span></div>
+									</div>
+															</div>
 						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The path for the api folder.</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
 							</div>
-		
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The path for the api folder.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

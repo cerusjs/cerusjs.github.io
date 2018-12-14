@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "selected" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -138,13 +148,14 @@
 	<div class="class">
 		<div class="name">
 							.compression().constants().memory()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
-					<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-					<a href="/views/cerus-compression/source/lib/compression.js.html#line882">Line 882</a>
+					<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+					<a href="/views/cerus-compression/source/lib/constants.js.html#line459">Line 459</a>
 				</div>
 			</div>
 												<div class="item">
@@ -157,145 +168,148 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.constants.memory.html#min">min</a>
-					</div>
-					<div class="col a8">Returns the MIN_MEMLEVEL constant.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.constants.memory.html#max">max</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.memory.html#min">min</a>
+						</div>
+						<div class="col a8">Returns the MIN_MEMLEVEL constant.</div>
 					</div>
-					<div class="col a8">Returns the MAX_MEMLEVEL constant.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-compression/reference/compression.constants.memory.html#default">default</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.memory.html#max">max</a>
+						</div>
+						<div class="col a8">Returns the MAX_MEMLEVEL constant.</div>
 					</div>
-					<div class="col a8">Returns the DEFAULT_MEMLEVEL constant.</div>
-				</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.memory.html#default">default</a>
+						</div>
+						<div class="col a8">Returns the DEFAULT_MEMLEVEL constant.</div>
 					</div>
-	</div>
-
+							</div>
+		</div>
+	
 	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="min" class="function">
-				<div class="name">
-					.min()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line889">Line 889</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the MIN_MEMLEVEL constant.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This is the MIN_MEMLEVEL constant. It returns the minimal amount of memory that can be used for the compression and decompression.</p>
-</div>
-																									<div class="return">
-						<h3>Returns</h3>
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="min" class="function">
+					<a class="name" href="#min">
+						.min()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
 						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Constant</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Z_MIN_MEMLEVEL</div>
-						</div>
-					</div>
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line465">Line 465</a>
 							</div>
-					<div id="max" class="function">
-				<div class="name">
-					.max()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line900">Line 900</a>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the MAX_MEMLEVEL constant.</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This is the MAX_MEMLEVEL constant. It returns the maximum amount of memory that can be used for the compression and decompression.</p>
-</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Constant</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Z_MAX_MEMLEVEL</div>
-						</div>
-					</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the MIN_MEMLEVEL constant.</div>
 							</div>
-					<div id="default" class="function">
-				<div class="name">
-					.default()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-compression/source/lib/compression.js.html">lib/compression.js</a>, 
-							<a href="/views/cerus-compression/source/lib/compression.js.html#line911">Line 911</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the DEFAULT_MEMLEVEL constant.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This is the DEFAULT_MEMLEVEL constant. It returns the default amount of memory that is used for the compression and decompression.</p>
+																							</div>
+					<div class="desc"><p>This is the MIN_MEMLEVEL constant. It returns the minimal amount of memory that can be used for the compression and decompression.</p>
 </div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Constant</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Z_DEFAULT_MEMLEVEL</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
 							</div>
-		
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_MIN_MEMLEVEL</div>
+							</div>
+						</div>
+									</div>
+							<div id="max" class="function">
+					<a class="name" href="#max">
+						.max()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line476">Line 476</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the MAX_MEMLEVEL constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the MAX_MEMLEVEL constant. It returns the maximum amount of memory that can be used for the compression and decompression.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_MAX_MEMLEVEL</div>
+							</div>
+						</div>
+									</div>
+							<div id="default" class="function">
+					<a class="name" href="#default">
+						.default()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line487">Line 487</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the DEFAULT_MEMLEVEL constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the DEFAULT_MEMLEVEL constant. It returns the default amount of memory that is used for the compression and decompression.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_DEFAULT_MEMLEVEL</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

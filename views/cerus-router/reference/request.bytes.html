@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -147,13 +157,14 @@
 	<div class="class">
 		<div class="name">
 							request.bytes()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-					<a href="/views/cerus-router/source/lib/request.js.html#line621">Line 621</a>
+					<a href="/views/cerus-router/source/lib/request.js.html#line623">Line 623</a>
 				</div>
 			</div>
 												<div class="item">
@@ -166,104 +177,106 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/request.bytes.html#read">read</a>
-					</div>
-					<div class="col a8">Returns the amount of bytes read.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/request.bytes.html#written">written</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.bytes.html#read">read</a>
+						</div>
+						<div class="col a8">Returns the amount of bytes read.</div>
 					</div>
-					<div class="col a8">Returns the amount of bytes written.</div>
-				</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.bytes.html#written">written</a>
+						</div>
+						<div class="col a8">Returns the amount of bytes written.</div>
 					</div>
-	</div>
-
+							</div>
+		</div>
+	
 	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="read" class="function">
-				<div class="name">
-					.read()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line632">Line 632</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the amount of bytes read.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function will return the amount of bytes that have been read from the request.</p>
-</div>
-																									<div class="return">
-						<h3>Returns</h3>
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="read" class="function">
+					<a class="name" href="#read">
+						.read()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
 						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Number</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The amount of bytes read.</div>
-						</div>
-					</div>
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+								<a href="/views/cerus-router/source/lib/request.js.html#line634">Line 634</a>
 							</div>
-					<div id="written" class="function">
-				<div class="name">
-					.written()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-							<a href="/views/cerus-router/source/lib/request.js.html#line642">Line 642</a>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the amount of bytes written.</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function returns the amount of bytes that have been written to the response.</p>
-</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Number</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The amount of bytes written.</div>
-						</div>
-					</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the amount of bytes read.</div>
 							</div>
-		
+																							</div>
+					<div class="desc"><p>This function will return the amount of bytes that have been read from the request.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Number</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The amount of bytes read.</div>
+							</div>
+						</div>
+									</div>
+							<div id="written" class="function">
+					<a class="name" href="#written">
+						.written()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+								<a href="/views/cerus-router/source/lib/request.js.html#line644">Line 644</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the amount of bytes written.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns the amount of bytes that have been written to the response.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Number</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The amount of bytes written.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

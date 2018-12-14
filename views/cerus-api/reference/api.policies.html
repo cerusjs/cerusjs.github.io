@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -134,7 +144,8 @@
 	<div class="class">
 		<div class="name">
 							.api().policies()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
@@ -153,324 +164,330 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.policies.html#add">add</a>
-					</div>
-					<div class="col a8">Creates a new policy function.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.policies.html#has">has</a>
-					</div>
-					<div class="col a8">Returns if the specified policy exists.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.policies.html#get">get</a>
-					</div>
-					<div class="col a8">Returns the specified policy promise.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.policies.html#remove">remove</a>
-					</div>
-					<div class="col a8">Removes the specified policy.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.policies.html#list">list</a>
-					</div>
-					<div class="col a8">Lists all of the policy names.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-api/reference/api.policies.html#clear">clear</a>
-					</div>
-					<div class="col a8">Clears all the policies.</div>
-				</div>
-					</div>
-	</div>
-
-	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="add" class="function">
-				<div class="name">
-					.add(name)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-							<a href="/views/cerus-api/source/lib/api/policies.js.html#line13">Line 13</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.policies.html#add">add</a>
 						</div>
+						<div class="col a8">Creates a new policy function.</div>
 					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Creates a new policy function.</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.policies.html#has">has</a>
 						</div>
-																			</div>
-				<div class="desc"><p>This functions creates a new policy function. It will return a promise, which is called using the &quot;policy&quot; when the policy is called. This event will be called with the following parameters: the request class, the json class and cerus. The api route is stopped when a policy function has emitted.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+						<div class="col a8">Returns if the specified policy exists.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.policies.html#get">get</a>
+						</div>
+						<div class="col a8">Returns the specified policy promise.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.policies.html#remove">remove</a>
+						</div>
+						<div class="col a8">Removes the specified policy.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.policies.html#list">list</a>
+						</div>
+						<div class="col a8">Lists all of the policy names.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/api.policies.html#clear">clear</a>
+						</div>
+						<div class="col a8">Clears all the policies.</div>
+					</div>
 							</div>
-															<div class="row">
-									<div class="col a3">name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the new policy.
-									</span></div>
+		</div>
+	
+	<!-- FUNCTIONS -->
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="add" class="function">
+					<a class="name" href="#add">
+						.add(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line13">Line 13</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Creates a new policy function.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This functions creates a new policy function. It will return a promise, which is called using the &quot;policy&quot; when the policy is called. This event will be called with the following parameters: the request class, the json class and cerus. The api route is stopped when a policy function has emitted.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript">json.policies().add(<span class="hljs-string">"emit"</span>) <span class="hljs-comment">// or json.policy()</span>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the new policy.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">json.policies().add(<span class="hljs-string">"emit"</span>) <span class="hljs-comment">// or json.policy()</span>
 .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, json</span>) </span>{
   json.emit();
 });
 <span class="hljs-comment">// -&gt; this adds a new policy called "emit" which always emits when it's called</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
-							</div>
-					<div id="has" class="function">
-				<div class="name">
-					.has(name)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-							<a href="/views/cerus-api/source/lib/api/policies.js.html#line39">Line 39</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns if the specified policy exists.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can check if the specified policy exists. If so this function will return true and false when it doesn&#39;t exist.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the policy you want to check.
-									</span></div>
-								</div>
 													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Boolean</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">If the policy exists.</div>
-						</div>
-					</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
 							</div>
-					<div id="get" class="function">
-				<div class="name">
-					.get(name)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-							<a href="/views/cerus-api/source/lib/api/policies.js.html#line55">Line 55</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns the specified policy promise.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can return the specified policy. It will return the promise that was created for the policy. This can be used to later add more checks to a policy without needing to save the policy as variable.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
 							</div>
-															<div class="row">
-									<div class="col a3">name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the policy you want to get.
-									</span></div>
-								</div>
-													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
+						</div>
+									</div>
+							<div id="has" class="function">
+					<a class="name" href="#has">
+						.has(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
 						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The promise for the specified policy.</div>
-						</div>
-					</div>
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line35">Line 35</a>
 							</div>
-					<div id="remove" class="function">
-				<div class="name">
-					.remove(name)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-							<a href="/views/cerus-api/source/lib/api/policies.js.html#line72">Line 72</a>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Removes the specified policy.</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will remove the specified policy for you. To remove all the policies you should use policies.clear(); When a policy is removed it can&#39;t be used in an api route anymore. This won&#39;t directly break your api routes though, since before being called the policy is checked if it exists.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns if the specified policy exists.</div>
 							</div>
-															<div class="row">
-									<div class="col a3">name</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The name of the policy to remove.
-									</span></div>
-								</div>
-													</div>
-					</div>
 																							</div>
-					<div id="list" class="function">
-				<div class="name">
-					.list()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-							<a href="/views/cerus-api/source/lib/api/policies.js.html#line89">Line 89</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Lists all of the policy names.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>With this function you can list all of the policy names.</p>
+					<div class="desc"><p>With this function you can check if the specified policy exists. If so this function will return true and false when it doesn&#39;t exist.</p>
 </div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String[]</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the policy you want to check.
+										</span></div>
+									</div>
+															</div>
 						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">Returns the array of all the policy names.</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Boolean</div>
 							</div>
-					<div id="clear" class="function">
-				<div class="name">
-					.clear()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-							<a href="/views/cerus-api/source/lib/api/policies.js.html#line99">Line 99</a>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">If the policy exists.</div>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Clears all the policies.</div>
+									</div>
+							<div id="get" class="function">
+					<a class="name" href="#get">
+						.get(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line47">Line 47</a>
+							</div>
 						</div>
-																			</div>
-				<div class="desc"><p>With this function you can clear all of the policies. It doesn&#39;t remove them one by one, since it resets the whole list. Which makes it faster to use that individually removing them.</p>
-</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the specified policy promise.</div>
+							</div>
 																							</div>
-		
+					<div class="desc"><p>With this function you can return the specified policy. It will return the promise that was created for the policy. This can be used to later add more checks to a policy without needing to save the policy as variable.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the policy you want to get.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The promise for the specified policy.</div>
+							</div>
+						</div>
+									</div>
+							<div id="remove" class="function">
+					<a class="name" href="#remove">
+						.remove(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line60">Line 60</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Removes the specified policy.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will remove the specified policy for you. To remove all the policies you should use policies.clear(); When a policy is removed it can&#39;t be used in an api route anymore. This won&#39;t directly break your api routes though, since before being called the policy is checked if it exists.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the policy to remove.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																													</div>
+							<div id="list" class="function">
+					<a class="name" href="#list">
+						.list()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line73">Line 73</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Lists all of the policy names.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can list all of the policy names.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String[]</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Returns the array of all the policy names.</div>
+							</div>
+						</div>
+									</div>
+							<div id="clear" class="function">
+					<a class="name" href="#clear">
+						.clear()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line83">Line 83</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Clears all the policies.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can clear all of the policies. It doesn&#39;t remove them one by one, since it resets the whole list. Which makes it faster to use that individually removing them.</p>
+</div>
+																													</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">

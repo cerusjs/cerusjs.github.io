@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -140,203 +150,203 @@
 	<div class="lines">
 					<div class="line" id="line1">
 				<div class="number">1.</div>
-				<pre class="content"><span class="hljs-keyword">var</span> layer = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./layer"</span>);</pre>
+				<pre class="content"><span class="hljs-keyword">const</span> layer = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./layer"</span>);</pre>
 			</div>
 					<div class="line" id="line2">
 				<div class="number">2.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-keyword">const</span> methods = [<span class="hljs-string">"GET"</span>, <span class="hljs-string">"POST"</span>, <span class="hljs-string">"PUT"</span>, <span class="hljs-string">"DELETE"</span>, <span class="hljs-string">"HEAD"</span>];</pre>
 			</div>
 					<div class="line" id="line3">
 				<div class="number">3.</div>
-				<pre class="content"><span class="hljs-comment">/**</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line4">
 				<div class="number">4.</div>
-				<pre class="content"><span class="hljs-comment"> * This is the router class. It is used to "sort" incoming requests based on their url. For </span></pre>
+				<pre class="content"><span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line5">
 				<div class="number">5.</div>
-				<pre class="content"><span class="hljs-comment"> * example, when requesting "/home" the router will look for a "/home" route. When that route is</span></pre>
+				<pre class="content"><span class="hljs-comment"> * This is the router class. It is used to "sort" incoming requests based on their url. For </span></pre>
 			</div>
 					<div class="line" id="line6">
 				<div class="number">6.</div>
-				<pre class="content"><span class="hljs-comment"> * found, the function that comes with the route is called. You can also create a child router</span></pre>
+				<pre class="content"><span class="hljs-comment"> * example, when requesting "/home" the router will look for a "/home" route. When that route is</span></pre>
 			</div>
 					<div class="line" id="line7">
 				<div class="number">7.</div>
-				<pre class="content"><span class="hljs-comment"> * for this router. For example, when creating a router "/user" and then routing "/home" will </span></pre>
+				<pre class="content"><span class="hljs-comment"> * found, the function that comes with the route is called. You can also create a child router</span></pre>
 			</div>
 					<div class="line" id="line8">
 				<div class="number">8.</div>
-				<pre class="content"><span class="hljs-comment"> * create the "/user/home" router. Still don't understand routing, take a look at the tutorial</span></pre>
+				<pre class="content"><span class="hljs-comment"> * for this router. For example, when creating a router "/user" and then routing "/home" will </span></pre>
 			</div>
 					<div class="line" id="line9">
 				<div class="number">9.</div>
-				<pre class="content"><span class="hljs-comment"> * about it.</span></pre>
+				<pre class="content"><span class="hljs-comment"> * create the "/user/home" router. Still don't understand routing, take a look at the tutorial</span></pre>
 			</div>
 					<div class="line" id="line10">
 				<div class="number">10.</div>
-				<pre class="content"><span class="hljs-comment"> * @example</span></pre>
+				<pre class="content"><span class="hljs-comment"> * about it.</span></pre>
 			</div>
 					<div class="line" id="line11">
 				<div class="number">11.</div>
-				<pre class="content"><span class="hljs-comment"> * cerus.router().route("/home");</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @example</span></pre>
 			</div>
 					<div class="line" id="line12">
 				<div class="number">12.</div>
-				<pre class="content"><span class="hljs-comment"> * // -&gt; will route the /home route.</span></pre>
+				<pre class="content"><span class="hljs-comment"> * cerus.router().route("/home");</span></pre>
 			</div>
 					<div class="line" id="line13">
 				<div class="number">13.</div>
-				<pre class="content"><span class="hljs-comment"> * @class router</span></pre>
+				<pre class="content"><span class="hljs-comment"> * // -&gt; will route the /home route.</span></pre>
 			</div>
 					<div class="line" id="line14">
 				<div class="number">14.</div>
-				<pre class="content"><span class="hljs-comment"> */</span></pre>
+				<pre class="content"><span class="hljs-comment"> * @class router</span></pre>
 			</div>
 					<div class="line" id="line15">
 				<div class="number">15.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">route</span> </span>{</pre>
+				<pre class="content"><span class="hljs-comment"> */</span></pre>
 			</div>
 					<div class="line" id="line16">
 				<div class="number">16.</div>
-				<pre class="content">	<span class="hljs-keyword">constructor</span>(cerus, path) {</pre>
+				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">route</span> </span>{</pre>
 			</div>
 					<div class="line" id="line17">
 				<div class="number">17.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._path = path || <span class="hljs-string">""</span>;</pre>
+				<pre class="content">	<span class="hljs-keyword">constructor</span>(cerus, path = "") {</pre>
 			</div>
 					<div class="line" id="line18">
 				<div class="number">18.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._stack = [];</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._path = path;</pre>
 			</div>
 					<div class="line" id="line19">
 				<div class="number">19.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._stack = [];</pre>
 			</div>
 					<div class="line" id="line20">
 				<div class="number">20.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._methods = [<span class="hljs-string">"GET"</span>, <span class="hljs-string">"POST"</span>, <span class="hljs-string">"PUT"</span>, <span class="hljs-string">"DELETE"</span>, <span class="hljs-string">"HEAD"</span>];</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus = cerus;</pre>
 			</div>
 					<div class="line" id="line21">
 				<div class="number">21.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line22">
 				<div class="number">22.</div>
-				<pre class="content">		<span class="hljs-comment">// Documentation for this can be found at the end of the class</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line23">
 				<div class="number">23.</div>
-				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>._methods.length; i++) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line24">
 				<div class="number">24.</div>
-				<pre class="content">			<span class="hljs-keyword">const</span> method = <span class="hljs-keyword">this</span>._methods[i];</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return a new child router. A child router inherits this router's path and</span></pre>
 			</div>
 					<div class="line" id="line25">
 				<div class="number">25.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * adds the specified path to it. The path used must be a valid url path. These child routers </span></pre>
 			</div>
 					<div class="line" id="line26">
 				<div class="number">26.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>[method.toLowerCase()] = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">path, priority</span>) </span>{</pre>
+				<pre class="content"><span class="hljs-comment">	 * are used to easily prefix routes.</span></pre>
 			</div>
 					<div class="line" id="line27">
 				<div class="number">27.</div>
-				<pre class="content">				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.route(path, method, priority);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line28">
 				<div class="number">28.</div>
-				<pre class="content">			};</pre>
+				<pre class="content"><span class="hljs-comment">	 * var router = cerus.router().router("/user");</span></pre>
 			</div>
 					<div class="line" id="line29">
 				<div class="number">29.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; router is now a child router of the root router</span></pre>
 			</div>
 					<div class="line" id="line30">
 				<div class="number">30.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 *</span></pre>
 			</div>
 					<div class="line" id="line31">
 				<div class="number">31.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * router.route("/home");</span></pre>
 			</div>
 					<div class="line" id="line32">
 				<div class="number">32.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; this will route "/user/home"</span></pre>
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return a new child router. A child router inherits this router's path and</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Creates a child router.</span></pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content"><span class="hljs-comment">	 * adds the specified path to it. The path used must be a valid url path. These child routers </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path of the child router.</span></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content"><span class="hljs-comment">	 * are used to easily prefix routes.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The child router.</span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function router</span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content"><span class="hljs-comment">	 * var router = cerus.router().router("/user");</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; router is now a child router of the root router</span></pre>
+				<pre class="content">	router(path) {</pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content"><span class="hljs-comment">	 *</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.check(path)) {</pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content"><span class="hljs-comment">	 * router.route("/home");</span></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the argument path must be a valid url path"</span>);</pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; this will route "/user/home"</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Creates a child router.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path of the child router.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">const</span> _route = <span class="hljs-keyword">new</span> route(<span class="hljs-keyword">this</span>._cerus, <span class="hljs-keyword">this</span>._path + path);</pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Class} The child router.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function router</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {</pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">			<span class="hljs-keyword">this</span>._stack.push(<span class="hljs-keyword">new</span> layer(path, <span class="hljs-keyword">this</span>._path, event, {<span class="hljs-attr">route</span>: _route}));</pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
-				<pre class="content">	router(path) {</pre>
+				<pre class="content">		})</pre>
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		.then(<span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {</pre>
 			</div>
 					<div class="line" id="line49">
 				<div class="number">49.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument path must be a string"</span>);</pre>
+				<pre class="content">			_route.handle(req, res);</pre>
 			</div>
 					<div class="line" id="line50">
 				<div class="number">50.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		});</pre>
 			</div>
 					<div class="line" id="line51">
 				<div class="number">51.</div>
@@ -344,67 +354,67 @@
 			</div>
 					<div class="line" id="line52">
 				<div class="number">52.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.check(path)) {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> _route;</pre>
 			</div>
 					<div class="line" id="line53">
 				<div class="number">53.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the argument path must be a valid url path"</span>);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line54">
 				<div class="number">54.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line55">
 				<div class="number">55.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line56">
 				<div class="number">56.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> route_ = <span class="hljs-keyword">new</span> route(<span class="hljs-keyword">this</span>._cerus, <span class="hljs-keyword">this</span>._path + path);</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is called by incoming requests. It is not recommended to use this function </span></pre>
 			</div>
 					<div class="line" id="line57">
 				<div class="number">57.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * unless you know what you're doing. This function goes through all the routes in this </span></pre>
 			</div>
 					<div class="line" id="line58">
 				<div class="number">58.</div>
-				<pre class="content">		<span class="hljs-comment">// Push a new layer to the stack array and handle the layer when requested</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * router's stack and searches for a match with the url and method. If a match is found it'll</span></pre>
 			</div>
 					<div class="line" id="line59">
 				<div class="number">59.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content"><span class="hljs-comment">	 * call the funtion that comes with the route.</span></pre>
 			</div>
 					<div class="line" id="line60">
 				<div class="number">60.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._stack.push(<span class="hljs-keyword">new</span> layer(path, <span class="hljs-keyword">this</span>._path, event, {<span class="hljs-attr">route</span>: route_}));</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Handles an incoming request.</span></pre>
 			</div>
 					<div class="line" id="line61">
 				<div class="number">61.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>))</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Class} req The request class.</span></pre>
 			</div>
 					<div class="line" id="line62">
 				<div class="number">62.</div>
-				<pre class="content">		.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Class} res The response class.</span></pre>
 			</div>
 					<div class="line" id="line63">
 				<div class="number">63.</div>
-				<pre class="content">			route_.handle(req, res);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function handle</span></pre>
 			</div>
 					<div class="line" id="line64">
 				<div class="number">64.</div>
-				<pre class="content">		});</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line65">
 				<div class="number">65.</div>
-				<pre class="content"></pre>
+				<pre class="content">	handle(req, res) {</pre>
 			</div>
 					<div class="line" id="line66">
 				<div class="number">66.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> route_;</pre>
+				<pre class="content">		<span class="hljs-keyword">let</span> matches = <span class="hljs-number">0</span>;</pre>
 			</div>
 					<div class="line" id="line67">
 				<div class="number">67.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;</pre>
 			</div>
 					<div class="line" id="line68">
 				<div class="number">68.</div>
@@ -412,171 +422,171 @@
 			</div>
 					<div class="line" id="line69">
 				<div class="number">69.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">const</span> next = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</pre>
 			</div>
 					<div class="line" id="line70">
 				<div class="number">70.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function is called by incoming requests. It is not recommended to use this function </span></pre>
+				<pre class="content">			<span class="hljs-keyword">let</span> match = <span class="hljs-literal">false</span>;</pre>
 			</div>
 					<div class="line" id="line71">
 				<div class="number">71.</div>
-				<pre class="content"><span class="hljs-comment">	 * unless you know what you're doing. This function goes through all the routes in this </span></pre>
+				<pre class="content">			<span class="hljs-keyword">const</span> path = req.pathname();</pre>
 			</div>
 					<div class="line" id="line72">
 				<div class="number">72.</div>
-				<pre class="content"><span class="hljs-comment">	 * router's stack and searches for a match with the url and method. If a match is found it'll</span></pre>
+				<pre class="content">			<span class="hljs-keyword">const</span> method = req.method();</pre>
 			</div>
 					<div class="line" id="line73">
 				<div class="number">73.</div>
-				<pre class="content"><span class="hljs-comment">	 * call the funtion that comes with the route.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line74">
 				<div class="number">74.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Handles an incoming request.</span></pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(matches &gt; <span class="hljs-number">0</span>) {</pre>
 			</div>
 					<div class="line" id="line75">
 				<div class="number">75.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Class} req The request class.</span></pre>
+				<pre class="content">				matches--;</pre>
 			</div>
 					<div class="line" id="line76">
 				<div class="number">76.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Class} res The response class.</span></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line77">
 				<div class="number">77.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function handle</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line78">
 				<div class="number">78.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">			<span class="hljs-comment">// Go through the layer until a match is found, else send a 404 error</span></pre>
 			</div>
 					<div class="line" id="line79">
 				<div class="number">79.</div>
-				<pre class="content">	handle(req, res) {</pre>
+				<pre class="content">			<span class="hljs-keyword">while</span>(match !== <span class="hljs-literal">true</span> &amp;&amp; i &lt; <span class="hljs-keyword">this</span>._stack.length) {</pre>
 			</div>
 					<div class="line" id="line80">
 				<div class="number">80.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> matches = <span class="hljs-number">0</span>;</pre>
+				<pre class="content">				<span class="hljs-keyword">const</span> layer = <span class="hljs-keyword">this</span>._stack[i++];</pre>
 			</div>
 					<div class="line" id="line81">
 				<div class="number">81.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;</pre>
+				<pre class="content">				</pre>
 			</div>
 					<div class="line" id="line82">
 				<div class="number">82.</div>
-				<pre class="content"></pre>
+				<pre class="content">				match = layer.match(path, method);</pre>
 			</div>
 					<div class="line" id="line83">
 				<div class="number">83.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> next = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line84">
 				<div class="number">84.</div>
-				<pre class="content">			<span class="hljs-keyword">var</span> match = <span class="hljs-literal">false</span>;</pre>
+				<pre class="content">				<span class="hljs-keyword">if</span>(match) {</pre>
 			</div>
 					<div class="line" id="line85">
 				<div class="number">85.</div>
-				<pre class="content">			<span class="hljs-keyword">var</span> path = req.pathname();</pre>
+				<pre class="content">					matches++;</pre>
 			</div>
 					<div class="line" id="line86">
 				<div class="number">86.</div>
-				<pre class="content">			<span class="hljs-keyword">var</span> method = req.method();</pre>
+				<pre class="content">					layer.callback(<span class="hljs-string">"request"</span>, req, res, next);</pre>
 			</div>
 					<div class="line" id="line87">
 				<div class="number">87.</div>
-				<pre class="content"></pre>
+				<pre class="content">				}</pre>
 			</div>
 					<div class="line" id="line88">
 				<div class="number">88.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(matches &gt; <span class="hljs-number">0</span>) {</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line89">
 				<div class="number">89.</div>
-				<pre class="content">				matches--;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line90">
 				<div class="number">90.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(i === <span class="hljs-keyword">this</span>._stack.length &amp;&amp; matches === <span class="hljs-number">0</span> &amp;&amp; !res.ended()) {</pre>
 			</div>
 					<div class="line" id="line91">
 				<div class="number">91.</div>
-				<pre class="content"></pre>
+				<pre class="content">				res.code(<span class="hljs-number">404</span>);</pre>
 			</div>
 					<div class="line" id="line92">
 				<div class="number">92.</div>
-				<pre class="content">			<span class="hljs-comment">// Go through the layer until a match is found, else send a 404 error</span></pre>
+				<pre class="content">				res.end();</pre>
 			</div>
 					<div class="line" id="line93">
 				<div class="number">93.</div>
-				<pre class="content">			<span class="hljs-keyword">while</span>(match !== <span class="hljs-literal">true</span> &amp;&amp; i &lt; <span class="hljs-keyword">this</span>._stack.length) {</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line94">
 				<div class="number">94.</div>
-				<pre class="content">				<span class="hljs-keyword">var</span> layer = <span class="hljs-keyword">this</span>._stack[i++];</pre>
+				<pre class="content">		};</pre>
 			</div>
 					<div class="line" id="line95">
 				<div class="number">95.</div>
-				<pre class="content">				</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line96">
 				<div class="number">96.</div>
-				<pre class="content">				match = layer.match(path, method);</pre>
+				<pre class="content">		next();</pre>
 			</div>
 					<div class="line" id="line97">
 				<div class="number">97.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line98">
 				<div class="number">98.</div>
-				<pre class="content">				<span class="hljs-keyword">if</span>(match) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line99">
 				<div class="number">99.</div>
-				<pre class="content">					matches++;</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line100">
 				<div class="number">100.</div>
-				<pre class="content">					layer.callback(<span class="hljs-string">"request"</span>, req, res, next);</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will check if the inserted path is valid.</span></pre>
 			</div>
 					<div class="line" id="line101">
 				<div class="number">101.</div>
-				<pre class="content">				}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line102">
 				<div class="number">102.</div>
-				<pre class="content">			}</pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.router().check("/example/ /path/");</span></pre>
 			</div>
 					<div class="line" id="line103">
 				<div class="number">103.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return false because the path is invalid</span></pre>
 			</div>
 					<div class="line" id="line104">
 				<div class="number">104.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(i === <span class="hljs-keyword">this</span>._stack.length &amp;&amp; matches === <span class="hljs-number">0</span> &amp;&amp; !res.ended()) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the path is valid.</span></pre>
 			</div>
 					<div class="line" id="line105">
 				<div class="number">105.</div>
-				<pre class="content">				res.code(<span class="hljs-number">404</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path that will be checked.</span></pre>
 			</div>
 					<div class="line" id="line106">
 				<div class="number">106.</div>
-				<pre class="content">				res.end();</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function check</span></pre>
 			</div>
 					<div class="line" id="line107">
 				<div class="number">107.</div>
-				<pre class="content">			}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line108">
 				<div class="number">108.</div>
-				<pre class="content">		};</pre>
+				<pre class="content">	check(path) {</pre>
 			</div>
 					<div class="line" id="line109">
 				<div class="number">109.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-regexp">/^[0-9a-zA-Z-._~:/?#[\]@!$&amp;'()*+,;=`.]+$/</span>.test(path);</pre>
 			</div>
 					<div class="line" id="line110">
 				<div class="number">110.</div>
-				<pre class="content">		next = next.bind(<span class="hljs-keyword">this</span>);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line111">
 				<div class="number">111.</div>
@@ -584,67 +594,67 @@
 			</div>
 					<div class="line" id="line112">
 				<div class="number">112.</div>
-				<pre class="content">		next();</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line113">
 				<div class="number">113.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * With this function you can remove previously added routes. To remove the path you have to </span></pre>
 			</div>
 					<div class="line" id="line114">
 				<div class="number">114.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * specify it's path and if the route isn't universal, it's method. When no route was found </span></pre>
 			</div>
 					<div class="line" id="line115">
 				<div class="number">115.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * that matched your parameters an Error is thrown.</span></pre>
 			</div>
 					<div class="line" id="line116">
 				<div class="number">116.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will check if the inserted path is valid.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line117">
 				<div class="number">117.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // with the route "/home" added</span></pre>
 			</div>
 					<div class="line" id="line118">
 				<div class="number">118.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.router().check("/example/ /path/");</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.router().remove("/home");</span></pre>
 			</div>
 					<div class="line" id="line119">
 				<div class="number">119.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will return false because the path is invalid</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; will remove the "/home" path</span></pre>
 			</div>
 					<div class="line" id="line120">
 				<div class="number">120.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the path is valid.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Removes the specified route.</span></pre>
 			</div>
 					<div class="line" id="line121">
 				<div class="number">121.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path that will be checked.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
 			</div>
 					<div class="line" id="line122">
 				<div class="number">122.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function check</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line123">
 				<div class="number">123.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	remove(path, {method} = {}) {</pre>
 			</div>
 					<div class="line" id="line124">
 				<div class="number">124.</div>
-				<pre class="content">	check(path) {</pre>
+				<pre class="content">		<span class="hljs-keyword">let</span> changed = <span class="hljs-literal">false</span>;</pre>
 			</div>
 					<div class="line" id="line125">
 				<div class="number">125.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line126">
 				<div class="number">126.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument path must be a string"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>._stack.length; i++) {</pre>
 			</div>
 					<div class="line" id="line127">
 				<div class="number">127.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			<span class="hljs-keyword">const</span> _layer = <span class="hljs-keyword">this</span>._stack[i];</pre>
 			</div>
 					<div class="line" id="line128">
 				<div class="number">128.</div>
@@ -652,11 +662,11 @@
 			</div>
 					<div class="line" id="line129">
 				<div class="number">129.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-regexp">/^[0-9a-zA-Z-._~:/?#[\]@!$&amp;'()*+,;=`.]+$/</span>.test(path);</pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(_layer.path === path &amp;&amp; (method === <span class="hljs-literal">undefined</span> || (_layer.method === method || _layer.method === <span class="hljs-string">"ALL"</span>))) {</pre>
 			</div>
 					<div class="line" id="line130">
 				<div class="number">130.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>._stack.splice(i);</pre>
 			</div>
 					<div class="line" id="line131">
 				<div class="number">131.</div>
@@ -664,722 +674,578 @@
 			</div>
 					<div class="line" id="line132">
 				<div class="number">132.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">				changed = <span class="hljs-literal">true</span>;</pre>
 			</div>
 					<div class="line" id="line133">
 				<div class="number">133.</div>
-				<pre class="content"><span class="hljs-comment">	 * With this function you can remove previously added routes. To remove the path you have to </span></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line134">
 				<div class="number">134.</div>
-				<pre class="content"><span class="hljs-comment">	 * specify it's path and if the route isn't universal, it's method. When no route was found </span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line135">
 				<div class="number">135.</div>
-				<pre class="content"><span class="hljs-comment">	 * that matched your parameters an Error is thrown.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line136">
 				<div class="number">136.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!changed) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the path "</span> + path + <span class="hljs-string">" wasn't found, so couldn't be removed"</span>);</pre>
 			</div>
 					<div class="line" id="line137">
 				<div class="number">137.</div>
-				<pre class="content"><span class="hljs-comment">	 * // with the route "/home" added</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line138">
 				<div class="number">138.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.router().remove("/home");</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line139">
 				<div class="number">139.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; will remove the "/home" path</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line140">
 				<div class="number">140.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Removes the specified route.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return a list of all the routes mapped by their path.</span></pre>
 			</div>
 					<div class="line" id="line141">
 				<div class="number">141.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns all the routes.</span></pre>
 			</div>
 					<div class="line" id="line142">
 				<div class="number">142.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String[]} The list of all the routes.</span></pre>
 			</div>
 					<div class="line" id="line143">
 				<div class="number">143.</div>
-				<pre class="content">	remove(path, method) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function routes</span></pre>
 			</div>
 					<div class="line" id="line144">
 				<div class="number">144.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line145">
 				<div class="number">145.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument path must be a string"</span>);</pre>
+				<pre class="content">	routes() {</pre>
 			</div>
 					<div class="line" id="line146">
 				<div class="number">146.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._stack.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x.path);</pre>
 			</div>
 					<div class="line" id="line147">
 				<div class="number">147.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line148">
 				<div class="number">148.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> changed = <span class="hljs-literal">false</span>;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line149">
 				<div class="number">149.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line150">
 				<div class="number">150.</div>
-				<pre class="content">		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">this</span>._stack.length; i++) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is for adding middleware. Middleware are routes with things that have to be </span></pre>
 			</div>
 					<div class="line" id="line151">
 				<div class="number">151.</div>
-				<pre class="content">			<span class="hljs-keyword">var</span> layer_ = <span class="hljs-keyword">this</span>._stack[i];</pre>
+				<pre class="content"><span class="hljs-comment">	 * called before the other routes. The path for middleware is "*", meaning that it matches all</span></pre>
 			</div>
 					<div class="line" id="line152">
 				<div class="number">152.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * possible requests. The priority for middleware is set to true so it's called before the </span></pre>
 			</div>
 					<div class="line" id="line153">
 				<div class="number">153.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(layer_.path === path &amp;&amp; (method === <span class="hljs-literal">undefined</span> || (layer_.method === method || layer_.method === <span class="hljs-string">"ALL"</span>))) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * other routes. Middleware shouldn't use values that could be changed or is added by other</span></pre>
 			</div>
 					<div class="line" id="line154">
 				<div class="number">154.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>._stack.splice(i);</pre>
+				<pre class="content"><span class="hljs-comment">	 * middleware to prevent unpredictable behaviour. When working with middleware it is important</span></pre>
 			</div>
 					<div class="line" id="line155">
 				<div class="number">155.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * to not forget to call next when your middleware is done. If your don't the request won't be</span></pre>
 			</div>
 					<div class="line" id="line156">
 				<div class="number">156.</div>
-				<pre class="content">				changed = <span class="hljs-literal">true</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * finished. For more information about routing take a look at {@link router.route} or at the </span></pre>
 			</div>
 					<div class="line" id="line157">
 				<div class="number">157.</div>
-				<pre class="content">			}</pre>
+				<pre class="content"><span class="hljs-comment">	 * tutorial about this subject.</span></pre>
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line159">
 				<div class="number">159.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.router().use()</span></pre>
 			</div>
 					<div class="line" id="line160">
 				<div class="number">160.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!changed) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * .then(function(req, res, next) {</span></pre>
 			</div>
 					<div class="line" id="line161">
 				<div class="number">161.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the path "</span> + path + <span class="hljs-string">" wasn't found, so couldn't be removed"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * // your code here and don't forget to call next when your done.</span></pre>
 			</div>
 					<div class="line" id="line162">
 				<div class="number">162.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * });</span></pre>
 			</div>
 					<div class="line" id="line163">
 				<div class="number">163.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new middleware.</span></pre>
 			</div>
 					<div class="line" id="line164">
 				<div class="number">164.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line165">
 				<div class="number">165.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function use</span></pre>
 			</div>
 					<div class="line" id="line166">
 				<div class="number">166.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return a list of all the routes mapped by their path.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line167">
 				<div class="number">167.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns all the routes.</span></pre>
+				<pre class="content">	use() {</pre>
 			</div>
 					<div class="line" id="line168">
 				<div class="number">168.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String[]} The list of all the routes.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.route(<span class="hljs-string">"*"</span>, {<span class="hljs-attr">priority</span>: <span class="hljs-literal">true</span>});</pre>
 			</div>
 					<div class="line" id="line169">
 				<div class="number">169.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function routes</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line170">
 				<div class="number">170.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line171">
 				<div class="number">171.</div>
-				<pre class="content">	routes() {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line172">
 				<div class="number">172.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._stack.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x.path);</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function is used to route a new route. Using these routes we can "sort" a incoming </span></pre>
 			</div>
 					<div class="line" id="line173">
 				<div class="number">173.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * request based on it's url. For example, when adding the "/home" route, all requests with the</span></pre>
 			</div>
 					<div class="line" id="line174">
 				<div class="number">174.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * "/home" url will cause the handler for the added route to be called. When the handler is </span></pre>
 			</div>
 					<div class="line" id="line175">
 				<div class="number">175.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * called three parameters are added. The first is the request class. This class contains all</span></pre>
 			</div>
 					<div class="line" id="line176">
 				<div class="number">176.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function is for adding middleware. Middleware are routes with things that have to be </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * functions you need to get information about the request. The second parameter is the </span></pre>
 			</div>
 					<div class="line" id="line177">
 				<div class="number">177.</div>
-				<pre class="content"><span class="hljs-comment">	 * called before the other routes. The path for middleware is "*", meaning that it matches all</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * response class. This class contains the functions you needed to create and send the </span></pre>
 			</div>
 					<div class="line" id="line178">
 				<div class="number">178.</div>
-				<pre class="content"><span class="hljs-comment">	 * possible requests. The priority for middleware is set to true so it's called before the </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * response. The last parameter is the next function. When you don't "want" to handle the </span></pre>
 			</div>
 					<div class="line" id="line179">
 				<div class="number">179.</div>
-				<pre class="content"><span class="hljs-comment">	 * other routes. Middleware shouldn't use values that could be changed or is added by other</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * request you call this function and the router will search for another handler to handle the</span></pre>
 			</div>
 					<div class="line" id="line180">
 				<div class="number">180.</div>
-				<pre class="content"><span class="hljs-comment">	 * middleware to prevent unpredictable behaviour. When working with middleware it is important</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * request. You can also change the method that is used with the route. By default the "ALL" </span></pre>
 			</div>
 					<div class="line" id="line181">
 				<div class="number">181.</div>
-				<pre class="content"><span class="hljs-comment">	 * to not forget to call next when your middleware is done. If your don't the request won't be</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * method is used, meaning that all methods are accepted. When you change this method the </span></pre>
 			</div>
 					<div class="line" id="line182">
 				<div class="number">182.</div>
-				<pre class="content"><span class="hljs-comment">	 * finished. For more information about routing take a look at {@link router.route} or at the </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * handler will also check if the route's method matches with the request's method. Lastly you</span></pre>
 			</div>
 					<div class="line" id="line183">
 				<div class="number">183.</div>
-				<pre class="content"><span class="hljs-comment">	 * tutorial about this subject.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * can change the priority. The priority defines where the route will be placed in the stack,</span></pre>
 			</div>
 					<div class="line" id="line184">
 				<div class="number">184.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * the list of routes. You want routes like middleware to be in the front so they are called </span></pre>
 			</div>
 					<div class="line" id="line185">
 				<div class="number">185.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.router().use()</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * before the other routes. For more information about routing look at the tutorial about it.</span></pre>
 			</div>
 					<div class="line" id="line186">
 				<div class="number">186.</div>
-				<pre class="content"><span class="hljs-comment">	 * .then(function(req, res, next) {</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
 			</div>
 					<div class="line" id="line187">
 				<div class="number">187.</div>
-				<pre class="content"><span class="hljs-comment">	 * // your code here and don't forget to call next when your done.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * cerus.router().route("/home", {method: "GET"})</span></pre>
 			</div>
 					<div class="line" id="line188">
 				<div class="number">188.</div>
-				<pre class="content"><span class="hljs-comment">	 * });</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * .then(function(req, res, next) {</span></pre>
 			</div>
 					<div class="line" id="line189">
 				<div class="number">189.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new middleware.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 *   // this function is called when someone uses the "/home" route</span></pre>
 			</div>
 					<div class="line" id="line190">
 				<div class="number">190.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * });</span></pre>
 			</div>
 					<div class="line" id="line191">
 				<div class="number">191.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function use</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * // -&gt; adds the new "/home" route.</span></pre>
 			</div>
 					<div class="line" id="line192">
 				<div class="number">192.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route.</span></pre>
 			</div>
 					<div class="line" id="line193">
 				<div class="number">193.</div>
-				<pre class="content">	use() {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
 			</div>
 					<div class="line" id="line194">
 				<div class="number">194.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.route(<span class="hljs-string">"*"</span>, <span class="hljs-literal">true</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Object} (options = {}) The options parameter.</span></pre>
 			</div>
 					<div class="line" id="line195">
 				<div class="number">195.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (options.method = "ALL") The method the route will use.</span></pre>
 			</div>
 					<div class="line" id="line196">
 				<div class="number">196.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (options.priority = false) The priority of the route.</span></pre>
 			</div>
 					<div class="line" id="line197">
 				<div class="number">197.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line198">
 				<div class="number">198.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function is used to route a new route. Using these routes we can "sort" a incoming </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function route</span></pre>
 			</div>
 					<div class="line" id="line199">
 				<div class="number">199.</div>
-				<pre class="content"><span class="hljs-comment">	 * request based on it's url. For example, when adding the "/home" route, all requests with the</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line200">
 				<div class="number">200.</div>
-				<pre class="content"><span class="hljs-comment">	 * "/home" url will cause the handler for the added route to be called. When the handler is </span></pre>
+				<pre class="content">	route(path, {method = <span class="hljs-string">"ALL"</span>, priority = <span class="hljs-literal">false</span>} = {}) {</pre>
 			</div>
 					<div class="line" id="line201">
 				<div class="number">201.</div>
-				<pre class="content"><span class="hljs-comment">	 * called three parameters are added. The first is the request class. This class contains all</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.check(path)) {</pre>
 			</div>
 					<div class="line" id="line202">
 				<div class="number">202.</div>
-				<pre class="content"><span class="hljs-comment">	 * functions you need to get information about the request. The second parameter is the </span></pre>
+				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the argument path must be a valid url path"</span>);</pre>
 			</div>
 					<div class="line" id="line203">
 				<div class="number">203.</div>
-				<pre class="content"><span class="hljs-comment">	 * response class. This class contains the functions you needed to create and send the </span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line204">
 				<div class="number">204.</div>
-				<pre class="content"><span class="hljs-comment">	 * response. The last parameter is the next function. When you don't "want" to handle the </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line205">
 				<div class="number">205.</div>
-				<pre class="content"><span class="hljs-comment">	 * request you call this function and the router will search for another handler to handle the</span></pre>
+				<pre class="content">		<span class="hljs-comment">// Push a new layer to the stack, placed depending on it's priority</span></pre>
 			</div>
 					<div class="line" id="line206">
 				<div class="number">206.</div>
-				<pre class="content"><span class="hljs-comment">	 * request. You can also change the method that is used with the route. By default the "ALL" </span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line207">
 				<div class="number">207.</div>
-				<pre class="content"><span class="hljs-comment">	 * method is used, meaning that all methods are accepted. When you change this method the </span></pre>
+				<pre class="content">			<span class="hljs-keyword">if</span>(priority) {</pre>
 			</div>
 					<div class="line" id="line208">
 				<div class="number">208.</div>
-				<pre class="content"><span class="hljs-comment">	 * handler will also check if the route's method matches with the request's method. Lastly you</span></pre>
+				<pre class="content">				<span class="hljs-keyword">var</span> index = <span class="hljs-keyword">this</span>._stack.findIndex(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> !x.priority);</pre>
 			</div>
 					<div class="line" id="line209">
 				<div class="number">209.</div>
-				<pre class="content"><span class="hljs-comment">	 * can change the priority. The priority defines where the route will be placed in the stack,</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line210">
 				<div class="number">210.</div>
-				<pre class="content"><span class="hljs-comment">	 * the list of routes. You want routes like middleware to be in the front so they are called </span></pre>
+				<pre class="content">				index = index === <span class="hljs-number">-1</span> ? <span class="hljs-keyword">this</span>._stack.length : index;</pre>
 			</div>
 					<div class="line" id="line211">
 				<div class="number">211.</div>
-				<pre class="content"><span class="hljs-comment">	 * before the other routes. For more information about routing look at the tutorial about it.</span></pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>._stack.splice(index, <span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> layer(path, <span class="hljs-keyword">this</span>._path, event, {method, priority}));</pre>
 			</div>
 					<div class="line" id="line212">
 				<div class="number">212.</div>
-				<pre class="content"><span class="hljs-comment">	 * @example</span></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line213">
 				<div class="number">213.</div>
-				<pre class="content"><span class="hljs-comment">	 * cerus.router().route("/home")</span></pre>
+				<pre class="content">			<span class="hljs-keyword">else</span> {</pre>
 			</div>
 					<div class="line" id="line214">
 				<div class="number">214.</div>
-				<pre class="content"><span class="hljs-comment">	 * .then(function(req, res, next) {</span></pre>
+				<pre class="content">				<span class="hljs-keyword">this</span>._stack.push(<span class="hljs-keyword">new</span> layer(path, <span class="hljs-keyword">this</span>._path, event, {method}));</pre>
 			</div>
 					<div class="line" id="line215">
 				<div class="number">215.</div>
-				<pre class="content"><span class="hljs-comment">	 * // this function is called when someone uses the "/home" route</span></pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line216">
 				<div class="number">216.</div>
-				<pre class="content"><span class="hljs-comment">	 * });</span></pre>
+				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
 			</div>
 					<div class="line" id="line217">
 				<div class="number">217.</div>
-				<pre class="content"><span class="hljs-comment">	 * // -&gt; adds the new "/home" route.</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line218">
 				<div class="number">218.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line219">
 				<div class="number">219.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
+				<pre class="content">	<span class="hljs-comment">// These functions are added in the constructor</span></pre>
 			</div>
 					<div class="line" id="line220">
 				<div class="number">220.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (method = "ALL") The method the route will use.</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line221">
 				<div class="number">221.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "GET" as method. For more information about routing </span></pre>
 			</div>
 					<div class="line" id="line222">
 				<div class="number">222.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
 			</div>
 					<div class="line" id="line223">
 				<div class="number">223.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function route</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with GET as method.</span></pre>
 			</div>
 					<div class="line" id="line224">
 				<div class="number">224.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
 			</div>
 					<div class="line" id="line225">
 				<div class="number">225.</div>
-				<pre class="content">	route(path, method, priority) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
 			</div>
 					<div class="line" id="line226">
 				<div class="number">226.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line227">
 				<div class="number">227.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument path must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function get</span></pre>
 			</div>
 					<div class="line" id="line228">
 				<div class="number">228.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line229">
 				<div class="number">229.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line230">
 				<div class="number">230.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>.check(path)) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "POST" as method. For more information about routing </span></pre>
 			</div>
 					<div class="line" id="line231">
 				<div class="number">231.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the argument path must be a valid url path"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
 			</div>
 					<div class="line" id="line232">
 				<div class="number">232.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with POST as method.</span></pre>
 			</div>
 					<div class="line" id="line233">
 				<div class="number">233.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
 			</div>
 					<div class="line" id="line234">
 				<div class="number">234.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> method_ = <span class="hljs-string">"ALL"</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
 			</div>
 					<div class="line" id="line235">
 				<div class="number">235.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> priority_ = <span class="hljs-literal">false</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line236">
 				<div class="number">236.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function post</span></pre>
 			</div>
 					<div class="line" id="line237">
 				<div class="number">237.</div>
-				<pre class="content">		<span class="hljs-comment">// Set the arguments depending on there type</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line238">
 				<div class="number">238.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> method === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line239">
 				<div class="number">239.</div>
-				<pre class="content">			method_ = method;</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "DELETE" as method. For more information about routing </span></pre>
 			</div>
 					<div class="line" id="line240">
 				<div class="number">240.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
 			</div>
 					<div class="line" id="line241">
 				<div class="number">241.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> priority === <span class="hljs-string">"boolean"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with DELETE as method.</span></pre>
 			</div>
 					<div class="line" id="line242">
 				<div class="number">242.</div>
-				<pre class="content">				priority_ = priority;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
 			</div>
 					<div class="line" id="line243">
 				<div class="number">243.</div>
-				<pre class="content">			}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
 			</div>
 					<div class="line" id="line244">
 				<div class="number">244.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line245">
 				<div class="number">245.</div>
-				<pre class="content">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> method === <span class="hljs-string">"boolean"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function delete</span></pre>
 			</div>
 					<div class="line" id="line246">
 				<div class="number">246.</div>
-				<pre class="content">			priority_ = method;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line247">
 				<div class="number">247.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line248">
 				<div class="number">248.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "HEAD" as method. For more information about routing </span></pre>
 			</div>
 					<div class="line" id="line249">
 				<div class="number">249.</div>
-				<pre class="content">		<span class="hljs-comment">// Push a new layer to the stack, placed depending on it's priority</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
 			</div>
 					<div class="line" id="line250">
 				<div class="number">250.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._cerus.promise(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with HEAD as method.</span></pre>
 			</div>
 					<div class="line" id="line251">
 				<div class="number">251.</div>
-				<pre class="content">			<span class="hljs-keyword">if</span>(priority_) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
 			</div>
 					<div class="line" id="line252">
 				<div class="number">252.</div>
-				<pre class="content">				<span class="hljs-keyword">var</span> index = <span class="hljs-keyword">this</span>._stack.findIndex(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> !x.priority);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
 			</div>
 					<div class="line" id="line253">
 				<div class="number">253.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line254">
 				<div class="number">254.</div>
-				<pre class="content">				index = index === <span class="hljs-number">-1</span> ? <span class="hljs-keyword">this</span>._stack.length : index;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function head</span></pre>
 			</div>
 					<div class="line" id="line255">
 				<div class="number">255.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>._stack.splice(index, <span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> layer(path, <span class="hljs-keyword">this</span>._path, event, {<span class="hljs-attr">method</span>: method_, <span class="hljs-attr">priority</span>: <span class="hljs-literal">true</span>}));</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line256">
 				<div class="number">256.</div>
-				<pre class="content">			}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line257">
 				<div class="number">257.</div>
-				<pre class="content">			<span class="hljs-keyword">else</span> {</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "PUT" as method. For more information about routing </span></pre>
 			</div>
 					<div class="line" id="line258">
 				<div class="number">258.</div>
-				<pre class="content">				<span class="hljs-keyword">this</span>._stack.push(<span class="hljs-keyword">new</span> layer(path, <span class="hljs-keyword">this</span>._path, event, {<span class="hljs-attr">method</span>: method_}));</pre>
+				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
 			</div>
 					<div class="line" id="line259">
 				<div class="number">259.</div>
-				<pre class="content">			}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with PUT as method.</span></pre>
 			</div>
 					<div class="line" id="line260">
 				<div class="number">260.</div>
-				<pre class="content">		}.bind(<span class="hljs-keyword">this</span>));</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
 			</div>
 					<div class="line" id="line261">
 				<div class="number">261.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
 			</div>
 					<div class="line" id="line262">
 				<div class="number">262.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
 			</div>
 					<div class="line" id="line263">
 				<div class="number">263.</div>
-				<pre class="content">	<span class="hljs-comment">// These functions are added in the constructor</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function put</span></pre>
 			</div>
 					<div class="line" id="line264">
 				<div class="number">264.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line265">
 				<div class="number">265.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "GET" as method. For more information about routing </span></pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line266">
 				<div class="number">266.</div>
-				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line267">
 				<div class="number">267.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with GET as method.</span></pre>
+				<pre class="content"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; methods.length; i++) {</pre>
 			</div>
 					<div class="line" id="line268">
 				<div class="number">268.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
+				<pre class="content">	<span class="hljs-keyword">const</span> method = methods[i];</pre>
 			</div>
 					<div class="line" id="line269">
 				<div class="number">269.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line270">
 				<div class="number">270.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
+				<pre class="content">	route.prototype[method.toLowerCase()] = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">path, options</span>) </span>{</pre>
 			</div>
 					<div class="line" id="line271">
 				<div class="number">271.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function get</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.route(path, <span class="hljs-built_in">Object</span>.assign({}, {method}, options));</pre>
 			</div>
 					<div class="line" id="line272">
 				<div class="number">272.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	};</pre>
 			</div>
 					<div class="line" id="line273">
 				<div class="number">273.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line274">
 				<div class="number">274.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "POST" as method. For more information about routing </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line275">
 				<div class="number">275.</div>
-				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
-			</div>
-					<div class="line" id="line276">
-				<div class="number">276.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with POST as method.</span></pre>
-			</div>
-					<div class="line" id="line277">
-				<div class="number">277.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
-			</div>
-					<div class="line" id="line278">
-				<div class="number">278.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
-			</div>
-					<div class="line" id="line279">
-				<div class="number">279.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
-			</div>
-					<div class="line" id="line280">
-				<div class="number">280.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function post</span></pre>
-			</div>
-					<div class="line" id="line281">
-				<div class="number">281.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line282">
-				<div class="number">282.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line283">
-				<div class="number">283.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "DELETE" as method. For more information about routing </span></pre>
-			</div>
-					<div class="line" id="line284">
-				<div class="number">284.</div>
-				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
-			</div>
-					<div class="line" id="line285">
-				<div class="number">285.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with DELETE as method.</span></pre>
-			</div>
-					<div class="line" id="line286">
-				<div class="number">286.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
-			</div>
-					<div class="line" id="line287">
-				<div class="number">287.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
-			</div>
-					<div class="line" id="line288">
-				<div class="number">288.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
-			</div>
-					<div class="line" id="line289">
-				<div class="number">289.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function delete</span></pre>
-			</div>
-					<div class="line" id="line290">
-				<div class="number">290.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line291">
-				<div class="number">291.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line292">
-				<div class="number">292.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "HEAD" as method. For more information about routing </span></pre>
-			</div>
-					<div class="line" id="line293">
-				<div class="number">293.</div>
-				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
-			</div>
-					<div class="line" id="line294">
-				<div class="number">294.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with HEAD as method.</span></pre>
-			</div>
-					<div class="line" id="line295">
-				<div class="number">295.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
-			</div>
-					<div class="line" id="line296">
-				<div class="number">296.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
-			</div>
-					<div class="line" id="line297">
-				<div class="number">297.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
-			</div>
-					<div class="line" id="line298">
-				<div class="number">298.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function head</span></pre>
-			</div>
-					<div class="line" id="line299">
-				<div class="number">299.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line300">
-				<div class="number">300.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line301">
-				<div class="number">301.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will create a route with "PUT" as method. For more information about routing </span></pre>
-			</div>
-					<div class="line" id="line302">
-				<div class="number">302.</div>
-				<pre class="content"><span class="hljs-comment">	 * take a look at the {@link router.route} function.</span></pre>
-			</div>
-					<div class="line" id="line303">
-				<div class="number">303.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Routes a new route with PUT as method.</span></pre>
-			</div>
-					<div class="line" id="line304">
-				<div class="number">304.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} path The path the route will use.</span></pre>
-			</div>
-					<div class="line" id="line305">
-				<div class="number">305.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (priority = false) The priority of the route.</span></pre>
-			</div>
-					<div class="line" id="line306">
-				<div class="number">306.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Promise} This function will return a promise.</span></pre>
-			</div>
-					<div class="line" id="line307">
-				<div class="number">307.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function put</span></pre>
-			</div>
-					<div class="line" id="line308">
-				<div class="number">308.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line309">
-				<div class="number">309.</div>
-				<pre class="content">}</pre>
-			</div>
-					<div class="line" id="line310">
-				<div class="number">310.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line311">
-				<div class="number">311.</div>
 				<pre class="content"><span class="hljs-built_in">module</span>.exports = route;</pre>
 			</div>
 			</div>

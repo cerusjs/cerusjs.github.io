@@ -9,7 +9,7 @@
 		<link href="/assets/css/highlight.css" rel="stylesheet">
 		<link href="/assets/css/markdown.css" rel="stylesheet">
 
-		<title>The CerusJS site!</title>
+		<title>CerusJS Documentation</title>
 	</head>
 	<body>
 		<div class="sidebar closed">
@@ -98,6 +98,16 @@
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="docs-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('docs')">
 				docs				<i class="fas fa-plus"></i>
@@ -147,13 +157,14 @@
 	<div class="class">
 		<div class="name">
 							.router()
-					</div>
+						<i class="fas fa-link"></i>
+		</div>
 		<div class="list">
 			<div class="item">
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-					<a href="/views/cerus-router/source/lib/route.js.html#line3">Line 3</a>
+					<a href="/views/cerus-router/source/lib/route.js.html#line4">Line 4</a>
 				</div>
 			</div>
 												<div class="item">
@@ -173,733 +184,752 @@
 			</div>
 
 	<!-- SUMMARY -->
-	<div class="summary">
-		<h2>Summary</h2>
-		<div class="table">
-			<div class="row head">
-				<div class="col a4">Name</div>
-				<div class="col a8">Description</div>
-			</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#router">router</a>
-					</div>
-					<div class="col a8">Creates a child router.</div>
+			<div class="summary">
+			<h2>Summary</h2>
+			<div class="table">
+				<div class="row head">
+					<div class="col a4">Name</div>
+					<div class="col a8">Description</div>
 				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#handle">handle</a>
-					</div>
-					<div class="col a8">Handles an incoming request.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#check">check</a>
-					</div>
-					<div class="col a8">Checks if the path is valid.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#remove">remove</a>
-					</div>
-					<div class="col a8">Removes the specified route.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#routes">routes</a>
-					</div>
-					<div class="col a8">Returns all the routes.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#use">use</a>
-					</div>
-					<div class="col a8">Routes a new middleware.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#route">route</a>
-					</div>
-					<div class="col a8">Routes a new route.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#get">get</a>
-					</div>
-					<div class="col a8">Routes a new route with GET as method.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#post">post</a>
-					</div>
-					<div class="col a8">Routes a new route with POST as method.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#delete">delete</a>
-					</div>
-					<div class="col a8">Routes a new route with DELETE as method.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#head">head</a>
-					</div>
-					<div class="col a8">Routes a new route with HEAD as method.</div>
-				</div>
-							<div class="row">
-					<div class="col a4">
-						<a href="/views/cerus-router/reference/router.html#put">put</a>
-					</div>
-					<div class="col a8">Routes a new route with PUT as method.</div>
-				</div>
-					</div>
-	</div>
-
-	<!-- FUNCTIONS -->
-	<div class="functions">
-		<h2>Functions</h2>
-					<div id="router" class="function">
-				<div class="name">
-					.router(path)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line32">Line 32</a>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#router">router</a>
 						</div>
+						<div class="col a8">Creates a child router.</div>
 					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Creates a child router.</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#handle">handle</a>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will return a new child router. A child router inherits this router&#39;s path and adds the specified path to it. The path used must be a valid url path. These child routers are used to easily prefix routes.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
+						<div class="col a8">Handles an incoming request.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#check">check</a>
+						</div>
+						<div class="col a8">Checks if the path is valid.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#remove">remove</a>
+						</div>
+						<div class="col a8">Removes the specified route.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#routes">routes</a>
+						</div>
+						<div class="col a8">Returns all the routes.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#use">use</a>
+						</div>
+						<div class="col a8">Routes a new middleware.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#route">route</a>
+						</div>
+						<div class="col a8">Routes a new route.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#get">get</a>
+						</div>
+						<div class="col a8">Routes a new route with GET as method.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#post">post</a>
+						</div>
+						<div class="col a8">Routes a new route with POST as method.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#delete">delete</a>
+						</div>
+						<div class="col a8">Routes a new route with DELETE as method.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#head">head</a>
+						</div>
+						<div class="col a8">Routes a new route with HEAD as method.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/router.html#put">put</a>
+						</div>
+						<div class="col a8">Routes a new route with PUT as method.</div>
+					</div>
 							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The path of the child router.
-									</span></div>
+		</div>
+	
+	<!-- FUNCTIONS -->
+			<div class="functions">
+			<h2>Functions</h2>
+							<div id="router" class="function">
+					<a class="name" href="#router">
+						.router(path)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line23">Line 23</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Creates a child router.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return a new child router. A child router inherits this router&#39;s path and adds the specified path to it. The path used must be a valid url path. These child routers are used to easily prefix routes.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> router = cerus.router().router(<span class="hljs-string">"/user"</span>);
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The path of the child router.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> router = cerus.router().router(<span class="hljs-string">"/user"</span>);
 <span class="hljs-comment">// -&gt; router is now a child router of the root router</span>
 router.route(<span class="hljs-string">"/home"</span>);
 <span class="hljs-comment">// -&gt; this will route "/user/home"</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Class</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The child router.</div>
-						</div>
-					</div>
-							</div>
-					<div id="handle" class="function">
-				<div class="name">
-					.handle(req, res)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line69">Line 69</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Handles an incoming request.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function is called by incoming requests. It is not recommended to use this function unless you know what you&#39;re doing. This function goes through all the routes in this router&#39;s stack and searches for a match with the url and method. If a match is found it&#39;ll call the funtion that comes with the route.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">req</div>
-									<div class="col a3">Class</div>
-									<div class="col a6"><span>
-										The request class.
-									</span></div>
-								</div>
-															<div class="row">
-									<div class="col a3">res</div>
-									<div class="col a3">Class</div>
-									<div class="col a6"><span>
-										The response class.
-									</span></div>
-								</div>
 													</div>
-					</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The child router.</div>
+							</div>
+						</div>
+									</div>
+							<div id="handle" class="function">
+					<a class="name" href="#handle">
+						.handle(req, res)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line55">Line 55</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Handles an incoming request.</div>
+							</div>
 																							</div>
-					<div id="check" class="function">
-				<div class="name">
-					.check(path)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line115">Line 115</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Checks if the path is valid.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function will check if the inserted path is valid.</p>
+					<div class="desc"><p>This function is called by incoming requests. It is not recommended to use this function unless you know what you&#39;re doing. This function goes through all the routes in this router&#39;s stack and searches for a match with the url and method. If a match is found it&#39;ll call the funtion that comes with the route.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The path that will be checked.
-									</span></div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript">cerus.router().check(<span class="hljs-string">"/example/ /path/"</span>);
+																	<div class="row">
+										<div class="col a3">req</div>
+										<div class="col a3">Class</div>
+										<div class="col a6"><span>
+											The request class.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">res</div>
+										<div class="col a3">Class</div>
+										<div class="col a6"><span>
+											The response class.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																													</div>
+							<div id="check" class="function">
+					<a class="name" href="#check">
+						.check(path)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line99">Line 99</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Checks if the path is valid.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will check if the inserted path is valid.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The path that will be checked.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">cerus.router().check(<span class="hljs-string">"/example/ /path/"</span>);
 <span class="hljs-comment">// -&gt; will return false because the path is invalid</span>
 </code></pre>
 </div>
-											</div>
-																			</div>
-					<div id="remove" class="function">
-				<div class="name">
-					.remove()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line132">Line 132</a>
+													</div>
+																								</div>
+							<div id="remove" class="function">
+					<a class="name" href="#remove">
+						.remove()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line112">Line 112</a>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Removes the specified route.</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
 						</div>
-																			</div>
-				<div class="desc"><p>With this function you can remove previously added routes. To remove the path you have to specify it&#39;s path and if the route isn&#39;t universal, it&#39;s method. When no route was found that matched your parameters an Error is thrown.</p>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Removes the specified route.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can remove previously added routes. To remove the path you have to specify it&#39;s path and if the route isn&#39;t universal, it&#39;s method. When no route was found that matched your parameters an Error is thrown.</p>
 </div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with the route "/home" added</span>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with the route "/home" added</span>
 cerus.router().remove(<span class="hljs-string">"/home"</span>);
 <span class="hljs-comment">// -&gt; will remove the "/home" path</span>
 </code></pre>
 </div>
-											</div>
-																			</div>
-					<div id="routes" class="function">
-				<div class="name">
-					.routes()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line165">Line 165</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Returns all the routes.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function will return a list of all the routes mapped by their path.</p>
-</div>
-																									<div class="return">
-						<h3>Returns</h3>
+													</div>
+																								</div>
+							<div id="routes" class="function">
+					<a class="name" href="#routes">
+						.routes()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
 						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">String[]</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">The list of all the routes.</div>
-						</div>
-					</div>
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line139">Line 139</a>
 							</div>
-					<div id="use" class="function">
-				<div class="name">
-					.use()
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line175">Line 175</a>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Routes a new middleware.</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function is for adding middleware. Middleware are routes with things that have to be called before the other routes. The path for middleware is &quot;*&quot;, meaning that it matches all possible requests. The priority for middleware is set to true so it&#39;s called before the other routes. Middleware shouldn&#39;t use values that could be changed or is added by other middleware to prevent unpredictable behaviour. When working with middleware it is important to not forget to call next when your middleware is done. If your don&#39;t the request won&#39;t be finished. For more information about routing take a look at <a href="/views/cerus-router/reference/router.html#route">router.route</a> or at the tutorial about this subject.</p>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns all the routes.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return a list of all the routes mapped by their path.</p>
 </div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript">cerus.router().use()
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String[]</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The list of all the routes.</div>
+							</div>
+						</div>
+									</div>
+							<div id="use" class="function">
+					<a class="name" href="#use">
+						.use()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line149">Line 149</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Routes a new middleware.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function is for adding middleware. Middleware are routes with things that have to be called before the other routes. The path for middleware is &quot;*&quot;, meaning that it matches all possible requests. The priority for middleware is set to true so it&#39;s called before the other routes. Middleware shouldn&#39;t use values that could be changed or is added by other middleware to prevent unpredictable behaviour. When working with middleware it is important to not forget to call next when your middleware is done. If your don&#39;t the request won&#39;t be finished. For more information about routing take a look at <a href="/views/cerus-router/reference/router.html#route">router.route</a> or at the tutorial about this subject.</p>
+</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">cerus.router().use()
 .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res, next</span>) </span>{
 <span class="hljs-comment">// your code here and don't forget to call next when your done.</span>
 });
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
-							</div>
-					<div id="route" class="function">
-				<div class="name">
-					.route(path, method, priority)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line197">Line 197</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Routes a new route.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function is used to route a new route. Using these routes we can &quot;sort&quot; a incoming request based on it&#39;s url. For example, when adding the &quot;/home&quot; route, all requests with the &quot;/home&quot; url will cause the handler for the added route to be called. When the handler is called three parameters are added. The first is the request class. This class contains all functions you need to get information about the request. The second parameter is the response class. This class contains the functions you needed to create and send the response. The last parameter is the next function. When you don&#39;t &quot;want&quot; to handle the request you call this function and the router will search for another handler to handle the request. You can also change the method that is used with the route. By default the &quot;ALL&quot; method is used, meaning that all methods are accepted. When you change this method the handler will also check if the route&#39;s method matches with the request&#39;s method. Lastly you can change the priority. The priority defines where the route will be placed in the stack, the list of routes. You want routes like middleware to be in the front so they are called before the other routes. For more information about routing look at the tutorial about it.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The path the route will use.
-									</span></div>
-								</div>
-															<div class="row">
-									<div class="col a3">method</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The method the route will use. (optional) (default: "ALL")
-									</span></div>
-								</div>
-															<div class="row">
-									<div class="col a3">priority</div>
-									<div class="col a3">Boolean</div>
-									<div class="col a6"><span>
-										The priority of the route. (optional) (default: false)
-									</span></div>
-								</div>
 													</div>
-					</div>
-													<div class="examples">
-						<h3>Examples</h3>
-													<div class="example"><pre><code class="hljs javascript">cerus.router().route(<span class="hljs-string">"/home"</span>)
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="route" class="function">
+					<a class="name" href="#route">
+						.route(path, options)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line171">Line 171</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Routes a new route.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function is used to route a new route. Using these routes we can &quot;sort&quot; a incoming request based on it&#39;s url. For example, when adding the &quot;/home&quot; route, all requests with the &quot;/home&quot; url will cause the handler for the added route to be called. When the handler is called three parameters are added. The first is the request class. This class contains all functions you need to get information about the request. The second parameter is the response class. This class contains the functions you needed to create and send the response. The last parameter is the next function. When you don&#39;t &quot;want&quot; to handle the request you call this function and the router will search for another handler to handle the request. You can also change the method that is used with the route. By default the &quot;ALL&quot; method is used, meaning that all methods are accepted. When you change this method the handler will also check if the route&#39;s method matches with the request&#39;s method. Lastly you can change the priority. The priority defines where the route will be placed in the stack, the list of routes. You want routes like middleware to be in the front so they are called before the other routes. For more information about routing look at the tutorial about it.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The path the route will use.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The options parameter. (optional) (default: {})
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options.method</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The method the route will use. (optional) (child) (default: "ALL")
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options.priority</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The priority of the route. (optional) (child) (default: false)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">cerus.router().route(<span class="hljs-string">"/home"</span>, {<span class="hljs-attr">method</span>: <span class="hljs-string">"GET"</span>})
 .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res, next</span>) </span>{
-<span class="hljs-comment">// this function is called when someone uses the "/home" route</span>
+  <span class="hljs-comment">// this function is called when someone uses the "/home" route</span>
 });
 <span class="hljs-comment">// -&gt; adds the new "/home" route.</span>
 </code></pre>
 </div>
-											</div>
-																					<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
-							</div>
-					<div id="get" class="function">
-				<div class="name">
-					.get(path, priority)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line264">Line 264</a>
-						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Routes a new route with GET as method.</div>
-						</div>
-																			</div>
-				<div class="desc"><p>This function will create a route with &quot;GET&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
-</div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The path the route will use.
-									</span></div>
-								</div>
-															<div class="row">
-									<div class="col a3">priority</div>
-									<div class="col a3">Boolean</div>
-									<div class="col a6"><span>
-										The priority of the route. (optional) (default: false)
-									</span></div>
-								</div>
 													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
-						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
 							</div>
-					<div id="post" class="function">
-				<div class="name">
-					.post(path, priority)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line273">Line 273</a>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Routes a new route with POST as method.</div>
+									</div>
+							<div id="get" class="function">
+					<a class="name" href="#get">
+						.get(path, priority)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line220">Line 220</a>
+							</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will create a route with &quot;POST&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Routes a new route with GET as method.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will create a route with &quot;GET&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The path the route will use.
-									</span></div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-															<div class="row">
-									<div class="col a3">priority</div>
-									<div class="col a3">Boolean</div>
-									<div class="col a6"><span>
-										The priority of the route. (optional) (default: false)
-									</span></div>
-								</div>
-													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The path the route will use.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">priority</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The priority of the route. (optional) (default: false)
+										</span></div>
+									</div>
+															</div>
 						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
 							</div>
-					<div id="delete" class="function">
-				<div class="name">
-					.delete(path, priority)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line282">Line 282</a>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Routes a new route with DELETE as method.</div>
+									</div>
+							<div id="post" class="function">
+					<a class="name" href="#post">
+						.post(path, priority)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line229">Line 229</a>
+							</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will create a route with &quot;DELETE&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Routes a new route with POST as method.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will create a route with &quot;POST&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The path the route will use.
-									</span></div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-															<div class="row">
-									<div class="col a3">priority</div>
-									<div class="col a3">Boolean</div>
-									<div class="col a6"><span>
-										The priority of the route. (optional) (default: false)
-									</span></div>
-								</div>
-													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The path the route will use.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">priority</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The priority of the route. (optional) (default: false)
+										</span></div>
+									</div>
+															</div>
 						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
 							</div>
-					<div id="head" class="function">
-				<div class="name">
-					.head(path, priority)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line291">Line 291</a>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Routes a new route with HEAD as method.</div>
+									</div>
+							<div id="delete" class="function">
+					<a class="name" href="#delete">
+						.delete(path, priority)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line238">Line 238</a>
+							</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will create a route with &quot;HEAD&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Routes a new route with DELETE as method.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will create a route with &quot;DELETE&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The path the route will use.
-									</span></div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-															<div class="row">
-									<div class="col a3">priority</div>
-									<div class="col a3">Boolean</div>
-									<div class="col a6"><span>
-										The priority of the route. (optional) (default: false)
-									</span></div>
-								</div>
-													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The path the route will use.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">priority</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The priority of the route. (optional) (default: false)
+										</span></div>
+									</div>
+															</div>
 						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
 							</div>
-					<div id="put" class="function">
-				<div class="name">
-					.put(path, priority)
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="key">Source:</div>
-						<div class="value">
-							<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
-							<a href="/views/cerus-router/source/lib/route.js.html#line300">Line 300</a>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
 						</div>
-					</div>
-																				<div class="item">
-						<div class="key">Access:</div>
-						<div class="value">public</div>
-					</div>
-																																														<div class="item">
-							<div class="key">Summary:</div>
-							<div class="value">Routes a new route with PUT as method.</div>
+									</div>
+							<div id="head" class="function">
+					<a class="name" href="#head">
+						.head(path, priority)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line247">Line 247</a>
+							</div>
 						</div>
-																			</div>
-				<div class="desc"><p>This function will create a route with &quot;PUT&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Routes a new route with HEAD as method.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will create a route with &quot;HEAD&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
 </div>
-									<div class="params">
-						<h3>Parameters</h3>
-						<div class="table params">
-							<div class="row head">
-								<div class="col a3">Name</div>
-								<div class="col a3">Type</div>
-								<div class="col a6">Description</div>
-							</div>
-															<div class="row">
-									<div class="col a3">path</div>
-									<div class="col a3">String</div>
-									<div class="col a6"><span>
-										The path the route will use.
-									</span></div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
 								</div>
-															<div class="row">
-									<div class="col a3">priority</div>
-									<div class="col a3">Boolean</div>
-									<div class="col a6"><span>
-										The priority of the route. (optional) (default: false)
-									</span></div>
-								</div>
-													</div>
-					</div>
-																									<div class="return">
-						<h3>Returns</h3>
-						<div class="item">
-							<div class="key">Type</div>
-							<div class="value">Promise</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The path the route will use.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">priority</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The priority of the route. (optional) (default: false)
+										</span></div>
+									</div>
+															</div>
 						</div>
-						<div class="item">
-							<div class="key">Description</div>
-							<div class="value">This function will return a promise.</div>
-						</div>
-					</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
 							</div>
-		
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="put" class="function">
+					<a class="name" href="#put">
+						.put(path, priority)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/route.js.html">lib/route.js</a>, 
+								<a href="/views/cerus-router/source/lib/route.js.html#line256">Line 256</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Routes a new route with PUT as method.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will create a route with &quot;PUT&quot; as method. For more information about routing take a look at the <a href="/views/cerus-router/reference/router.html#route">router.route</a> function.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">path</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The path the route will use.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">priority</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The priority of the route. (optional) (default: false)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
+						</div>
+									</div>
+			
+		</div>
 	</div>
-</div>
 			</div>
 		</div>
 		<div id="scrollTop" class="scroll">
