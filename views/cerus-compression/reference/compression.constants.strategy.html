@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "selected" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -155,7 +155,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-					<a href="/views/cerus-compression/source/lib/constants.js.html#line357">Line 357</a>
+					<a href="/views/cerus-compression/source/lib/constants.js.html#line356">Line 356</a>
 				</div>
 			</div>
 												<div class="item">
@@ -177,9 +177,21 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.strategy.html#default">default</a>
+						</div>
+						<div class="col a8">Returns the DEFAULT_STRATEGY constant.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-compression/reference/compression.constants.strategy.html#filtered">filtered</a>
 						</div>
 						<div class="col a8">Returns the FILTERED constant.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.strategy.html#fixed">fixed</a>
+						</div>
+						<div class="col a8">Returns the FIXED constant.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -193,24 +205,48 @@
 						</div>
 						<div class="col a8">Returns the RLE constant.</div>
 					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.strategy.html#fixed">fixed</a>
-						</div>
-						<div class="col a8">Returns the FIXED constant.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.strategy.html#default">default</a>
-						</div>
-						<div class="col a8">Returns the DEFAULT_STRATEGY constant.</div>
-					</div>
 							</div>
 		</div>
 	
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
+							<div id="default" class="function">
+					<a class="name" href="#default">
+						.default()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line406">Line 406</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the DEFAULT_STRATEGY constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the DEFAULT_STRATEGY constant. This strategy is optimized for normal data. It combines Huffman&#39;s compression with the standard text compression.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_DEFAULT_STRATEGY</div>
+							</div>
+						</div>
+									</div>
 							<div id="filtered" class="function">
 					<a class="name" href="#filtered">
 						.filtered()
@@ -221,7 +257,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line363">Line 363</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line362">Line 362</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -247,6 +283,42 @@
 							</div>
 						</div>
 									</div>
+							<div id="fixed" class="function">
+					<a class="name" href="#fixed">
+						.fixed()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line395">Line 395</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the FIXED constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the FIXED constant. This strategy is optimized for simpler applications and is optimized for shorter strings, as it doesn&#39;t use Huffman&#39;s dynamic codes.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_FIXED</div>
+							</div>
+						</div>
+									</div>
 							<div id="huffman" class="function">
 					<a class="name" href="#huffman">
 						.huffman()
@@ -257,7 +329,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line374">Line 374</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line373">Line 373</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -293,7 +365,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line385">Line 385</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line384">Line 384</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -316,78 +388,6 @@
 							<div class="item">
 								<div class="key">Description</div>
 								<div class="value">Z_RLE</div>
-							</div>
-						</div>
-									</div>
-							<div id="fixed" class="function">
-					<a class="name" href="#fixed">
-						.fixed()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line396">Line 396</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the FIXED constant.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the FIXED constant. This strategy is optimized for simpler applications and is optimized for shorter strings, as it doesn&#39;t use Huffman&#39;s dynamic codes.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_FIXED</div>
-							</div>
-						</div>
-									</div>
-							<div id="default" class="function">
-					<a class="name" href="#default">
-						.default()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line407">Line 407</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the DEFAULT_STRATEGY constant.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the DEFAULT_STRATEGY constant. This strategy is optimized for normal data. It combines Huffman&#39;s compression with the standard text compression.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_DEFAULT_STRATEGY</div>
 							</div>
 						</div>
 									</div>

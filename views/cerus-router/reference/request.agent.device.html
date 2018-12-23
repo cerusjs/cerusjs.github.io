@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -164,7 +164,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-					<a href="/views/cerus-router/source/lib/request/agent.js.html#line229">Line 229</a>
+					<a href="/views/cerus-router/source/lib/request/agent.js.html#line225">Line 225</a>
 				</div>
 			</div>
 												<div class="item">
@@ -186,6 +186,12 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.agent.device.html#model">model</a>
+						</div>
+						<div class="col a8">Returns the model of the device.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-router/reference/request.agent.device.html#type">type</a>
 						</div>
 						<div class="col a8">Returns the type of the device.</div>
@@ -196,18 +202,48 @@
 						</div>
 						<div class="col a8">Returns the vendor of the device.</div>
 					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/request.agent.device.html#model">model</a>
-						</div>
-						<div class="col a8">Returns the model of the device.</div>
-					</div>
 							</div>
 		</div>
 	
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
+							<div id="model" class="function">
+					<a class="name" href="#model">
+						.model()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
+								<a href="/views/cerus-router/source/lib/request/agent.js.html#line261">Line 261</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the model of the device.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns the model of the device. Often the model cannot be parsed and it will return undefined.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The model of the device.</div>
+							</div>
+						</div>
+									</div>
 							<div id="type" class="function">
 					<a class="name" href="#type">
 						.type()
@@ -218,7 +254,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-								<a href="/views/cerus-router/source/lib/request/agent.js.html#line240">Line 240</a>
+								<a href="/views/cerus-router/source/lib/request/agent.js.html#line236">Line 236</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -254,7 +290,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-								<a href="/views/cerus-router/source/lib/request/agent.js.html#line251">Line 251</a>
+								<a href="/views/cerus-router/source/lib/request/agent.js.html#line247">Line 247</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -277,42 +313,6 @@
 							<div class="item">
 								<div class="key">Description</div>
 								<div class="value">The vendor of the device.</div>
-							</div>
-						</div>
-									</div>
-							<div id="model" class="function">
-					<a class="name" href="#model">
-						.model()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-								<a href="/views/cerus-router/source/lib/request/agent.js.html#line267">Line 267</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the model of the device.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function returns the model of the device. Often the model cannot be parsed and it will return undefined.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">String</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The model of the device.</div>
 							</div>
 						</div>
 									</div>

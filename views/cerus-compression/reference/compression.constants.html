@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "selected" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -177,9 +177,9 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.html#flush">flush</a>
+							<a href="/views/cerus-compression/reference/compression.constants.html#chunk">chunk</a>
 						</div>
-						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.flush.html">compression.constants.flush</a> class.</div>
+						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.chunk.html">compression.constants.chunk</a> class.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -189,9 +189,21 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.html#flush">flush</a>
+						</div>
+						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.flush.html">compression.constants.flush</a> class.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-compression/reference/compression.constants.html#level">level</a>
 						</div>
 						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.level.html">compression.constants.level</a> class.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.html#memory">memory</a>
+						</div>
+						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.memory.html">compression.constants.memory</a> class.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -205,27 +217,15 @@
 						</div>
 						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.windowbits.html">compression.constants.windowbits</a> class.</div>
 					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.html#memory">memory</a>
-						</div>
-						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.memory.html">compression.constants.memory</a> class.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.html#chunk">chunk</a>
-						</div>
-						<div class="col a8">Returns the <a href="/views/cerus-compression/reference/compression.constants.chunk.html">compression.constants.chunk</a> class.</div>
-					</div>
 							</div>
 		</div>
 	
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="flush" class="function">
-					<a class="name" href="#flush">
-						.flush()
+							<div id="chunk" class="function">
+					<a class="name" href="#chunk">
+						.chunk()
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -233,7 +233,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line8">Line 8</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line97">Line 97</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -242,10 +242,10 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns the <a href="/views/cerus-compression/reference/compression.constants.flush.html">compression.constants.flush</a> class.</div>
+								<div class="value">Returns the <a href="/views/cerus-compression/reference/compression.constants.chunk.html">compression.constants.chunk</a> class.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function returns the <a href="/views/cerus-compression/reference/compression.constants.flush.html">compression.constants.flush</a> class. It contains the constants for the flush setting.</p>
+					<div class="desc"><p>This functions return the <a href="/views/cerus-compression/reference/compression.constants.chunk.html">compression.constants.chunk</a> class. It contains the constants for the chunk size setting.</p>
 </div>
 																															<div class="return">
 							<h3>Returns</h3>
@@ -255,7 +255,7 @@
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">The <a href="/views/cerus-compression/reference/compression.constants.flush.html">compression.constants.flush</a> class.</div>
+								<div class="value">The <a href="/views/cerus-compression/reference/compression.constants.chunk.html">compression.constants.chunk</a> class.</div>
 							</div>
 						</div>
 									</div>
@@ -269,7 +269,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line23">Line 23</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line22">Line 22</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -295,6 +295,42 @@
 							</div>
 						</div>
 									</div>
+							<div id="flush" class="function">
+					<a class="name" href="#flush">
+						.flush()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line7">Line 7</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the <a href="/views/cerus-compression/reference/compression.constants.flush.html">compression.constants.flush</a> class.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns the <a href="/views/cerus-compression/reference/compression.constants.flush.html">compression.constants.flush</a> class. It contains the constants for the flush setting.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The <a href="/views/cerus-compression/reference/compression.constants.flush.html">compression.constants.flush</a> class.</div>
+							</div>
+						</div>
+									</div>
 							<div id="level" class="function">
 					<a class="name" href="#level">
 						.level()
@@ -305,7 +341,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line38">Line 38</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line37">Line 37</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -331,6 +367,42 @@
 							</div>
 						</div>
 									</div>
+							<div id="memory" class="function">
+					<a class="name" href="#memory">
+						.memory()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line82">Line 82</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the <a href="/views/cerus-compression/reference/compression.constants.memory.html">compression.constants.memory</a> class.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This functions return the <a href="/views/cerus-compression/reference/compression.constants.memory.html">compression.constants.memory</a> class. It contains the constants for the memory level setting.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The <a href="/views/cerus-compression/reference/compression.constants.memory.html">compression.constants.memory</a> class.</div>
+							</div>
+						</div>
+									</div>
 							<div id="strategy" class="function">
 					<a class="name" href="#strategy">
 						.strategy()
@@ -341,7 +413,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line53">Line 53</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line52">Line 52</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -377,7 +449,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line68">Line 68</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line67">Line 67</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -400,78 +472,6 @@
 							<div class="item">
 								<div class="key">Description</div>
 								<div class="value">The <a href="/views/cerus-compression/reference/compression.constants.windowbits.html">compression.constants.windowbits</a> class.</div>
-							</div>
-						</div>
-									</div>
-							<div id="memory" class="function">
-					<a class="name" href="#memory">
-						.memory()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line83">Line 83</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the <a href="/views/cerus-compression/reference/compression.constants.memory.html">compression.constants.memory</a> class.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This functions return the <a href="/views/cerus-compression/reference/compression.constants.memory.html">compression.constants.memory</a> class. It contains the constants for the memory level setting.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Class</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The <a href="/views/cerus-compression/reference/compression.constants.memory.html">compression.constants.memory</a> class.</div>
-							</div>
-						</div>
-									</div>
-							<div id="chunk" class="function">
-					<a class="name" href="#chunk">
-						.chunk()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line98">Line 98</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the <a href="/views/cerus-compression/reference/compression.constants.chunk.html">compression.constants.chunk</a> class.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This functions return the <a href="/views/cerus-compression/reference/compression.constants.chunk.html">compression.constants.chunk</a> class. It contains the constants for the chunk size setting.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Class</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The <a href="/views/cerus-compression/reference/compression.constants.chunk.html">compression.constants.chunk</a> class.</div>
 							</div>
 						</div>
 									</div>

@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item opened">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-minus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "selected" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -197,21 +197,15 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-promise/reference/promise.html#event">event</a>
-						</div>
-						<div class="col a8">Calls the specified event.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-promise/reference/promise.html#then">then</a>
-						</div>
-						<div class="col a8">Creates a handler that responds to non-error events.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-promise/reference/promise.html#catch">catch</a>
 						</div>
 						<div class="col a8">Creates a handler that responds to error events.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-promise/reference/promise.html#event">event</a>
+						</div>
+						<div class="col a8">Calls the specified event.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -221,15 +215,21 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-promise/reference/promise.html#shadow">shadow</a>
+						</div>
+						<div class="col a8">Promisifies the specified handler.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-promise/reference/promise.html#stack">stack</a>
 						</div>
 						<div class="col a8">Stack a promise on top of another one.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-promise/reference/promise.html#shadow">shadow</a>
+							<a href="/views/cerus-promise/reference/promise.html#then">then</a>
 						</div>
-						<div class="col a8">Promisifies the specified handler.</div>
+						<div class="col a8">Creates a handler that responds to non-error events.</div>
 					</div>
 							</div>
 		</div>
@@ -262,140 +262,6 @@
 					<div class="desc"><p>This function updates all the events that are in the queue. It does this by looping through all the events in the queue and matching all the handlers there are listening for every event. Those handlers then get called. If the promise is locked it will return and do nothing. After looping through all the events in queue the queue is cleared.</p>
 </div>
 																													</div>
-							<div id="event" class="function">
-					<a class="name" href="#event">
-						.event(event, args)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-promise/source/lib/promise.js.html">lib/promise.js</a>, 
-								<a href="/views/cerus-promise/source/lib/promise.js.html#line152">Line 152</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Calls the specified event.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will call the specified event. This function is passed into the promise function, but can also be used to call events from outside of the promise. You can also add arguments by just adding them to function. What events cause what to happen, like &quot;then&quot; and &quot;catch&quot; functions is explained in the class description.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">event</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The name of the event to call.
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">args</div>
-										<div class="col a3">...Any</div>
-										<div class="col a6"><span>
-											The arguments for the event that will be called.
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Self</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">This function returns itself for chaining.</div>
-							</div>
-						</div>
-									</div>
-							<div id="then" class="function">
-					<a class="name" href="#then">
-						.then(callback, options)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-promise/source/lib/promise.js.html">lib/promise.js</a>, 
-								<a href="/views/cerus-promise/source/lib/promise.js.html#line187">Line 187</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Creates a handler that responds to non-error events.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>With this function you can create a handler that responds to all non-error events. The meaning of a handler is explained in the class description. You can also supply the event option which sets if the first argument when the handler is called is the name of the event. By default this is set to false.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">callback</div>
-										<div class="col a3">Function</div>
-										<div class="col a6"><span>
-											The callback that will be called on non-error events.
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">options</div>
-										<div class="col a3">Object</div>
-										<div class="col a6"><span>
-											The optional options object. (optional)
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">options.event</div>
-										<div class="col a3">Boolean</div>
-										<div class="col a6"><span>
-											If the first argument when the handler is called is the event. (optional) (child) (default: false)
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">options.passthrough</div>
-										<div class="col a3">Boolean</div>
-										<div class="col a6"><span>
-											If the value returned by the handler may be treaded as a resolved promise. (optional) (child) (default: faslse)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Self</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">This function returns itself for chaining.</div>
-							</div>
-						</div>
-									</div>
 							<div id="catch" class="function">
 					<a class="name" href="#catch">
 						.catch(callback, options)
@@ -447,6 +313,66 @@
 										<div class="col a3">Boolean</div>
 										<div class="col a6"><span>
 											If the value returned by the handler may be treaded as a resolved promise. (optional) (child) (default: faslse)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Self</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns itself for chaining.</div>
+							</div>
+						</div>
+									</div>
+							<div id="event" class="function">
+					<a class="name" href="#event">
+						.event(event, args)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-promise/source/lib/promise.js.html">lib/promise.js</a>, 
+								<a href="/views/cerus-promise/source/lib/promise.js.html#line152">Line 152</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Calls the specified event.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will call the specified event. This function is passed into the promise function, but can also be used to call events from outside of the promise. You can also add arguments by just adding them to function. What events cause what to happen, like &quot;then&quot; and &quot;catch&quot; functions is explained in the class description.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">event</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the event to call.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">args</div>
+										<div class="col a3">...Any</div>
+										<div class="col a6"><span>
+											The arguments for the event that will be called.
 										</span></div>
 									</div>
 															</div>
@@ -537,6 +463,67 @@
 							</div>
 						</div>
 									</div>
+							<div id="shadow" class="function">
+					<a class="name" href="#shadow">
+						.shadow(handler_index)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-promise/source/lib/promise.js.html">lib/promise.js</a>, 
+								<a href="/views/cerus-promise/source/lib/promise.js.html#line298">Line 298</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Promisifies the specified handler.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns a real promise that will be resolved when the specified handler has resolved. By default the handler that has last been added is promisified. The promise that is returned will allways resolve succesfully even if the handler is catch handler.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">handler_index</div>
+										<div class="col a3">Number</div>
+										<div class="col a6"><span>
+											The index of the handler to shadow. By default this is the last added handler. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> test_promise = cerus.promise(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> event(<span class="hljs-string">"done"</span>, <span class="hljs-string">"test"</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">await</span> test_promise.shadow());
+<span class="hljs-comment">// logs "test"</span>
+</code></pre>
+</div>
+													</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The newly created real promise.</div>
+							</div>
+						</div>
+									</div>
 							<div id="stack" class="function">
 					<a class="name" href="#stack">
 						.stack(event)
@@ -603,9 +590,9 @@
 							</div>
 						</div>
 									</div>
-							<div id="shadow" class="function">
-					<a class="name" href="#shadow">
-						.shadow(handler_index)
+							<div id="then" class="function">
+					<a class="name" href="#then">
+						.then(callback, options)
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -613,7 +600,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-promise/source/lib/promise.js.html">lib/promise.js</a>, 
-								<a href="/views/cerus-promise/source/lib/promise.js.html#line298">Line 298</a>
+								<a href="/views/cerus-promise/source/lib/promise.js.html#line187">Line 187</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -622,10 +609,10 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Promisifies the specified handler.</div>
+								<div class="value">Creates a handler that responds to non-error events.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function returns a promise that will be resolved when the specified handler has resolved. By default the handler that has last been added is promisified. The promise that is returned will allways resolve succesfully even if the handler is catch handler.</p>
+					<div class="desc"><p>With this function you can create a handler that responds to all non-error events. The meaning of a handler is explained in the class description. You can also supply the event option which sets if the first argument when the handler is called is the name of the event. By default this is set to false.</p>
 </div>
 											<div class="params">
 							<h3>Parameters</h3>
@@ -636,31 +623,44 @@
 									<div class="col a6">Description</div>
 								</div>
 																	<div class="row">
-										<div class="col a3">handler_index</div>
-										<div class="col a3">Number</div>
+										<div class="col a3">callback</div>
+										<div class="col a3">Function</div>
 										<div class="col a6"><span>
-											The index of the handler to shadow. By default this is the last added handler. (optional)
+											The callback that will be called on non-error events.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The optional options object. (optional)
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options.event</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											If the first argument when the handler is called is the event. (optional) (child) (default: false)
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options.passthrough</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											If the value returned by the handler may be treaded as a resolved promise. (optional) (child) (default: faslse)
 										</span></div>
 									</div>
 															</div>
 						</div>
-																<div class="examples">
-							<h3>Examples</h3>
-															<div class="example"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> test_promise = <span class="hljs-keyword">new</span> promise(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> event(<span class="hljs-string">"done"</span>, <span class="hljs-string">"test"</span>));
-<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">await</span> test_promise.shadow());
-<span class="hljs-comment">// logs "test"</span>
-</code></pre>
-</div>
-													</div>
-																										<div class="return">
+																															<div class="return">
 							<h3>Returns</h3>
 							<div class="item">
 								<div class="key">Type</div>
-								<div class="value">Promise</div>
+								<div class="value">Self</div>
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">The newly created promise.</div>
+								<div class="value">This function returns itself for chaining.</div>
 							</div>
 						</div>
 									</div>

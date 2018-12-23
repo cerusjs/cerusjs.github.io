@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -283,17 +283,17 @@
 										</span></div>
 									</div>
 																	<div class="row">
-										<div class="col a3">options.absolute</div>
+										<div class="col a3">options.instantiate</div>
 										<div class="col a3">Boolean</div>
 										<div class="col a6"><span>
-											If the inserted path is absolute. (optional) (child)
+											If the helper should be instantiated. (optional) (child) (default: true)
 										</span></div>
 									</div>
 																	<div class="row">
 										<div class="col a3">options.override</div>
 										<div class="col a3">Boolean</div>
 										<div class="col a6"><span>
-											If the helper should be overridden. (optional) (child)
+											If the helper should be overridden. (optional) (child) (default: false)
 										</span></div>
 									</div>
 															</div>
@@ -333,7 +333,7 @@ cerus.autoroute().helper(<span class="hljs-string">"D:\\project\\example"</span>
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus/source/lib/require.js.html">lib/require.js</a>, 
-								<a href="/views/cerus/source/lib/require.js.html#line73">Line 73</a>
+								<a href="/views/cerus/source/lib/require.js.html#line61">Line 61</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -370,17 +370,17 @@ cerus.autoroute().helper(<span class="hljs-string">"D:\\project\\example"</span>
 										</span></div>
 									</div>
 																	<div class="row">
-										<div class="col a3">options.absolute</div>
+										<div class="col a3">options.instantiate</div>
 										<div class="col a3">Boolean</div>
 										<div class="col a6"><span>
-											If the inserted path is absolute. (optional) (child)
+											If the library should be instantiated. (optional) (child) (default: false)
 										</span></div>
 									</div>
 																	<div class="row">
 										<div class="col a3">options.override</div>
 										<div class="col a3">Boolean</div>
 										<div class="col a6"><span>
-											If the library should be overridden. (optional) (child)
+											If the library should be overridden. (optional) (child) (default: false)
 										</span></div>
 									</div>
 															</div>
@@ -420,7 +420,7 @@ cerus.autoroute().library(<span class="hljs-string">"D:\\project\\example"</span
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus/source/lib/require.js.html">lib/require.js</a>, 
-								<a href="/views/cerus/source/lib/require.js.html#line114">Line 114</a>
+								<a href="/views/cerus/source/lib/require.js.html#line90">Line 90</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -457,17 +457,17 @@ cerus.autoroute().library(<span class="hljs-string">"D:\\project\\example"</span
 										</span></div>
 									</div>
 																	<div class="row">
-										<div class="col a3">options.absolute</div>
+										<div class="col a3">options.instantiate</div>
 										<div class="col a3">Boolean</div>
 										<div class="col a6"><span>
-											If the inserted path is absolute. (optional) (child)
+											If the model should be instantiated. (optional) (child) (default: false)
 										</span></div>
 									</div>
 																	<div class="row">
 										<div class="col a3">options.override</div>
 										<div class="col a3">Boolean</div>
 										<div class="col a6"><span>
-											If the model should be overridden. (optional) (child)
+											If the model should be overridden. (optional) (child) (default: false)
 										</span></div>
 									</div>
 															</div>

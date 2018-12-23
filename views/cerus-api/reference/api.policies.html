@@ -78,6 +78,16 @@
 				<li><a class= "selected" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -179,9 +179,9 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-api/reference/api.policies.html#has">has</a>
+							<a href="/views/cerus-api/reference/api.policies.html#clear">clear</a>
 						</div>
-						<div class="col a8">Returns if the specified policy exists.</div>
+						<div class="col a8">Clears all the policies.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -191,9 +191,9 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-api/reference/api.policies.html#remove">remove</a>
+							<a href="/views/cerus-api/reference/api.policies.html#has">has</a>
 						</div>
-						<div class="col a8">Removes the specified policy.</div>
+						<div class="col a8">Returns if the specified policy exists.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -203,9 +203,9 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-api/reference/api.policies.html#clear">clear</a>
+							<a href="/views/cerus-api/reference/api.policies.html#remove">remove</a>
 						</div>
-						<div class="col a8">Clears all the policies.</div>
+						<div class="col a8">Removes the specified policy.</div>
 					</div>
 							</div>
 		</div>
@@ -276,9 +276,9 @@
 							</div>
 						</div>
 									</div>
-							<div id="has" class="function">
-					<a class="name" href="#has">
-						.has(name)
+							<div id="clear" class="function">
+					<a class="name" href="#clear">
+						.clear()
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -286,7 +286,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-								<a href="/views/cerus-api/source/lib/api/policies.js.html#line35">Line 35</a>
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line83">Line 83</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -295,40 +295,12 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns if the specified policy exists.</div>
+								<div class="value">Clears all the policies.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>With this function you can check if the specified policy exists. If so this function will return true and false when it doesn&#39;t exist.</p>
+					<div class="desc"><p>With this function you can clear all of the policies. It doesn&#39;t remove them one by one, since it resets the whole list. Which makes it faster to use that individually removing them.</p>
 </div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">name</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The name of the policy you want to check.
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Boolean</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">If the policy exists.</div>
-							</div>
-						</div>
-									</div>
+																													</div>
 							<div id="get" class="function">
 					<a class="name" href="#get">
 						.get(name)
@@ -382,6 +354,95 @@
 							</div>
 						</div>
 									</div>
+							<div id="has" class="function">
+					<a class="name" href="#has">
+						.has(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line35">Line 35</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns if the specified policy exists.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can check if the specified policy exists. If so this function will return true and false when it doesn&#39;t exist.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the policy you want to check.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Boolean</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">If the policy exists.</div>
+							</div>
+						</div>
+									</div>
+							<div id="list" class="function">
+					<a class="name" href="#list">
+						.list()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
+								<a href="/views/cerus-api/source/lib/api/policies.js.html#line73">Line 73</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Lists all of the policy names.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can list all of the policy names.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String[]</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Returns the array of all the policy names.</div>
+							</div>
+						</div>
+									</div>
 							<div id="remove" class="function">
 					<a class="name" href="#remove">
 						.remove(name)
@@ -423,67 +484,6 @@
 									</div>
 															</div>
 						</div>
-																													</div>
-							<div id="list" class="function">
-					<a class="name" href="#list">
-						.list()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-								<a href="/views/cerus-api/source/lib/api/policies.js.html#line73">Line 73</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Lists all of the policy names.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>With this function you can list all of the policy names.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">String[]</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Returns the array of all the policy names.</div>
-							</div>
-						</div>
-									</div>
-							<div id="clear" class="function">
-					<a class="name" href="#clear">
-						.clear()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-api/source/lib/api/policies.js.html">lib/api/policies.js</a>, 
-								<a href="/views/cerus-api/source/lib/api/policies.js.html#line83">Line 83</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Clears all the policies.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>With this function you can clear all of the policies. It doesn&#39;t remove them one by one, since it resets the whole list. Which makes it faster to use that individually removing them.</p>
-</div>
 																													</div>
 			
 		</div>

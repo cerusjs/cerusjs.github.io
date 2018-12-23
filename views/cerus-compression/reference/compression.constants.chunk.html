@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "selected" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -155,7 +155,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-					<a href="/views/cerus-compression/source/lib/constants.js.html#line499">Line 499</a>
+					<a href="/views/cerus-compression/source/lib/constants.js.html#line498">Line 498</a>
 				</div>
 			</div>
 												<div class="item">
@@ -177,9 +177,9 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.chunk.html#min">min</a>
+							<a href="/views/cerus-compression/reference/compression.constants.chunk.html#default">default</a>
 						</div>
-						<div class="col a8">Returns the MIN_CHUNK constant.</div>
+						<div class="col a8">Returns the DEFAULT_CHUNK constant.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -189,9 +189,9 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.chunk.html#default">default</a>
+							<a href="/views/cerus-compression/reference/compression.constants.chunk.html#min">min</a>
 						</div>
-						<div class="col a8">Returns the DEFAULT_CHUNK constant.</div>
+						<div class="col a8">Returns the MIN_CHUNK constant.</div>
 					</div>
 							</div>
 		</div>
@@ -199,9 +199,9 @@
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="min" class="function">
-					<a class="name" href="#min">
-						.min()
+							<div id="default" class="function">
+					<a class="name" href="#default">
+						.default()
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -209,7 +209,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line505">Line 505</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line526">Line 526</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -218,10 +218,10 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns the MIN_CHUNK constant.</div>
+								<div class="value">Returns the DEFAULT_CHUNK constant.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This is the MIN_CHUNK constant. It returns the minimal chunk size that can be used for the compression and decompression.</p>
+					<div class="desc"><p>This is the DEFAULT_CHUNK constant. It returns the default chunk size that is used for the compression and decompression.</p>
 </div>
 																															<div class="return">
 							<h3>Returns</h3>
@@ -231,7 +231,7 @@
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">Z_MIN_CHUNK</div>
+								<div class="value">Z_DEFAULT_CHUNK</div>
 							</div>
 						</div>
 									</div>
@@ -245,7 +245,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line516">Line 516</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line515">Line 515</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -271,9 +271,9 @@
 							</div>
 						</div>
 									</div>
-							<div id="default" class="function">
-					<a class="name" href="#default">
-						.default()
+							<div id="min" class="function">
+					<a class="name" href="#min">
+						.min()
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -281,7 +281,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line527">Line 527</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line504">Line 504</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -290,10 +290,10 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns the DEFAULT_CHUNK constant.</div>
+								<div class="value">Returns the MIN_CHUNK constant.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This is the DEFAULT_CHUNK constant. It returns the default chunk size that is used for the compression and decompression.</p>
+					<div class="desc"><p>This is the MIN_CHUNK constant. It returns the minimal chunk size that can be used for the compression and decompression.</p>
 </div>
 																															<div class="return">
 							<h3>Returns</h3>
@@ -303,7 +303,7 @@
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">Z_DEFAULT_CHUNK</div>
+								<div class="value">Z_MIN_CHUNK</div>
 							</div>
 						</div>
 									</div>

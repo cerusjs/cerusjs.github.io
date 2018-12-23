@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -226,142 +226,110 @@
 			</div>
 					<div class="line" id="line20">
 				<div class="number">20.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._request.headers[key.toLowerCase()];</pre>
 			</div>
 					<div class="line" id="line21">
 				<div class="number">21.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument key must be a string"</span>);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line22">
 				<div class="number">22.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line23">
 				<div class="number">23.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line24">
 				<div class="number">24.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._request.headers[key.toLowerCase()];</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function returns if the client has sent the specified header. You can specify the </span></pre>
 			</div>
 					<div class="line" id="line25">
 				<div class="number">25.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * header you want to check using the key parameter. If the key parameter isn't a string it'll</span></pre>
 			</div>
 					<div class="line" id="line26">
 				<div class="number">26.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * throw a TypeError.</span></pre>
 			</div>
 					<div class="line" id="line27">
 				<div class="number">27.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the header exists.</span></pre>
 			</div>
 					<div class="line" id="line28">
 				<div class="number">28.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function returns if the client has sent the specified header. You can specify the </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the header exists.</span></pre>
 			</div>
 					<div class="line" id="line29">
 				<div class="number">29.</div>
-				<pre class="content"><span class="hljs-comment">	 * header you want to check using the key parameter. If the key parameter isn't a string it'll</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function has</span></pre>
 			</div>
 					<div class="line" id="line30">
 				<div class="number">30.</div>
-				<pre class="content"><span class="hljs-comment">	 * throw a TypeError.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line31">
 				<div class="number">31.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Checks if the header exists.</span></pre>
+				<pre class="content">	has(key) {</pre>
 			</div>
 					<div class="line" id="line32">
 				<div class="number">32.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} If the header exists.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._headers.includes(key.toLowerCase());</pre>
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function has</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content">	has(key) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * This function returns an array of the names of all the headers that were sent by the client.</span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"argument key must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns an array of all the headers.</span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String[]} An array of all the headers.</span></pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function list</span></pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._headers.includes(key.toLowerCase());</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	list() {</pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>._request.headers);</pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function returns an array of the names of all the headers that were sent by the client.</span></pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns an array of all the headers.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String[]} An array of all the headers.</span></pre>
-			</div>
-					<div class="line" id="line47">
-				<div class="number">47.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function list</span></pre>
-			</div>
-					<div class="line" id="line48">
-				<div class="number">48.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line49">
-				<div class="number">49.</div>
-				<pre class="content">	list() {</pre>
-			</div>
-					<div class="line" id="line50">
-				<div class="number">50.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>._request.headers);</pre>
-			</div>
-					<div class="line" id="line51">
-				<div class="number">51.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line52">
-				<div class="number">52.</div>
-				<pre class="content">}</pre>
-			</div>
-					<div class="line" id="line53">
-				<div class="number">53.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line54">
-				<div class="number">54.</div>
 				<pre class="content"><span class="hljs-built_in">module</span>.exports = headers;</pre>
 			</div>
 			</div>

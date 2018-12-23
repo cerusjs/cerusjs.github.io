@@ -78,6 +78,16 @@
 				<li><a class= "selected" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -179,21 +179,9 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-api/reference/json.errors.html#unauthorized">unauthorized</a>
+							<a href="/views/cerus-api/reference/json.errors.html#error">error</a>
 						</div>
-						<div class="col a8">Send a "Unauthorized" error to the client.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-api/reference/json.errors.html#notallowed">notallowed</a>
-						</div>
-						<div class="col a8">Send a "Method Not Allowed" error to the client.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-api/reference/json.errors.html#toomany">toomany</a>
-						</div>
-						<div class="col a8">Send a "Too Many Requests" error to the client.</div>
+						<div class="col a8">Send a custom error to the client.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -203,15 +191,27 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-api/reference/json.errors.html#notallowed">notallowed</a>
+						</div>
+						<div class="col a8">Send a "Method Not Allowed" error to the client.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-api/reference/json.errors.html#notimplemented">notimplemented</a>
 						</div>
 						<div class="col a8">Send a "Not Implemented" error to the client.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-api/reference/json.errors.html#error">error</a>
+							<a href="/views/cerus-api/reference/json.errors.html#toomany">toomany</a>
 						</div>
-						<div class="col a8">Send a custom error to the client.</div>
+						<div class="col a8">Send a "Too Many Requests" error to the client.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-api/reference/json.errors.html#unauthorized">unauthorized</a>
+						</div>
+						<div class="col a8">Send a "Unauthorized" error to the client.</div>
 					</div>
 							</div>
 		</div>
@@ -264,251 +264,6 @@
 							<h3>Examples</h3>
 															<div class="example"><pre><code class="hljs javascript">json.errors().badrequest({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
 <span class="hljs-comment">// -&gt; this will send the object {code: 400, message: "Bad Request", data {"error": "value"}}</span>
-</code></pre>
-</div>
-													</div>
-																								</div>
-							<div id="unauthorized" class="function">
-					<a class="name" href="#unauthorized">
-						.unauthorized(data)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
-								<a href="/views/cerus-api/source/lib/json/errors.js.html#line28">Line 28</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Send a "Unauthorized" error to the client.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will send a &quot;Unauthorized&quot; error to the client. This error has 401 as status code and &quot;Unauthorized&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">data</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																<div class="examples">
-							<h3>Examples</h3>
-															<div class="example"><pre><code class="hljs javascript">json.errors().unauthorized({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
-<span class="hljs-comment">// -&gt; this will send the object {code: 401, message: "Unauthorized", data {"error": "value"}}</span>
-</code></pre>
-</div>
-													</div>
-																								</div>
-							<div id="notallowed" class="function">
-					<a class="name" href="#notallowed">
-						.notallowed(data)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
-								<a href="/views/cerus-api/source/lib/json/errors.js.html#line44">Line 44</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Send a "Method Not Allowed" error to the client.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will send a &quot;Method Not Allowed&quot; error to the client. This error has 405 as status  code and &quot;Method Not Allowed&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">data</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																<div class="examples">
-							<h3>Examples</h3>
-															<div class="example"><pre><code class="hljs javascript">json.errors().notallowed({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
-<span class="hljs-comment">// -&gt; this will send the object {code: 405, message: "Method Not Allowed", data {"error": "value"}}</span>
-</code></pre>
-</div>
-													</div>
-																								</div>
-							<div id="toomany" class="function">
-					<a class="name" href="#toomany">
-						.toomany(data)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
-								<a href="/views/cerus-api/source/lib/json/errors.js.html#line60">Line 60</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Send a "Too Many Requests" error to the client.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will send a &quot;Too Many Requests&quot; error to the client. This error has 429 as status  code and &quot;Too Many Requests&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">data</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																<div class="examples">
-							<h3>Examples</h3>
-															<div class="example"><pre><code class="hljs javascript">json.errors().toomany({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
-<span class="hljs-comment">// -&gt; this will send the object {code: 429, message: "Too Many Requests", data: {"error": "value"}}</span>
-</code></pre>
-</div>
-													</div>
-																								</div>
-							<div id="internal" class="function">
-					<a class="name" href="#internal">
-						.internal(data)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
-								<a href="/views/cerus-api/source/lib/json/errors.js.html#line76">Line 76</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Send a "TInternal Server Error" error to the client.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will send a &quot;Internal Server Error&quot; error to the client. This error has 500 as status code and &quot;Internal Server Error&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">data</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																<div class="examples">
-							<h3>Examples</h3>
-															<div class="example"><pre><code class="hljs javascript">json.errors().internal({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
-<span class="hljs-comment">// -&gt; this will send the object {code: 500, message: "Internal Server Error", data: {"error": "value"}}</span>
-</code></pre>
-</div>
-													</div>
-																								</div>
-							<div id="notimplemented" class="function">
-					<a class="name" href="#notimplemented">
-						.notimplemented(data)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
-								<a href="/views/cerus-api/source/lib/json/errors.js.html#line92">Line 92</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Send a "Not Implemented" error to the client.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will send a &quot;Not Implemented&quot; error to the client. This error has 501 as status  code and &quot;Not Implemented&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">data</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																<div class="examples">
-							<h3>Examples</h3>
-															<div class="example"><pre><code class="hljs javascript">json.errors().notimplemented({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
-<span class="hljs-comment">// -&gt; this will send the object {code: 501, message: "Not Implemented", data: {"error": "value"}}</span>
 </code></pre>
 </div>
 													</div>
@@ -572,6 +327,251 @@
 							<h3>Examples</h3>
 															<div class="example"><pre><code class="hljs javascript">json.errors().error(<span class="hljs-number">400</span>, json.header(<span class="hljs-number">400</span>), {<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
 <span class="hljs-comment">// -&gt; this will send the object {code: 400, message: "Bad Request", data: {"error": "value"}}</span>
+</code></pre>
+</div>
+													</div>
+																								</div>
+							<div id="internal" class="function">
+					<a class="name" href="#internal">
+						.internal(data)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
+								<a href="/views/cerus-api/source/lib/json/errors.js.html#line76">Line 76</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Send a "TInternal Server Error" error to the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will send a &quot;Internal Server Error&quot; error to the client. This error has 500 as status code and &quot;Internal Server Error&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">data</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">json.errors().internal({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
+<span class="hljs-comment">// -&gt; this will send the object {code: 500, message: "Internal Server Error", data: {"error": "value"}}</span>
+</code></pre>
+</div>
+													</div>
+																								</div>
+							<div id="notallowed" class="function">
+					<a class="name" href="#notallowed">
+						.notallowed(data)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
+								<a href="/views/cerus-api/source/lib/json/errors.js.html#line44">Line 44</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Send a "Method Not Allowed" error to the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will send a &quot;Method Not Allowed&quot; error to the client. This error has 405 as status  code and &quot;Method Not Allowed&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">data</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">json.errors().notallowed({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
+<span class="hljs-comment">// -&gt; this will send the object {code: 405, message: "Method Not Allowed", data {"error": "value"}}</span>
+</code></pre>
+</div>
+													</div>
+																								</div>
+							<div id="notimplemented" class="function">
+					<a class="name" href="#notimplemented">
+						.notimplemented(data)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
+								<a href="/views/cerus-api/source/lib/json/errors.js.html#line92">Line 92</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Send a "Not Implemented" error to the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will send a &quot;Not Implemented&quot; error to the client. This error has 501 as status  code and &quot;Not Implemented&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">data</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">json.errors().notimplemented({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
+<span class="hljs-comment">// -&gt; this will send the object {code: 501, message: "Not Implemented", data: {"error": "value"}}</span>
+</code></pre>
+</div>
+													</div>
+																								</div>
+							<div id="toomany" class="function">
+					<a class="name" href="#toomany">
+						.toomany(data)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
+								<a href="/views/cerus-api/source/lib/json/errors.js.html#line60">Line 60</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Send a "Too Many Requests" error to the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will send a &quot;Too Many Requests&quot; error to the client. This error has 429 as status  code and &quot;Too Many Requests&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">data</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">json.errors().toomany({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
+<span class="hljs-comment">// -&gt; this will send the object {code: 429, message: "Too Many Requests", data: {"error": "value"}}</span>
+</code></pre>
+</div>
+													</div>
+																								</div>
+							<div id="unauthorized" class="function">
+					<a class="name" href="#unauthorized">
+						.unauthorized(data)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-api/source/lib/json/errors.js.html">lib/json/errors.js</a>, 
+								<a href="/views/cerus-api/source/lib/json/errors.js.html#line28">Line 28</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Send a "Unauthorized" error to the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will send a &quot;Unauthorized&quot; error to the client. This error has 401 as status code and &quot;Unauthorized&quot; as message. You can also add data that will be placed under the &quot;data&quot; key.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">data</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The data that you want to add to the error. It can be a string or every other type of variable. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">json.errors().unauthorized({<span class="hljs-string">"error"</span>: <span class="hljs-string">"value"</span>});
+<span class="hljs-comment">// -&gt; this will send the object {code: 401, message: "Unauthorized", data {"error": "value"}}</span>
 </code></pre>
 </div>
 													</div>

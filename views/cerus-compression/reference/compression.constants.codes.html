@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "selected" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -155,7 +155,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-					<a href="/views/cerus-compression/source/lib/constants.js.html#line199">Line 199</a>
+					<a href="/views/cerus-compression/source/lib/constants.js.html#line198">Line 198</a>
 				</div>
 			</div>
 												<div class="item">
@@ -177,6 +177,36 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.codes.html#buferror">buferror</a>
+						</div>
+						<div class="col a8">Returns the BUF_ERROR code.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.codes.html#dataerror">dataerror</a>
+						</div>
+						<div class="col a8">Returns the DATA_ERROR code.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.codes.html#errno">errno</a>
+						</div>
+						<div class="col a8">Returns the ERRNO code.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.codes.html#memerror">memerror</a>
+						</div>
+						<div class="col a8">Returns the MEM_ERROR code.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.codes.html#needdict">needdict</a>
+						</div>
+						<div class="col a8">Returns the NEED_DICT code.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-compression/reference/compression.constants.codes.html#ok">ok</a>
 						</div>
 						<div class="col a8">Returns the OK code.</div>
@@ -189,39 +219,9 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.codes.html#needdict">needdict</a>
-						</div>
-						<div class="col a8">Returns the NEED_DICT code.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.codes.html#errno">errno</a>
-						</div>
-						<div class="col a8">Returns the ERRNO code.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-compression/reference/compression.constants.codes.html#streamerror">streamerror</a>
 						</div>
 						<div class="col a8">Returns the STREAM_ERROR code.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.codes.html#dataerror">dataerror</a>
-						</div>
-						<div class="col a8">Returns the DATA_ERROR code.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.codes.html#memerror">memerror</a>
-						</div>
-						<div class="col a8">Returns the MEM_ERROR code.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.codes.html#buferror">buferror</a>
-						</div>
-						<div class="col a8">Returns the BUF_ERROR code.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -235,6 +235,186 @@
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
+							<div id="buferror" class="function">
+					<a class="name" href="#buferror">
+						.buferror()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line282">Line 282</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the BUF_ERROR code.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the BUF_ERROR code. This code means that there was an error while trying to write data to the buffer since it was full.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_BUF_ERROR</div>
+							</div>
+						</div>
+									</div>
+							<div id="dataerror" class="function">
+					<a class="name" href="#dataerror">
+						.dataerror()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line260">Line 260</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the DATA_ERROR code.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the DATA_ERROR code. This code means that there was something that stopped the stream while it was compressing or decompressing data.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_DATA_ERROR</div>
+							</div>
+						</div>
+									</div>
+							<div id="errno" class="function">
+					<a class="name" href="#errno">
+						.errno()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line239">Line 239</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the ERRNO code.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the ERRNO code. This code means that there was an error while flushing the data.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_ERRNO</div>
+							</div>
+						</div>
+									</div>
+							<div id="memerror" class="function">
+					<a class="name" href="#memerror">
+						.memerror()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line271">Line 271</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the MEM_ERROR code.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the MEM_ERROR code. This code means that there was an error while allocating memory to the compression or decompression process.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_MEM_ERROR</div>
+							</div>
+						</div>
+									</div>
+							<div id="needdict" class="function">
+					<a class="name" href="#needdict">
+						.needdict()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line227">Line 227</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the NEED_DICT code.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the NEED_DICT code. This code means that the compression stream was trying to decompress something but couldn&#39;t find a dictionary. This is list of quick translations the decompression class uses to quickly decompress data.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_NEED_DICT</div>
+							</div>
+						</div>
+									</div>
 							<div id="ok" class="function">
 					<a class="name" href="#ok">
 						.ok()
@@ -245,7 +425,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line205">Line 205</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line204">Line 204</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -281,7 +461,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line216">Line 216</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line215">Line 215</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -307,78 +487,6 @@
 							</div>
 						</div>
 									</div>
-							<div id="needdict" class="function">
-					<a class="name" href="#needdict">
-						.needdict()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line228">Line 228</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the NEED_DICT code.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the NEED_DICT code. This code means that the compression stream was trying to decompress something but couldn&#39;t find a dictionary. This is list of quick translations the decompression class uses to quickly decompress data.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_NEED_DICT</div>
-							</div>
-						</div>
-									</div>
-							<div id="errno" class="function">
-					<a class="name" href="#errno">
-						.errno()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line240">Line 240</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the ERRNO code.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the ERRNO code. This code means that there was an error while flushing the data.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_ERRNO</div>
-							</div>
-						</div>
-									</div>
 							<div id="streamerror" class="function">
 					<a class="name" href="#streamerror">
 						.streamerror()
@@ -389,7 +497,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line250">Line 250</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line249">Line 249</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -415,114 +523,6 @@
 							</div>
 						</div>
 									</div>
-							<div id="dataerror" class="function">
-					<a class="name" href="#dataerror">
-						.dataerror()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line261">Line 261</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the DATA_ERROR code.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the DATA_ERROR code. This code means that there was something that stopped the stream while it was compressing or decompressing data.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_DATA_ERROR</div>
-							</div>
-						</div>
-									</div>
-							<div id="memerror" class="function">
-					<a class="name" href="#memerror">
-						.memerror()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line272">Line 272</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the MEM_ERROR code.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the MEM_ERROR code. This code means that there was an error while allocating memory to the compression or decompression process.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_MEM_ERROR</div>
-							</div>
-						</div>
-									</div>
-							<div id="buferror" class="function">
-					<a class="name" href="#buferror">
-						.buferror()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line283">Line 283</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the BUF_ERROR code.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the BUF_ERROR code. This code means that there was an error while trying to write data to the buffer since it was full.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_BUF_ERROR</div>
-							</div>
-						</div>
-									</div>
 							<div id="versionerror" class="function">
 					<a class="name" href="#versionerror">
 						.versionerror()
@@ -533,7 +533,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line294">Line 294</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line293">Line 293</a>
 							</div>
 						</div>
 																								<div class="item">

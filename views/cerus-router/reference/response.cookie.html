@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -194,33 +194,15 @@ response.cookies().add(cookie);
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookie.html#key">key</a>
+							<a href="/views/cerus-router/reference/response.cookie.html#build">build</a>
 						</div>
-						<div class="col a8">The setter/getter for the key setting.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookie.html#value">value</a>
-						</div>
-						<div class="col a8">The setter/getter for the value setting.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookie.html#maxage">maxage</a>
-						</div>
-						<div class="col a8">The setter/getter for the maxage setting.</div>
+						<div class="col a8">Builds the cookie.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
 							<a href="/views/cerus-router/reference/response.cookie.html#domain">domain</a>
 						</div>
 						<div class="col a8">The setter/getter for the domain setting.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookie.html#path">path</a>
-						</div>
-						<div class="col a8">The setter/getter for the path setting.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -236,9 +218,21 @@ response.cookies().add(cookie);
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookie.html#secure">secure</a>
+							<a href="/views/cerus-router/reference/response.cookie.html#key">key</a>
 						</div>
-						<div class="col a8">The setter/getter for the secure setting.</div>
+						<div class="col a8">The setter/getter for the key setting.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.cookie.html#maxage">maxage</a>
+						</div>
+						<div class="col a8">The setter/getter for the maxage setting.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.cookie.html#path">path</a>
+						</div>
+						<div class="col a8">The setter/getter for the path setting.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -248,9 +242,15 @@ response.cookies().add(cookie);
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookie.html#build">build</a>
+							<a href="/views/cerus-router/reference/response.cookie.html#secure">secure</a>
 						</div>
-						<div class="col a8">Builds the cookie.</div>
+						<div class="col a8">The setter/getter for the secure setting.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.cookie.html#value">value</a>
+						</div>
+						<div class="col a8">The setter/getter for the value setting.</div>
 					</div>
 							</div>
 		</div>
@@ -258,6 +258,201 @@ response.cookies().add(cookie);
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
+							<div id="build" class="function">
+					<a class="name" href="#build">
+						.build()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line151">Line 151</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Builds the cookie.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will build the cookie using the settings set in this class. It will return a string with the build cookie in it.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The built cookie.</div>
+							</div>
+						</div>
+									</div>
+							<div id="domain" class="function">
+					<a class="name" href="#domain">
+						.domain(key)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line63">Line 63</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The setter/getter for the domain setting.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the setter and getter for the domain setting. This setting sets the domain that the cookie is allowed to be send to.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">key</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The new domain setting. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The domain setting.</div>
+							</div>
+						</div>
+									</div>
+							<div id="expires" class="function">
+					<a class="name" href="#expires">
+						.expires(key)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line91">Line 91</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The setter/getter for the expires setting.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the setter and getter for the expires setting. The expires sets a date where the cookie will expire. It is different from the maxage setting in that this setting will make the cookie expire at the selected data and the maxage setting will set a time in seconds until the cookie will expire.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">key</div>
+										<div class="col a3">Date</div>
+										<div class="col a6"><span>
+											The new expires setting. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Date</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The expires setting.</div>
+							</div>
+						</div>
+									</div>
+							<div id="httponly" class="function">
+					<a class="name" href="#httponly">
+						.httponly(key)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line107">Line 107</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The setter/getter for the httponly setting.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the setter and getter for the httponly setting. This setting sets if the cookie is only allowed to be send over http(s) and not be set by the client itself.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">key</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The new httponly setting. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Boolean</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The httponly setting.</div>
+							</div>
+						</div>
+									</div>
 							<div id="key" class="function">
 					<a class="name" href="#key">
 						.key(key)
@@ -311,59 +506,6 @@ response.cookies().add(cookie);
 							</div>
 						</div>
 									</div>
-							<div id="value" class="function">
-					<a class="name" href="#value">
-						.value(value)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line35">Line 35</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The setter/getter for the value setting.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the setter and getter for the cookie&#39;s value. The value of the cookie is the data that the cookie will save on the client.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">value</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The new value setting. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">String</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The value setting.</div>
-							</div>
-						</div>
-									</div>
 							<div id="maxage" class="function">
 					<a class="name" href="#maxage">
 						.maxage(key)
@@ -374,7 +516,7 @@ response.cookies().add(cookie);
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line51">Line 51</a>
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line47">Line 47</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -417,59 +559,6 @@ response.cookies().add(cookie);
 							</div>
 						</div>
 									</div>
-							<div id="domain" class="function">
-					<a class="name" href="#domain">
-						.domain(key)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line69">Line 69</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The setter/getter for the domain setting.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the setter and getter for the domain setting. This setting sets the domain that the cookie is allowed to be send to.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">key</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The new domain setting. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">String</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The domain setting.</div>
-							</div>
-						</div>
-									</div>
 							<div id="path" class="function">
 					<a class="name" href="#path">
 						.path(key)
@@ -480,7 +569,7 @@ response.cookies().add(cookie);
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line85">Line 85</a>
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line77">Line 77</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -523,165 +612,6 @@ response.cookies().add(cookie);
 							</div>
 						</div>
 									</div>
-							<div id="expires" class="function">
-					<a class="name" href="#expires">
-						.expires(key)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line101">Line 101</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The setter/getter for the expires setting.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the setter and getter for the expires setting. The expires sets a date where the cookie will expire. It is different from the maxage setting in that this setting will make the cookie expire at the selected data and the maxage setting will set a time in seconds until the cookie will expire.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">key</div>
-										<div class="col a3">Date</div>
-										<div class="col a6"><span>
-											The new expires setting. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Date</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The expires setting.</div>
-							</div>
-						</div>
-									</div>
-							<div id="httponly" class="function">
-					<a class="name" href="#httponly">
-						.httponly(key)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line119">Line 119</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The setter/getter for the httponly setting.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the setter and getter for the httponly setting. This setting sets if the cookie is only allowed to be send over http(s) and not be set by the client itself.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">key</div>
-										<div class="col a3">Boolean</div>
-										<div class="col a6"><span>
-											The new httponly setting. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Boolean</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The httponly setting.</div>
-							</div>
-						</div>
-									</div>
-							<div id="secure" class="function">
-					<a class="name" href="#secure">
-						.secure(key)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line135">Line 135</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The setter/getter for the secure setting.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the setter and getter for the secure setting. This setting sets if the cookie may only be send over https connections to make sure it&#39;s contents are never compromised.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">key</div>
-										<div class="col a3">Boolean</div>
-										<div class="col a6"><span>
-											The new secure setting. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Boolean</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The secure setting.</div>
-							</div>
-						</div>
-									</div>
 							<div id="same" class="function">
 					<a class="name" href="#same">
 						.same(key)
@@ -692,7 +622,7 @@ response.cookies().add(cookie);
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line151">Line 151</a>
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line135">Line 135</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -735,9 +665,9 @@ response.cookies().add(cookie);
 							</div>
 						</div>
 									</div>
-							<div id="build" class="function">
-					<a class="name" href="#build">
-						.build()
+							<div id="secure" class="function">
+					<a class="name" href="#secure">
+						.secure(key)
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -745,7 +675,7 @@ response.cookies().add(cookie);
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line169">Line 169</a>
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line121">Line 121</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -754,11 +684,81 @@ response.cookies().add(cookie);
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Builds the cookie.</div>
+								<div class="value">The setter/getter for the secure setting.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function will build the cookie using the settings set in this class. It will return a string with the build cookie in it.</p>
+					<div class="desc"><p>This is the setter and getter for the secure setting. This setting sets if the cookie may only be send over https connections to make sure it&#39;s contents are never compromised.</p>
 </div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">key</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The new secure setting. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Boolean</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The secure setting.</div>
+							</div>
+						</div>
+									</div>
+							<div id="value" class="function">
+					<a class="name" href="#value">
+						.value(value)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html">lib/response/cookie.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/cookie.js.html#line33">Line 33</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The setter/getter for the value setting.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the setter and getter for the cookie&#39;s value. The value of the cookie is the data that the cookie will save on the client.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">value</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The new value setting. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
 																															<div class="return">
 							<h3>Returns</h3>
 							<div class="item">
@@ -767,7 +767,7 @@ response.cookies().add(cookie);
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">The built cookie.</div>
+								<div class="value">The value setting.</div>
 							</div>
 						</div>
 									</div>

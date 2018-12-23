@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -164,7 +164,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-					<a href="/views/cerus-router/source/lib/request/agent.js.html#line90">Line 90</a>
+					<a href="/views/cerus-router/source/lib/request/agent.js.html#line88">Line 88</a>
 				</div>
 			</div>
 												<div class="item">
@@ -186,6 +186,12 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.agent.browser.html#is">is</a>
+						</div>
+						<div class="col a8">Returns the is class.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-router/reference/request.agent.browser.html#name">name</a>
 						</div>
 						<div class="col a8">Returns the name of the browser.</div>
@@ -196,18 +202,48 @@
 						</div>
 						<div class="col a8">Returns the version of the browser.</div>
 					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/request.agent.browser.html#is">is</a>
-						</div>
-						<div class="col a8">Returns the is class.</div>
-					</div>
 							</div>
 		</div>
 	
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
+							<div id="is" class="function">
+					<a class="name" href="#is">
+						.is()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
+								<a href="/views/cerus-router/source/lib/request/agent.js.html#line123">Line 123</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the is class.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns the is class. With this class you can check if the client is using a certain browser.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The is class.</div>
+							</div>
+						</div>
+									</div>
 							<div id="name" class="function">
 					<a class="name" href="#name">
 						.name()
@@ -218,7 +254,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-								<a href="/views/cerus-router/source/lib/request/agent.js.html#line102">Line 102</a>
+								<a href="/views/cerus-router/source/lib/request/agent.js.html#line100">Line 100</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -254,7 +290,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-								<a href="/views/cerus-router/source/lib/request/agent.js.html#line117">Line 117</a>
+								<a href="/views/cerus-router/source/lib/request/agent.js.html#line113">Line 113</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -277,42 +313,6 @@
 							<div class="item">
 								<div class="key">Description</div>
 								<div class="value">The version of the browser.</div>
-							</div>
-						</div>
-									</div>
-							<div id="is" class="function">
-					<a class="name" href="#is">
-						.is()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-								<a href="/views/cerus-router/source/lib/request/agent.js.html#line127">Line 127</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the is class.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function returns the is class. With this class you can check if the client is using a certain browser.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Class</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The is class.</div>
 							</div>
 						</div>
 									</div>

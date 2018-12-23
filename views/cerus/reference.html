@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -172,9 +172,9 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus/reference/autoroute.html#folders">folders</a>
+							<a href="/views/cerus/reference/autoroute.html#assets">assets</a>
 						</div>
-						<div class="col a8">Returns the folders class.</div>
+						<div class="col a8">Loads and routes an assets folder.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -184,15 +184,15 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus/reference/autoroute.html#view">view</a>
+							<a href="/views/cerus/reference/autoroute.html#folders">folders</a>
 						</div>
-						<div class="col a8">Loads and routes a view.</div>
+						<div class="col a8">Returns the folders class.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus/reference/autoroute.html#assets">assets</a>
+							<a href="/views/cerus/reference/autoroute.html#view">view</a>
 						</div>
-						<div class="col a8">Loads and routes an assets folder.</div>
+						<div class="col a8">Loads and routes a view.</div>
 					</div>
 							</div>
 		</div>
@@ -200,9 +200,9 @@
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="folders" class="function">
-					<a class="name" href="#folders">
-						.folders()
+							<div id="assets" class="function">
+					<a class="name" href="#assets">
+						.assets(folder, options)
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -210,7 +210,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-								<a href="/views/cerus/source/lib/autoroute.js.html#line16">Line 16</a>
+								<a href="/views/cerus/source/lib/autoroute.js.html#line133">Line 133</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -219,20 +219,99 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns the folders class.</div>
+								<div class="value">Loads and routes an assets folder.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function will return the folders class for this module. With it you can change the folders the views and assets should be stored in.</p>
+					<div class="desc"><p>With this function you can route assets. Assets are folders containing a certain type of &quot;assets&quot;, e.g. stylesheets, scripts, images, etc. If you want to learn more about how to use assets take a look at the assets tutorial. By default all the assets are stored in the assets folder. You can change this folder with .folder().assets(). You can also use an absolute path. When using an absolute path the default prefix, the root and assets folder, won&#39;t be used. This path is also fixed (\\ is changed to /) before being used to support all the platforms. The assets will be routed to /{FOLDER}/{FILE}, for example: &quot;styles.css&quot; from folder &quot;css&quot; will routed to &quot;/css/styles.css&quot;. You can also override the type that will be send with the request by using the type parameter.</p>
 </div>
-																															<div class="return">
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">folder</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The assets folder that will be routed.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The object of options. (optional) (default: {})
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options.absolute</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											If the inserted path is absolute. (optional) (child)
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options.url</div>
+										<div class="col a3">Boolean</div>
+										<div class="col a6"><span>
+											The prefix of the url the assets are routed to. By default this is the folder parameter. (optional) (child)
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options.type</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The MIME type of the favicon. By default this is automatically selected. (optional) (child)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js" and folder "C:\\project\\assets\\css\\" containing two files:</span>
+<span class="hljs-comment">// "example1.css" and "example2.css"</span>
+cerus.autoroute().assets(<span class="hljs-string">"css"</span>);
+<span class="hljs-comment">// -&gt; will load and route "example1.css" to "/css/example1.css" and "example2.css" to "/css/example2.css"</span>
+</code></pre>
+</div>
+													</div>
+																					<div class="emits">
+							<h3>Emits</h3>
+							<div class="table">
+								<div class="row head">
+									<div class="col a3">Event</div>
+									<div class="col a9">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">file</div>
+										<div class="col a9">When one of the assets has been loaded. With the file as first parameter.</div>
+									</div>
+																	<div class="row">
+										<div class="col a3">request</div>
+										<div class="col a9">When an asset is requested. With the request as first parameter and response as second.</div>
+									</div>
+																	<div class="row">
+										<div class="col a3">error</div>
+										<div class="col a9">When there was an error while loading the file. With the error as first parameter.</div>
+									</div>
+																	<div class="row">
+										<div class="col a3">finish</div>
+										<div class="col a9">When it is finished loading and routing all the assets. This event has no parameters.</div>
+									</div>
+															</div>
+						</div>
+																<div class="return">
 							<h3>Returns</h3>
 							<div class="item">
 								<div class="key">Type</div>
-								<div class="value">Class</div>
+								<div class="value">Promise</div>
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">The autoroute.folders class.</div>
+								<div class="value">This function will return a promise.</div>
 							</div>
 						</div>
 									</div>
@@ -280,13 +359,6 @@
 										<div class="col a3">Object</div>
 										<div class="col a6"><span>
 											The object of options. (optional) (default: {})
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">options.absolute</div>
-										<div class="col a3">Boolean</div>
-										<div class="col a6"><span>
-											If the inserted path is absolute. (optional) (child)
 										</span></div>
 									</div>
 																	<div class="row">
@@ -346,6 +418,42 @@ cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
 							</div>
 						</div>
 									</div>
+							<div id="folders" class="function">
+					<a class="name" href="#folders">
+						.folders()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
+								<a href="/views/cerus/source/lib/autoroute.js.html#line16">Line 16</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the folders class.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return the folders class for this module. With it you can change the folders the views and assets should be stored in.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The autoroute.folders class.</div>
+							</div>
+						</div>
+									</div>
 							<div id="view" class="function">
 					<a class="name" href="#view">
 						.view(url, filename, options)
@@ -356,7 +464,7 @@ cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-								<a href="/views/cerus/source/lib/autoroute.js.html#line80">Line 80</a>
+								<a href="/views/cerus/source/lib/autoroute.js.html#line76">Line 76</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -407,13 +515,6 @@ cerus.autoroute().favicon(<span class="hljs-string">"favicon.png"</span>);
 										</span></div>
 									</div>
 																	<div class="row">
-										<div class="col a3">options.absolute</div>
-										<div class="col a3">Boolean</div>
-										<div class="col a6"><span>
-											If the inserted path is absolute. (optional) (child)
-										</span></div>
-									</div>
-																	<div class="row">
 										<div class="col a3">options.type</div>
 										<div class="col a3">String</div>
 										<div class="col a6"><span>
@@ -452,114 +553,6 @@ cerus.autoroute().view(<span class="hljs-string">"/home"</span>, <span class="hl
 																	<div class="row">
 										<div class="col a3">finish</div>
 										<div class="col a9">When it is finished loading and routing the file. This event has no parameters.</div>
-									</div>
-															</div>
-						</div>
-																<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Promise</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">This function will return a promise.</div>
-							</div>
-						</div>
-									</div>
-							<div id="assets" class="function">
-					<a class="name" href="#assets">
-						.assets(folder, options)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus/source/lib/autoroute.js.html">lib/autoroute.js</a>, 
-								<a href="/views/cerus/source/lib/autoroute.js.html#line147">Line 147</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Loads and routes an assets folder.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>With this function you can route assets. Assets are folders containing a certain type of &quot;assets&quot;, e.g. stylesheets, scripts, images, etc. If you want to learn more about how to use assets take a look at the assets tutorial. By default all the assets are stored in the assets folder. You can change this folder with .folder().assets(). You can also use an absolute path. When using an absolute path the default prefix, the root and assets folder, won&#39;t be used. This path is also fixed (\\ is changed to /) before being used to support all the platforms. The assets will be routed to /{FOLDER}/{FILE}, for example: &quot;styles.css&quot; from folder &quot;css&quot; will routed to &quot;/css/styles.css&quot;. You can also override the type that will be send with the request by using the type parameter.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">folder</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The assets folder that will be routed.
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">options</div>
-										<div class="col a3">Object</div>
-										<div class="col a6"><span>
-											The object of options. (optional) (default: {})
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">options.absolute</div>
-										<div class="col a3">Boolean</div>
-										<div class="col a6"><span>
-											If the inserted path is absolute. (optional) (child)
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">options.type</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The MIME type of the favicon. By default this is automatically selected. (optional) (child)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																<div class="examples">
-							<h3>Examples</h3>
-															<div class="example"><pre><code class="hljs javascript"><span class="hljs-comment">// with as project env "C:\\project\\example.js" and folder "C:\\project\\assets\\css\\" containing two files:</span>
-<span class="hljs-comment">// "example1.css" and "example2.css"</span>
-cerus.autoroute().assets(<span class="hljs-string">"css"</span>);
-<span class="hljs-comment">// -&gt; will load and route "example1.css" to "/css/example1.css" and "example2.css" to "/css/example2.css"</span>
-</code></pre>
-</div>
-													</div>
-																					<div class="emits">
-							<h3>Emits</h3>
-							<div class="table">
-								<div class="row head">
-									<div class="col a3">Event</div>
-									<div class="col a9">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">file</div>
-										<div class="col a9">When one of the assets has been loaded. With the file as first parameter.</div>
-									</div>
-																	<div class="row">
-										<div class="col a3">request</div>
-										<div class="col a9">When an asset is requested. With the request as first parameter and response as second.</div>
-									</div>
-																	<div class="row">
-										<div class="col a3">error</div>
-										<div class="col a9">When there was an error while loading the file. With the error as first parameter.</div>
-									</div>
-																	<div class="row">
-										<div class="col a3">finish</div>
-										<div class="col a9">When it is finished loading and routing all the assets. This event has no parameters.</div>
 									</div>
 															</div>
 						</div>

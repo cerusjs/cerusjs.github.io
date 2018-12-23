@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -166,7 +166,7 @@
 			</div>
 					<div class="line" id="line5">
 				<div class="number">5.</div>
-				<pre class="content"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">headers</span> </span>{</pre>
+				<pre class="content"><span class="hljs-built_in">module</span>.exports = <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">headers</span> </span>{</pre>
 			</div>
 					<div class="line" id="line6">
 				<div class="number">6.</div>
@@ -202,11 +202,11 @@
 			</div>
 					<div class="line" id="line14">
 				<div class="number">14.</div>
-				<pre class="content">	set(key, value = <span class="hljs-literal">null</span>) {</pre>
+				<pre class="content">	set(key, value) {</pre>
 			</div>
 					<div class="line" id="line15">
 				<div class="number">15.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> value_ = value;</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._response.finsihed) <span class="hljs-keyword">return</span>;</pre>
 			</div>
 					<div class="line" id="line16">
 				<div class="number">16.</div>
@@ -214,43 +214,43 @@
 			</div>
 					<div class="line" id="line17">
 				<div class="number">17.</div>
-				<pre class="content">		<span class="hljs-comment">// Check if the variables are correct</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._headers.push(key);</pre>
 			</div>
 					<div class="line" id="line18">
 				<div class="number">18.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._response.setHeader(key, value);</pre>
 			</div>
 					<div class="line" id="line19">
 				<div class="number">19.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument key must be a string"</span>);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line20">
 				<div class="number">20.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line21">
 				<div class="number">21.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line22">
 				<div class="number">22.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._response.finished) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function get</span></pre>
 			</div>
 					<div class="line" id="line23">
 				<div class="number">23.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span>;</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line24">
 				<div class="number">24.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	get(key) {</pre>
 			</div>
 					<div class="line" id="line25">
 				<div class="number">25.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._response.getHeader(key);</pre>
 			</div>
 					<div class="line" id="line26">
 				<div class="number">26.</div>
-				<pre class="content">		value_ = <span class="hljs-built_in">Array</span>.isArray(value_) ? value_.map(<span class="hljs-built_in">String</span>) : <span class="hljs-built_in">String</span>(value_);</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line27">
 				<div class="number">27.</div>
@@ -258,147 +258,147 @@
 			</div>
 					<div class="line" id="line28">
 				<div class="number">28.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._headers.push(key);</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line29">
 				<div class="number">29.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._response.setHeader(key, value_);</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function has</span></pre>
 			</div>
 					<div class="line" id="line30">
 				<div class="number">30.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line31">
 				<div class="number">31.</div>
-				<pre class="content"></pre>
+				<pre class="content">	has(key) {</pre>
 			</div>
 					<div class="line" id="line32">
 				<div class="number">32.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._response.hasHeader(key);</pre>
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function get</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content">	get(key) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument key must be a string"</span>);</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	remove(key) {</pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content">		</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>._headers.includes(key)) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the specified header doesn't exist"</span>);</pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._response.getHeader(key);</pre>
+				<pre class="content">		</pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._headers.splice(<span class="hljs-keyword">this</span>._headers.indexOf(key));</pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._response.removeHeader(key);</pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function has</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content">	has(key) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function append</span></pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument key must be a string"</span>);</pre>
+				<pre class="content">	append(key, value) {</pre>
 			</div>
 					<div class="line" id="line49">
 				<div class="number">49.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._response.finished) <span class="hljs-keyword">return</span>;</pre>
 			</div>
 					<div class="line" id="line50">
 				<div class="number">50.</div>
-				<pre class="content">		</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line51">
 				<div class="number">51.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._response.hasHeader(key);</pre>
+				<pre class="content">		<span class="hljs-keyword">const</span> header = <span class="hljs-keyword">this</span>.get(key);</pre>
 			</div>
 					<div class="line" id="line52">
 				<div class="number">52.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line53">
 				<div class="number">53.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-built_in">Array</span>.isArray(header)) {</pre>
 			</div>
 					<div class="line" id="line54">
 				<div class="number">54.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">			new_value = header.concat(value);</pre>
 			</div>
 					<div class="line" id="line55">
 				<div class="number">55.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function remove</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line56">
 				<div class="number">56.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-built_in">Array</span>.isArray(value)) {</pre>
 			</div>
 					<div class="line" id="line57">
 				<div class="number">57.</div>
-				<pre class="content">	remove(key) {</pre>
+				<pre class="content">			new_value = [header].concat(value);</pre>
 			</div>
 					<div class="line" id="line58">
 				<div class="number">58.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line59">
 				<div class="number">59.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument key must be a string"</span>);</pre>
+				<pre class="content">		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(header === <span class="hljs-literal">undefined</span>) {</pre>
 			</div>
 					<div class="line" id="line60">
 				<div class="number">60.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">			new_value = value;</pre>
 			</div>
 					<div class="line" id="line61">
 				<div class="number">61.</div>
-				<pre class="content"></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line62">
 				<div class="number">62.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(!<span class="hljs-keyword">this</span>._headers.includes(key)) {</pre>
+				<pre class="content">		<span class="hljs-keyword">else</span> {</pre>
 			</div>
 					<div class="line" id="line63">
 				<div class="number">63.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"the specified header doesn't exist"</span>);</pre>
+				<pre class="content">			new_value = [header, value];</pre>
 			</div>
 					<div class="line" id="line64">
 				<div class="number">64.</div>
@@ -406,198 +406,82 @@
 			</div>
 					<div class="line" id="line65">
 				<div class="number">65.</div>
-				<pre class="content">		</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line66">
 				<div class="number">66.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._headers.splice(<span class="hljs-keyword">this</span>._headers.indexOf(key));</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>.set(key, val);</pre>
 			</div>
 					<div class="line" id="line67">
 				<div class="number">67.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line68">
 				<div class="number">68.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._response.removeHeader(key);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line69">
 				<div class="number">69.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line70">
 				<div class="number">70.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function clear</span></pre>
 			</div>
 					<div class="line" id="line71">
 				<div class="number">71.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line72">
 				<div class="number">72.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function append</span></pre>
+				<pre class="content">	clear() {</pre>
 			</div>
 					<div class="line" id="line73">
 				<div class="number">73.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._headers.forEach(<span class="hljs-function"><span class="hljs-params">header</span> =&gt;</span> <span class="hljs-keyword">this</span>.remove(header));</pre>
 			</div>
 					<div class="line" id="line74">
 				<div class="number">74.</div>
-				<pre class="content">	append(key, value) {</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._headers = [];</pre>
 			</div>
 					<div class="line" id="line75">
 				<div class="number">75.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line76">
 				<div class="number">76.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument key must be a string"</span>);</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line77">
 				<div class="number">77.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line78">
 				<div class="number">78.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function list</span></pre>
 			</div>
 					<div class="line" id="line79">
 				<div class="number">79.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> value !== <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line80">
 				<div class="number">80.</div>
-				<pre class="content">			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"the argument value must be a string"</span>);</pre>
+				<pre class="content">	list() {</pre>
 			</div>
 					<div class="line" id="line81">
 				<div class="number">81.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._headers;</pre>
 			</div>
 					<div class="line" id="line82">
 				<div class="number">82.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line83">
 				<div class="number">83.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._response.finished) {</pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line84">
 				<div class="number">84.</div>
-				<pre class="content">			<span class="hljs-keyword">return</span>;</pre>
-			</div>
-					<div class="line" id="line85">
-				<div class="number">85.</div>
-				<pre class="content">		}</pre>
-			</div>
-					<div class="line" id="line86">
-				<div class="number">86.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line87">
-				<div class="number">87.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> header = <span class="hljs-keyword">this</span>.get(key);</pre>
-			</div>
-					<div class="line" id="line88">
-				<div class="number">88.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> val = value;</pre>
-			</div>
-					<div class="line" id="line89">
-				<div class="number">89.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line90">
-				<div class="number">90.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(header) {</pre>
-			</div>
-					<div class="line" id="line91">
-				<div class="number">91.</div>
-				<pre class="content">			val = <span class="hljs-built_in">Array</span>.isArray(header) ? header.concat(value) : <span class="hljs-built_in">Array</span>.isArray(value) ? [header].concat(value) : [header, value];</pre>
-			</div>
-					<div class="line" id="line92">
-				<div class="number">92.</div>
-				<pre class="content">		}</pre>
-			</div>
-					<div class="line" id="line93">
-				<div class="number">93.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line94">
-				<div class="number">94.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>.set(key, val);</pre>
-			</div>
-					<div class="line" id="line95">
-				<div class="number">95.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line96">
-				<div class="number">96.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line97">
-				<div class="number">97.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line98">
-				<div class="number">98.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function clear</span></pre>
-			</div>
-					<div class="line" id="line99">
-				<div class="number">99.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line100">
-				<div class="number">100.</div>
-				<pre class="content">	clear() {</pre>
-			</div>
-					<div class="line" id="line101">
-				<div class="number">101.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._headers = [];</pre>
-			</div>
-					<div class="line" id="line102">
-				<div class="number">102.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line103">
-				<div class="number">103.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line104">
-				<div class="number">104.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line105">
-				<div class="number">105.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function list</span></pre>
-			</div>
-					<div class="line" id="line106">
-				<div class="number">106.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line107">
-				<div class="number">107.</div>
-				<pre class="content">	list() {</pre>
-			</div>
-					<div class="line" id="line108">
-				<div class="number">108.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._headers;</pre>
-			</div>
-					<div class="line" id="line109">
-				<div class="number">109.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line110">
-				<div class="number">110.</div>
-				<pre class="content">}</pre>
-			</div>
-					<div class="line" id="line111">
-				<div class="number">111.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line112">
-				<div class="number">112.</div>
-				<pre class="content"><span class="hljs-built_in">module</span>.exports = headers;</pre>
-			</div>
-					<div class="line" id="line113">
-				<div class="number">113.</div>
 				<pre class="content"></pre>
 			</div>
 			</div>

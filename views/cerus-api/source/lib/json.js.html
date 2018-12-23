@@ -78,6 +78,16 @@
 				<li><a class= "selected" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -946,7 +946,7 @@
 			</div>
 					<div class="line" id="line202">
 				<div class="number">202.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._res.send(<span class="hljs-keyword">this</span>.stringify());</pre>
+				<pre class="content">		<span class="hljs-keyword">this</span>._res.json(<span class="hljs-keyword">this</span>._json, {<span class="hljs-attr">pretty</span>: <span class="hljs-keyword">this</span>._pretty});</pre>
 			</div>
 					<div class="line" id="line203">
 				<div class="number">203.</div>
@@ -962,82 +962,42 @@
 			</div>
 					<div class="line" id="line206">
 				<div class="number">206.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function stringifies the json response. When pretty is on it will also prettify this </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will return the {@link json.errors} class. With this class you can easily send errors to </span></pre>
 			</div>
 					<div class="line" id="line207">
 				<div class="number">207.</div>
-				<pre class="content"><span class="hljs-comment">	 * response.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * the client. You can also create your own errors if the pre-created ones don't suffice.</span></pre>
 			</div>
 					<div class="line" id="line208">
 				<div class="number">208.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Stringifies the json response.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Returns the json.errors class.</span></pre>
 			</div>
 					<div class="line" id="line209">
 				<div class="number">209.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function stringify</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Class} The json.errors class.</span></pre>
 			</div>
 					<div class="line" id="line210">
 				<div class="number">210.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function errors</span></pre>
 			</div>
 					<div class="line" id="line211">
 				<div class="number">211.</div>
-				<pre class="content">	stringify() {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line212">
 				<div class="number">212.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._pretty ? <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>._json, <span class="hljs-literal">null</span>, <span class="hljs-string">"\t"</span>) : <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>._json);</pre>
+				<pre class="content">	errors() {</pre>
 			</div>
 					<div class="line" id="line213">
 				<div class="number">213.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._errors;</pre>
 			</div>
 					<div class="line" id="line214">
 				<div class="number">214.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line215">
 				<div class="number">215.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
-			</div>
-					<div class="line" id="line216">
-				<div class="number">216.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will return the {@link json.errors} class. With this class you can easily send errors to </span></pre>
-			</div>
-					<div class="line" id="line217">
-				<div class="number">217.</div>
-				<pre class="content"><span class="hljs-comment">	 * the client. You can also create your own errors if the pre-created ones don't suffice.</span></pre>
-			</div>
-					<div class="line" id="line218">
-				<div class="number">218.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Returns the json.errors class.</span></pre>
-			</div>
-					<div class="line" id="line219">
-				<div class="number">219.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Class} The json.errors class.</span></pre>
-			</div>
-					<div class="line" id="line220">
-				<div class="number">220.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function errors</span></pre>
-			</div>
-					<div class="line" id="line221">
-				<div class="number">221.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
-			</div>
-					<div class="line" id="line222">
-				<div class="number">222.</div>
-				<pre class="content">	errors() {</pre>
-			</div>
-					<div class="line" id="line223">
-				<div class="number">223.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._errors;</pre>
-			</div>
-					<div class="line" id="line224">
-				<div class="number">224.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line225">
-				<div class="number">225.</div>
 				<pre class="content">}</pre>
 			</div>
 			</div>

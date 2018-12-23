@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -196,9 +196,33 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.html#status">status</a>
+							<a href="/views/cerus-router/reference/response.html#compression">compression</a>
 						</div>
-						<div class="col a8">The setter/getter for the status code.</div>
+						<div class="col a8">Sets if the compression is allowed to be used.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.html#cookies">cookies</a>
+						</div>
+						<div class="col a8">Returns the response.cookies class.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.html#download">download</a>
+						</div>
+						<div class="col a8">Sends a file that will be doewnloaded by the client.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.html#end">end</a>
+						</div>
+						<div class="col a8">Ends the response.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.html#file">file</a>
+						</div>
+						<div class="col a8">Sends a file to the client.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -214,15 +238,9 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.html#cookies">cookies</a>
+							<a href="/views/cerus-router/reference/response.html#json">json</a>
 						</div>
-						<div class="col a8">Returns the response.cookies class.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.html#compression">compression</a>
-						</div>
-						<div class="col a8">Sets if the compression is allowed to be used.</div>
+						<div class="col a8">Sends json data to the client.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -238,39 +256,21 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.html#type">type</a>
-						</div>
-						<div class="col a8">The setter/getter for the content type.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.html#end">end</a>
-						</div>
-						<div class="col a8">Ends the response.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-router/reference/response.html#send">send</a>
 						</div>
 						<div class="col a8">Sends data to the client.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.html#json">json</a>
+							<a href="/views/cerus-router/reference/response.html#status">status</a>
 						</div>
-						<div class="col a8">Sends json data to the client.</div>
+						<div class="col a8">The setter/getter for the status code.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.html#file">file</a>
+							<a href="/views/cerus-router/reference/response.html#type">type</a>
 						</div>
-						<div class="col a8">Sends a file to the client.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.html#download">download</a>
-						</div>
-						<div class="col a8">Sends a file that will be doewnloaded by the client.</div>
+						<div class="col a8">The setter/getter for the content type.</div>
 					</div>
 							</div>
 		</div>
@@ -278,9 +278,9 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="status" class="function">
-					<a class="name" href="#status">
-						.status(code)
+							<div id="compression" class="function">
+					<a class="name" href="#compression">
+						.compression(allowed)
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -288,23 +288,19 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line27">Line 27</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line84">Line 84</a>
 							</div>
 						</div>
-																									<div class="item">
-								<div class="key">Aliases:</div>
-								<div class="value">code</div>
-							</div>
-												<div class="item">
+																								<div class="item">
 							<div class="key">Access:</div>
 							<div class="value">public</div>
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">The setter/getter for the status code.</div>
+								<div class="value">Sets if the compression is allowed to be used.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This is the setter and getter for the status code that is send in the response. The status code is the code that tells the client how the request went. All 2xx codes means it was successful, 3xx is used for redirection and 4xx/5xx are used for errors. If no status code has been set the default, 200, will be used.</p>
+					<div class="desc"><p>With this function you can set if compression is allowed to be used. If you allow compression to be use it will first check if the client accepts the gzip or deflate compression types. If it isn&#39;t accepted by the client no compression will be used.</p>
 </div>
 											<div class="params">
 							<h3>Parameters</h3>
@@ -315,26 +311,174 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 									<div class="col a6">Description</div>
 								</div>
 																	<div class="row">
-										<div class="col a3">code</div>
-										<div class="col a3">Number</div>
+										<div class="col a3">allowed</div>
+										<div class="col a3">Boolean</div>
 										<div class="col a6"><span>
-											The new status code. (optional)
+											If the compression is allowed to be used.
 										</span></div>
 									</div>
 															</div>
 						</div>
+																													</div>
+							<div id="cookies" class="function">
+					<a class="name" href="#cookies">
+						.cookies()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
+								<a href="/views/cerus-router/source/lib/response.js.html#line73">Line 73</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the response.cookies class.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns the cookies class. With this class you can change the cookies that are send in the response.</p>
+</div>
 																															<div class="return">
 							<h3>Returns</h3>
 							<div class="item">
 								<div class="key">Type</div>
-								<div class="value">Number</div>
+								<div class="value">Class</div>
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">The status code</div>
+								<div class="value">The response.cookies class.</div>
 							</div>
 						</div>
 									</div>
+							<div id="download" class="function">
+					<a class="name" href="#download">
+						.download(file, name, encoding)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
+								<a href="/views/cerus-router/source/lib/response.js.html#line267">Line 267</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Sends a file that will be doewnloaded by the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>Using this function you can send a file that will be downloaded by the client. It will thrown an error if the file parameter isn&#39;t a file or a string. If it is a file it will be transformed to a string and the file&#39;s name will be used as name if the name wasn&#39;t set yet. You can set the name of the file using the name parameter and the encoding using the encoding parameter. It will also throw an error when the name parameter is not a string. To send the file it wil use the .send() function.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">file</div>
+										<div class="col a3">param</div>
+										<div class="col a6"><span>
+											The file to send to the client.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the file to send.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">encoding</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The encoding of the file that will be send. (optional) (default: "utf-8")
+										</span></div>
+									</div>
+															</div>
+						</div>
+																													</div>
+							<div id="end" class="function">
+					<a class="name" href="#end">
+						.end()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
+								<a href="/views/cerus-router/source/lib/response.js.html#line154">Line 154</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Ends the response.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can easily end the response. By ending the response you stop sending data to the client. It is not possible to not send things like the headers when using this function since those are still send.</p>
+</div>
+																													</div>
+							<div id="file" class="function">
+					<a class="name" href="#file">
+						.file(file)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
+								<a href="/views/cerus-router/source/lib/response.js.html#line256">Line 256</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Sends a file to the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can easily send a file to the client. It will send the file by creating a read stream for the file and piping that to the response.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">file</div>
+										<div class="col a3">File</div>
+										<div class="col a6"><span>
+											The file to send.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																													</div>
 							<div id="finished" class="function">
 					<a class="name" href="#finished">
 						.finished()
@@ -345,7 +489,7 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line50">Line 50</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line47">Line 47</a>
 							</div>
 						</div>
 																									<div class="item">
@@ -385,7 +529,7 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line65">Line 65</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line62">Line 62</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -411,9 +555,9 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							</div>
 						</div>
 									</div>
-							<div id="cookies" class="function">
-					<a class="name" href="#cookies">
-						.cookies()
+							<div id="json" class="function">
+					<a class="name" href="#json">
+						.json(body)
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -421,7 +565,7 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line76">Line 76</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line237">Line 237</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -430,46 +574,10 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns the response.cookies class.</div>
+								<div class="value">Sends json data to the client.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function returns the cookies class. With this class you can change the cookies that are send in the response.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Class</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The response.cookies class.</div>
-							</div>
-						</div>
-									</div>
-							<div id="compression" class="function">
-					<a class="name" href="#compression">
-						.compression(allowed)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line87">Line 87</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Sets if the compression is allowed to be used.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>With this function you can set if compression is allowed to be used. If you allow compression to be use it will first check if the client accepts the gzip or deflate compression types. If it isn&#39;t accepted by the client no compression will be used.</p>
+					<div class="desc"><p>This function is used to send json objects to the client. It works just like the send function, but then for json objects. If the body parameter isn&#39;t an object it will throw an error. It will also set the content type if that isn&#39;t set yet. It will stringify the object using JSON.stringify().</p>
 </div>
 											<div class="params">
 							<h3>Parameters</h3>
@@ -480,10 +588,10 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 									<div class="col a6">Description</div>
 								</div>
 																	<div class="row">
-										<div class="col a3">allowed</div>
-										<div class="col a3">Boolean</div>
+										<div class="col a3">body</div>
+										<div class="col a3">String</div>
 										<div class="col a6"><span>
-											If the compression is allowed to be used.
+											The object body of the response.
 										</span></div>
 									</div>
 															</div>
@@ -499,7 +607,7 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line106">Line 106</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line100">Line 100</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -541,7 +649,7 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line130">Line 130</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line117">Line 117</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -573,84 +681,6 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 															</div>
 						</div>
 																													</div>
-							<div id="type" class="function">
-					<a class="name" href="#type">
-						.type(type)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line144">Line 144</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The setter/getter for the content type.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the setter and getter for the content type of the response. The content type contains the type of content that is send with the response. This function will parse the inserted type and transform it to a correct MIME version. Because of this you can insert things like &quot;javascript&quot; and this will be parsed to &quot;script/javascript&quot;.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">type</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The new content type. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">String</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The content type.</div>
-							</div>
-						</div>
-									</div>
-							<div id="end" class="function">
-					<a class="name" href="#end">
-						.end()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line162">Line 162</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Ends the response.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>With this function you can easily end the response. By ending the response you stop sending data to the client. It is not possible to not send things like the headers when using this function since those are still send.</p>
-</div>
-																													</div>
 							<div id="send" class="function">
 					<a class="name" href="#send">
 						.send(body, encoding)
@@ -661,7 +691,7 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line173">Line 173</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line165">Line 165</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -711,9 +741,9 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 </div>
 													</div>
 																								</div>
-							<div id="json" class="function">
-					<a class="name" href="#json">
-						.json(body)
+							<div id="status" class="function">
+					<a class="name" href="#status">
+						.status(code)
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -721,19 +751,23 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line243">Line 243</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line26">Line 26</a>
 							</div>
 						</div>
-																								<div class="item">
+																									<div class="item">
+								<div class="key">Aliases:</div>
+								<div class="value">code</div>
+							</div>
+												<div class="item">
 							<div class="key">Access:</div>
 							<div class="value">public</div>
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Sends json data to the client.</div>
+								<div class="value">The setter/getter for the status code.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function is used to send json objects to the client. It works just like the send function, but then for json objects. If the body parameter isn&#39;t an object it will throw an error. It will also set the content type if that isn&#39;t set yet. It will stringify the object using JSON.stringify().</p>
+					<div class="desc"><p>This is the setter and getter for the status code that is send in the response. The status code is the code that tells the client how the request went. All 2xx codes means it was successful, 3xx is used for redirection and 4xx/5xx are used for errors. If no status code has been set the default, 200, will be used.</p>
 </div>
 											<div class="params">
 							<h3>Parameters</h3>
@@ -744,18 +778,29 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 									<div class="col a6">Description</div>
 								</div>
 																	<div class="row">
-										<div class="col a3">body</div>
-										<div class="col a3">String</div>
+										<div class="col a3">code</div>
+										<div class="col a3">Number</div>
 										<div class="col a6"><span>
-											The object body of the response.
+											The new status code. (optional)
 										</span></div>
 									</div>
 															</div>
 						</div>
-																													</div>
-							<div id="file" class="function">
-					<a class="name" href="#file">
-						.file(file)
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Number</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The status code</div>
+							</div>
+						</div>
+									</div>
+							<div id="type" class="function">
+					<a class="name" href="#type">
+						.type(type)
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -763,7 +808,7 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line264">Line 264</a>
+								<a href="/views/cerus-router/source/lib/response.js.html#line130">Line 130</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -772,10 +817,10 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Sends a file to the client.</div>
+								<div class="value">The setter/getter for the content type.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>With this function you can easily send a file object to the client. It also uses the .send() function. If the file parameter isn&#39;t a file it will throw an error.</p>
+					<div class="desc"><p>This is the setter and getter for the content type of the response. The content type contains the type of content that is send with the response. This function will parse the inserted type and transform it to a correct MIME version. Because of this you can insert things like &quot;javascript&quot; and this will be parsed to &quot;script/javascript&quot;.</p>
 </div>
 											<div class="params">
 							<h3>Parameters</h3>
@@ -786,71 +831,26 @@ cerus.router().route(<span class="hljs-string">"/"</span>)
 									<div class="col a6">Description</div>
 								</div>
 																	<div class="row">
-										<div class="col a3">file</div>
-										<div class="col a3">File</div>
+										<div class="col a3">type</div>
+										<div class="col a3">String</div>
 										<div class="col a6"><span>
-											The file to send.
+											The new content type. (optional)
 										</span></div>
 									</div>
 															</div>
 						</div>
-																													</div>
-							<div id="download" class="function">
-					<a class="name" href="#download">
-						.download(file, name, encoding)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response.js.html">lib/response.js</a>, 
-								<a href="/views/cerus-router/source/lib/response.js.html#line279">Line 279</a>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The content type.</div>
 							</div>
 						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Sends a file that will be doewnloaded by the client.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>Using this function you can send a file that will be downloaded by the client. It will thrown an error if the file parameter isn&#39;t a file or a string. If it is a file it will be transformed to a string and the file&#39;s name will be used as name if the name wasn&#39;t set yet. You can set the name of the file using the name parameter and the encoding using the encoding parameter. It will also throw an error when the name parameter is not a string. To send the file it wil use the .send() function.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">file</div>
-										<div class="col a3">param</div>
-										<div class="col a6"><span>
-											The file to send to the client.
-										</span></div>
 									</div>
-																	<div class="row">
-										<div class="col a3">name</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The name of the file to send.
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">encoding</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The encoding of the file that will be send. (optional) (default: "utf-8")
-										</span></div>
-									</div>
-															</div>
-						</div>
-																													</div>
 			
 		</div>
 	</div>

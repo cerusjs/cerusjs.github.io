@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -186,15 +186,15 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/request.agent.html#string">string</a>
-						</div>
-						<div class="col a8">Returns the full User-Agent string.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-router/reference/request.agent.html#browser">browser</a>
 						</div>
 						<div class="col a8">Returns the browser class.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.agent.html#cpu">cpu</a>
+						</div>
+						<div class="col a8">Returns the cpu class.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -216,9 +216,9 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/request.agent.html#cpu">cpu</a>
+							<a href="/views/cerus-router/reference/request.agent.html#string">string</a>
 						</div>
-						<div class="col a8">Returns the cpu class.</div>
+						<div class="col a8">Returns the full User-Agent string.</div>
 					</div>
 							</div>
 		</div>
@@ -226,42 +226,6 @@
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="string" class="function">
-					<a class="name" href="#string">
-						.string()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-								<a href="/views/cerus-router/source/lib/request/agent.js.html#line19">Line 19</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the full User-Agent string.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will return the full User-Agent header the client send. The User-Agent header contains information about the system the client is using and can therefore be used to get some information about the client. Please note that the client is able to fake his/her User-Agent, so this information shouldn&#39;t be depended on.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">String</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The full User-Agent string.</div>
-							</div>
-						</div>
-									</div>
 							<div id="browser" class="function">
 					<a class="name" href="#browser">
 						.browser()
@@ -295,6 +259,42 @@
 							<div class="item">
 								<div class="key">Description</div>
 								<div class="value">The browser class.</div>
+							</div>
+						</div>
+									</div>
+							<div id="cpu" class="function">
+					<a class="name" href="#cpu">
+						.cpu()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
+								<a href="/views/cerus-router/source/lib/request/agent.js.html#line76">Line 76</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the cpu class.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns the cpu class. This class contains information about the cpu the client was using when sending the request.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The cpu class.</div>
 							</div>
 						</div>
 									</div>
@@ -406,9 +406,9 @@
 							</div>
 						</div>
 									</div>
-							<div id="cpu" class="function">
-					<a class="name" href="#cpu">
-						.cpu()
+							<div id="string" class="function">
+					<a class="name" href="#string">
+						.string()
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -416,7 +416,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/request/agent.js.html">lib/request/agent.js</a>, 
-								<a href="/views/cerus-router/source/lib/request/agent.js.html#line76">Line 76</a>
+								<a href="/views/cerus-router/source/lib/request/agent.js.html#line19">Line 19</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -425,20 +425,20 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns the cpu class.</div>
+								<div class="value">Returns the full User-Agent string.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function returns the cpu class. This class contains information about the cpu the client was using when sending the request.</p>
+					<div class="desc"><p>This function will return the full User-Agent header the client send. The User-Agent header contains information about the system the client is using and can therefore be used to get some information about the client. Please note that the client is able to fake his/her User-Agent, so this information shouldn&#39;t be depended on.</p>
 </div>
 																															<div class="return">
 							<h3>Returns</h3>
 							<div class="item">
 								<div class="key">Type</div>
-								<div class="value">Class</div>
+								<div class="value">String</div>
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">The cpu class.</div>
+								<div class="value">The full User-Agent string.</div>
 							</div>
 						</div>
 									</div>

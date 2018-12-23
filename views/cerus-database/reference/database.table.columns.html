@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item opened">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-minus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -180,21 +180,15 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#clear">clear</a>
+						</div>
+						<div class="col a8">Clears all of the columns.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-database/reference/database.table.columns.html#drop">drop</a>
 						</div>
 						<div class="col a8">Drops the specified column.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-database/reference/database.table.columns.html#modify">modify</a>
-						</div>
-						<div class="col a8">Modifies the specified column.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-database/reference/database.table.columns.html#has">has</a>
-						</div>
-						<div class="col a8">Checks if the column exists.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -204,15 +198,21 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-database/reference/database.table.columns.html#has">has</a>
+						</div>
+						<div class="col a8">Checks if the column exists.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-database/reference/database.table.columns.html#list">list</a>
 						</div>
 						<div class="col a8">Lists all of the columns.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-database/reference/database.table.columns.html#clear">clear</a>
+							<a href="/views/cerus-database/reference/database.table.columns.html#modify">modify</a>
 						</div>
-						<div class="col a8">Clears all of the columns.</div>
+						<div class="col a8">Modifies the specified column.</div>
 					</div>
 							</div>
 		</div>
@@ -280,6 +280,42 @@
 							</div>
 						</div>
 									</div>
+							<div id="clear" class="function">
+					<a class="name" href="#clear">
+						.clear()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line489">Line 489</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Clears all of the columns.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can remove all of the columns.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
 							<div id="drop" class="function">
 					<a class="name" href="#drop">
 						.drop(name)
@@ -317,119 +353,6 @@
 										<div class="col a3">String</div>
 										<div class="col a6"><span>
 											The name of the column to drop.
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Promise</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">This function returns a promise.</div>
-							</div>
-						</div>
-									</div>
-							<div id="modify" class="function">
-					<a class="name" href="#modify">
-						.modify(name, options)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
-								<a href="/views/cerus-database/source/lib/database.js.html#line430">Line 430</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Modifies the specified column.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function modifies the specified column. The name of the columns that will be modified is specified using the name parameters and can be modified using the options parameter. The function returns a promise that is resolved when the column has been modified.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">name</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The name of the column to modify.
-										</span></div>
-									</div>
-																	<div class="row">
-										<div class="col a3">options</div>
-										<div class="col a3">Object</div>
-										<div class="col a6"><span>
-											The options containing what will be modified.
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Promise</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">This function returns a promise.</div>
-							</div>
-						</div>
-									</div>
-							<div id="has" class="function">
-					<a class="name" href="#has">
-						.has(name)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
-								<a href="/views/cerus-database/source/lib/database.js.html#line448">Line 448</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Checks if the column exists.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>With this function you can check if a column exists. The function returns a promise that is resolved with a boolean if the column exists.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">name</div>
-										<div class="col a3">String</div>
-										<div class="col a6"><span>
-											The name of the column exists.
 										</span></div>
 									</div>
 															</div>
@@ -499,6 +422,59 @@
 							</div>
 						</div>
 									</div>
+							<div id="has" class="function">
+					<a class="name" href="#has">
+						.has(name)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
+								<a href="/views/cerus-database/source/lib/database.js.html#line448">Line 448</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Checks if the column exists.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can check if a column exists. The function returns a promise that is resolved with a boolean if the column exists.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the column exists.
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function returns a promise.</div>
+							</div>
+						</div>
+									</div>
 							<div id="list" class="function">
 					<a class="name" href="#list">
 						.list()
@@ -535,9 +511,9 @@
 							</div>
 						</div>
 									</div>
-							<div id="clear" class="function">
-					<a class="name" href="#clear">
-						.clear()
+							<div id="modify" class="function">
+					<a class="name" href="#modify">
+						.modify(name, options)
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -545,7 +521,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-database/source/lib/database.js.html">lib/database.js</a>, 
-								<a href="/views/cerus-database/source/lib/database.js.html#line489">Line 489</a>
+								<a href="/views/cerus-database/source/lib/database.js.html#line430">Line 430</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -554,11 +530,35 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Clears all of the columns.</div>
+								<div class="value">Modifies the specified column.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>With this function you can remove all of the columns.</p>
+					<div class="desc"><p>This function modifies the specified column. The name of the columns that will be modified is specified using the name parameters and can be modified using the options parameter. The function returns a promise that is resolved when the column has been modified.</p>
 </div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">name</div>
+										<div class="col a3">String</div>
+										<div class="col a6"><span>
+											The name of the column to modify.
+										</span></div>
+									</div>
+																	<div class="row">
+										<div class="col a3">options</div>
+										<div class="col a3">Object</div>
+										<div class="col a6"><span>
+											The options containing what will be modified.
+										</span></div>
+									</div>
+															</div>
+						</div>
 																															<div class="return">
 							<h3>Returns</h3>
 							<div class="item">

@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -164,7 +164,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-					<a href="/views/cerus-router/source/lib/request.js.html#line534">Line 534</a>
+					<a href="/views/cerus-router/source/lib/request.js.html#line510">Line 510</a>
 				</div>
 			</div>
 												<div class="item">
@@ -192,15 +192,15 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/request.remote.html#port">port</a>
-						</div>
-						<div class="col a8">Returns the port used by the client.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-router/reference/request.remote.html#family">family</a>
 						</div>
 						<div class="col a8">Returns the family of the IP used by the client.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/request.remote.html#port">port</a>
+						</div>
+						<div class="col a8">Returns the port used by the client.</div>
 					</div>
 							</div>
 		</div>
@@ -218,7 +218,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-								<a href="/views/cerus-router/source/lib/request.js.html#line545">Line 545</a>
+								<a href="/views/cerus-router/source/lib/request.js.html#line521">Line 521</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -251,49 +251,6 @@
 							</div>
 						</div>
 									</div>
-							<div id="port" class="function">
-					<a class="name" href="#port">
-						.port()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-								<a href="/views/cerus-router/source/lib/request.js.html#line558">Line 558</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the port used by the client.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will return the port used by the client.</p>
-</div>
-																<div class="examples">
-							<h3>Examples</h3>
-															<div class="example"><pre><code class="hljs javascript">req.remote().port();
-<span class="hljs-comment">// -&gt; will return the client port</span>
-</code></pre>
-</div>
-													</div>
-																										<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">String</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The port used by the client.</div>
-							</div>
-						</div>
-									</div>
 							<div id="family" class="function">
 					<a class="name" href="#family">
 						.family()
@@ -304,7 +261,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
-								<a href="/views/cerus-router/source/lib/request.js.html#line571">Line 571</a>
+								<a href="/views/cerus-router/source/lib/request.js.html#line547">Line 547</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -334,6 +291,49 @@
 							<div class="item">
 								<div class="key">Description</div>
 								<div class="value">The family of the IP used by the client.</div>
+							</div>
+						</div>
+									</div>
+							<div id="port" class="function">
+					<a class="name" href="#port">
+						.port()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/request.js.html">lib/request.js</a>, 
+								<a href="/views/cerus-router/source/lib/request.js.html#line534">Line 534</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the port used by the client.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return the port used by the client.</p>
+</div>
+																<div class="examples">
+							<h3>Examples</h3>
+															<div class="example"><pre><code class="hljs javascript">req.remote().port();
+<span class="hljs-comment">// -&gt; will return the client port</span>
+</code></pre>
+</div>
+													</div>
+																										<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">String</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The port used by the client.</div>
 							</div>
 						</div>
 									</div>

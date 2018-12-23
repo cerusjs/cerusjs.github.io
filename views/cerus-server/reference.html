@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -179,27 +179,27 @@ cerus.server().start();
 				</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-server/reference/server.html#address">address</a>
+						</div>
+						<div class="col a8">Returns the server.address class.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-server/reference/server.html#alive">alive</a>
+						</div>
+						<div class="col a8">The getter/setter for the keep alive timeout time.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-server/reference/server.html#callback">callback</a>
 						</div>
 						<div class="col a8">Sets the callback that will be called for incoming requests.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.html#start">start</a>
+							<a href="/views/cerus-server/reference/server.html#connections">connections</a>
 						</div>
-						<div class="col a8">Starts the server.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.html#stop">stop</a>
-						</div>
-						<div class="col a8">Stops the server.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.html#port">port</a>
-						</div>
-						<div class="col a8">The getter/setter for the server port.</div>
+						<div class="col a8">Returns the amount of active connections.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -215,27 +215,33 @@ cerus.server().start();
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.html#maxheaders">maxheaders</a>
-						</div>
-						<div class="col a8">The getter/setter for the maximum amount of headers.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-server/reference/server.html#maxconnections">maxconnections</a>
 						</div>
 						<div class="col a8">The getter/setter for the maximum amount of connections.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.html#connections">connections</a>
+							<a href="/views/cerus-server/reference/server.html#maxheaders">maxheaders</a>
 						</div>
-						<div class="col a8">Returns the amount of active connections.</div>
+						<div class="col a8">The getter/setter for the maximum amount of headers.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.html#alive">alive</a>
+							<a href="/views/cerus-server/reference/server.html#port">port</a>
 						</div>
-						<div class="col a8">The getter/setter for the keep alive timeout time.</div>
+						<div class="col a8">The getter/setter for the server port.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-server/reference/server.html#start">start</a>
+						</div>
+						<div class="col a8">Starts the server.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-server/reference/server.html#stop">stop</a>
+						</div>
+						<div class="col a8">Stops the server.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -243,18 +249,101 @@ cerus.server().start();
 						</div>
 						<div class="col a8">The getter/setter for the timeout time.</div>
 					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.html#address">address</a>
-						</div>
-						<div class="col a8">Returns the server.address class.</div>
-					</div>
 							</div>
 		</div>
 	
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
+							<div id="address" class="function">
+					<a class="name" href="#address">
+						.address()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
+								<a href="/views/cerus-server/source/lib/server.js.html#line263">Line 263</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the server.address class.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return the address class for this server. The address class contains information about the address the server is using. This class can only be returned of the server is listening.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Class</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The server.address class.</div>
+							</div>
+						</div>
+									</div>
+							<div id="alive" class="function">
+					<a class="name" href="#alive">
+						.alive(alive)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
+								<a href="/views/cerus-server/source/lib/server.js.html#line229">Line 229</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The getter/setter for the keep alive timeout time.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is a getter and setter for the number of milliseconds of inactivity the server needs to wait for incoming data. If it takes more than the alive time the request is presumed inactive. The default time is 5000 milliseconds (5 seconds).</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">alive</div>
+										<div class="col a3">Number</div>
+										<div class="col a6"><span>
+											The keep alive timeout time. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Number</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The keep alive timeout time.</div>
+							</div>
+						</div>
+									</div>
 							<div id="callback" class="function">
 					<a class="name" href="#callback">
 						.callback(func)
@@ -304,6 +393,273 @@ cerus.server().start();
 </div>
 													</div>
 																								</div>
+							<div id="connections" class="function">
+					<a class="name" href="#connections">
+						.connections()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
+								<a href="/views/cerus-server/source/lib/server.js.html#line203">Line 203</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the amount of active connections.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function will return the current amount of connections. The connections will be returned using a promise. The amount of connections will be a parameter in the connections event. The amount of connections can only be fetched if the server is listening.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Number</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The amount of connections.</div>
+							</div>
+						</div>
+									</div>
+							<div id="event" class="function">
+					<a class="name" href="#event">
+						.event()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
+								<a href="/views/cerus-server/source/lib/server.js.html#line129">Line 129</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns a promise that is called on every event.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>With this function you can listen for server events. It&#39;ll return a promise that is called on a number of events. The &quot;error&quot; event is called when there was an error in the server. It is called with the error as parameter. The &quot;close&quot; event is called when the server was closed. The &quot;listening&quot; event is called when the server has started listening. The &quot;connection&quot; event is called when there was a new connection together with the new socket as paramater.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Promise</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">This function will return a promise.</div>
+							</div>
+						</div>
+									</div>
+							<div id="listening" class="function">
+					<a class="name" href="#listening">
+						.listening()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
+								<a href="/views/cerus-server/source/lib/server.js.html#line160">Line 160</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns if the server is listening.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This function returns if the server is currently listening for requests. This means that this function returns if the server has started or if it&#39;s currently stopped.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Boolean</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">If the server is listening.</div>
+							</div>
+						</div>
+									</div>
+							<div id="maxconnections" class="function">
+					<a class="name" href="#maxconnections">
+						.maxconnections(maxconnections)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
+								<a href="/views/cerus-server/source/lib/server.js.html#line187">Line 187</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The getter/setter for the maximum amount of connections.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is a getter and setter for the maximum amount of connections that the server will accept before refusing requests. By default there is no maximum amount of connections.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">maxconnections</div>
+										<div class="col a3">Number</div>
+										<div class="col a6"><span>
+											The new maximum amount of connections. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Number</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The maximum amount of connections.</div>
+							</div>
+						</div>
+									</div>
+							<div id="maxheaders" class="function">
+					<a class="name" href="#maxheaders">
+						.maxheaders(maxheaders)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
+								<a href="/views/cerus-server/source/lib/server.js.html#line171">Line 171</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The getter/setter for the maximum amount of headers.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is a getter and setter for the maximum amount of headers that the server will accept in a HTTP request. The default maximum amount of headers is 2000.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">maxheaders</div>
+										<div class="col a3">Number</div>
+										<div class="col a6"><span>
+											The new maximum amount of headers. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Number</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The maximum amount of headers.</div>
+							</div>
+						</div>
+									</div>
+							<div id="port" class="function">
+					<a class="name" href="#port">
+						.port(port)
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
+								<a href="/views/cerus-server/source/lib/server.js.html#line113">Line 113</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">The getter/setter for the server port.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is a getter and setter for the port that will be used for the server. It is possible to not use this port by supplying a port to the .start() function directly.</p>
+</div>
+											<div class="params">
+							<h3>Parameters</h3>
+							<div class="table params">
+								<div class="row head">
+									<div class="col a3">Name</div>
+									<div class="col a3">Type</div>
+									<div class="col a6">Description</div>
+								</div>
+																	<div class="row">
+										<div class="col a3">port</div>
+										<div class="col a3">Number</div>
+										<div class="col a6"><span>
+											The new server port. (optional)
+										</span></div>
+									</div>
+															</div>
+						</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Number</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">The server port.</div>
+							</div>
+						</div>
+									</div>
 							<div id="start" class="function">
 					<a class="name" href="#start">
 						.start(port)
@@ -416,326 +772,6 @@ cerus.server().stop(); <span class="hljs-comment">// or cerus.server().end();</s
 							</div>
 						</div>
 									</div>
-							<div id="port" class="function">
-					<a class="name" href="#port">
-						.port(port)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line113">Line 113</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The getter/setter for the server port.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is a getter and setter for the port that will be used for the server. It is possible to not use this port by supplying a port to the .start() function directly.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">port</div>
-										<div class="col a3">Number</div>
-										<div class="col a6"><span>
-											The new server port. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Number</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The server port.</div>
-							</div>
-						</div>
-									</div>
-							<div id="event" class="function">
-					<a class="name" href="#event">
-						.event()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line129">Line 129</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns a promise that is called on every event.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>With this function you can listen for server events. It&#39;ll return a promise that is called on a number of events. The &quot;error&quot; event is called when there was an error in the server. It is called with the error as parameter. The &quot;close&quot; event is called when the server was closed. The &quot;listening&quot; event is called when the server has started listening. The &quot;connection&quot; event is called when there was a new connection together with the new socket as paramater.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Promise</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">This function will return a promise.</div>
-							</div>
-						</div>
-									</div>
-							<div id="listening" class="function">
-					<a class="name" href="#listening">
-						.listening()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line160">Line 160</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns if the server is listening.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function returns if the server is currently listening for requests. This means that this function returns if the server has started or if it&#39;s currently stopped.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Boolean</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">If the server is listening.</div>
-							</div>
-						</div>
-									</div>
-							<div id="maxheaders" class="function">
-					<a class="name" href="#maxheaders">
-						.maxheaders(maxheaders)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line171">Line 171</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The getter/setter for the maximum amount of headers.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is a getter and setter for the maximum amount of headers that the server will accept in a HTTP request. The default maximum amount of headers is 2000.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">maxheaders</div>
-										<div class="col a3">Number</div>
-										<div class="col a6"><span>
-											The new maximum amount of headers. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Number</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The maximum amount of headers.</div>
-							</div>
-						</div>
-									</div>
-							<div id="maxconnections" class="function">
-					<a class="name" href="#maxconnections">
-						.maxconnections(maxconnections)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line187">Line 187</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The getter/setter for the maximum amount of connections.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is a getter and setter for the maximum amount of connections that the server will accept before refusing requests. By default there is no maximum amount of connections.</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">maxconnections</div>
-										<div class="col a3">Number</div>
-										<div class="col a6"><span>
-											The new maximum amount of connections. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Number</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The maximum amount of connections.</div>
-							</div>
-						</div>
-									</div>
-							<div id="connections" class="function">
-					<a class="name" href="#connections">
-						.connections()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line203">Line 203</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the amount of active connections.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will return the current amount of connections. The connections will be returned using a promise. The amount of connections will be a parameter in the connections event. The amount of connections can only be fetched if the server is listening.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Number</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The amount of connections.</div>
-							</div>
-						</div>
-									</div>
-							<div id="alive" class="function">
-					<a class="name" href="#alive">
-						.alive(alive)
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line229">Line 229</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">The getter/setter for the keep alive timeout time.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is a getter and setter for the number of milliseconds of inactivity the server needs to wait for incoming data. If it takes more than the alive time the request is presumed inactive. The default time is 5000 milliseconds (5 seconds).</p>
-</div>
-											<div class="params">
-							<h3>Parameters</h3>
-							<div class="table params">
-								<div class="row head">
-									<div class="col a3">Name</div>
-									<div class="col a3">Type</div>
-									<div class="col a6">Description</div>
-								</div>
-																	<div class="row">
-										<div class="col a3">alive</div>
-										<div class="col a3">Number</div>
-										<div class="col a6"><span>
-											The keep alive timeout time. (optional)
-										</span></div>
-									</div>
-															</div>
-						</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Number</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The keep alive timeout time.</div>
-							</div>
-						</div>
-									</div>
 							<div id="timeout" class="function">
 					<a class="name" href="#timeout">
 						.timeout(timeout)
@@ -786,42 +822,6 @@ cerus.server().stop(); <span class="hljs-comment">// or cerus.server().end();</s
 							<div class="item">
 								<div class="key">Description</div>
 								<div class="value">The timeout time.</div>
-							</div>
-						</div>
-									</div>
-							<div id="address" class="function">
-					<a class="name" href="#address">
-						.address()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line263">Line 263</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the server.address class.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This function will return the address class for this server. The address class contains information about the address the server is using. This class can only be returned of the server is listening.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Class</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">The server.address class.</div>
 							</div>
 						</div>
 									</div>

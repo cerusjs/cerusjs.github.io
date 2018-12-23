@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -169,9 +169,9 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.address.html#port">port</a>
+							<a href="/views/cerus-server/reference/server.address.html#address">address</a>
 						</div>
-						<div class="col a8">Returns the port the server is using.</div>
+						<div class="col a8">Returns the ip of the server.</div>
 					</div>
 									<div class="row">
 						<div class="col a4">
@@ -181,9 +181,9 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-server/reference/server.address.html#address">address</a>
+							<a href="/views/cerus-server/reference/server.address.html#port">port</a>
 						</div>
-						<div class="col a8">Returns the ip of the server.</div>
+						<div class="col a8">Returns the port the server is using.</div>
 					</div>
 							</div>
 		</div>
@@ -191,9 +191,9 @@
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="port" class="function">
-					<a class="name" href="#port">
-						.port()
+							<div id="address" class="function">
+					<a class="name" href="#address">
+						.address()
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -201,7 +201,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line296">Line 296</a>
+								<a href="/views/cerus-server/source/lib/server.js.html#line316">Line 316</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -210,20 +210,20 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns the port the server is using.</div>
+								<div class="value">Returns the ip of the server.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function will return the port the server is currently listening on.</p>
+					<div class="desc"><p>This function will return the ip the server is currently using.</p>
 </div>
 																															<div class="return">
 							<h3>Returns</h3>
 							<div class="item">
 								<div class="key">Type</div>
-								<div class="value">Number</div>
+								<div class="value">String</div>
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">The port the server is using.</div>
+								<div class="value">The ip of the server.</div>
 							</div>
 						</div>
 									</div>
@@ -263,9 +263,9 @@
 							</div>
 						</div>
 									</div>
-							<div id="address" class="function">
-					<a class="name" href="#address">
-						.address()
+							<div id="port" class="function">
+					<a class="name" href="#port">
+						.port()
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -273,7 +273,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-server/source/lib/server.js.html">lib/server.js</a>, 
-								<a href="/views/cerus-server/source/lib/server.js.html#line316">Line 316</a>
+								<a href="/views/cerus-server/source/lib/server.js.html#line296">Line 296</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -282,20 +282,20 @@
 						</div>
 																																																							<div class="item">
 								<div class="key">Summary:</div>
-								<div class="value">Returns the ip of the server.</div>
+								<div class="value">Returns the port the server is using.</div>
 							</div>
 																							</div>
-					<div class="desc"><p>This function will return the ip the server is currently using.</p>
+					<div class="desc"><p>This function will return the port the server is currently listening on.</p>
 </div>
 																															<div class="return">
 							<h3>Returns</h3>
 							<div class="item">
 								<div class="key">Type</div>
-								<div class="value">String</div>
+								<div class="value">Number</div>
 							</div>
 							<div class="item">
 								<div class="key">Description</div>
-								<div class="value">The ip of the server.</div>
+								<div class="value">The port the server is using.</div>
 							</div>
 						</div>
 									</div>

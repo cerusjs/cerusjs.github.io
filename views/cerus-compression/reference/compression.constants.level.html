@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "selected" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -155,7 +155,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-					<a href="/views/cerus-compression/source/lib/constants.js.html#line306">Line 306</a>
+					<a href="/views/cerus-compression/source/lib/constants.js.html#line305">Line 305</a>
 				</div>
 			</div>
 												<div class="item">
@@ -177,18 +177,6 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.level.html#no">no</a>
-						</div>
-						<div class="col a8">Returns the NO_COMPRESSION constant.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.level.html#speed">speed</a>
-						</div>
-						<div class="col a8">Returns the BEST_SPEED constant.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-compression/reference/compression.constants.level.html#compression">compression</a>
 						</div>
 						<div class="col a8">Returns the BEST_COMPRESSION constant.</div>
@@ -199,84 +187,24 @@
 						</div>
 						<div class="col a8">Returns the DEFAULT_COMPRESSION constant.</div>
 					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.level.html#no">no</a>
+						</div>
+						<div class="col a8">Returns the NO_COMPRESSION constant.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.level.html#speed">speed</a>
+						</div>
+						<div class="col a8">Returns the BEST_SPEED constant.</div>
+					</div>
 							</div>
 		</div>
 	
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="no" class="function">
-					<a class="name" href="#no">
-						.no()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line312">Line 312</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the NO_COMPRESSION constant.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the NO_COMPRESSION constant. When it&#39;s used the compression class won&#39;t compress anything.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_NO_COMPRESSION</div>
-							</div>
-						</div>
-									</div>
-							<div id="speed" class="function">
-					<a class="name" href="#speed">
-						.speed()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line323">Line 323</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the BEST_SPEED constant.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the BEST_SPEED constant. When it&#39;s used the compression class will compress with as fast as possible, meaning the compression won&#39;t be as good.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_BEST_SPEED</div>
-							</div>
-						</div>
-									</div>
 							<div id="compression" class="function">
 					<a class="name" href="#compression">
 						.compression()
@@ -287,7 +215,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line334">Line 334</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line333">Line 333</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -323,7 +251,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line345">Line 345</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line344">Line 344</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -346,6 +274,78 @@
 							<div class="item">
 								<div class="key">Description</div>
 								<div class="value">Z_DEFAULT_COMPRESSION</div>
+							</div>
+						</div>
+									</div>
+							<div id="no" class="function">
+					<a class="name" href="#no">
+						.no()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line311">Line 311</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the NO_COMPRESSION constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the NO_COMPRESSION constant. When it&#39;s used the compression class won&#39;t compress anything.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_NO_COMPRESSION</div>
+							</div>
+						</div>
+									</div>
+							<div id="speed" class="function">
+					<a class="name" href="#speed">
+						.speed()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line322">Line 322</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the BEST_SPEED constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the BEST_SPEED constant. When it&#39;s used the compression class will compress with as fast as possible, meaning the compression won&#39;t be as good.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_BEST_SPEED</div>
 							</div>
 						</div>
 									</div>

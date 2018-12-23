@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -258,415 +258,415 @@
 			</div>
 					<div class="line" id="line28">
 				<div class="number">28.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> key === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(key === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._key;</pre>
 			</div>
 					<div class="line" id="line29">
 				<div class="number">29.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._key = key;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line30">
 				<div class="number">30.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._key = key;</pre>
 			</div>
 					<div class="line" id="line31">
 				<div class="number">31.</div>
-				<pre class="content"></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line32">
 				<div class="number">32.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._key;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line33">
 				<div class="number">33.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line34">
 				<div class="number">34.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the cookie's value. The value of the cookie is the data </span></pre>
 			</div>
 					<div class="line" id="line35">
 				<div class="number">35.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * that the cookie will save on the client.</span></pre>
 			</div>
 					<div class="line" id="line36">
 				<div class="number">36.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the cookie's value. The value of the cookie is the data </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the value setting.</span></pre>
 			</div>
 					<div class="line" id="line37">
 				<div class="number">37.</div>
-				<pre class="content"><span class="hljs-comment">	 * that the cookie will save on the client.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (value) The new value setting.</span></pre>
 			</div>
 					<div class="line" id="line38">
 				<div class="number">38.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the value setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The value setting.</span></pre>
 			</div>
 					<div class="line" id="line39">
 				<div class="number">39.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (value) The new value setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function value</span></pre>
 			</div>
 					<div class="line" id="line40">
 				<div class="number">40.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The value setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line41">
 				<div class="number">41.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function value</span></pre>
+				<pre class="content">	value(value) {</pre>
 			</div>
 					<div class="line" id="line42">
 				<div class="number">42.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(value === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._value;</pre>
 			</div>
 					<div class="line" id="line43">
 				<div class="number">43.</div>
-				<pre class="content">	value(value) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line44">
 				<div class="number">44.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> value === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._value = value;</pre>
 			</div>
 					<div class="line" id="line45">
 				<div class="number">45.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._value = value;</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line46">
 				<div class="number">46.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line47">
 				<div class="number">47.</div>
-				<pre class="content"></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line48">
 				<div class="number">48.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._value;</pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the maxage setting. The maxage is the maximum age until </span></pre>
 			</div>
 					<div class="line" id="line49">
 				<div class="number">49.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * the client will remove the cookie. It is different from the expires setting in that this</span></pre>
 			</div>
 					<div class="line" id="line50">
 				<div class="number">50.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * setting sets a time in seconds until the cookie will expire and the expires setting will</span></pre>
 			</div>
 					<div class="line" id="line51">
 				<div class="number">51.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * expire at the selected data.</span></pre>
 			</div>
 					<div class="line" id="line52">
 				<div class="number">52.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the maxage setting. The maxage is the maximum age until </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the maxage setting.</span></pre>
 			</div>
 					<div class="line" id="line53">
 				<div class="number">53.</div>
-				<pre class="content"><span class="hljs-comment">	 * the client will remove the cookie. It is different from the expires setting in that this</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Number} (key) The new maxage setting.</span></pre>
 			</div>
 					<div class="line" id="line54">
 				<div class="number">54.</div>
-				<pre class="content"><span class="hljs-comment">	 * setting sets a time in seconds until the cookie will expire and the expires setting will</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Number} The maxage setting.</span></pre>
 			</div>
 					<div class="line" id="line55">
 				<div class="number">55.</div>
-				<pre class="content"><span class="hljs-comment">	 * expire at the selected data.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function maxage</span></pre>
 			</div>
 					<div class="line" id="line56">
 				<div class="number">56.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the maxage setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line57">
 				<div class="number">57.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Number} (key) The new maxage setting.</span></pre>
+				<pre class="content">	maxage(maxage) {</pre>
 			</div>
 					<div class="line" id="line58">
 				<div class="number">58.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Number} The maxage setting.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(maxage === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"maxage"</span>];</pre>
 			</div>
 					<div class="line" id="line59">
 				<div class="number">59.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function maxage</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line60">
 				<div class="number">60.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"maxage"</span>] = maxage;</pre>
 			</div>
 					<div class="line" id="line61">
 				<div class="number">61.</div>
-				<pre class="content">	maxage(maxage) {</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line62">
 				<div class="number">62.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> maxage === <span class="hljs-string">"number"</span>) {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line63">
 				<div class="number">63.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._options[<span class="hljs-string">"maxage"</span>] = maxage;</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line64">
 				<div class="number">64.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the domain setting. This setting sets the domain that the </span></pre>
 			</div>
 					<div class="line" id="line65">
 				<div class="number">65.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * cookie is allowed to be send to.</span></pre>
 			</div>
 					<div class="line" id="line66">
 				<div class="number">66.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"maxage"</span>];</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the domain setting.</span></pre>
 			</div>
 					<div class="line" id="line67">
 				<div class="number">67.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (key) The new domain setting.</span></pre>
 			</div>
 					<div class="line" id="line68">
 				<div class="number">68.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The domain setting.</span></pre>
 			</div>
 					<div class="line" id="line69">
 				<div class="number">69.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function domain</span></pre>
 			</div>
 					<div class="line" id="line70">
 				<div class="number">70.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the domain setting. This setting sets the domain that the </span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line71">
 				<div class="number">71.</div>
-				<pre class="content"><span class="hljs-comment">	 * cookie is allowed to be send to.</span></pre>
+				<pre class="content">	domain(domain) {</pre>
 			</div>
 					<div class="line" id="line72">
 				<div class="number">72.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the domain setting.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(domain === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"domain"</span>];</pre>
 			</div>
 					<div class="line" id="line73">
 				<div class="number">73.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (key) The new domain setting.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line74">
 				<div class="number">74.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The domain setting.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"domain"</span>] = domain;</pre>
 			</div>
 					<div class="line" id="line75">
 				<div class="number">75.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function domain</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line76">
 				<div class="number">76.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line77">
 				<div class="number">77.</div>
-				<pre class="content">	domain(domain) {</pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line78">
 				<div class="number">78.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> domain === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the path setting. This setting sets the path that the </span></pre>
 			</div>
 					<div class="line" id="line79">
 				<div class="number">79.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._options[<span class="hljs-string">"domain"</span>] = domain;</pre>
+				<pre class="content"><span class="hljs-comment">	 * cookie is allowed to be send to.</span></pre>
 			</div>
 					<div class="line" id="line80">
 				<div class="number">80.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the path setting.</span></pre>
 			</div>
 					<div class="line" id="line81">
 				<div class="number">81.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (key) The new path setting.</span></pre>
 			</div>
 					<div class="line" id="line82">
 				<div class="number">82.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"domain"</span>];</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The path setting.</span></pre>
 			</div>
 					<div class="line" id="line83">
 				<div class="number">83.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function path</span></pre>
 			</div>
 					<div class="line" id="line84">
 				<div class="number">84.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line85">
 				<div class="number">85.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	path(path) {</pre>
 			</div>
 					<div class="line" id="line86">
 				<div class="number">86.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the path setting. This setting sets the path that the </span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(path === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"path"</span>];</pre>
 			</div>
 					<div class="line" id="line87">
 				<div class="number">87.</div>
-				<pre class="content"><span class="hljs-comment">	 * cookie is allowed to be send to.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line88">
 				<div class="number">88.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the path setting.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"path"</span>] = path;</pre>
 			</div>
 					<div class="line" id="line89">
 				<div class="number">89.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (key) The new path setting.</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line90">
 				<div class="number">90.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The path setting.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line91">
 				<div class="number">91.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function path</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line92">
 				<div class="number">92.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the expires setting. The expires sets a date where the </span></pre>
 			</div>
 					<div class="line" id="line93">
 				<div class="number">93.</div>
-				<pre class="content">	path(path) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * cookie will expire. It is different from the maxage setting in that this setting will make </span></pre>
 			</div>
 					<div class="line" id="line94">
 				<div class="number">94.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> path === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * the cookie expire at the selected data and the maxage setting will set a time in seconds </span></pre>
 			</div>
 					<div class="line" id="line95">
 				<div class="number">95.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._options[<span class="hljs-string">"path"</span>] = path;</pre>
+				<pre class="content"><span class="hljs-comment">	 * until the cookie will expire.</span></pre>
 			</div>
 					<div class="line" id="line96">
 				<div class="number">96.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the expires setting.</span></pre>
 			</div>
 					<div class="line" id="line97">
 				<div class="number">97.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Date} (key) The new expires setting.</span></pre>
 			</div>
 					<div class="line" id="line98">
 				<div class="number">98.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"path"</span>];</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Date} The expires setting.</span></pre>
 			</div>
 					<div class="line" id="line99">
 				<div class="number">99.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function expires</span></pre>
 			</div>
 					<div class="line" id="line100">
 				<div class="number">100.</div>
-				<pre class="content"></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line101">
 				<div class="number">101.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	expires(expires) {</pre>
 			</div>
 					<div class="line" id="line102">
 				<div class="number">102.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the expires setting. The expires sets a date where the </span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(expires === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"expires"</span>];</pre>
 			</div>
 					<div class="line" id="line103">
 				<div class="number">103.</div>
-				<pre class="content"><span class="hljs-comment">	 * cookie will expire. It is different from the maxage setting in that this setting will make </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line104">
 				<div class="number">104.</div>
-				<pre class="content"><span class="hljs-comment">	 * the cookie expire at the selected data and the maxage setting will set a time in seconds </span></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"expires"</span>] = expires;</pre>
 			</div>
 					<div class="line" id="line105">
 				<div class="number">105.</div>
-				<pre class="content"><span class="hljs-comment">	 * until the cookie will expire.</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line106">
 				<div class="number">106.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the expires setting.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line107">
 				<div class="number">107.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Date} (key) The new expires setting.</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line108">
 				<div class="number">108.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Date} The expires setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the httponly setting. This setting sets if the cookie is </span></pre>
 			</div>
 					<div class="line" id="line109">
 				<div class="number">109.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function expires</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * only allowed to be send over http(s) and not be set by the client itself.</span></pre>
 			</div>
 					<div class="line" id="line110">
 				<div class="number">110.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the httponly setting.</span></pre>
 			</div>
 					<div class="line" id="line111">
 				<div class="number">111.</div>
-				<pre class="content">	expires(expires) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (key) The new httponly setting.</span></pre>
 			</div>
 					<div class="line" id="line112">
 				<div class="number">112.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(expires <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Date</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} The httponly setting.</span></pre>
 			</div>
 					<div class="line" id="line113">
 				<div class="number">113.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._options[<span class="hljs-string">"expires"</span>] = expires;</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function httponly</span></pre>
 			</div>
 					<div class="line" id="line114">
 				<div class="number">114.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line115">
 				<div class="number">115.</div>
-				<pre class="content"></pre>
+				<pre class="content">	httponly(httponly) {</pre>
 			</div>
 					<div class="line" id="line116">
 				<div class="number">116.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"expires"</span>];</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(httponly === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"httponly"</span>];</pre>
 			</div>
 					<div class="line" id="line117">
 				<div class="number">117.</div>
-				<pre class="content">	}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line118">
 				<div class="number">118.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"httponly"</span>] = httponly;</pre>
 			</div>
 					<div class="line" id="line119">
 				<div class="number">119.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line120">
 				<div class="number">120.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the httponly setting. This setting sets if the cookie is </span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line121">
 				<div class="number">121.</div>
-				<pre class="content"><span class="hljs-comment">	 * only allowed to be send over http(s) and not be set by the client itself.</span></pre>
+				<pre class="content">	<span class="hljs-comment">/**</span></pre>
 			</div>
 					<div class="line" id="line122">
 				<div class="number">122.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the httponly setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the secure setting. This setting sets if the cookie may</span></pre>
 			</div>
 					<div class="line" id="line123">
 				<div class="number">123.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (key) The new httponly setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * only be send over https connections to make sure it's contents are never compromised.</span></pre>
 			</div>
 					<div class="line" id="line124">
 				<div class="number">124.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} The httponly setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the secure setting.</span></pre>
 			</div>
 					<div class="line" id="line125">
 				<div class="number">125.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function httponly</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (key) The new secure setting.</span></pre>
 			</div>
 					<div class="line" id="line126">
 				<div class="number">126.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} The secure setting.</span></pre>
 			</div>
 					<div class="line" id="line127">
 				<div class="number">127.</div>
-				<pre class="content">	httponly(httponly) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function secure</span></pre>
 			</div>
 					<div class="line" id="line128">
 				<div class="number">128.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> httponly === <span class="hljs-string">"boolean"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line129">
 				<div class="number">129.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._options[<span class="hljs-string">"httponly"</span>] = httponly;</pre>
+				<pre class="content">	secure(secure) {</pre>
 			</div>
 					<div class="line" id="line130">
 				<div class="number">130.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(secure === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"secure"</span>];</pre>
 			</div>
 					<div class="line" id="line131">
 				<div class="number">131.</div>
@@ -674,7 +674,7 @@
 			</div>
 					<div class="line" id="line132">
 				<div class="number">132.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"httponly"</span>];</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"secure"</span>] = secure;</pre>
 			</div>
 					<div class="line" id="line133">
 				<div class="number">133.</div>
@@ -690,47 +690,47 @@
 			</div>
 					<div class="line" id="line136">
 				<div class="number">136.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the secure setting. This setting sets if the cookie may</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the same setting. This setting sets if the cookie is only </span></pre>
 			</div>
 					<div class="line" id="line137">
 				<div class="number">137.</div>
-				<pre class="content"><span class="hljs-comment">	 * only be send over https connections to make sure it's contents are never compromised.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * allowed to be send to the same site where it came from. There are two options for this: </span></pre>
 			</div>
 					<div class="line" id="line138">
 				<div class="number">138.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the secure setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * "lax" will allow the client to send the cookie to other sites and "strict" tells the client </span></pre>
 			</div>
 					<div class="line" id="line139">
 				<div class="number">139.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {Boolean} (key) The new secure setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * to only send the cookie to the set domain.</span></pre>
 			</div>
 					<div class="line" id="line140">
 				<div class="number">140.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {Boolean} The secure setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the same setting.</span></pre>
 			</div>
 					<div class="line" id="line141">
 				<div class="number">141.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function secure</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @param {String} (key) The new same setting.</span></pre>
 			</div>
 					<div class="line" id="line142">
 				<div class="number">142.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The same setting.</span></pre>
 			</div>
 					<div class="line" id="line143">
 				<div class="number">143.</div>
-				<pre class="content">	secure(secure) {</pre>
+				<pre class="content"><span class="hljs-comment">	 * @function same</span></pre>
 			</div>
 					<div class="line" id="line144">
 				<div class="number">144.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> secure === <span class="hljs-string">"boolean"</span>) {</pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line145">
 				<div class="number">145.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._options[<span class="hljs-string">"secure"</span>] = secure;</pre>
+				<pre class="content">	same(same) {</pre>
 			</div>
 					<div class="line" id="line146">
 				<div class="number">146.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(same === <span class="hljs-literal">undefined</span>) <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"same"</span>];</pre>
 			</div>
 					<div class="line" id="line147">
 				<div class="number">147.</div>
@@ -738,7 +738,7 @@
 			</div>
 					<div class="line" id="line148">
 				<div class="number">148.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"secure"</span>];</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"same"</span>] = same;</pre>
 			</div>
 					<div class="line" id="line149">
 				<div class="number">149.</div>
@@ -754,67 +754,67 @@
 			</div>
 					<div class="line" id="line152">
 				<div class="number">152.</div>
-				<pre class="content"><span class="hljs-comment">	 * This is the setter and getter for the same setting. This setting sets if the cookie is only </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function will build the cookie using the settings set in this class. It will return a </span></pre>
 			</div>
 					<div class="line" id="line153">
 				<div class="number">153.</div>
-				<pre class="content"><span class="hljs-comment">	 * allowed to be send to the same site where it came from. There are two options for this: </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * string with the build cookie in it.</span></pre>
 			</div>
 					<div class="line" id="line154">
 				<div class="number">154.</div>
-				<pre class="content"><span class="hljs-comment">	 * "lax" will allow the client to send the cookie to other sites and "strict" tells the client </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @summary Builds the cookie.</span></pre>
 			</div>
 					<div class="line" id="line155">
 				<div class="number">155.</div>
-				<pre class="content"><span class="hljs-comment">	 * to only send the cookie to the set domain.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @return {String} The built cookie.</span></pre>
 			</div>
 					<div class="line" id="line156">
 				<div class="number">156.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary The setter/getter for the same setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @function build</span></pre>
 			</div>
 					<div class="line" id="line157">
 				<div class="number">157.</div>
-				<pre class="content"><span class="hljs-comment">	 * @param {String} (key) The new same setting.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 */</span></pre>
 			</div>
 					<div class="line" id="line158">
 				<div class="number">158.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The same setting.</span></pre>
+				<pre class="content">	build() {</pre>
 			</div>
 					<div class="line" id="line159">
 				<div class="number">159.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function same</span></pre>
+				<pre class="content">		<span class="hljs-keyword">var</span> cookie = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">this</span>._key}</span>=<span class="hljs-subst">${<span class="hljs-keyword">this</span>._value}</span>; Path=<span class="hljs-subst">${<span class="hljs-keyword">this</span>._options.path || <span class="hljs-string">"/"</span>}</span>`</span>;</pre>
 			</div>
 					<div class="line" id="line160">
 				<div class="number">160.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line161">
 				<div class="number">161.</div>
-				<pre class="content">	same(same) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.maxage) {</pre>
 			</div>
 					<div class="line" id="line162">
 				<div class="number">162.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> same === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">			cookie += <span class="hljs-string">`; Max-Age=<span class="hljs-subst">${<span class="hljs-built_in">Math</span>.floor(<span class="hljs-keyword">this</span>._options.maxage)}</span>`</span>;</pre>
 			</div>
 					<div class="line" id="line163">
 				<div class="number">163.</div>
-				<pre class="content">			<span class="hljs-keyword">this</span>._options[<span class="hljs-string">"same"</span>] = same;</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line164">
 				<div class="number">164.</div>
-				<pre class="content">		}</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line165">
 				<div class="number">165.</div>
-				<pre class="content"></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.domain) {</pre>
 			</div>
 					<div class="line" id="line166">
 				<div class="number">166.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._options[<span class="hljs-string">"same"</span>];</pre>
+				<pre class="content">			cookie += <span class="hljs-string">`; Domain=<span class="hljs-subst">${<span class="hljs-keyword">this</span>._options.domain}</span>`</span>;</pre>
 			</div>
 					<div class="line" id="line167">
 				<div class="number">167.</div>
-				<pre class="content">	}</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line168">
 				<div class="number">168.</div>
@@ -822,47 +822,47 @@
 			</div>
 					<div class="line" id="line169">
 				<div class="number">169.</div>
-				<pre class="content">	<span class="hljs-comment">/**</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.expires) {</pre>
 			</div>
 					<div class="line" id="line170">
 				<div class="number">170.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function will build the cookie using the settings set in this class. It will return a </span></pre>
+				<pre class="content">			cookie += <span class="hljs-string">`; Expires=<span class="hljs-subst">${<span class="hljs-keyword">this</span>._options.expires.toUTCString()}</span>`</span>;</pre>
 			</div>
 					<div class="line" id="line171">
 				<div class="number">171.</div>
-				<pre class="content"><span class="hljs-comment">	 * string with the build cookie in it.</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line172">
 				<div class="number">172.</div>
-				<pre class="content"><span class="hljs-comment">	 * @summary Builds the cookie.</span></pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line173">
 				<div class="number">173.</div>
-				<pre class="content"><span class="hljs-comment">	 * @return {String} The built cookie.</span></pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.httponly) {</pre>
 			</div>
 					<div class="line" id="line174">
 				<div class="number">174.</div>
-				<pre class="content"><span class="hljs-comment">	 * @function build</span></pre>
+				<pre class="content">			cookie += <span class="hljs-string">"; HttpOnly"</span>;</pre>
 			</div>
 					<div class="line" id="line175">
 				<div class="number">175.</div>
-				<pre class="content"><span class="hljs-comment">	 */</span></pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line176">
 				<div class="number">176.</div>
-				<pre class="content">	build() {</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line177">
 				<div class="number">177.</div>
-				<pre class="content">		<span class="hljs-keyword">var</span> cookie = <span class="hljs-keyword">this</span>._key + <span class="hljs-string">"="</span> + <span class="hljs-keyword">this</span>._value;</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.secure) {</pre>
 			</div>
 					<div class="line" id="line178">
 				<div class="number">178.</div>
-				<pre class="content"></pre>
+				<pre class="content">			cookie += <span class="hljs-string">"; Secure"</span>;</pre>
 			</div>
 					<div class="line" id="line179">
 				<div class="number">179.</div>
-				<pre class="content">		<span class="hljs-keyword">this</span>._options.path = <span class="hljs-keyword">this</span>._options.path || <span class="hljs-string">"/"</span>;</pre>
+				<pre class="content">		}</pre>
 			</div>
 					<div class="line" id="line180">
 				<div class="number">180.</div>
@@ -870,59 +870,59 @@
 			</div>
 					<div class="line" id="line181">
 				<div class="number">181.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>._options.maxage === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.same) {</pre>
 			</div>
 					<div class="line" id="line182">
 				<div class="number">182.</div>
-				<pre class="content">			cookie += <span class="hljs-string">"; Max-Age="</span> + <span class="hljs-built_in">Math</span>.floor(<span class="hljs-keyword">this</span>._options.maxage);</pre>
+				<pre class="content">			<span class="hljs-keyword">switch</span>(<span class="hljs-keyword">this</span>._options.same) {</pre>
 			</div>
 					<div class="line" id="line183">
 				<div class="number">183.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">				<span class="hljs-keyword">case</span> <span class="hljs-string">"lax"</span>:</pre>
 			</div>
 					<div class="line" id="line184">
 				<div class="number">184.</div>
-				<pre class="content"></pre>
+				<pre class="content">					cookie += <span class="hljs-string">"; SameSite=Lax"</span>;</pre>
 			</div>
 					<div class="line" id="line185">
 				<div class="number">185.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>._options.domain === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">					<span class="hljs-keyword">break</span>;</pre>
 			</div>
 					<div class="line" id="line186">
 				<div class="number">186.</div>
-				<pre class="content">			cookie += <span class="hljs-string">"; Domain="</span> + <span class="hljs-keyword">this</span>._options.domain;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line187">
 				<div class="number">187.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">				<span class="hljs-keyword">case</span> <span class="hljs-string">"strict"</span>:</pre>
 			</div>
 					<div class="line" id="line188">
 				<div class="number">188.</div>
-				<pre class="content"></pre>
+				<pre class="content">					cookie += <span class="hljs-string">"; SameSite=Strict"</span>;</pre>
 			</div>
 					<div class="line" id="line189">
 				<div class="number">189.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>._options.path === <span class="hljs-string">"string"</span>) {</pre>
+				<pre class="content">					<span class="hljs-keyword">break</span>;</pre>
 			</div>
 					<div class="line" id="line190">
 				<div class="number">190.</div>
-				<pre class="content">			cookie += <span class="hljs-string">"; Path="</span> + <span class="hljs-keyword">this</span>._options.path;</pre>
+				<pre class="content"></pre>
 			</div>
 					<div class="line" id="line191">
 				<div class="number">191.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">				<span class="hljs-keyword">default</span>:</pre>
 			</div>
 					<div class="line" id="line192">
 				<div class="number">192.</div>
-				<pre class="content"></pre>
+				<pre class="content">					cookie += <span class="hljs-string">`; SameSite=<span class="hljs-subst">${<span class="hljs-keyword">this</span>._options.same}</span>`</span>;</pre>
 			</div>
 					<div class="line" id="line193">
 				<div class="number">193.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.expires <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Date</span>) {</pre>
+				<pre class="content">					<span class="hljs-keyword">break</span>;</pre>
 			</div>
 					<div class="line" id="line194">
 				<div class="number">194.</div>
-				<pre class="content">			cookie += <span class="hljs-string">"; Expires="</span> + <span class="hljs-keyword">this</span>._options.expires.toUTCString();</pre>
+				<pre class="content">			}</pre>
 			</div>
 					<div class="line" id="line195">
 				<div class="number">195.</div>
@@ -934,15 +934,15 @@
 			</div>
 					<div class="line" id="line197">
 				<div class="number">197.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.httponly) {</pre>
+				<pre class="content">		<span class="hljs-keyword">return</span> cookie;</pre>
 			</div>
 					<div class="line" id="line198">
 				<div class="number">198.</div>
-				<pre class="content">			cookie += <span class="hljs-string">"; HttpOnly"</span>;</pre>
+				<pre class="content">	}</pre>
 			</div>
 					<div class="line" id="line199">
 				<div class="number">199.</div>
-				<pre class="content">		}</pre>
+				<pre class="content">}</pre>
 			</div>
 					<div class="line" id="line200">
 				<div class="number">200.</div>
@@ -950,86 +950,6 @@
 			</div>
 					<div class="line" id="line201">
 				<div class="number">201.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>._options.secure) {</pre>
-			</div>
-					<div class="line" id="line202">
-				<div class="number">202.</div>
-				<pre class="content">			cookie += <span class="hljs-string">"; Secure"</span>;</pre>
-			</div>
-					<div class="line" id="line203">
-				<div class="number">203.</div>
-				<pre class="content">		}</pre>
-			</div>
-					<div class="line" id="line204">
-				<div class="number">204.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line205">
-				<div class="number">205.</div>
-				<pre class="content">		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>._options.same === <span class="hljs-string">"string"</span>) {</pre>
-			</div>
-					<div class="line" id="line206">
-				<div class="number">206.</div>
-				<pre class="content">			<span class="hljs-keyword">switch</span>(<span class="hljs-keyword">this</span>._options.same) {</pre>
-			</div>
-					<div class="line" id="line207">
-				<div class="number">207.</div>
-				<pre class="content">				<span class="hljs-keyword">case</span> <span class="hljs-string">"lax"</span>:</pre>
-			</div>
-					<div class="line" id="line208">
-				<div class="number">208.</div>
-				<pre class="content">					cookie += <span class="hljs-string">"; SameSite=Lax"</span>;</pre>
-			</div>
-					<div class="line" id="line209">
-				<div class="number">209.</div>
-				<pre class="content">					<span class="hljs-keyword">break</span>;</pre>
-			</div>
-					<div class="line" id="line210">
-				<div class="number">210.</div>
-				<pre class="content">				<span class="hljs-keyword">case</span> <span class="hljs-string">"strict"</span>:</pre>
-			</div>
-					<div class="line" id="line211">
-				<div class="number">211.</div>
-				<pre class="content">				<span class="hljs-keyword">default</span>:</pre>
-			</div>
-					<div class="line" id="line212">
-				<div class="number">212.</div>
-				<pre class="content">					cookie += <span class="hljs-string">"; SameSite=Strict"</span>;</pre>
-			</div>
-					<div class="line" id="line213">
-				<div class="number">213.</div>
-				<pre class="content">					<span class="hljs-keyword">break</span>;</pre>
-			</div>
-					<div class="line" id="line214">
-				<div class="number">214.</div>
-				<pre class="content">			}</pre>
-			</div>
-					<div class="line" id="line215">
-				<div class="number">215.</div>
-				<pre class="content">		}</pre>
-			</div>
-					<div class="line" id="line216">
-				<div class="number">216.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line217">
-				<div class="number">217.</div>
-				<pre class="content">		<span class="hljs-keyword">return</span> cookie;</pre>
-			</div>
-					<div class="line" id="line218">
-				<div class="number">218.</div>
-				<pre class="content">	}</pre>
-			</div>
-					<div class="line" id="line219">
-				<div class="number">219.</div>
-				<pre class="content">}</pre>
-			</div>
-					<div class="line" id="line220">
-				<div class="number">220.</div>
-				<pre class="content"></pre>
-			</div>
-					<div class="line" id="line221">
-				<div class="number">221.</div>
 				<pre class="content"><span class="hljs-built_in">module</span>.exports = cookie;</pre>
 			</div>
 			</div>

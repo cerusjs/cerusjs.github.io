@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item opened">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-minus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "selected" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item opened">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-minus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "selected" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -148,7 +148,7 @@
 			</div>
 					<div class="line" id="line3">
 				<div class="number">3.</div>
-				<pre class="content"><span class="hljs-keyword">const</span> error_events = [<span class="hljs-string">"err"</span>, <span class="hljs-string">"error"</span>, <span class="hljs-string">"catch"</span>, <span class="hljs-string">"failure"</span>];</pre>
+				<pre class="content"><span class="hljs-keyword">const</span> error_events = [<span class="hljs-string">"err"</span>, <span class="hljs-string">"error"</span>, <span class="hljs-string">"catch"</span>, <span class="hljs-string">"failure"</span>, <span class="hljs-string">"fail"</span>];</pre>
 			</div>
 					<div class="line" id="line4">
 				<div class="number">4.</div>
@@ -508,7 +508,7 @@
 			</div>
 					<div class="line" id="line93">
 				<div class="number">93.</div>
-				<pre class="content">				<span class="hljs-keyword">let</span> child;</pre>
+				<pre class="content">				<span class="hljs-keyword">let</span> data;</pre>
 			</div>
 					<div class="line" id="line94">
 				<div class="number">94.</div>
@@ -520,7 +520,7 @@
 			</div>
 					<div class="line" id="line96">
 				<div class="number">96.</div>
-				<pre class="content">					child = handler.callback(item.event, ...item.args);</pre>
+				<pre class="content">					data = handler.callback(item.event, ...item.args);</pre>
 			</div>
 					<div class="line" id="line97">
 				<div class="number">97.</div>
@@ -532,7 +532,7 @@
 			</div>
 					<div class="line" id="line99">
 				<div class="number">99.</div>
-				<pre class="content">					child = handler.callback(...item.args);</pre>
+				<pre class="content">					data = handler.callback(...item.args);</pre>
 			</div>
 					<div class="line" id="line100">
 				<div class="number">100.</div>
@@ -544,11 +544,11 @@
 			</div>
 					<div class="line" id="line102">
 				<div class="number">102.</div>
-				<pre class="content">				<span class="hljs-keyword">if</span>(child <span class="hljs-keyword">instanceof</span> promise &amp;&amp; child !== <span class="hljs-keyword">this</span>) {</pre>
+				<pre class="content">				<span class="hljs-keyword">if</span>(data <span class="hljs-keyword">instanceof</span> promise &amp;&amp; data !== <span class="hljs-keyword">this</span>) {</pre>
 			</div>
 					<div class="line" id="line103">
 				<div class="number">103.</div>
-				<pre class="content">					<span class="hljs-keyword">this</span>._parentify(child, <span class="hljs-keyword">this</span>._handlers.indexOf(handler) + <span class="hljs-number">1</span>);</pre>
+				<pre class="content">					<span class="hljs-keyword">this</span>._parentify(data, <span class="hljs-keyword">this</span>._handlers.indexOf(handler) + <span class="hljs-number">1</span>);</pre>
 			</div>
 					<div class="line" id="line104">
 				<div class="number">104.</div>
@@ -556,7 +556,7 @@
 			</div>
 					<div class="line" id="line105">
 				<div class="number">105.</div>
-				<pre class="content">				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(child !== <span class="hljs-literal">undefined</span> &amp;&amp; handler.options.passthrough) {</pre>
+				<pre class="content">				<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(data !== <span class="hljs-literal">undefined</span> &amp;&amp; handler.options.passthrough) {</pre>
 			</div>
 					<div class="line" id="line106">
 				<div class="number">106.</div>
@@ -568,11 +568,11 @@
 			</div>
 					<div class="line" id="line108">
 				<div class="number">108.</div>
-				<pre class="content">					<span class="hljs-keyword">if</span>(handler.options.multi &amp;&amp; child <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>) {</pre>
+				<pre class="content">					<span class="hljs-keyword">if</span>(handler.options.multi &amp;&amp; data <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span>) {</pre>
 			</div>
 					<div class="line" id="line109">
 				<div class="number">109.</div>
-				<pre class="content">						args.push(...child);</pre>
+				<pre class="content">						args.push(...data);</pre>
 			</div>
 					<div class="line" id="line110">
 				<div class="number">110.</div>
@@ -584,7 +584,7 @@
 			</div>
 					<div class="line" id="line112">
 				<div class="number">112.</div>
-				<pre class="content">						args.push(child);</pre>
+				<pre class="content">						args.push(data);</pre>
 			</div>
 					<div class="line" id="line113">
 				<div class="number">113.</div>
@@ -1332,7 +1332,7 @@
 			</div>
 					<div class="line" id="line299">
 				<div class="number">299.</div>
-				<pre class="content"><span class="hljs-comment">	 * This function returns a promise that will be resolved when the specified handler has </span></pre>
+				<pre class="content"><span class="hljs-comment">	 * This function returns a real promise that will be resolved when the specified handler has </span></pre>
 			</div>
 					<div class="line" id="line300">
 				<div class="number">300.</div>
@@ -1348,7 +1348,7 @@
 			</div>
 					<div class="line" id="line303">
 				<div class="number">303.</div>
-				<pre class="content"><span class="hljs-comment">	 * let test_promise = new promise(event =&gt; event("done", "test"));</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * let test_promise = cerus.promise(event =&gt; event("done", "test"));</span></pre>
 			</div>
 					<div class="line" id="line304">
 				<div class="number">304.</div>
@@ -1368,7 +1368,7 @@
 			</div>
 					<div class="line" id="line308">
 				<div class="number">308.</div>
-				<pre class="content"><span class="hljs-comment">	 * @returns {Promise} The newly created promise.</span></pre>
+				<pre class="content"><span class="hljs-comment">	 * @returns {Promise} The newly created real promise.</span></pre>
 			</div>
 					<div class="line" id="line309">
 				<div class="number">309.</div>

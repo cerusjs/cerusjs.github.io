@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -185,13 +185,19 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookies.html#create">create</a>
+							<a href="/views/cerus-router/reference/response.cookies.html#add">add</a>
 						</div>
 						<div class="col a8"></div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookies.html#add">add</a>
+							<a href="/views/cerus-router/reference/response.cookies.html#clear">clear</a>
+						</div>
+						<div class="col a8"></div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.cookies.html#create">create</a>
 						</div>
 						<div class="col a8"></div>
 					</div>
@@ -209,19 +215,13 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookies.html#remove">remove</a>
-						</div>
-						<div class="col a8"></div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-router/reference/response.cookies.html#list">list</a>
 						</div>
 						<div class="col a8"></div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.cookies.html#clear">clear</a>
+							<a href="/views/cerus-router/reference/response.cookies.html#remove">remove</a>
 						</div>
 						<div class="col a8"></div>
 					</div>
@@ -231,26 +231,6 @@
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="create" class="function">
-					<a class="name" href="#create">
-						.create()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/cookies.js.html">lib/response/cookies.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line12">Line 12</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																																	</div>
-					<div class="desc"></div>
-																													</div>
 							<div id="add" class="function">
 					<a class="name" href="#add">
 						.add()
@@ -271,6 +251,46 @@
 																																																																	</div>
 					<div class="desc"></div>
 																													</div>
+							<div id="clear" class="function">
+					<a class="name" href="#clear">
+						.clear()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/cookies.js.html">lib/response/cookies.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line54">Line 54</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																																	</div>
+					<div class="desc"></div>
+																													</div>
+							<div id="create" class="function">
+					<a class="name" href="#create">
+						.create()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/cookies.js.html">lib/response/cookies.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line12">Line 12</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																																	</div>
+					<div class="desc"></div>
+																													</div>
 							<div id="get" class="function">
 					<a class="name" href="#get">
 						.get()
@@ -281,7 +301,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/cookies.js.html">lib/response/cookies.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line34">Line 34</a>
+								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line26">Line 26</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -301,27 +321,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/cookies.js.html">lib/response/cookies.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line45">Line 45</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																																	</div>
-					<div class="desc"></div>
-																													</div>
-							<div id="remove" class="function">
-					<a class="name" href="#remove">
-						.remove()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/cookies.js.html">lib/response/cookies.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line56">Line 56</a>
+								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line33">Line 33</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -341,7 +341,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/cookies.js.html">lib/response/cookies.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line67">Line 67</a>
+								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line47">Line 47</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -351,9 +351,9 @@
 																																																																	</div>
 					<div class="desc"></div>
 																													</div>
-							<div id="clear" class="function">
-					<a class="name" href="#clear">
-						.clear()
+							<div id="remove" class="function">
+					<a class="name" href="#remove">
+						.remove()
 						<i class="fas fa-link"></i>
 					</a>
 					<div class="list">
@@ -361,7 +361,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/cookies.js.html">lib/response/cookies.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line74">Line 74</a>
+								<a href="/views/cerus-router/source/lib/response/cookies.js.html#line40">Line 40</a>
 							</div>
 						</div>
 																								<div class="item">

@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -185,7 +185,13 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.headers.html#set">set</a>
+							<a href="/views/cerus-router/reference/response.headers.html#append">append</a>
+						</div>
+						<div class="col a8"></div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.headers.html#clear">clear</a>
 						</div>
 						<div class="col a8"></div>
 					</div>
@@ -203,25 +209,19 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-router/reference/response.headers.html#list">list</a>
+						</div>
+						<div class="col a8"></div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-router/reference/response.headers.html#remove">remove</a>
 						</div>
 						<div class="col a8"></div>
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.headers.html#append">append</a>
-						</div>
-						<div class="col a8"></div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.headers.html#clear">clear</a>
-						</div>
-						<div class="col a8"></div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-router/reference/response.headers.html#list">list</a>
+							<a href="/views/cerus-router/reference/response.headers.html#set">set</a>
 						</div>
 						<div class="col a8"></div>
 					</div>
@@ -231,86 +231,6 @@
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
-							<div id="set" class="function">
-					<a class="name" href="#set">
-						.set()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/headers.js.html#line11">Line 11</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																																	</div>
-					<div class="desc"></div>
-																													</div>
-							<div id="get" class="function">
-					<a class="name" href="#get">
-						.get()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/headers.js.html#line32">Line 32</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																																	</div>
-					<div class="desc"></div>
-																													</div>
-							<div id="has" class="function">
-					<a class="name" href="#has">
-						.has()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/headers.js.html#line43">Line 43</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																																	</div>
-					<div class="desc"></div>
-																													</div>
-							<div id="remove" class="function">
-					<a class="name" href="#remove">
-						.remove()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/headers.js.html#line54">Line 54</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																																	</div>
-					<div class="desc"></div>
-																													</div>
 							<div id="append" class="function">
 					<a class="name" href="#append">
 						.append()
@@ -321,7 +241,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/headers.js.html#line71">Line 71</a>
+								<a href="/views/cerus-router/source/lib/response/headers.js.html#line45">Line 45</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -341,7 +261,47 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/headers.js.html#line97">Line 97</a>
+								<a href="/views/cerus-router/source/lib/response/headers.js.html#line69">Line 69</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																																	</div>
+					<div class="desc"></div>
+																													</div>
+							<div id="get" class="function">
+					<a class="name" href="#get">
+						.get()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/headers.js.html#line21">Line 21</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																																	</div>
+					<div class="desc"></div>
+																													</div>
+							<div id="has" class="function">
+					<a class="name" href="#has">
+						.has()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/headers.js.html#line28">Line 28</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -361,7 +321,47 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
-								<a href="/views/cerus-router/source/lib/response/headers.js.html#line104">Line 104</a>
+								<a href="/views/cerus-router/source/lib/response/headers.js.html#line77">Line 77</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																																	</div>
+					<div class="desc"></div>
+																													</div>
+							<div id="remove" class="function">
+					<a class="name" href="#remove">
+						.remove()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/headers.js.html#line35">Line 35</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																																	</div>
+					<div class="desc"></div>
+																													</div>
+							<div id="set" class="function">
+					<a class="name" href="#set">
+						.set()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-router/source/lib/response/headers.js.html">lib/response/headers.js</a>, 
+								<a href="/views/cerus-router/source/lib/response/headers.js.html#line11">Line 11</a>
 							</div>
 						</div>
 																								<div class="item">

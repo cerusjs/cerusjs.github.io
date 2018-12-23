@@ -78,6 +78,16 @@
 				<li><a class= "" href="/views/cerus-api/reference.html">Reference</a></li>
 			</ul>
 		</div>
+		<div id="cerus-promise-item" class="item closed">
+			<div class="item-title" onclick="sidebar().item('cerus-promise')">
+				cerus-promise				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="item-links">
+				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
+				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
+				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
+			</ul>
+		</div>
 		<div id="cerus-database-item" class="item closed">
 			<div class="item-title" onclick="sidebar().item('cerus-database')">
 				cerus-database				<i class="fas fa-plus"></i>
@@ -96,16 +106,6 @@
 				<li><a class= "" href="/views/cerus-compression/readme.html">Readme</a></li>
 				<li><a class= "" href="/views/cerus-compression/changelog.html">Changelog</a></li>
 				<li><a class= "selected" href="/views/cerus-compression/reference.html">Reference</a></li>
-			</ul>
-		</div>
-		<div id="cerus-promise-item" class="item closed">
-			<div class="item-title" onclick="sidebar().item('cerus-promise')">
-				cerus-promise				<i class="fas fa-plus"></i>
-			</div>
-			<ul class="item-links">
-				<li><a class= "" href="/views/cerus-promise/readme.html">Readme</a></li>
-				<li><a class= "" href="/views/cerus-promise/changelog.html">Changelog</a></li>
-				<li><a class= "" href="/views/cerus-promise/reference.html">Reference</a></li>
 			</ul>
 		</div>
 		<div id="docs-item" class="item closed">
@@ -155,7 +155,7 @@
 				<div class="key">Source:</div>
 				<div class="value">
 					<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-					<a href="/views/cerus-compression/source/lib/constants.js.html#line114">Line 114</a>
+					<a href="/views/cerus-compression/source/lib/constants.js.html#line113">Line 113</a>
 				</div>
 			</div>
 												<div class="item">
@@ -177,6 +177,24 @@
 				</div>
 									<div class="row">
 						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.flush.html#block">block</a>
+						</div>
+						<div class="col a8">Returns the BLOCK constant.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.flush.html#finish">finish</a>
+						</div>
+						<div class="col a8">Returns the FINISH constant.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
+							<a href="/views/cerus-compression/reference/compression.constants.flush.html#full">full</a>
+						</div>
+						<div class="col a8">Returns the FULL_FLUSH constant.</div>
+					</div>
+									<div class="row">
+						<div class="col a4">
 							<a href="/views/cerus-compression/reference/compression.constants.flush.html#no">no</a>
 						</div>
 						<div class="col a8">Returns the NO_FLUSH constant.</div>
@@ -195,24 +213,6 @@
 					</div>
 									<div class="row">
 						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.flush.html#full">full</a>
-						</div>
-						<div class="col a8">Returns the FULL_FLUSH constant.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.flush.html#finish">finish</a>
-						</div>
-						<div class="col a8">Returns the FINISH constant.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
-							<a href="/views/cerus-compression/reference/compression.constants.flush.html#block">block</a>
-						</div>
-						<div class="col a8">Returns the BLOCK constant.</div>
-					</div>
-									<div class="row">
-						<div class="col a4">
 							<a href="/views/cerus-compression/reference/compression.constants.flush.html#trees">trees</a>
 						</div>
 						<div class="col a8">Returns the TREES constant.</div>
@@ -223,6 +223,114 @@
 	<!-- FUNCTIONS -->
 			<div class="functions">
 			<h2>Functions</h2>
+							<div id="block" class="function">
+					<a class="name" href="#block">
+						.block()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line174">Line 174</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the BLOCK constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the BLOCK constant. This means the compression class will flush every time a new block has been created. A block is a certain amount of data, which size depends on the machine you&#39;re using.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_BLOCK</div>
+							</div>
+						</div>
+									</div>
+							<div id="finish" class="function">
+					<a class="name" href="#finish">
+						.finish()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line163">Line 163</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the FINISH constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the FINISH constant. This means the compression class will only do a flush when the compression has been ended.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_FINISH</div>
+							</div>
+						</div>
+									</div>
+							<div id="full" class="function">
+					<a class="name" href="#full">
+						.full()
+						<i class="fas fa-link"></i>
+					</a>
+					<div class="list">
+						<div class="item">
+							<div class="key">Source:</div>
+							<div class="value">
+								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line152">Line 152</a>
+							</div>
+						</div>
+																								<div class="item">
+							<div class="key">Access:</div>
+							<div class="value">public</div>
+						</div>
+																																																							<div class="item">
+								<div class="key">Summary:</div>
+								<div class="value">Returns the FULL_FLUSH constant.</div>
+							</div>
+																							</div>
+					<div class="desc"><p>This is the FULL_FLUSH constant. THis means the compression class will fully flush the stream every time new data has been added.</p>
+</div>
+																															<div class="return">
+							<h3>Returns</h3>
+							<div class="item">
+								<div class="key">Type</div>
+								<div class="value">Constant</div>
+							</div>
+							<div class="item">
+								<div class="key">Description</div>
+								<div class="value">Z_FULL_FLUSH</div>
+							</div>
+						</div>
+									</div>
 							<div id="no" class="function">
 					<a class="name" href="#no">
 						.no()
@@ -233,7 +341,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line119">Line 119</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line118">Line 118</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -269,7 +377,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line130">Line 130</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line129">Line 129</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -305,7 +413,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line141">Line 141</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line140">Line 140</a>
 							</div>
 						</div>
 																								<div class="item">
@@ -331,114 +439,6 @@
 							</div>
 						</div>
 									</div>
-							<div id="full" class="function">
-					<a class="name" href="#full">
-						.full()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line153">Line 153</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the FULL_FLUSH constant.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the FULL_FLUSH constant. THis means the compression class will fully flush the stream every time new data has been added.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_FULL_FLUSH</div>
-							</div>
-						</div>
-									</div>
-							<div id="finish" class="function">
-					<a class="name" href="#finish">
-						.finish()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line164">Line 164</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the FINISH constant.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the FINISH constant. This means the compression class will only do a flush when the compression has been ended.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_FINISH</div>
-							</div>
-						</div>
-									</div>
-							<div id="block" class="function">
-					<a class="name" href="#block">
-						.block()
-						<i class="fas fa-link"></i>
-					</a>
-					<div class="list">
-						<div class="item">
-							<div class="key">Source:</div>
-							<div class="value">
-								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line175">Line 175</a>
-							</div>
-						</div>
-																								<div class="item">
-							<div class="key">Access:</div>
-							<div class="value">public</div>
-						</div>
-																																																							<div class="item">
-								<div class="key">Summary:</div>
-								<div class="value">Returns the BLOCK constant.</div>
-							</div>
-																							</div>
-					<div class="desc"><p>This is the BLOCK constant. This means the compression class will flush every time a new block has been created. A block is a certain amount of data, which size depends on the machine you&#39;re using.</p>
-</div>
-																															<div class="return">
-							<h3>Returns</h3>
-							<div class="item">
-								<div class="key">Type</div>
-								<div class="value">Constant</div>
-							</div>
-							<div class="item">
-								<div class="key">Description</div>
-								<div class="value">Z_BLOCK</div>
-							</div>
-						</div>
-									</div>
 							<div id="trees" class="function">
 					<a class="name" href="#trees">
 						.trees()
@@ -449,7 +449,7 @@
 							<div class="key">Source:</div>
 							<div class="value">
 								<a href="/views/cerus-compression/source/lib/constants.js.html">lib/constants.js</a>, 
-								<a href="/views/cerus-compression/source/lib/constants.js.html#line187">Line 187</a>
+								<a href="/views/cerus-compression/source/lib/constants.js.html#line186">Line 186</a>
 							</div>
 						</div>
 																								<div class="item">
